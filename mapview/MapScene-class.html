@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapScene class from the mapview library, for the Dart programming language.">
+  <title>MapScene class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview.dart</a></li>
+    <li class="self-crumb">MapScene class</li>
+  </ol>
+  <div class="self-name">MapScene</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;mapview-library-sidebar.html"
+    data-below-sidebar="mapview&#47;MapScene-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapScene</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Represents a map scene and exposes the functionality to manipulate its content.</p>
+<h2 id="map-schemes">Map schemes</h2>
+<p>The content of the displayed map and how it looks is specified by a
+<a href="../mapview/MapScheme.html">MapScheme</a> which is set when loading a scene with <a href="../mapview/MapScene/loadSceneForMapScheme.html">MapScene.loadSceneForMapScheme</a>.
+It is also possible to load your own custom map scheme from a file bundled
+with your application. Supported file formats are:</p>
+<ul>
+<li>JSON (file extension '.json'; e.g. 'my_custom_style.json')</li>
+<li>ZIP archive (file extension '.zip'; e.g. 'my_custom_style.zip'), with the following archive structure:
+<ul>
+<li>root folder: any, not empty (e.g. 'my_custom_style')</li>
+<li>JSON configuration: '<root folder="">/style.json'</root></li>
+<li>custom assets folder: '<root folder="">/assets'</root></li>
+</ul>
+</li>
+</ul>
+<h2 id="map-features">Map features</h2>
+<p>Different map schemes offer different sets of features, for example showing traffic or 3D buildings.
+Some features have multiple modes of operation, but most have only one.
+<a href="../mapview/MapScene/getSupportedFeatures.html">MapScene.getSupportedFeatures</a> can be used to check what features and modes are supported
+for the current scene. Features can be enabled using <a href="../mapview/MapScene/enableFeatures.html">MapScene.enableFeatures</a> and disabled
+with <a href="../mapview/MapScene/disableFeatures.html">MapScene.disableFeatures</a>. Checking which features are currently enabled can be done using
+<a href="../mapview/MapScene/getActiveFeatures.html">MapScene.getActiveFeatures</a>. For convenience, <a href="../mapview/MapFeatures-class.html">MapFeatures</a> and <a href="../mapview/MapFeatureModes-class.html">MapFeatureModes</a> hold
+constants for feature and mode names.</p>
+<p>Since version 4.15.0, map features cannot be controlled using <a href="../mapview/MapScene/setLayerVisibility.html">MapScene.setLayerVisibility</a>,
+since <a href="../mapview/MapScene/setLayerVisibility.html">MapScene.setLayerVisibility</a> controls only visibility of the layers which are
+corresponding to the features enabled either by <a href="../mapview/MapScene/enableFeatures.html">MapScene.enableFeatures</a> or enabled by default
+for the scene.</p>
+<h2 id="map-layers">Map layers</h2>
+<p>A map scheme is organized in layers, which can be controlled using <a href="../mapview/MapScene/setLayerVisibility.html">MapScene.setLayerVisibility</a>.
+It's possible to change the visibility state of any map layer as long as the name is known.</p>
+<p>Layer visibility settings persist between scene reloading.</p>
+<h2 id="user-content">User content</h2>
+<p>User generated content can be visualised on the map using <a href="../mapview/MapPolyline-class.html">MapPolyline</a>, <a href="../mapview/MapPolygon-class.html">MapPolygon</a>, <a href="../mapview/MapMarker-class.html">MapMarker</a>,
+<a href="../mapview/MapMarkerCluster-class.html">MapMarkerCluster</a>, <a href="../mapview/MapArrow-class.html">MapArrow</a>, <a href="../mapview/MapMarker3D-class.html">MapMarker3D</a> and <a href="../mapview/MapImageOverlay-class.html">MapImageOverlay</a>
+(collectively referred to as "map items"). Those can be added to and removed
+from the scene by respective add and remove methods. The render order of the map items
+is according to the list above. The order of objects within the same type can be controlled using
+the <code>drawOrder</code> property of each object.</p>
+<p>Be careful when adding a very large number of map items as this can have a negative impact on
+the performance of the app.
+To work around this limitation the following approach can be used:
+Register to map camera updates using <a href="../mapview/MapCamera/addListener.html">MapCamera.addListener</a>. Query the bounding box of the
+camera viewport using <a href="../mapview/MapCamera/boundingBox.html">MapCamera.boundingBox</a> (it may be extended) and then use the method
+<a href="../core/GeoBox/containsGeoCoordinates.html">GeoBox.containsGeoCoordinates</a> in combination with <a href="../mapview/MapCameraState/distanceToTargetInMeters.html">MapCameraState.distanceToTargetInMeters</a> to
+determine which map items are actually visible to the user in the current camera viewport and
+thus need to be added to the map.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapScene" class="callable">
+          <span class="name"><a href="../mapview/MapScene/MapScene.html">MapScene</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../mapview/MapScene/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="lights" class="property">
+  <span class="name"><a href="../mapview/MapScene/lights.html">lights</a></span>
+  <span class="signature">&#8594; <a href="../mapview/MapSceneLights-class.html">MapSceneLights</a></span>
+  
+
+</dt>
+<dd>
+  Controls lights present in the scene.
+The behavior of the returned <a href="../mapview/MapSceneLights-class.html">MapSceneLights</a> instance depends on the state of the scene:
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../mapview/MapScene/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="style" class="property">
+  <span class="name"><a href="../mapview/MapScene/style.html">style</a></span>
+  <span class="signature">&#8594; <a href="../mapview/Style-class.html">Style</a></span>
+  
+
+</dt>
+<dd>
+  The style that the map scene uses to customize the visual appearance of rendered features.
+Changes made to the map style using <a href="../mapview/Style/update.html">Style.update</a> are lost when new scene is loaded using
+<a href="../mapview/MapScene/loadSceneForMapScheme.html">MapScene.loadSceneForMapScheme</a> and its variants.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addMapArrow" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapArrow.html">addMapArrow</a></span><span class="signature">(<wbr><span class="parameter" id="addMapArrow-param-mapArrow"><span class="type-annotation"><a href="../mapview/MapArrow-class.html">MapArrow</a></span> <span class="parameter-name">mapArrow</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a map arrow to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapImageOverlay" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapImageOverlay.html">addMapImageOverlay</a></span><span class="signature">(<wbr><span class="parameter" id="addMapImageOverlay-param-overlay"><span class="type-annotation"><a href="../mapview/MapImageOverlay-class.html">MapImageOverlay</a></span> <span class="parameter-name">overlay</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a map image overlay to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapMarker" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarker.html">addMapMarker</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarker-param-marker"><span class="type-annotation"><a href="../mapview/MapMarker-class.html">MapMarker</a></span> <span class="parameter-name">marker</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a map marker to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapMarker3d" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarker3d.html">addMapMarker3d</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarker3d-param-marker"><span class="type-annotation"><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span> <span class="parameter-name">marker</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a 3D map marker to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapMarker3dLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarker3dLayer.html">addMapMarker3dLayer</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarker3dLayer-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="addMapMarker3dLayer-param-layerPriority"><span class="type-annotation"><a href="../mapview/MapLayerPriority-class.html">MapLayerPriority</a>?</span> <span class="parameter-name">layerPriority</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a named 3D marker layer with the specified render priority.
+  
+
+</dd>
+
+        <dt id="addMapMarker3dToLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarker3dToLayer.html">addMapMarker3dToLayer</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarker3dToLayer-param-marker"><span class="type-annotation"><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span> <span class="parameter-name">marker</span>, </span><span class="parameter" id="addMapMarker3dToLayer-param-layerName"><span class="type-annotation">String</span> <span class="parameter-name">layerName</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a 3D map marker to the named layer.
+  
+
+</dd>
+
+        <dt id="addMapMarkerCluster" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarkerCluster.html">addMapMarkerCluster</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarkerCluster-param-cluster"><span class="type-annotation"><a href="../mapview/MapMarkerCluster-class.html">MapMarkerCluster</a></span> <span class="parameter-name">cluster</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a map marker cluster to the map.
+  
+
+</dd>
+
+        <dt id="addMapMarkers" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarkers.html">addMapMarkers</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarkers-param-markers"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMarker-class.html">MapMarker</a></span>&gt;</span></span> <span class="parameter-name">markers</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds multiple map markers to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapMarkers3d" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarkers3d.html">addMapMarkers3d</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarkers3d-param-markers"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span>&gt;</span></span> <span class="parameter-name">markers</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds multiple 3D map markers to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapMarkers3dToLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapMarkers3dToLayer.html">addMapMarkers3dToLayer</a></span><span class="signature">(<wbr><span class="parameter" id="addMapMarkers3dToLayer-param-markers"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span>&gt;</span></span> <span class="parameter-name">markers</span>, </span><span class="parameter" id="addMapMarkers3dToLayer-param-layerName"><span class="type-annotation">String</span> <span class="parameter-name">layerName</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds multiple 3D map markers to the named layer.
+  
+
+</dd>
+
+        <dt id="addMapPolygon" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolygon.html">addMapPolygon</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolygon-param-mapPolygon"><span class="type-annotation"><a href="../mapview/MapPolygon-class.html">MapPolygon</a></span> <span class="parameter-name">mapPolygon</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a map polygon to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapPolygons" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolygons.html">addMapPolygons</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolygons-param-mapPolygons"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapPolygon-class.html">MapPolygon</a></span>&gt;</span></span> <span class="parameter-name">mapPolygons</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds multiple map polygons to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapPolyline" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolyline.html">addMapPolyline</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolyline-param-mapPolyline"><span class="type-annotation"><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span> <span class="parameter-name">mapPolyline</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a map polyline to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapPolylineLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolylineLayer.html">addMapPolylineLayer</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolylineLayer-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="addMapPolylineLayer-param-layerPriority"><span class="type-annotation"><a href="../mapview/MapLayerPriority-class.html">MapLayerPriority</a>?</span> <span class="parameter-name">layerPriority</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates and registers a new polyline layer for this map scene.
+  
+
+</dd>
+
+        <dt id="addMapPolylines" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolylines.html">addMapPolylines</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolylines-param-mapPolylines"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span>&gt;</span></span> <span class="parameter-name">mapPolylines</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds map polylines to this map scene.
+  
+
+</dd>
+
+        <dt id="addMapPolylinesToLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolylinesToLayer.html">addMapPolylinesToLayer</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolylinesToLayer-param-mapPolylines"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span>&gt;</span></span> <span class="parameter-name">mapPolylines</span>, </span><span class="parameter" id="addMapPolylinesToLayer-param-layerName"><span class="type-annotation">String</span> <span class="parameter-name">layerName</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds multiple polylines to the layer identified by a layer name.
+  
+
+</dd>
+
+        <dt id="addMapPolylineToLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/addMapPolylineToLayer.html">addMapPolylineToLayer</a></span><span class="signature">(<wbr><span class="parameter" id="addMapPolylineToLayer-param-mapPolyline"><span class="type-annotation"><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span> <span class="parameter-name">mapPolyline</span>, </span><span class="parameter" id="addMapPolylineToLayer-param-layerName"><span class="type-annotation">String</span> <span class="parameter-name">layerName</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a single polyline to the layer identified by a layer name.
+  
+
+</dd>
+
+        <dt id="disableFeatures" class="callable">
+  <span class="name"><a href="../mapview/MapScene/disableFeatures.html">disableFeatures</a></span><span class="signature">(<wbr><span class="parameter" id="disableFeatures-param-features"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span> <span class="parameter-name">features</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Disables specified map features.
+  
+
+</dd>
+
+        <dt id="enableFeatures" class="callable">
+  <span class="name"><a href="../mapview/MapScene/enableFeatures.html">enableFeatures</a></span><span class="signature">(<wbr><span class="parameter" id="enableFeatures-param-features"><span class="type-annotation">Map<span class="signature">&lt;<wbr><span class="type-parameter">String</span>, <span class="type-parameter">String</span>&gt;</span></span> <span class="parameter-name">features</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Enables specified map features.
+  
+
+</dd>
+
+        <dt id="getActiveFeatures" class="callable">
+  <span class="name"><a href="../mapview/MapScene/getActiveFeatures.html">getActiveFeatures</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; Map<span class="signature">&lt;<wbr><span class="type-parameter">String</span>, <span class="type-parameter">String</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets map features that are currently active.
+  
+
+</dd>
+
+        <dt id="getSupportedFeatures" class="callable">
+  <span class="name"><a href="../mapview/MapScene/getSupportedFeatures.html">getSupportedFeatures</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; Map<span class="signature">&lt;<wbr><span class="type-parameter">String</span>, <span class="type-parameter">List<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets features and all of their modes supported by the currently loaded scene configuration.
+  
+
+</dd>
+
+        <dt id="loadScene" class="callable">
+  <span class="name"><a href="../mapview/MapScene/loadScene.html">loadScene</a></span><span class="signature">(<wbr><span class="parameter" id="loadScene-param-options"><span class="type-annotation"><a href="../mapview/MapSceneLoadOptions-class.html">MapSceneLoadOptions</a></span> <span class="parameter-name">options</span>, </span><span class="parameter" id="loadScene-param-callback"><span class="type-annotation"><a href="../mapview/MapSceneLoadSceneCallback.html">MapSceneLoadSceneCallback</a>?</span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Asynchronously loads a map scene using MapSceneLoadOptions.
+  
+
+</dd>
+
+        <dt id="loadSceneForMapScheme" class="callable">
+  <span class="name"><a href="../mapview/MapScene/loadSceneForMapScheme.html">loadSceneForMapScheme</a></span><span class="signature">(<wbr><span class="parameter" id="loadSceneForMapScheme-param-mapScheme"><span class="type-annotation"><a href="../mapview/MapScheme.html">MapScheme</a></span> <span class="parameter-name">mapScheme</span>, </span><span class="parameter" id="loadSceneForMapScheme-param-callback"><span class="type-annotation"><a href="../mapview/MapSceneLoadSceneCallback.html">MapSceneLoadSceneCallback</a>?</span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Asynchronously loads a map scene described by a specified map scheme.
+  
+
+</dd>
+
+        <dt id="loadSceneFromConfigurationFile" class="callable">
+  <span class="name"><a href="../mapview/MapScene/loadSceneFromConfigurationFile.html">loadSceneFromConfigurationFile</a></span><span class="signature">(<wbr><span class="parameter" id="loadSceneFromConfigurationFile-param-configurationFile"><span class="type-annotation">String</span> <span class="parameter-name">configurationFile</span>, </span><span class="parameter" id="loadSceneFromConfigurationFile-param-callback"><span class="type-annotation"><a href="../mapview/MapSceneLoadSceneCallback.html">MapSceneLoadSceneCallback</a>?</span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Asynchronously loads a map scene described by a specified file in one of the supported
+formats.
+  
+
+</dd>
+
+        <dt id="loadSceneFromConfigurationFileWithWatermarkStyle" class="callable">
+  <span class="name"><a href="../mapview/MapScene/loadSceneFromConfigurationFileWithWatermarkStyle.html">loadSceneFromConfigurationFileWithWatermarkStyle</a></span><span class="signature">(<wbr><span class="parameter" id="loadSceneFromConfigurationFileWithWatermarkStyle-param-configurationFile"><span class="type-annotation">String</span> <span class="parameter-name">configurationFile</span>, </span><span class="parameter" id="loadSceneFromConfigurationFileWithWatermarkStyle-param-watermarkStyle"><span class="type-annotation"><a href="../mapview/WatermarkStyle.html">WatermarkStyle</a></span> <span class="parameter-name">watermarkStyle</span>, </span><span class="parameter" id="loadSceneFromConfigurationFileWithWatermarkStyle-param-callback"><span class="type-annotation"><a href="../mapview/MapSceneLoadSceneCallback.html">MapSceneLoadSceneCallback</a>?</span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Asynchronously loads a map scene described by a specified file in one of the supported
+formats.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../mapview/MapScene/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="reloadScene" class="callable">
+  <span class="name"><a href="../mapview/MapScene/reloadScene.html">reloadScene</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Asynchronously reloads the current map scene from file.
+  
+
+</dd>
+
+        <dt id="removeAllMapItems" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeAllMapItems.html">removeAllMapItems</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all map objects from this map scene.
+  
+
+</dd>
+
+        <dt id="removeAllMapMarkers" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeAllMapMarkers.html">removeAllMapMarkers</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all map markers from this map scene.
+  
+
+</dd>
+
+        <dt id="removeAllMapMarkers3d" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeAllMapMarkers3d.html">removeAllMapMarkers3d</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all 3D map markers from this map scene.
+  
+
+</dd>
+
+        <dt id="removeAllMapPolygons" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeAllMapPolygons.html">removeAllMapPolygons</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all map polygons from this map scene.
+  
+
+</dd>
+
+        <dt id="removeAllMapPolylines" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeAllMapPolylines.html">removeAllMapPolylines</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all map polylines from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapArrow" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapArrow.html">removeMapArrow</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapArrow-param-mapArrow"><span class="type-annotation"><a href="../mapview/MapArrow-class.html">MapArrow</a></span> <span class="parameter-name">mapArrow</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a map arrow from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapImageOverlay" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapImageOverlay.html">removeMapImageOverlay</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapImageOverlay-param-overlay"><span class="type-annotation"><a href="../mapview/MapImageOverlay-class.html">MapImageOverlay</a></span> <span class="parameter-name">overlay</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a map image overlay from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapMarker" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapMarker.html">removeMapMarker</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapMarker-param-marker"><span class="type-annotation"><a href="../mapview/MapMarker-class.html">MapMarker</a></span> <span class="parameter-name">marker</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a map marker from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapMarker3d" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapMarker3d.html">removeMapMarker3d</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapMarker3d-param-marker"><span class="type-annotation"><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span> <span class="parameter-name">marker</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a 3D map marker from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapMarker3dLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapMarker3dLayer.html">removeMapMarker3dLayer</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapMarker3dLayer-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes the 3D marker layer identified by a name from this map scene, including all 3D markers
+contained in it.
+  
+
+</dd>
+
+        <dt id="removeMapMarkerCluster" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapMarkerCluster.html">removeMapMarkerCluster</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapMarkerCluster-param-cluster"><span class="type-annotation"><a href="../mapview/MapMarkerCluster-class.html">MapMarkerCluster</a></span> <span class="parameter-name">cluster</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a map marker cluster from the map.
+  
+
+</dd>
+
+        <dt id="removeMapMarkers" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapMarkers.html">removeMapMarkers</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapMarkers-param-markers"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMarker-class.html">MapMarker</a></span>&gt;</span></span> <span class="parameter-name">markers</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes multiple map markers from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapMarkers3d" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapMarkers3d.html">removeMapMarkers3d</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapMarkers3d-param-markers"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span>&gt;</span></span> <span class="parameter-name">markers</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes multiple 3D map markers from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapPolygon" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapPolygon.html">removeMapPolygon</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapPolygon-param-mapPolygon"><span class="type-annotation"><a href="../mapview/MapPolygon-class.html">MapPolygon</a></span> <span class="parameter-name">mapPolygon</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a map polygon from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapPolygons" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapPolygons.html">removeMapPolygons</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapPolygons-param-mapPolygons"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapPolygon-class.html">MapPolygon</a></span>&gt;</span></span> <span class="parameter-name">mapPolygons</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes multiple map polygon from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapPolyline" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapPolyline.html">removeMapPolyline</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapPolyline-param-mapPolyline"><span class="type-annotation"><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span> <span class="parameter-name">mapPolyline</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a map polyline from this map scene.
+  
+
+</dd>
+
+        <dt id="removeMapPolylineLayer" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapPolylineLayer.html">removeMapPolylineLayer</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapPolylineLayer-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes the polyline layer identified by a name from this map scene, including all polylines
+contained in it.
+  
+
+</dd>
+
+        <dt id="removeMapPolylines" class="callable">
+  <span class="name"><a href="../mapview/MapScene/removeMapPolylines.html">removeMapPolylines</a></span><span class="signature">(<wbr><span class="parameter" id="removeMapPolylines-param-mapPolylines"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span>&gt;</span></span> <span class="parameter-name">mapPolylines</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes map polylines from this map scene.
+  
+
+</dd>
+
+        <dt id="setLayerVisibility" class="callable">
+  <span class="name"><a href="../mapview/MapScene/setLayerVisibility.html">setLayerVisibility</a></span><span class="signature">(<wbr><span class="parameter" id="setLayerVisibility-param-layerName"><span class="type-annotation">String</span> <span class="parameter-name">layerName</span>, </span><span class="parameter" id="setLayerVisibility-param-visibility"><span class="type-annotation"><a href="../mapview/VisibilityState.html">VisibilityState</a></span> <span class="parameter-name">visibility</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Immediately changes the visibility of a specified map layer.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../mapview/MapScene/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../mapview/MapScene/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview</a></li>
+    <li class="self-crumb">MapScene class</li>
+</ol>
+
+
+    <h5>mapview library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Easing.withSampledPoints constructor from Class Easing from the animation library, for the Dart programming language.">
+  <title>Easing.withSampledPoints constructor - Easing - animation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../animation/animation-library.html">animation.dart</a></li>
+    <li><a href="../../animation/Easing-class.html">Easing</a></li>
+    <li class="self-crumb">Easing.withSampledPoints factory constructor</li>
+  </ol>
+  <div class="self-name">Easing.withSampledPoints</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="animation&#47;Easing-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">Easing.withSampledPoints</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">Easing.withSampledPoints</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="withSampledPoints-param-points"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../core/Point2D-class.html">Point2D</a></span>&gt;</span></span> <span class="parameter-name">points</span></span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates an instance of customized <a href="../../animation/Easing-class.html">Easing</a> using a specified number of points describing an
+easing function.</p>
+<ul>
+<li><code>points</code> List of sampled data points that define an easing function.
+X describes normalized time values in the range [0, 1].
+Y describes normalized animated value changes. Values can fall outside of the range [0, 1]. During
+an animation run animated target value is multiplied with Y value. In case resulting animated target value
+falls outside of its own supported range it will be clamped to its range (e.g. when negative values used for
+color animation).
+X values must increase monotonically.
+There must be at least 2 data points specified. The first point's X value must be 0, the last point's
+X value must be 1.
+During an animation run for any given time value X' from the animation engine that
+satisfies the relation X(i) &lt; X' &lt; X(i+1) for the given X data points the corresponding
+Y' value will be calculated by linearly interpolating between Y(i) and Y(i+1) data points.
+The higher the sampling rate of the easing curve used for the data points the more precise the results.
+In order to achieve the same animation precision for animations with different durations
+(shorter vs longer) it is recommended to use a higher sampling rate for longer animation duration.</li>
+</ul>
+<p>Throws <a href="../../animation/EasingInstantiationException-class.html">EasingInstantiationException</a>. Instantiation error in case of invalid input parameters.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory Easing.withSampledPoints(List&lt;Point2D&gt; points) =&gt; $prototype.withSampledPoints(points);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../animation/animation-library.html">animation</a></li>
+    <li><a href="../../animation/Easing-class.html">Easing</a></li>
+    <li class="self-crumb">Easing.withSampledPoints factory constructor</li>
+</ol>
+
+
+    <h5>Easing class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

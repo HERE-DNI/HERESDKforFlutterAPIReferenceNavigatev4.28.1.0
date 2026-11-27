@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the EVChargingTariff class from the search library, for the Dart programming language.">
+  <title>EVChargingTariff class - search library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../search/search-library.html">search.dart</a></li>
+    <li class="self-crumb">EVChargingTariff class</li>
+  </ol>
+  <div class="self-name">EVChargingTariff</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="search&#47;search-library-sidebar.html"
+    data-below-sidebar="search&#47;EVChargingTariff-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">EVChargingTariff</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Tariffs provide detailed pricing information for charging electric vehicles at a specific location.</p>
+<p>Each tariff describes how costs are calculated based on various factors such as energy consumed,
+time spent charging, and session duration.
+Tariffs are typically associated with specific connectors or connector groups, and are only
+included in the response when relevant data is available and requested.</p>
+<p><strong>Note:</strong> This is a <strong>beta</strong> release of this feature and may contain bugs or exhibit unexpected behaviour. Related APIs are subject to change without a deprecation process.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="EVChargingTariff" class="callable">
+          <span class="name"><a href="../search/EVChargingTariff/EVChargingTariff.html">EVChargingTariff</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="currency" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/currency.html">currency</a></span>
+  <span class="signature">&#8596; String</span>
+  
+
+</dt>
+<dd>
+  The currency in which the prices are given, represented by the ISO 4217 standard currency
+code (e.g., EUR, DKK).
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="elements" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/elements.html">elements</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../search/EVChargingTariffElement-class.html">EVChargingTariffElement</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Elements composing the tariff. Each element can have multiple components. When multiple elements
+are present, the associated condition helps the client to select the element that matches the
+charging session. If no condition matches, the element without any condition applies.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="name" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/name.html">name</a></span>
+  <span class="signature">&#8596; String?</span>
+  
+
+</dt>
+<dd>
+  Name of the tariff. The name is not mandatory for ad-hoc tariffs, but may exist.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="partner" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/partner.html">partner</a></span>
+  <span class="signature">&#8596; String</span>
+  
+
+</dt>
+<dd>
+  Name of the partner providing the tariff, either the charge point operator or eMSP.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="partnerID" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/partnerID.html">partnerID</a></span>
+  <span class="signature">&#8596; String</span>
+  
+
+</dt>
+<dd>
+  A unique ID representing the partner.
+The same id is used also in other parts of the API and other related HERE APIs.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../search/EVChargingTariff/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="../search/EVChargingTariff/type.html">type</a></span>
+  <span class="signature">&#8596; <a href="../search/EVChargingTariffType.html">EVChargingTariffType</a></span>
+  
+
+</dt>
+<dd>
+  Indicates the pricing model.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../search/EVChargingTariff/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../search/EVChargingTariff/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../search/EVChargingTariff/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../search/search-library.html">search</a></li>
+    <li class="self-crumb">EVChargingTariff class</li>
+</ol>
+
+
+    <h5>search library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

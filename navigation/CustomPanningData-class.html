@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CustomPanningData class from the navigation library, for the Dart programming language.">
+  <title>CustomPanningData class - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation.dart</a></li>
+    <li class="self-crumb">CustomPanningData class</li>
+  </ol>
+  <div class="self-name">CustomPanningData</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="navigation&#47;navigation-library-sidebar.html"
+    data-below-sidebar="navigation&#47;CustomPanningData-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">CustomPanningData</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>This class contains all the information regarding the next angular panning element, including
+a new estimated audio cue duration, and a new set of initial and sweep angular angle,
+allowing the customization of the spatial audio trajectories for any type of notification,
+such as speed or merge warners, maneuvers or even roundabouts notifications.</p>
+<p>The orientation in space for <a href="../navigation/CustomPanningData/initialAzimuthInDegrees.html">CustomPanningData.initialAzimuthInDegrees</a> and <a href="../navigation/CustomPanningData/sweepAzimuthInDegrees.html">CustomPanningData.sweepAzimuthInDegrees</a> can
+be represented by the following angular values:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Front</th>
+<th align="center">Right</th>
+<th align="center">Rear</th>
+<th align="center">Left</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0°</td>
+<td align="center">+90°</td>
+<td align="center">+- 180</td>
+<td align="center">-90°</td>
+</tr>
+</tbody>
+</table>
+<p>When any of the members of <a href="../navigation/CustomPanningData-class.html">CustomPanningData</a> are initialized as null, the default value
+provided by HERE SDK will be used instead.
+The audio cue is spatialized considering the action of both maneuvers, for example,
+the audio cue 'Now turn right and then turn left' will be spatialized as following:
+'Now turn right' will be heard as coming from the right.
+'and then turn left' will be heard as coming from the left.
+Note: The estimation for playing both audio cues could be not fully accurate and therefore
+a mismatch between the audio source and the audio cue message could be perceived.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CustomPanningData" class="callable">
+          <span class="name"><a href="../navigation/CustomPanningData/CustomPanningData.html">CustomPanningData</a></span><span class="signature">(<span class="parameter" id="-param-estimatedAudioCueDuration"><span class="type-annotation">Duration?</span> <span class="parameter-name">estimatedAudioCueDuration</span>, </span><span class="parameter" id="-param-initialAzimuthInDegrees"><span class="type-annotation">double?</span> <span class="parameter-name">initialAzimuthInDegrees</span>, </span><span class="parameter" id="-param-sweepAzimuthInDegrees"><span class="type-annotation">double?</span> <span class="parameter-name">sweepAzimuthInDegrees</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="estimatedAudioCueDuration" class="property">
+  <span class="name"><a href="../navigation/CustomPanningData/estimatedAudioCueDuration.html">estimatedAudioCueDuration</a></span>
+  <span class="signature">&#8596; Duration?</span>
+  
+
+</dt>
+<dd>
+  Customized estimated duration for playing the audio cue on the selected TTS Engine.
+When not used, HERE SDK's estimation will be used instead.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../navigation/CustomPanningData/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="initialAzimuthInDegrees" class="property">
+  <span class="name"><a href="../navigation/CustomPanningData/initialAzimuthInDegrees.html">initialAzimuthInDegrees</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Initial desired angular position of the upcoming audio cue. For example, for a maneuver such
+as "Turn right on" (<code>ManeuverAction.RightTurn</code>) we want to create a spatial audio arc
+from the front to the right, mimicking the maneuver geometry. In this case,
+it is good practice to start the trajectory from an initial azimuth that is slightly located
+on the opposite direction of the maneuver (e.g. slightly starting from "front-left")
+and terminate the trajectory fully on the right side. The initial azimuth angle of such
+a trajectory would be, for example, -5.0 (slightly front-left).
+This azimuth value is needed to set the position of the audio renderer before starting
+to play the audio cue to avoid unwanted audio "jumps".
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../navigation/CustomPanningData/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sweepAzimuthInDegrees" class="property">
+  <span class="name"><a href="../navigation/CustomPanningData/sweepAzimuthInDegrees.html">sweepAzimuthInDegrees</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Sweep angle of the upcoming audio cue. For example, for a maneuver such as "Turn right on"
+(i.e. <code>ManeuverAction.RightTurn</code>),
+within an <code>initial_azimuth_in_degrees</code> of -5 degrees, we want to create a spatial audio arc
+trajectory from the front to the right, mimicking the maneuver geometry.
+In this case, the desired final angle would be +90 degrees, and therefore, a sweep angle of
++95 degrees would be required.
+On the other hand, when the desired spatialization is to the left side
+(i.e. <code>ManeuverAction.LeftTurn</code>), the <code>initial_azimuth_in_degrees</code> could be set to +5 degrees
+and the <code>sweep_azimuth_in_degrees</code> to -95 degrees
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../navigation/CustomPanningData/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../navigation/CustomPanningData/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../navigation/CustomPanningData/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation</a></li>
+    <li class="self-crumb">CustomPanningData class</li>
+</ol>
+
+
+    <h5>navigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

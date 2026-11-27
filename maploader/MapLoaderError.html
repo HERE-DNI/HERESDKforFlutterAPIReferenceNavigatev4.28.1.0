@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapLoaderError enum from the maploader library, for the Dart programming language.">
+  <title>MapLoaderError enum - maploader library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../maploader/maploader-library.html">maploader.dart</a></li>
+    <li class="self-crumb">MapLoaderError enum</li>
+  </ol>
+  <div class="self-name">MapLoaderError</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="maploader&#47;maploader-library-sidebar.html"
+    data-below-sidebar="maploader&#47;MapLoaderError-enum-sidebar.html">
+    <div>
+
+      <h1>
+        <span class="kind-enum">MapLoaderError</span>
+        enum 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>Specifies possible errors that may result from map downloading/prefetching.</p>
+</section>
+
+
+
+      <section class="summary offset-anchor" id="values">
+        <h2>Values</h2>
+
+        <dl class="properties">
+            <dt id="resourceNotFound" class="constant">
+    <span class="name ">resourceNotFound</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The requested resource is not found.</p>
+  
+
+</dd>
+
+            <dt id="notReady" class="constant">
+    <span class="name ">notReady</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>There's a problem with an ongoing download or update: If an operation is in a paused state,
+you can resume or cancel it. If no operation is in a paused state: Either wait for active
+downloads to finish, or cancel existing <code>sdk.maploader.MapDownloader</code> requests and
+call <code>sdk.maploader.MapDownloader.get_initial_persistent_map_status</code>. If there is a
+problem, call <code>sdk.maploader.MapDownloader.repair_persistent_map</code> to repair before
+continuing with other <code>sdk.maploader.MapDownloader</code> operations.
+This error may occur when an on-going or paused operation prevents the requested task.</p>
+  
+
+</dd>
+
+            <dt id="invalidArgument" class="constant">
+    <span class="name ">invalidArgument</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The request passed invalid arguments.</p>
+  
+
+</dd>
+
+            <dt id="operationCancelled" class="constant">
+    <span class="name ">operationCancelled</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The request was cancelled (usually by the user).</p>
+  
+
+</dd>
+
+            <dt id="alreadyInstalled" class="constant">
+    <span class="name ">alreadyInstalled</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>All tiles of requested regions were already installed, no need for any download.</p>
+  
+
+</dd>
+
+            <dt id="timeOut" class="constant">
+    <span class="name ">timeOut</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The request exceeded the timeout limit.</p>
+  
+
+</dd>
+
+            <dt id="serviceUnavailable" class="constant">
+    <span class="name ">serviceUnavailable</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The requested service is unavailable.</p>
+  
+
+</dd>
+
+            <dt id="accessDenied" class="constant">
+    <span class="name ">accessDenied</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The access is denied due to invalid credentials.</p>
+  
+
+</dd>
+
+            <dt id="requestLimitReached" class="constant">
+    <span class="name ">requestLimitReached</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Request limit reached for set a credentials for a particular period of time.</p>
+  
+
+</dd>
+
+            <dt id="networkConnectionError" class="constant">
+    <span class="name ">networkConnectionError</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>A network connection error has happened.</p>
+  
+
+</dd>
+
+            <dt id="forbidden" class="constant">
+    <span class="name ">forbidden</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The operation is forbidden, make sure your credentials grant the necessary permissions.</p>
+  
+
+</dd>
+
+            <dt id="mapDataError" class="constant">
+    <span class="name ">mapDataError</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Downloaded map data is invalid or a <code>sdk.maploader.RegionId</code> passed to the method
+<code>sdk.maploader.MapDownloader.delete_regions</code> is incorrect.</p>
+  
+
+</dd>
+
+            <dt id="unexpectedServerResponse" class="constant">
+    <span class="name ">unexpectedServerResponse</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Received unexpected response from the backend. It means the response is malformed or
+server returned an internal error. Try repeating the request.</p>
+  
+
+</dd>
+
+            <dt id="mapManagerError" class="constant">
+    <span class="name ">mapManagerError</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Error occurred inside the map manager and might be related to network issues. Try
+repeating the request.</p>
+  
+
+</dd>
+
+            <dt id="incompleteData" class="constant">
+    <span class="name ">incompleteData</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The data to process is incomplete, failed decoding the tile.</p>
+  
+
+</dd>
+
+            <dt id="serviceAccessFailed" class="constant">
+    <span class="name ">serviceAccessFailed</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The conditions to access the service are not satisfied. Check if correct
+<code>sdk.maploader.RegionId</code> was passed to <code>sdk.maploader.MapDownloader.download_regions</code> or
+download for passed <code>sdk.maploader.RegionId</code> already started. Further control for
+started download must be performed through <code>sdk.maploader.MapDownloaderTask</code>.</p>
+  
+
+</dd>
+
+            <dt id="internalError" class="constant">
+    <span class="name ">internalError</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Internal error occurred.</p>
+  
+
+</dd>
+
+            <dt id="offline" class="constant">
+    <span class="name ">offline</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Online operation is not permitted because offline mode is enabled.</p>
+  
+
+</dd>
+
+            <dt id="cacheIoError" class="constant">
+    <span class="name ">cacheIoError</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>A cache IO error occurred.</p>
+  
+
+</dd>
+
+            <dt id="protectedCacheCorrupted" class="constant">
+    <span class="name ">protectedCacheCorrupted</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Protected cache is corrupted. It can be a result of downloading the map in the background
+and the OS killing the application at that time. Use method
+<code>sdk.maploader.MapDownloader.get_initial_persistent_map_status</code> to get the status of the
+map and method repair_persistent_map in the MapDownloader to try to fix the cache if it is
+broken.</p>
+  
+
+</dd>
+
+            <dt id="migrationRequired" class="constant">
+    <span class="name ">migrationRequired</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Operation on the protected cache cannot be done due to required migration.
+Call <code>sdk.maploader.MapDownloader.repair_persistent_map</code> to perform migration.</p>
+  
+
+</dd>
+
+            <dt id="operationAfterDispose" class="constant">
+    <span class="name ">operationAfterDispose</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Method is invoked on object connected to the disposed SDKNativeEngine.</p>
+  
+
+</dd>
+
+            <dt id="catalogConfigurationError" class="constant">
+    <span class="name ">catalogConfigurationError</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Misconfiguration of catalogs.
+This error may occur when <code>sdk.core.engine.CatalogConfiguration</code> is misconfigured and
+cannot be used for any operation with <code>MapDownloader</code> or <code>MapUpdater</code>.
+Verify <a href="../core.engine/SDKOptions/catalogConfigurations.html">SDKOptions.catalogConfigurations</a>.</p>
+  
+
+</dd>
+
+            <dt id="pendingUpdate" class="constant">
+    <span class="name ">pendingUpdate</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Map regions update was interrupted. Indicates that the cache state is wrong after an
+update that was finished not in correct way (e.g sudden app shutdown).
+Prefetching or removing of map regions are blocked until
+the update has been completed successfully.</p>
+  
+
+</dd>
+
+            <dt id="updateBlockedAsAnotherPending" class="constant">
+    <span class="name ">updateBlockedAsAnotherPending</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Catalog update cannot proceed as another catalog update is in PENDING_UPDATE state.
+Update the catalog in PENDING_UPDATE state first, before trying to update another catalog.</p>
+  
+
+</dd>
+
+            <dt id="brokenUpdate" class="constant">
+    <span class="name ">brokenUpdate</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Unrecoverable error during construction of pending update parameters.
+Operations such as catalog updates or region downloads will fail.
+The healing procedure is to clean persistent map with <code>sdk.maploader.MapDownloader.clear_persistent_map_storage</code>.</p>
+  
+
+</dd>
+
+            <dt id="parallelRequest" class="constant">
+    <span class="name ">parallelRequest</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Parallel request is already running and conflicting with the current one (e.g updating map and deleting map regions)</p>
+  
+
+</dd>
+
+            <dt id="proxyAuthenticationFailed" class="constant">
+    <span class="name ">proxyAuthenticationFailed</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Proxy is not authenticated. Check your proxy credentials.</p>
+  
+
+</dd>
+
+            <dt id="proxyServerUnreachable" class="constant">
+    <span class="name ">proxyServerUnreachable</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Proxy server unreachable.</p>
+  
+
+</dd>
+
+            <dt id="notEnoughSpace" class="constant">
+    <span class="name ">notEnoughSpace</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>There's no sufficient space on the disk to finish operation.
+For offline maps operation (download or update), it means that
+there's not enough space on the device.
+For prefetch operations, it means that there's not enough space
+in the mutable cache to store the prefetched data.</p>
+  
+
+</dd>
+
+            <dt id="onlineNavigateOnly" class="constant">
+    <span class="name ">onlineNavigateOnly</span>
+  <span class="signature">&#8594; const <a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>
+  
+
+</dt>
+<dd>
+  <p>This version of HERE SDK does not support the ability to download maps.
+Contact the sales team to get access to the full version.</p>
+  
+
+</dd>
+
+        </dl>
+      </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../maploader/MapLoaderError/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="index" class="property inherited">
+  <span class="name"><a href="../maploader/MapLoaderError/index.html">index</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  A numeric identifier for the enumerated value.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../maploader/MapLoaderError/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../maploader/MapLoaderError/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../maploader/MapLoaderError/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../maploader/MapLoaderError/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="values" class="constant">
+    <span class="name "><a href="../maploader/MapLoaderError/values-constant.html">values</a></span>
+  <span class="signature">&#8594; const List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../maploader/MapLoaderError.html">MapLoaderError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A constant List of the values in this enum, in order of their declaration.
+  
+
+</dd>
+
+    </dl>
+  </section>
+</div><!-- /.main-content -->
+
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../maploader/maploader-library.html">maploader</a></li>
+    <li class="self-crumb">MapLoaderError enum</li>
+</ol>
+
+
+  <h5>maploader library</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div>
+
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!-- /.sidebar-offcanvas -->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

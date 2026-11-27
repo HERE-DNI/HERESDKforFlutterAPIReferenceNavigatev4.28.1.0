@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the configureVehicleRestrictionFilterWithTransportSpecification method from the MapContentSettings class, for the Dart programming language.">
+  <title>configureVehicleRestrictionFilterWithTransportSpecification method - MapContentSettings class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview.dart</a></li>
+    <li><a href="../../mapview/MapContentSettings-class.html">MapContentSettings</a></li>
+    <li class="self-crumb">configureVehicleRestrictionFilterWithTransportSpecification static method</li>
+  </ol>
+  <div class="self-name">configureVehicleRestrictionFilterWithTransportSpecification</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;MapContentSettings-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">configureVehicleRestrictionFilterWithTransportSpecification</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">void</span>
+<span class="name ">configureVehicleRestrictionFilterWithTransportSpecification</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="configureVehicleRestrictionFilterWithTransportSpecification-param-transportSpecs"><span class="type-annotation"><a href="../../transport/TransportSpecification-class.html">TransportSpecification</a></span> <span class="parameter-name">transportSpecs</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Configures a filter for <a href="../../mapview/MapFeatures/vehicleRestrictions.html">MapFeatures.vehicleRestrictions</a> to show only the restrictions
+matching the transport specifications when the feature is enabled.</p>
+<p>This method provides a unified way to configure vehicle restriction filters using
+a single <a href="../../transport/TransportSpecification-class.html">TransportSpecification</a> parameter. This allows you to use the same
+transport configuration for both routing and map rendering, ensuring consistency between
+route calculation and the restrictions displayed on the map.</p>
+<p>The method extracts the transport mode, vehicle specifications, hazardous materials, and
+tunnel category from the <code>MapContentSettings.configureVehicleRestrictionFilterWithTransportSpecification.transportSpecs</code> parameter and applies filtering according to
+the same rules described below.</p>
+<h1 id="filtering-rules-for-transport-mode">Filtering rules for transport mode</h1>
+<p>The transport mode is used to distinguish between truck and other transport modes.
+This distinction ensures consistency between the routing logic and the information
+displayed on the map. At present, this is primarily used to suppress the generic
+truck restriction icon for non-truck modes.</p>
+<p>Currently, only vehicle-related restrictions are supported. For pedestrian, scooter,
+or taxi transport modes, the transport mode information is used, but no additional
+vehicle-specific restrictions are applied.</p>
+<h1 id="filtering-rules-for-vehicle-specifications">Filtering rules for vehicle specifications</h1>
+<p>Only restrictions applicable to the vehicle specifications will be shown.
+The vehicle specifications include dimensions (height, width, length), weights
+(gross weight, weight per axle), and trailer count.</p>
+<p>Examples:</p>
+<ul>
+<li>If the height in vehicle specifications is set to 200 cm, then height restrictions
+with a height greater than 200 cm will not be displayed.</li>
+<li>If the trailer count in vehicle specifications is set to 2, then trailer
+restrictions for a count greater than 2 will not be displayed.</li>
+</ul>
+<h1 id="filtering-rules-for-hazardous-materials">Filtering rules for hazardous materials</h1>
+<p>Only restrictions applicable to specified hazardous materials will be shown.
+Hazardous materials are specified within the <a href="../../transport/VehicleSpecification-class.html">VehicleSpecification</a>
+contained in the <code>MapContentSettings.configureVehicleRestrictionFilterWithTransportSpecification.transportSpecs</code> parameter.</p>
+<p>If at least one hazardous material of any type is present in the list, all available
+tunnel category restrictions will be displayed. In order to filter-out non-applicable
+tunnel categories, a tunnel category that applies to the vehicle can be specified
+additionally.</p>
+<p>Examples:</p>
+<ul>
+<li>If the hazardous materials list contains <a href="../../transport/HazardousMaterial.html">HazardousMaterial.poison</a>
+and <a href="../../transport/HazardousMaterial.html">HazardousMaterial.gas</a>, then only material restrictions
+for poison and gas will be displayed.</li>
+<li>If the hazardous materials list is empty, then no material restrictions
+will be shown.</li>
+<li>If the hazardous materials list is not supplied at all (is <code>null</code>), then
+no material restrictions will be shown.</li>
+<li>If the hazardous materials list contains at least one hazardous material of any
+type and tunnel category is <code>null</code>, then only corresponding material
+restrictions will be displayed together with all available tunnel categories.</li>
+</ul>
+<h1 id="filtering-rules-for-tunnel-category">Filtering rules for tunnel category</h1>
+<p>Tunnel categories are labeled and rated based on the level of restriction they provide.
+The lowest level of restriction is <a href="../../transport/TunnelCategory.html">TunnelCategory.b</a>, the highest and most
+restrictive one is <a href="../../transport/TunnelCategory.html">TunnelCategory.e</a>.</p>
+<p>The tunnel category is specified within the <a href="../../transport/VehicleSpecification-class.html">VehicleSpecification</a>
+contained in the <code>MapContentSettings.configureVehicleRestrictionFilterWithTransportSpecification.transportSpecs</code> parameter.</p>
+<p>Specifying tunnel category means that:</p>
+<ul>
+<li>The vehicle carries goods which could cause only the additional dangerous effects
+described in specified tunnel category and other categories below it with lower level
+of restriction.</li>
+<li>The vehicle does not carry goods that could cause the dangerous effects described in
+tunnel categories above with higher restriction levels than the one specified.</li>
+</ul>
+<p>Tunnel categories are closely related to hazardous materials.</p>
+<p>Since the type of hazardous material alone does not define the exact level of danger,
+to ensure comprehensive coverage; the HERE SDK follows:</p>
+<ul>
+<li>If at least one hazardous material is specified but no tunnel category is provided,
+the SDK enables and displays <strong>all tunnel category restrictions</strong> to ensure that no relevant
+restrictions are omitted.</li>
+<li>If both hazardous materials and a tunnel category are specified, the SDK
+<strong>strictly follows the given tunnel category parameter</strong> and displays only the
+applicable restrictions.</li>
+</ul>
+<p>Example:
+If tunnel category is set to <a href="../../transport/TunnelCategory.html">TunnelCategory.d</a>, then restrictions for
+tunnel category <a href="../../transport/TunnelCategory.html">TunnelCategory.e</a> and <a href="../../transport/TunnelCategory.html">TunnelCategory.d</a>
+will be displayed, but not the categories <a href="../../transport/TunnelCategory.html">TunnelCategory.b</a> and
+<a href="../../transport/TunnelCategory.html">TunnelCategory.c</a>.</p>
+<ul>
+<li><code>transportSpecs</code> The transport specification containing the transport mode and vehicle specifications.
+For vehicle modes (car, truck, bus), the <a href="../../transport/VehicleSpecification-class.html">VehicleSpecification</a> within
+this parameter provides dimensions, weights, hazardous materials, and tunnel category
+information used for filtering. The same <a href="../../transport/TransportSpecification-class.html">TransportSpecification</a> object
+can be used for both routing configuration and map rendering to ensure consistency.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static void configureVehicleRestrictionFilterWithTransportSpecification(TransportSpecification transportSpecs) =&gt; $prototype.configureVehicleRestrictionFilterWithTransportSpecification(transportSpecs);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview</a></li>
+    <li><a href="../../mapview/MapContentSettings-class.html">MapContentSettings</a></li>
+    <li class="self-crumb">configureVehicleRestrictionFilterWithTransportSpecification static method</li>
+</ol>
+
+
+    <h5>MapContentSettings class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

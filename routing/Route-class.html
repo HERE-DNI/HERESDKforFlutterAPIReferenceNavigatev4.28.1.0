@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Route class from the routing library, for the Dart programming language.">
+  <title>Route class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing.dart</a></li>
+    <li class="self-crumb">Route class</li>
+  </ol>
+  <div class="self-name">Route</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;routing-library-sidebar.html"
+    data-below-sidebar="routing&#47;Route-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Route</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A route is a path through a road network over which someone travels.</p>
+<p><strong>Note:</strong> Each <a href="../routing/Section-class.html">Section</a> of a route contains a list of <a href="../routing/SectionNotice-class.html">SectionNotice</a> objects
+that describe <em>potential issues</em> after the route was calculated. If the list is non-empty,
+it is recommended to evaluate possible violations against the requested route options and
+reject the route if deemed necessary.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Route" class="callable">
+          <span class="name"><a href="../routing/Route/Route.html">Route</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="boundingBox" class="property">
+  <span class="name"><a href="../routing/Route/boundingBox.html">boundingBox</a></span>
+  <span class="signature">&#8594; <a href="../core/GeoBox-class.html">GeoBox</a></span>
+  
+
+</dt>
+<dd>
+  The closest rectangular area where this route fits in.
+Gets the closest rectangular area where this route fits in.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="consumptionInKilowattHours" class="property">
+  <span class="name"><a href="../routing/Route/consumptionInKilowattHours.html">consumptionInKilowattHours</a></span>
+  <span class="signature">&#8594; double?</span>
+  
+
+</dt>
+<dd>
+  Estimated net energy consumption (in kWh) if the transportation mode used for this route
+is an electric vehicle. Note that it can be negative due to energy recuperation.
+Gets estimated net energy consumption (in kWh) if the transportation mode used for this route
+is an electric vehicle. Note that it can be negative due to energy recuperation.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="duration" class="property">
+  <span class="name"><a href="../routing/Route/duration.html">duration</a></span>
+  <span class="signature">&#8594; Duration</span>
+  
+
+</dt>
+<dd>
+  The estimated time in seconds needed to travel along this route, including
+real-time traffic delays if available.
+Gets the estimated time in seconds needed to travel along this route, including
+real-time traffic delays if available.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="geometry" class="property">
+  <span class="name"><a href="../routing/Route/geometry.html">geometry</a></span>
+  <span class="signature">&#8594; <a href="../core/GeoPolyline-class.html">GeoPolyline</a></span>
+  
+
+</dt>
+<dd>
+  The <a href="../core/GeoPolyline-class.html">GeoPolyline</a> object representing the polyline of this route. It may not contain the original
+coordinates specified in the request for a route.
+Gets the <a href="../core/GeoPolyline-class.html">GeoPolyline</a> object representing the polyline of this route. It may not contain the original
+coordinates specified in the request for a route.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../routing/Route/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="language" class="property">
+  <span class="name"><a href="../routing/Route/language.html">language</a></span>
+  <span class="signature">&#8594; <a href="../core/LanguageCode.html">LanguageCode</a></span>
+  
+
+</dt>
+<dd>
+  Indicates the language requested for all textual information related to this route.
+Gets the language requested for all textual information related to this route.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="lengthInMeters" class="property">
+  <span class="name"><a href="../routing/Route/lengthInMeters.html">lengthInMeters</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The length of this route in meters.
+Gets the length of this route in meters.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="optimizationMode" class="property">
+  <span class="name"><a href="../routing/Route/optimizationMode.html">optimizationMode</a></span>
+  <span class="signature">&#8594; <a href="../routing/OptimizationMode.html">OptimizationMode</a></span>
+  
+
+</dt>
+<dd>
+  The optimization mode requested for route calculation.
+Gets the optimization mode requested for route calculation.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="railwayCrossings" class="property">
+  <span class="name"><a href="../routing/Route/railwayCrossings.html">railwayCrossings</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/RouteRailwayCrossing-class.html">RouteRailwayCrossing</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Collection of railway crossings along the route.
+Railway crossing information for routes created with the <code>RoutingEngine</code> (online) or the <code>OfflineRoutingEngine</code>.
+Gets the railway crossings along the route.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="requestedTransportMode" class="property">
+  <span class="name"><a href="../routing/Route/requestedTransportMode.html">requestedTransportMode</a></span>
+  <span class="signature">&#8594; <a href="../transport/TransportMode.html">TransportMode</a></span>
+  
+
+</dt>
+<dd>
+  The transport mode requested for route calculation.
+Gets the transport mode requested for route calculation.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="routeHandle" class="property">
+  <span class="name"><a href="../routing/Route/routeHandle.html">routeHandle</a></span>
+  <span class="signature">&#8594; <a href="../routing/RouteHandle-class.html">RouteHandle</a>?</span>
+  
+
+</dt>
+<dd>
+  The route handle of this route. Note that it is provided only if
+<a href="../routing/RouteOptions/enableRouteHandle.html">RouteOptions.enableRouteHandle</a> is set before route calculation.
+Gets the route handle of this route. Note that it is provided only if
+<a href="../routing/RouteOptions/enableRouteHandle.html">RouteOptions.enableRouteHandle</a> is set before route calculation.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="routeLabels" class="property">
+  <span class="name"><a href="../routing/Route/routeLabels.html">routeLabels</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/RouteLabel-class.html">RouteLabel</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A collection containing a maximum of 2 <code>RouteLabel</code> instances for the route. It will return an empty list if no labels are available.
+The main street names or route numbers through which the route is going to pass that differentiate it from other alternatives routes.
+The labels are ordered by importance based on how much time the route spends on each road segment, not by traversal sequence. This helps users quickly identify and distinguish between different route alternatives
+when alternative routes have been quested via <code>RouteOptions</code>.
+Gets route labels.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="routeTag" class="property">
+  <span class="name"><a href="../routing/Route/routeTag.html">routeTag</a></span>
+  <span class="signature">&#8594; <a href="../routing/RouteTag-class.html">RouteTag</a></span>
+  
+
+</dt>
+<dd>
+  The unique identifier of this route.
+Gets the unique identifier of this route.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="routingOptions" class="property">
+  <span class="name"><a href="../routing/Route/routingOptions.html">routingOptions</a></span>
+  <span class="signature">&#8594; <a href="../routing/RoutingOptions-class.html">RoutingOptions</a>?</span>
+  
+
+</dt>
+<dd>
+  The set of options used to calculate the route.
+Gets the options used to calculate this route.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../routing/Route/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sections" class="property">
+  <span class="name"><a href="../routing/Route/sections.html">sections</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/Section-class.html">Section</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The sections that make up this route.
+Gets the sections that make up this route.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="trafficDelay" class="property">
+  <span class="name"><a href="../routing/Route/trafficDelay.html">trafficDelay</a></span>
+  <span class="signature">&#8594; Duration</span>
+  
+
+</dt>
+<dd>
+  The estimated time in seconds spent in traffic along this route. Negative values
+indicate that the route can be traversed faster than usual.
+Gets the estimated time in seconds spent in traffic along this route. Negative values
+indicate that the route can be traversed faster than usual.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../routing/Route/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../routing/Route/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../routing/Route/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="deserialize" class="callable">
+  <span class="name"><a href="../routing/Route/deserialize.html">deserialize</a></span><span class="signature">(<wbr><span class="parameter" id="deserialize-param-routeData"><span class="type-annotation">Uint8List</span> <span class="parameter-name">routeData</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../routing/Route-class.html">Route</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates route from the given binary data.
+  
+
+</dd>
+
+        <dt id="serialize" class="callable">
+  <span class="name"><a href="../routing/Route/serialize.html">serialize</a></span><span class="signature">(<wbr><span class="parameter" id="serialize-param-route"><span class="type-annotation"><a href="../routing/Route-class.html">Route</a></span> <span class="parameter-name">route</span></span>)
+    <span class="returntype parameter">&#8594; Uint8List?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Serializes given route to a binary data.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing</a></li>
+    <li class="self-crumb">Route class</li>
+</ol>
+
+
+    <h5>routing library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

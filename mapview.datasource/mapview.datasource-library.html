@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="mapview.datasource library API docs, for the Dart programming language.">
+  <title>mapview.datasource library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li class="self-crumb">mapview.datasource.dart</li>
+  </ol>
+  <div class="self-name">mapview.datasource</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="mapview.datasource&#47;mapview.datasource-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">mapview.datasource</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+          <dt id="DataAttributes">
+  <span class="name "><a href="../mapview.datasource/DataAttributes-class.html">DataAttributes</a></span> 
+
+</dt>
+<dd>
+  Data attributes collection.
+</dd>
+
+          <dt id="DataAttributesAccessor">
+  <span class="name "><a href="../mapview.datasource/DataAttributesAccessor-class.html">DataAttributesAccessor</a></span> 
+
+</dt>
+<dd>
+  Accessor used for manipulating data attributes.
+</dd>
+
+          <dt id="DataAttributesBase">
+  <span class="name "><a href="../mapview.datasource/DataAttributesBase-class.html">DataAttributesBase</a></span> 
+
+</dt>
+<dd>
+  Interface for a collection of data attributes.
+</dd>
+
+          <dt id="DataAttributesBuilder">
+  <span class="name "><a href="../mapview.datasource/DataAttributesBuilder-class.html">DataAttributesBuilder</a></span> 
+
+</dt>
+<dd>
+  Data attributes collection builder.
+</dd>
+
+          <dt id="DataAttributeValue">
+  <span class="name "><a href="../mapview.datasource/DataAttributeValue-class.html">DataAttributeValue</a></span> 
+
+</dt>
+<dd>
+  Encapsulates a data attribute value.
+</dd>
+
+          <dt id="LineData">
+  <span class="name "><a href="../mapview.datasource/LineData-class.html">LineData</a></span> 
+
+</dt>
+<dd>
+  Represents a geodetic line with custom attributes.
+</dd>
+
+          <dt id="LineDataAccessor">
+  <span class="name "><a href="../mapview.datasource/LineDataAccessor-class.html">LineDataAccessor</a></span> 
+
+</dt>
+<dd>
+  Line data accessor used for manipulating polylines that are part of a LineDataSource.
+</dd>
+
+          <dt id="LineDataBuilder">
+  <span class="name "><a href="../mapview.datasource/LineDataBuilder-class.html">LineDataBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder of <a href="../mapview.datasource/LineData-class.html">LineData</a> instances.
+</dd>
+
+          <dt id="LineDataSource">
+  <span class="name "><a href="../mapview.datasource/LineDataSource-class.html">LineDataSource</a></span> 
+
+</dt>
+<dd>
+  Polyline data source allows the rendering engine access to the user provided
+polylines geometry and their attributes.
+</dd>
+
+          <dt id="LineDataSourceBuilder">
+  <span class="name "><a href="../mapview.datasource/LineDataSourceBuilder-class.html">LineDataSourceBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder of lines data source.
+</dd>
+
+          <dt id="LineTileDataSource">
+  <span class="name "><a href="../mapview.datasource/LineTileDataSource-class.html">LineTileDataSource</a></span> 
+
+</dt>
+<dd>
+  Line tile data source allows the rendering engine access to user managed data sets of
+geodetic lines and their attributes through a <a href="../mapview.datasource/LineTileSource-class.html">LineTileSource</a>.
+</dd>
+
+          <dt id="LineTileSource">
+  <span class="name "><a href="../mapview.datasource/LineTileSource-class.html">LineTileSource</a></span> 
+
+</dt>
+<dd>
+  A source of geodetic line tiles.
+</dd>
+
+          <dt id="LineTileSourceLoadResultHandler">
+  <span class="name "><a href="../mapview.datasource/LineTileSourceLoadResultHandler-class.html">LineTileSourceLoadResultHandler</a></span> 
+
+</dt>
+<dd>
+  Result handler of a load tile request.
+</dd>
+
+          <dt id="MapOcmTileDataSourceFactory">
+  <span class="name "><a href="../mapview.datasource/MapOcmTileDataSourceFactory-class.html">MapOcmTileDataSourceFactory</a></span> 
+
+</dt>
+<dd>
+  Factory for creation of <a href="../mapview.datasource/MapTileDataSource-class.html">MapTileDataSource</a> instances backed by OCM data.
+</dd>
+
+          <dt id="MapTileDataSource">
+  <span class="name "><a href="../mapview.datasource/MapTileDataSource-class.html">MapTileDataSource</a></span> 
+
+</dt>
+<dd>
+  A tile data source that exposes geometry data for map features.
+</dd>
+
+          <dt id="MapTileGeometryData">
+  <span class="name "><a href="../mapview.datasource/MapTileGeometryData-class.html">MapTileGeometryData</a></span> 
+
+</dt>
+<dd>
+  Holds map tile geometry data.
+</dd>
+
+          <dt id="PointData">
+  <span class="name "><a href="../mapview.datasource/PointData-class.html">PointData</a></span> 
+
+</dt>
+<dd>
+  Represents a geodetic point with custom attributes.
+</dd>
+
+          <dt id="PointDataAccessor">
+  <span class="name "><a href="../mapview.datasource/PointDataAccessor-class.html">PointDataAccessor</a></span> 
+
+</dt>
+<dd>
+  Point data accessor used for manipulating points that are part of a PointDataSource.
+</dd>
+
+          <dt id="PointDataBuilder">
+  <span class="name "><a href="../mapview.datasource/PointDataBuilder-class.html">PointDataBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder of <a href="../mapview.datasource/PointData-class.html">PointData</a> instances.
+</dd>
+
+          <dt id="PointDataSource">
+  <span class="name "><a href="../mapview.datasource/PointDataSource-class.html">PointDataSource</a></span> 
+
+</dt>
+<dd>
+  Point data source allows the rendering engine access to the user provided
+geographical locations and their attributes.
+</dd>
+
+          <dt id="PointDataSourceBuilder">
+  <span class="name "><a href="../mapview.datasource/PointDataSourceBuilder-class.html">PointDataSourceBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder of points data source.
+</dd>
+
+          <dt id="PointTileDataSource">
+  <span class="name "><a href="../mapview.datasource/PointTileDataSource-class.html">PointTileDataSource</a></span> 
+
+</dt>
+<dd>
+  Point tile data source allows the rendering engine access to user managed data sets of
+geographical locations and their attributes through a <a href="../mapview.datasource/PointTileSource-class.html">PointTileSource</a>.
+</dd>
+
+          <dt id="PointTileSource">
+  <span class="name "><a href="../mapview.datasource/PointTileSource-class.html">PointTileSource</a></span> 
+
+</dt>
+<dd>
+  A source of geodetic point tiles.
+</dd>
+
+          <dt id="PointTileSourceLoadResultHandler">
+  <span class="name "><a href="../mapview.datasource/PointTileSourceLoadResultHandler-class.html">PointTileSourceLoadResultHandler</a></span> 
+
+</dt>
+<dd>
+  Result handler of a load tile request.
+</dd>
+
+          <dt id="PolygonData">
+  <span class="name "><a href="../mapview.datasource/PolygonData-class.html">PolygonData</a></span> 
+
+</dt>
+<dd>
+  Represents a geodetic polygon with custom attributes.
+</dd>
+
+          <dt id="PolygonDataAccessor">
+  <span class="name "><a href="../mapview.datasource/PolygonDataAccessor-class.html">PolygonDataAccessor</a></span> 
+
+</dt>
+<dd>
+  Polygon data accessor used for manipulating polygons that are part of a PolygonDataSource.
+</dd>
+
+          <dt id="PolygonDataBuilder">
+  <span class="name "><a href="../mapview.datasource/PolygonDataBuilder-class.html">PolygonDataBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder of <a href="../mapview.datasource/PolygonData-class.html">PolygonData</a> instances.
+</dd>
+
+          <dt id="PolygonDataSource">
+  <span class="name "><a href="../mapview.datasource/PolygonDataSource-class.html">PolygonDataSource</a></span> 
+
+</dt>
+<dd>
+  Polygon data source allows the rendering engine access to the user provided
+polygons geometry and their attributes.
+</dd>
+
+          <dt id="PolygonDataSourceBuilder">
+  <span class="name "><a href="../mapview.datasource/PolygonDataSourceBuilder-class.html">PolygonDataSourceBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder of the polygons data source.
+</dd>
+
+          <dt id="PolygonTileDataSource">
+  <span class="name "><a href="../mapview.datasource/PolygonTileDataSource-class.html">PolygonTileDataSource</a></span> 
+
+</dt>
+<dd>
+  Polygon tile data source allows the rendering engine access to user managed data sets of
+geodetic polygons and their attributes through a <a href="../mapview.datasource/PolygonTileSource-class.html">PolygonTileSource</a>.
+</dd>
+
+          <dt id="PolygonTileSource">
+  <span class="name "><a href="../mapview.datasource/PolygonTileSource-class.html">PolygonTileSource</a></span> 
+
+</dt>
+<dd>
+  A source of geodetic polygon tiles.
+</dd>
+
+          <dt id="PolygonTileSourceLoadResultHandler">
+  <span class="name "><a href="../mapview.datasource/PolygonTileSourceLoadResultHandler-class.html">PolygonTileSourceLoadResultHandler</a></span> 
+
+</dt>
+<dd>
+  Result handler of a load tile request.
+</dd>
+
+          <dt id="RasterDataSource">
+  <span class="name "><a href="../mapview.datasource/RasterDataSource-class.html">RasterDataSource</a></span> 
+
+</dt>
+<dd>
+  Data source to load map layers using a raster image format (jpg, png).
+</dd>
+
+          <dt id="RasterDataSourceCacheConfiguration">
+  <span class="name "><a href="../mapview.datasource/RasterDataSourceCacheConfiguration-class.html">RasterDataSourceCacheConfiguration</a></span> 
+
+</dt>
+<dd>
+  Configuration of a local data cache.
+</dd>
+
+          <dt id="RasterDataSourceConfiguration">
+  <span class="name "><a href="../mapview.datasource/RasterDataSourceConfiguration-class.html">RasterDataSourceConfiguration</a></span> 
+
+</dt>
+<dd>
+  Called on the main thread after <code>fromJsonFile()</code> method finishes loading
+the configuration.
+</dd>
+
+          <dt id="RasterDataSourceConfigurationUpdate">
+  <span class="name "><a href="../mapview.datasource/RasterDataSourceConfigurationUpdate-class.html">RasterDataSourceConfigurationUpdate</a></span> 
+
+</dt>
+<dd>
+  Configuration update for a RasterDataSource.
+</dd>
+
+          <dt id="RasterDataSourceListener">
+  <span class="name "><a href="../mapview.datasource/RasterDataSourceListener-class.html">RasterDataSourceListener</a></span> 
+
+</dt>
+<dd>
+  Listener for RasterDataSource events.
+</dd>
+
+          <dt id="RasterDataSourceProviderConfiguration">
+  <span class="name "><a href="../mapview.datasource/RasterDataSourceProviderConfiguration-class.html">RasterDataSourceProviderConfiguration</a></span> 
+
+</dt>
+<dd>
+  Configuration of a data provider.
+</dd>
+
+          <dt id="RasterTileSource">
+  <span class="name "><a href="../mapview.datasource/RasterTileSource-class.html">RasterTileSource</a></span> 
+
+</dt>
+<dd>
+  A source of raster tiles.
+</dd>
+
+          <dt id="RasterTileSourceLoadResultHandler">
+  <span class="name "><a href="../mapview.datasource/RasterTileSourceLoadResultHandler-class.html">RasterTileSourceLoadResultHandler</a></span> 
+
+</dt>
+<dd>
+  Result handler of a load tile request.
+</dd>
+
+          <dt id="TileGeoBoundsCalculator">
+  <span class="name "><a href="../mapview.datasource/TileGeoBoundsCalculator-class.html">TileGeoBoundsCalculator</a></span> 
+
+</dt>
+<dd>
+  A calculator of geodetic bounds for tiles identified by keys generated
+in a particular tiling scheme (<a href="../mapview.datasource/TilingScheme.html">TilingScheme</a>).
+</dd>
+
+          <dt id="TileKey">
+  <span class="name "><a href="../mapview.datasource/TileKey-class.html">TileKey</a></span> 
+
+</dt>
+<dd>
+  Key of a data source tile.
+</dd>
+
+          <dt id="TileSource">
+  <span class="name "><a href="../mapview.datasource/TileSource-class.html">TileSource</a></span> 
+
+</dt>
+<dd>
+  A source of tiles.
+</dd>
+
+          <dt id="TileSourceDataVersion">
+  <span class="name "><a href="../mapview.datasource/TileSourceDataVersion-class.html">TileSourceDataVersion</a></span> 
+
+</dt>
+<dd>
+  Tile data version.
+</dd>
+
+          <dt id="TileSourceListener">
+  <span class="name "><a href="../mapview.datasource/TileSourceListener-class.html">TileSourceListener</a></span> 
+
+</dt>
+<dd>
+  Listener to receive <a href="../mapview.datasource/TileSource-class.html">TileSource</a> events.
+</dd>
+
+          <dt id="TileSourceLoadTileRequestHandle">
+  <span class="name "><a href="../mapview.datasource/TileSourceLoadTileRequestHandle-class.html">TileSourceLoadTileRequestHandle</a></span> 
+
+</dt>
+<dd>
+  Handle of a load request.
+</dd>
+
+          <dt id="TileSourceTileMetadata">
+  <span class="name "><a href="../mapview.datasource/TileSourceTileMetadata-class.html">TileSourceTileMetadata</a></span> 
+
+</dt>
+<dd>
+  Tile metadata.
+</dd>
+
+          <dt id="TileUrlProviderFactory">
+  <span class="name "><a href="../mapview.datasource/TileUrlProviderFactory-class.html">TileUrlProviderFactory</a></span> 
+
+</dt>
+<dd>
+  Factory for generating a <a href="../mapview.datasource/TileUrlProviderCallback.html">TileUrlProviderCallback</a> utilized in creating a tile URL.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+          <dt id="DataAttributeValueType">
+  <span class="name "><a href="../mapview.datasource/DataAttributeValueType.html">DataAttributeValueType</a></span> 
+
+</dt>
+<dd>
+  Supported types of the data attribute values.
+</dd>
+
+          <dt id="MapTileDataLayer">
+  <span class="name "><a href="../mapview.datasource/MapTileDataLayer.html">MapTileDataLayer</a></span> 
+
+</dt>
+<dd>
+  Specifies map data layer that <a href="../mapview.datasource/MapTileDataSource-class.html">MapTileDataSource</a> operates on.
+</dd>
+
+          <dt id="MapTileGeometryDataType">
+  <span class="name "><a href="../mapview.datasource/MapTileGeometryDataType.html">MapTileGeometryDataType</a></span> 
+
+</dt>
+<dd>
+  The type of geometry held by <a href="../mapview.datasource/MapTileGeometryData-class.html">MapTileGeometryData</a>.
+</dd>
+
+          <dt id="RasterDataSourceError">
+  <span class="name "><a href="../mapview.datasource/RasterDataSourceError.html">RasterDataSourceError</a></span> 
+
+</dt>
+<dd>
+  Raster data source error codes.
+</dd>
+
+          <dt id="TilingScheme">
+  <span class="name "><a href="../mapview.datasource/TilingScheme.html">TilingScheme</a></span> 
+
+</dt>
+<dd>
+  List of available data tiling schemes.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl>
+          
+  <dt id="DataAttributeValueValueType" class="">
+  <span class="name deprecated"><a class="deprecated" href="../mapview.datasource/DataAttributeValueValueType.html">DataAttributeValueValueType</a></span>
+    = <a href="../mapview.datasource/DataAttributeValueType.html">DataAttributeValueType</a>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+
+          
+  <dt id="LineDataSourceLineDataProcessor" class="callable">
+    <span class="name"><a href="../mapview.datasource/LineDataSourceLineDataProcessor.html">LineDataSourceLineDataProcessor</a></span><span class="signature">
+      <span class="returntype parameter">= bool Function<span class="signature">(<span class="parameter" id="param-lineAccessor"><span class="type-annotation"><a href="../mapview.datasource/LineDataAccessor-class.html">LineDataAccessor</a></span> <span class="parameter-name">lineAccessor</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Called for each line, allowing inspection, removal or update of coordinates and attributes.
+    
+
+  </dd>
+
+          
+  <dt id="MapTileDataSourceLoadTileCallback" class="callable">
+    <span class="name"><a href="../mapview.datasource/MapTileDataSourceLoadTileCallback.html">MapTileDataSourceLoadTileCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-tileKey"><span class="type-annotation"><a href="../mapview.datasource/TileKey-class.html">TileKey</a></span> <span class="parameter-name">tileKey</span>, </span><span class="parameter" id="param-mapFeatureData"><span class="type-annotation"><a href="../mapview.datasource/MapTileGeometryData-class.html">MapTileGeometryData</a>?</span> <span class="parameter-name">mapFeatureData</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Receives loaded tile data.
+    
+
+  </dd>
+
+          
+  <dt id="PointDataSourcePointDataProcessor" class="callable">
+    <span class="name"><a href="../mapview.datasource/PointDataSourcePointDataProcessor.html">PointDataSourcePointDataProcessor</a></span><span class="signature">
+      <span class="returntype parameter">= bool Function<span class="signature">(<span class="parameter" id="param-pointAccessor"><span class="type-annotation"><a href="../mapview.datasource/PointDataAccessor-class.html">PointDataAccessor</a></span> <span class="parameter-name">pointAccessor</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Called for each point, allowing inspection, removal or update of coordinates and attributes.
+    
+
+  </dd>
+
+          
+  <dt id="PolygonDataSourcePolygonDataProcessor" class="callable">
+    <span class="name"><a href="../mapview.datasource/PolygonDataSourcePolygonDataProcessor.html">PolygonDataSourcePolygonDataProcessor</a></span><span class="signature">
+      <span class="returntype parameter">= bool Function<span class="signature">(<span class="parameter" id="param-polygonAccessor"><span class="type-annotation"><a href="../mapview.datasource/PolygonDataAccessor-class.html">PolygonDataAccessor</a></span> <span class="parameter-name">polygonAccessor</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Called for each polygon, allowing inspection, removal or update of coordinates and attributes.
+    
+
+  </dd>
+
+          
+  <dt id="TileUrlProviderCallback" class="callable">
+    <span class="name"><a href="../mapview.datasource/TileUrlProviderCallback.html">TileUrlProviderCallback</a></span><span class="signature">
+      <span class="returntype parameter">= String Function<span class="signature">(<span class="parameter" id="param-x"><span class="type-annotation">int</span> <span class="parameter-name">x</span>, </span><span class="parameter" id="param-y"><span class="type-annotation">int</span> <span class="parameter-name">y</span>, </span><span class="parameter" id="param-level"><span class="type-annotation">int</span> <span class="parameter-name">level</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Provides the URL as String for the given tile coordinates and storage level.
+    
+
+  </dd>
+
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li class="self-crumb">mapview.datasource.dart</li>
+</ol>
+
+
+    <h5><span class="package-name">here_sdk</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../animation/animation-library.html">animation</a></li>
+      <li><a href="../core/core-library.html">core</a></li>
+      <li><a href="../core.engine/core.engine-library.html">core.engine</a></li>
+      <li><a href="../core.errors/core.errors-library.html">core.errors</a></li>
+      <li><a href="../core.threading/core.threading-library.html">core.threading</a></li>
+      <li><a href="../electronic_horizon/electronic_horizon-library.html">electronic_horizon</a></li>
+      <li><a href="../ev/ev-library.html">ev</a></li>
+      <li><a href="../gestures/gestures-library.html">gestures</a></li>
+      <li><a href="../location/location-library.html">location</a></li>
+      <li><a href="../mapdata/mapdata-library.html">mapdata</a></li>
+      <li><a href="../mapdata.ocm/mapdata.ocm-library.html">mapdata.ocm</a></li>
+      <li><a href="../maploader/maploader-library.html">maploader</a></li>
+      <li><a href="../maploader.remote.connection/maploader.remote.connection-library.html">maploader.remote.connection</a></li>
+      <li><a href="../mapmatcher/mapmatcher-library.html">mapmatcher</a></li>
+      <li><a href="../mapview/mapview-library.html">mapview</a></li>
+      <li><a href="../mapview.datasource/mapview.datasource-library.html">mapview.datasource</a></li>
+      <li><a href="../mapview.mapobject/mapview.mapobject-library.html">mapview.mapobject</a></li>
+      <li><a href="../navigation/navigation-library.html">navigation</a></li>
+      <li><a href="../prefetcher/prefetcher-library.html">prefetcher</a></li>
+      <li><a href="../routing/routing-library.html">routing</a></li>
+      <li><a href="../search/search-library.html">search</a></li>
+      <li><a href="../traffic/traffic-library.html">traffic</a></li>
+      <li><a href="../trafficawarenavigation/trafficawarenavigation-library.html">trafficawarenavigation</a></li>
+      <li><a href="../trafficbroadcast/trafficbroadcast-library.html">trafficbroadcast</a></li>
+      <li><a href="../transport/transport-library.html">transport</a></li>
+      <li><a href="../venue/venue-library.html">venue</a></li>
+      <li><a href="../venue.control/venue.control-library.html">venue.control</a></li>
+      <li><a href="../venue.data/venue.data-library.html">venue.data</a></li>
+      <li><a href="../venue.routing/venue.routing-library.html">venue.routing</a></li>
+      <li><a href="../venue.service/venue.service-library.html">venue.service</a></li>
+      <li><a href="../venue.style/venue.style-library.html">venue.style</a></li>
+      <li><a href="../warner/warner-library.html">warner</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>mapview.datasource library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

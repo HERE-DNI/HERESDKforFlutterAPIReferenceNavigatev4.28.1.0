@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the startingPoint property from the RefreshRouteParameters class, for the Dart programming language.">
+  <title>startingPoint property - RefreshRouteParameters class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../routing/routing-library.html">routing.dart</a></li>
+    <li><a href="../../routing/RefreshRouteParameters-class.html">RefreshRouteParameters</a></li>
+    <li class="self-crumb">startingPoint property</li>
+  </ol>
+  <div class="self-name">startingPoint</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;RefreshRouteParameters-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-property">startingPoint</span> property 
+</h1></div>
+
+      <section class="multi-line-signature">
+        
+        <a href="../../routing/Waypoint-class.html">Waypoint</a>?
+        <span class="name ">startingPoint</span>
+        <div class="features"><span class="feature">getter/setter pair</span></div>
+
+      </section>
+      
+<section class="desc markdown">
+  <p>Identify the new starting point of the route. It should be of type <a href="../../routing/WaypointType.html">WaypointType.stopover</a>.
+Otherwise, an <a href="../../routing/RoutingError.html">RoutingError.invalidParameter</a> error is generated. Moreover, it should be very close to the
+original route specified with the <a href="../../routing/RouteHandle-class.html">RouteHandle</a>. The location of this waypoint may by provided,
+for example, by a <code>RouteProgress</code> event. Since the new starting point is expected to be
+along the original route, the original route geometry is used to reach the remaining waypoints. The new route
+will not include the <a href="../../routing/Waypoint-class.html">Waypoint</a> items that lie behind the new starting point (i.e. the path that
+was already traveled). Plus, <a href="../../routing/Route/lengthInMeters.html">Route.lengthInMeters</a>, <a href="../../routing/Route/duration.html">Route.duration</a>, and similar
+values are from the new starting point to the destination. If the new waypoint is too far off the original
+route, the route refresh may fail and an <a href="../../routing/RoutingError.html">RoutingError.couldNotMatchOrigin</a> error is triggered.
+In that case, an application may decide to calculate a new route from scratch.</p>
+</section>
+
+      
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Waypoint? startingPoint;</code></pre>
+</section>
+
+
+</div> <!-- /.main-content -->
+
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../routing/routing-library.html">routing</a></li>
+    <li><a href="../../routing/RefreshRouteParameters-class.html">RefreshRouteParameters</a></li>
+    <li class="self-crumb">startingPoint property</li>
+</ol>
+
+
+  <h5>RefreshRouteParameters class</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
+
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

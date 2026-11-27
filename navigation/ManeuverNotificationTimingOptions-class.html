@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ManeuverNotificationTimingOptions class from the navigation library, for the Dart programming language.">
+  <title>ManeuverNotificationTimingOptions class - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation.dart</a></li>
+    <li class="self-crumb">ManeuverNotificationTimingOptions class</li>
+  </ol>
+  <div class="self-name">ManeuverNotificationTimingOptions</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="navigation&#47;navigation-library-sidebar.html"
+    data-below-sidebar="navigation&#47;ManeuverNotificationTimingOptions-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ManeuverNotificationTimingOptions</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A class defining timing and distance thresholds for maneuver notifications.</p>
+<p>Setting custom values will impact the time when the notification for each supported <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType</a> is sent - dependent on the <a href="../navigation/TimingProfile.html">TimingProfile</a>.</p>
+<p><strong>Note:</strong> By default, notification thresholds depend on <a href="../navigation/TimingProfile.html">TimingProfile</a>. When custom values are set, then these rules will still apply.
+The following rules apply for all transport modes:</p>
+<ul>
+<li>For <a href="../navigation/TimingProfile.html">TimingProfile.fastSpeed</a> timing profile, if the current speed limit is less than 62 m/h (100 km/h), then the notification thresholds for <a href="../navigation/TimingProfile.html">TimingProfile.regularSpeed</a> timing profile will be used instead.</li>
+<li>For <a href="../navigation/TimingProfile.html">TimingProfile.regularSpeed</a> timing profile, if the current speed limit is less than 37 m/h (60 km/h), then the notification thresholds for <a href="../navigation/TimingProfile.html">TimingProfile.slowSpeed</a> timing profile will be used instead.</li>
+<li>For <a href="../navigation/TimingProfile.html">TimingProfile.slowSpeed</a> timing profile the thresholds will be always used as specified.</li>
+</ul>
+<p>The timings follow a strict order:</p>
+<ol>
+<li><a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a>: The first notification, it may be very far away (use 0 for farthest or earliest possible notification).</li>
+<li><a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.reminder</a>: The second notification.</li>
+<li><a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.distance</a>: A second reminder notification to take action.</li>
+<li><a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.action</a>: Final notification, specifying the required action to be taken.</li>
+</ol>
+<p>Therefore, it is crucial that the set values do not violate the order: range &gt; reminder &gt; distance &gt; action.
+For example, the following values are valid: range = 4000, reminder = 2500, distance = 1000, action = 400.
+If <code>ManeuverNotificationTimingOptions.rangeNotificationDistanceInMeters</code> is smaller than <code>ManeuverNotificationTimingOptions.reminderNotificationDistanceInMeters</code> the new options will be
+silently ignored and the previous values are kept.</p>
+<p>You always have the choice to specify the thresholds for time or distance. For each <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType</a> a
+notification is only sent once, so the value that is reached first, wins. However, it is recommended to always update both, time
+and distance values.
+A configuration value of 0 is only allowed for <code>ManeuverNotificationTimingOptions.rangeNotificationDistanceInMeters</code> and <code>ManeuverNotificationTimingOptions.rangeNotificationTimeInSeconds</code>.
+It means that the maneuver notifications of type <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> should be generated as soon
+as the maneuver location is known - no matter how far away it may be.
+It's impossible for the other types to have 0 as value due to the descending ordering rule mentioned above.</p>
+<p>You can also specify the <code>ManeuverNotificationTimingOptions.doubleNotificationDistanceInMeters</code> threshold that determines the distance between two maneuvers that
+should be merged into a single maneuver notification, for example, when they are very close to each other. Maneuvers below this
+threshold will be merged like in this example: "After 300 meters turn right and then turn left.".</p>
+<p>Tip: To set the timings to the HERE SDK, you can first call <code>getManeuverNotificationTimingOptions()</code> to get the default values
+for the desired combination of transport mode and timing profile. Then configure the timings, then set it back by calling the
+<code>setManeuverNotificationTimingOptions()</code>.</p>
+<p>Note: In the comment of each attribute, the term <code>Others</code> refers to non-pedestrian transport modes such as
+<a href="../transport/TransportMode.html">TransportMode.car</a>, <a href="../transport/TransportMode.html">TransportMode.bicycle</a>, <a href="../transport/TransportMode.html">TransportMode.truck</a>.</p>
+<p>Attention: The default values for <a href="../transport/TransportMode.html">TransportMode.pedestrian</a> on <a href="../navigation/TimingProfile.html">TimingProfile.fastSpeed</a> are theoretical, as such
+routes cannot be calculated with the HERE SDK as highways are forbidden for pedestrians.</p>
+<p>Usage example:</p>
+<pre class="language-dart"><code>// Get current values or default values, if no values have been set before.
+ManeuverNotificationTimingOptions car_highway_timings = Navigator.getManeuverNotificationTimingOptions(TransportMode.car, TimingProfile.FAST_SPEED);
+// Set a new value for a specific option and keep the previous or default values for the others.
+car_highway_timings.distanceNotificationDistanceInMeters = 1500;
+// Apply the changes to Navigator (or VisualNavigator).
+Navigator.setManeuverNotificationTimingOptions(TransportMode.CAR, TimingProfile.FAST_SPEED, car_fast_speed_timings);
+</code></pre>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ManeuverNotificationTimingOptions" class="callable">
+          <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/ManeuverNotificationTimingOptions.html">ManeuverNotificationTimingOptions</a></span><span class="signature">(<span class="parameter" id="-param-rangeNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">rangeNotificationDistanceInMeters</span>, </span><span class="parameter" id="-param-rangeNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">rangeNotificationTimeInSeconds</span>, </span><span class="parameter" id="-param-reminderNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">reminderNotificationDistanceInMeters</span>, </span><span class="parameter" id="-param-reminderNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">reminderNotificationTimeInSeconds</span>, </span><span class="parameter" id="-param-distanceNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">distanceNotificationDistanceInMeters</span>, </span><span class="parameter" id="-param-distanceNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">distanceNotificationTimeInSeconds</span>, </span><span class="parameter" id="-param-actionNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">actionNotificationDistanceInMeters</span>, </span><span class="parameter" id="-param-actionNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">actionNotificationTimeInSeconds</span>, </span><span class="parameter" id="-param-doubleNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">doubleNotificationDistanceInMeters</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="actionNotificationDistanceInMeters" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/actionNotificationDistanceInMeters.html">actionNotificationDistanceInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default distance setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.action</a> notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="actionNotificationTimeInSeconds" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/actionNotificationTimeInSeconds.html">actionNotificationTimeInSeconds</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default time setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.action</a> notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="distanceNotificationDistanceInMeters" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/distanceNotificationDistanceInMeters.html">distanceNotificationDistanceInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default distance setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.distance</a> notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="distanceNotificationTimeInSeconds" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/distanceNotificationTimeInSeconds.html">distanceNotificationTimeInSeconds</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default time setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.distance</a> notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="doubleNotificationDistanceInMeters" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/doubleNotificationDistanceInMeters.html">doubleNotificationDistanceInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default distance setting for double notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="rangeNotificationDistanceInMeters" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/rangeNotificationDistanceInMeters.html">rangeNotificationDistanceInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default distance setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> notification. A configuration value of 0 is only allowed for
+<a href="../navigation/ManeuverNotificationTimingOptions/rangeNotificationDistanceInMeters.html">ManeuverNotificationTimingOptions.rangeNotificationDistanceInMeters</a> and <a href="../navigation/ManeuverNotificationTimingOptions/rangeNotificationTimeInSeconds.html">ManeuverNotificationTimingOptions.rangeNotificationTimeInSeconds</a>. It means that the maneuver notifications of type
+<a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> should be generated as soon as the maneuver location is known - no matter how far away it may be.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="rangeNotificationTimeInSeconds" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/rangeNotificationTimeInSeconds.html">rangeNotificationTimeInSeconds</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default time setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> notification. A configuration value of 0 is only allowed for
+<a href="../navigation/ManeuverNotificationTimingOptions/rangeNotificationDistanceInMeters.html">ManeuverNotificationTimingOptions.rangeNotificationDistanceInMeters</a> and <a href="../navigation/ManeuverNotificationTimingOptions/rangeNotificationTimeInSeconds.html">ManeuverNotificationTimingOptions.rangeNotificationTimeInSeconds</a>. It means that the maneuver notifications of type
+<a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> should be generated as soon as the maneuver location is known - no matter how far away it may be.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="reminderNotificationDistanceInMeters" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/reminderNotificationDistanceInMeters.html">reminderNotificationDistanceInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default distance setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.reminder</a> notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="reminderNotificationTimeInSeconds" class="property">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/reminderNotificationTimeInSeconds.html">reminderNotificationTimeInSeconds</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The default time setting for <a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType.reminder</a> notification.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../navigation/ManeuverNotificationTimingOptions/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation</a></li>
+    <li class="self-crumb">ManeuverNotificationTimingOptions class</li>
+</ol>
+
+
+    <h5>navigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

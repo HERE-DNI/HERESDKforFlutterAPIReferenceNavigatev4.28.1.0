@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CarSpecifications class from the transport library, for the Dart programming language.">
+  <title>CarSpecifications class - transport library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../transport/transport-library.html">transport.dart</a></li>
+    <li class="self-crumb"><span class="deprecated">CarSpecifications</span> class</li>
+  </ol>
+  <div class="self-name">CarSpecifications</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="transport&#47;transport-library-sidebar.html"
+    data-below-sidebar="transport&#47;CarSpecifications-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">CarSpecifications</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Car specifications contain vehicle related attributes.</p>
+<p>Examples: Dimensions, weight, axle count.
+Only the fields that are set are considered for restriction handling.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@Deprecated(&quot;Will be removed in v4.28.0. Use `TransportSpecification` instead.&quot;)</li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CarSpecifications" class="callable">
+          <span class="name"><a href="../transport/CarSpecifications/CarSpecifications.html">CarSpecifications</a></span><span class="signature">([<span class="parameter" id="-param-grossWeightInKilograms"><span class="type-annotation">int?</span> <span class="parameter-name">grossWeightInKilograms</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-heightInCentimeters"><span class="type-annotation">int?</span> <span class="parameter-name">heightInCentimeters</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-widthInCentimeters"><span class="type-annotation">int?</span> <span class="parameter-name">widthInCentimeters</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-lengthInCentimeters"><span class="type-annotation">int?</span> <span class="parameter-name">lengthInCentimeters</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-axleCount"><span class="type-annotation">int?</span> <span class="parameter-name">axleCount</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-trailerCount"><span class="type-annotation">int?</span> <span class="parameter-name">trailerCount</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-trailerAxleCount"><span class="type-annotation">int?</span> <span class="parameter-name">trailerAxleCount</span> = <span class="default-value">null</span></span>])</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+        <dt id="CarSpecifications.withDefaults" class="callable">
+          <span class="name"><a href="../transport/CarSpecifications/CarSpecifications.withDefaults.html">CarSpecifications.withDefaults</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="axleCount" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/axleCount.html">axleCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines total number of axles in the vehicle. The provided value must be greater than or
+equal to 2. By default, it is not set.
+Route calculation: When not set, possible axle count restrictions will not be
+taken into consideration.
+When specifying <a href="../transport/CarSpecifications/trailerAxleCount.html">CarSpecifications.trailerAxleCount</a>, then <a href="../transport/CarSpecifications/axleCount.html">CarSpecifications.axleCount</a> is required and must be greater than <a href="../transport/CarSpecifications/trailerAxleCount.html">CarSpecifications.trailerAxleCount</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="grossWeightInKilograms" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/grossWeightInKilograms.html">grossWeightInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Car weight including trailers and shipped goods in kilograms. The provided value
+must be greater than or equal to 0. By default, it is not set.
+<strong>Note:</strong>
+This parameter is limited to a maximum weight of 4250 kg without trailer and 7550 kg with trailer.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="heightInCentimeters" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/heightInCentimeters.html">heightInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Car height in centimeters. The provided value must be in the range [0, 5000].
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="lengthInCentimeters" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/lengthInCentimeters.html">lengthInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Car length in centimeters. The provided value must be in the range [0, 30000].
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../transport/CarSpecifications/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trailerAxleCount" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/trailerAxleCount.html">trailerAxleCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines total number of axles across all the trailers attached to the vehicle.
+This number is included in <a href="../transport/CarSpecifications/axleCount.html">CarSpecifications.axleCount</a>, hence <a href="../transport/CarSpecifications/trailerAxleCount.html">CarSpecifications.trailerAxleCount</a> must be less than <a href="../transport/CarSpecifications/axleCount.html">CarSpecifications.axleCount</a>
+and greater than or equal to 1. <a href="../transport/CarSpecifications/axleCount.html">CarSpecifications.axleCount</a> and <a href="../transport/CarSpecifications/trailerCount.html">CarSpecifications.trailerCount</a> are required to specify <a href="../transport/CarSpecifications/trailerAxleCount.html">CarSpecifications.trailerAxleCount</a>.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="trailerCount" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/trailerCount.html">trailerCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines number of trailers attached to the vehicle. The provided value must be in the range
+[0, 1]. By default, it is not set.
+When specifying <a href="../transport/CarSpecifications/trailerAxleCount.html">CarSpecifications.trailerAxleCount</a>, then <a href="../transport/CarSpecifications/trailerCount.html">CarSpecifications.trailerCount</a> is required and must be greater than 0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="widthInCentimeters" class="property">
+  <span class="name"><a href="../transport/CarSpecifications/widthInCentimeters.html">widthInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Car width in centimeters. The provided value must be in the range [0, 5000].
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../transport/CarSpecifications/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../transport/CarSpecifications/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../transport/CarSpecifications/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../transport/transport-library.html">transport</a></li>
+    <li class="self-crumb"><span class="deprecated">CarSpecifications</span> class</li>
+</ol>
+
+
+    <h5>transport library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the DynamicRoutingEngine class from the trafficawarenavigation library, for the Dart programming language.">
+  <title>DynamicRoutingEngine class - trafficawarenavigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../trafficawarenavigation/trafficawarenavigation-library.html">trafficawarenavigation.dart</a></li>
+    <li class="self-crumb">DynamicRoutingEngine class</li>
+  </ol>
+  <div class="self-name">DynamicRoutingEngine</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="trafficawarenavigation&#47;trafficawarenavigation-library-sidebar.html"
+    data-below-sidebar="trafficawarenavigation&#47;DynamicRoutingEngine-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">DynamicRoutingEngine</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>This class queries the HERE routing backend
+to find routes with less traffic and therefore an earlier remaining estimated time of arrival.</p>
+<p><a href="../trafficawarenavigation/DynamicRoutingEngine-class.html">DynamicRoutingEngine</a> polls the HERE routing backend periodically to find the best new route out
+of a given initial route.
+For initial route calculation it is recommended to use the <a href="../routing/RoutingEngine-class.html">RoutingEngine</a>
+as it already requests traffic-optimized routes.</p>
+<p>When a better route is found, it is recommended to follow these steps to set the new route:</p>
+<ol>
+<li>Stop the <a href="../trafficawarenavigation/DynamicRoutingEngine-class.html">DynamicRoutingEngine</a>.</li>
+<li>Update the currently active <code>Navigator</code>instance with the newly found route.</li>
+<li>Restart the <a href="../trafficawarenavigation/DynamicRoutingEngine-class.html">DynamicRoutingEngine</a>. This should be done outside of the <code>onBetterRouteFound()</code> callback.</li>
+</ol>
+<p>For both <a href="../trafficawarenavigation/DynamicRoutingEngine-class.html">DynamicRoutingEngine</a> and <a href="../routing/RoutingEngine-class.html">RoutingEngine</a>,
+the resulting routes are optimized based on speed flow changes such as traffic jams,
+street closures or road accidents.
+To get the best result, it is recommended to not specify the
+<a href="../routing/RouteOptions/departureTime.html">RouteOptions.departureTime</a> as then the current time is used by default.</p>
+<p>The poll interval is defined by
+<a href="../trafficawarenavigation/DynamicRoutingEngineOptions/pollInterval.html">DynamicRoutingEngineOptions.pollInterval</a> and
+triggered by <a href="../trafficawarenavigation/DynamicRoutingEngine/updateCurrentLocation.html">DynamicRoutingEngine.updateCurrentLocation</a>.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="DynamicRoutingEngine" class="callable">
+          <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/DynamicRoutingEngine.html">DynamicRoutingEngine</a></span><span class="signature">(<span class="parameter" id="-param-options"><span class="type-annotation"><a href="../trafficawarenavigation/DynamicRoutingEngineOptions-class.html">DynamicRoutingEngineOptions</a>?</span> <span class="parameter-name">options</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="DynamicRoutingEngine.withSdkEngine" class="callable">
+          <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/DynamicRoutingEngine.withSdkEngine.html">DynamicRoutingEngine.withSdkEngine</a></span><span class="signature">(<span class="parameter" id="withSdkEngine-param-sdkEngine"><span class="type-annotation"><a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a></span> <span class="parameter-name">sdkEngine</span>, </span><span class="parameter" id="withSdkEngine-param-options"><span class="type-annotation"><a href="../trafficawarenavigation/DynamicRoutingEngineOptions-class.html">DynamicRoutingEngineOptions</a>?</span> <span class="parameter-name">options</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="start" class="callable">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/start.html">start</a></span><span class="signature">(<wbr><span class="parameter" id="start-param-route"><span class="type-annotation"><a href="../routing/Route-class.html">Route</a></span> <span class="parameter-name">route</span>, </span><span class="parameter" id="start-param-listener"><span class="type-annotation"><a href="../trafficawarenavigation/DynamicRoutingListener-class.html">DynamicRoutingListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts polling the HERE backend services to find a better route,
+as defined by the DynamicRoutingEngineOptions.
+  
+
+</dd>
+
+        <dt id="startWithWaypointsAndRoutingOptions" class="callable">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/startWithWaypointsAndRoutingOptions.html">startWithWaypointsAndRoutingOptions</a></span><span class="signature">(<wbr><span class="parameter" id="startWithWaypointsAndRoutingOptions-param-routeHandle"><span class="type-annotation"><a href="../routing/RouteHandle-class.html">RouteHandle</a></span> <span class="parameter-name">routeHandle</span>, </span><span class="parameter" id="startWithWaypointsAndRoutingOptions-param-waypoints"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/Waypoint-class.html">Waypoint</a></span>&gt;</span></span> <span class="parameter-name">waypoints</span>, </span><span class="parameter" id="startWithWaypointsAndRoutingOptions-param-routingOptions"><span class="type-annotation"><a href="../routing/RoutingOptions-class.html">RoutingOptions</a></span> <span class="parameter-name">routingOptions</span>, </span><span class="parameter" id="startWithWaypointsAndRoutingOptions-param-listener"><span class="type-annotation"><a href="../trafficawarenavigation/DynamicRoutingListener-class.html">DynamicRoutingListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts polling the HERE backend services to find a better route,
+as defined by the <a href="../trafficawarenavigation/DynamicRoutingEngineOptions-class.html">DynamicRoutingEngineOptions</a>.
+  
+
+</dd>
+
+        <dt id="stop" class="callable">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/stop.html">stop</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stops polling the HERE backend services.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateCurrentLocation" class="callable">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/updateCurrentLocation.html">updateCurrentLocation</a></span><span class="signature">(<wbr><span class="parameter" id="updateCurrentLocation-param-mapMatchedLocation"><span class="type-annotation"><a href="../navigation/MapMatchedLocation-class.html">MapMatchedLocation</a></span> <span class="parameter-name">mapMatchedLocation</span>, </span><span class="parameter" id="updateCurrentLocation-param-sectionIndex"><span class="type-annotation">int</span> <span class="parameter-name">sectionIndex</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Updates the current location.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../trafficawarenavigation/DynamicRoutingEngine/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../trafficawarenavigation/trafficawarenavigation-library.html">trafficawarenavigation</a></li>
+    <li class="self-crumb">DynamicRoutingEngine class</li>
+</ol>
+
+
+    <h5>trafficawarenavigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

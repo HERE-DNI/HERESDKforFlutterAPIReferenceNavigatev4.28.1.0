@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the renderedBeforeLayerWithCategory method from the MapLayerPriorityBuilder class, for the Dart programming language.">
+  <title>renderedBeforeLayerWithCategory method - MapLayerPriorityBuilder class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview.dart</a></li>
+    <li><a href="../../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></li>
+    <li class="self-crumb">renderedBeforeLayerWithCategory abstract method</li>
+  </ol>
+  <div class="self-name">renderedBeforeLayerWithCategory</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;MapLayerPriorityBuilder-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">renderedBeforeLayerWithCategory</span> abstract method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="../../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+<span class="name ">renderedBeforeLayerWithCategory</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="renderedBeforeLayerWithCategory-param-referenceLayer"><span class="type-annotation">String</span> <span class="parameter-name">referenceLayer</span>, </span></li>
+<li><span class="parameter" id="renderedBeforeLayerWithCategory-param-referenceCategory"><span class="type-annotation">String</span> <span class="parameter-name">referenceCategory</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Sets the priority as rendered before the referenceCategory of the referenceLayer.</p>
+<p>Applies to the
+layer itself or the category pointed to by the preceding call to
+<a href="../../mapview/MapLayerPriorityBuilder/withCategory.html">MapLayerPriorityBuilder.withCategory</a>.
+Notice that the order of calls to the functions
+<code>renderedFirst|Last|Before|After</code>
+matters, and that after such a call the builder clears the current category and refers again to
+the layer itself. Further, only one priority for each layer and layer category should be set
+with these functions since previous priorities would be ingored. For example the priority to
+render layer category 'C' after layer 'L' would be overridden by the priority to
+render layer category 'C' before layer 'L' when building something like</p>
+<p><code>withCategory("C").renderedAfterLayer("L").withCategory("C").renderedBeforeLayer("L")</code></p>
+<p>The previously defined and prioritised categories can be used as reference.
+If the referenceLayer and/or the referenceCategory do not exist, then the function will set
+the priority as rendered before all layers and categories.</p>
+<ul>
+<li>
+<p><code>referenceLayer</code> The beforehand defined layer name which renders directly after the current layer.</p>
+</li>
+<li>
+<p><code>referenceCategory</code> The beforehand defined category name which renders directly after the current layer.</p>
+</li>
+</ul>
+<p>Returns <a href="../../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a>. This class instance.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">MapLayerPriorityBuilder renderedBeforeLayerWithCategory(String referenceLayer, String referenceCategory);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview</a></li>
+    <li><a href="../../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></li>
+    <li class="self-crumb">renderedBeforeLayerWithCategory abstract method</li>
+</ol>
+
+
+    <h5>MapLayerPriorityBuilder class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapLayerPriorityBuilder class from the mapview library, for the Dart programming language.">
+  <title>MapLayerPriorityBuilder class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview.dart</a></li>
+    <li class="self-crumb">MapLayerPriorityBuilder class</li>
+  </ol>
+  <div class="self-name">MapLayerPriorityBuilder</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;mapview-library-sidebar.html"
+    data-below-sidebar="mapview&#47;MapLayerPriorityBuilder-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapLayerPriorityBuilder</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>MapLayerPriorityBuilder is an interface used to define the rendering priority of a layer
+and its categories, relative to other layers or layer-category pairs.</p>
+<p>Map layers are rendered in an order according to specified priorities. Rendering order of elements in
+a single map layer can be controlled with categories. Layer names are unique, and category names have
+to be unique within a layer. The layer's default, main category is unnamed.</p>
+<p>The concept of 'category' is tightly linked to styling. The idea behind category is that
+one should be able to style separately elements in a map layer. Take, for instance, roads.
+If one wants to style separately the bridges it will create a category 'bridges' and style
+it accordingly in the style file. If the user does not intend to or cannot style elements
+of the layer diffenrently then it should opt for a layer with only the default category (e.g.
+raster layer).</p>
+<p>One way to define layers' priorities is by using a layer priority list in the scene configuration.</p>
+<p>For example, a priority list in a scene configuration could define:</p>
+<ul>
+<li>background</li>
+<li>water</li>
+<li>roads:outline</li>
+<li>roads</li>
+<li>labels</li>
+</ul>
+<p>This means layer "background" is rendered first. Next up is layer "water". Then category "outline" of
+layer "roads", followed by the main category of layer "roads". Layer "labels" is then rendered last.</p>
+<p>
+Now let's consider a newly created layer 'zone' and its categories:
+</p><ul>
+<li>zone</li>
+<li>zone:background</li>
+<li>zone:lines-outline</li>
+<li>zone:lines</li>
+</ul>
+<p>The user wants to alter the rendering order so that it looks like:</p>
+<ul>
+<li>background</li>
+<li>water</li>
+<li>zone:background</li>
+<li>zone</li>
+<li>road:outline</li>
+<li>road</li>
+<li>zone:lines-outline</li>
+<li>zone:lines</li>
+<li>labels</li>
+</ul>
+<p>This could be achieved with the help of the MapLayerPriorityBuilder and a sequence of calls to its
+<code>renderedBeforeLayer()</code> and <code>renderedAfterLayer()</code> member functions.</p>
+<p>Note that the order of calls matters and one can use a previously defined layer or category
+as a reference:</p>
+<pre class="language-dart"><code>  final zoneLayerPriority = MapLayerPriorityBuilder()
+       .renderedAfterLayer("water")          // places "zone" after "water"
+                                             // in the rendering order
+       .withCategory("background")
+       .renderedAfterLayer("water")          // places "zone:background" after "water"
+                                             // in the rendering order and thus shifts
+                                             // "zone" to be rendered later
+       .withCategory("lines-outline")
+       .renderedAfterLayer("road")           // places "zone:lines-outline" after "road"
+                                             // in the rendering order
+       .withCategory("lines")
+       .renderedAfterLayer("zone", "lines-outline") // places "zone:lines" after
+                                                    // "zone:lines-outline" in the rendering order
+       .build();
+
+  zoneLayer.setPriority(zoneLayerPriority);  // applies the priority to the zone layer
+                                             // and its categories in one single operation.
+</code></pre>
+<p>In case an empty MapLayerPriority without any ordering commands is built, it is assumed that the target layer
+is going to be rendered last.</p>
+<p>Due to a current limitation for point map layers, the mentioned APIs to control the rendering
+order are not implemented. All labels will be rendered within the "labels" layer, defined in
+the scene configuration file.
+By default, all labels rendered by a point map layer are rendered last and no overlapping is
+allowed. The following categories can be used to have a different behaviour:</p>
+<ul>
+<li>'custom-labels' A label should be rendered first, is allowed to overlap with other labels of
+the same category and block map labels.</li>
+<li>'custom-labels-no-self-overlap' A label should be rendered after 'custom-labels', is not allowed
+to overlap with other labels of the same categoty and block map labels.</li>
+<li>'custom-labels-overlap-all' A label should be rendered last, is allowed to overlap all
+predefined categories, also map labels.
+These categories are configured accordingly in the basic map
+scene configurations.
+Category assignment to features can be done in the style based on data attributes. The category
+assignment can be done for all types of data: points, lines, polygons.</li>
+</ul>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapLayerPriorityBuilder" class="callable">
+          <span class="name"><a href="../mapview/MapLayerPriorityBuilder/MapLayerPriorityBuilder.html">MapLayerPriorityBuilder</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Creates an instance of the layer priority builder interface.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="build" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/build.html">build</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriority-class.html">MapLayerPriority</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Constructs a MapLayerPriority.
+  
+
+</dd>
+
+        <dt id="inGroup" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/inGroup.html">inGroup</a></span><span class="signature">(<wbr><span class="parameter" id="inGroup-param-group"><span class="type-annotation">String</span> <span class="parameter-name">group</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the group for which a priority could be defined with the next call to the functions
+<code>renderedFirst|Last|BeforeLayer|AfterLayer</code>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="renderedAfterLayer" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/renderedAfterLayer.html">renderedAfterLayer</a></span><span class="signature">(<wbr><span class="parameter" id="renderedAfterLayer-param-referenceLayer"><span class="type-annotation">String</span> <span class="parameter-name">referenceLayer</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the priority as rendered after the last one from the referenceLayer and its categories.
+  
+
+</dd>
+
+        <dt id="renderedAfterLayerWithCategory" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/renderedAfterLayerWithCategory.html">renderedAfterLayerWithCategory</a></span><span class="signature">(<wbr><span class="parameter" id="renderedAfterLayerWithCategory-param-referenceLayer"><span class="type-annotation">String</span> <span class="parameter-name">referenceLayer</span>, </span><span class="parameter" id="renderedAfterLayerWithCategory-param-referenceCategory"><span class="type-annotation">String</span> <span class="parameter-name">referenceCategory</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the priority as rendered after the referenceCategory of the referenceLayer.
+  
+
+</dd>
+
+        <dt id="renderedBeforeLayer" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/renderedBeforeLayer.html">renderedBeforeLayer</a></span><span class="signature">(<wbr><span class="parameter" id="renderedBeforeLayer-param-referenceLayer"><span class="type-annotation">String</span> <span class="parameter-name">referenceLayer</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the priority as rendered before the first one from the referenceLayer and its categories.
+  
+
+</dd>
+
+        <dt id="renderedBeforeLayerWithCategory" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/renderedBeforeLayerWithCategory.html">renderedBeforeLayerWithCategory</a></span><span class="signature">(<wbr><span class="parameter" id="renderedBeforeLayerWithCategory-param-referenceLayer"><span class="type-annotation">String</span> <span class="parameter-name">referenceLayer</span>, </span><span class="parameter" id="renderedBeforeLayerWithCategory-param-referenceCategory"><span class="type-annotation">String</span> <span class="parameter-name">referenceCategory</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the priority as rendered before the referenceCategory of the referenceLayer.
+  
+
+</dd>
+
+        <dt id="renderedFirst" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/renderedFirst.html">renderedFirst</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the priority as rendered before all layers and categories.
+  
+
+</dd>
+
+        <dt id="renderedLast" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/renderedLast.html">renderedLast</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the priority as rendered after all layers and categories.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="withCategory" class="callable">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/withCategory.html">withCategory</a></span><span class="signature">(<wbr><span class="parameter" id="withCategory-param-category"><span class="type-annotation">String</span> <span class="parameter-name">category</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the layer category for which a priority could be defined with the next call to the functions
+<code>renderedFirst|Last|BeforeLayer|AfterLayer</code>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../mapview/MapLayerPriorityBuilder/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview</a></li>
+    <li class="self-crumb">MapLayerPriorityBuilder class</li>
+</ol>
+
+
+    <h5>mapview library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

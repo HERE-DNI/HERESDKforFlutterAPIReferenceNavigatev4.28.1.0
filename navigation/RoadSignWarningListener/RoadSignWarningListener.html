@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RoadSignWarningListener constructor from Class RoadSignWarningListener from the navigation library, for the Dart programming language.">
+  <title>RoadSignWarningListener constructor - RoadSignWarningListener - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../navigation/navigation-library.html">navigation.dart</a></li>
+    <li><a href="../../navigation/RoadSignWarningListener-class.html">RoadSignWarningListener</a></li>
+    <li class="self-crumb"><span class="deprecated">RoadSignWarningListener</span> factory constructor</li>
+  </ol>
+  <div class="self-name">RoadSignWarningListener</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="navigation&#47;RoadSignWarningListener-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">RoadSignWarningListener</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@Deprecated(&quot;Will be removed in v4.29.0. Use the `WarningListener` implementation instead.&quot;)</li>
+    </ol>
+  </div>
+      <span class="name deprecated">RoadSignWarningListener</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="-param-onRoadSignWarningUpdatedLambda"><span class="type-annotation">void</span> <span class="parameter-name">onRoadSignWarningUpdatedLambda</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-"><span class="type-annotation"><a href="../../navigation/RoadSignWarning-class.html">RoadSignWarning</a></span></span></li>
+</ol>)</span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>This abstract class
+should be implemented in order to receive road sign warnings.</p>
+<p><strong>Note:</strong> The road sign warner is a point warner, which means that for a road sign there will <em>always</em> be
+2 warnings emitted, with the <a class="deprecated" href="../../navigation/RoadSignWarning/distanceType.html">RoadSignWarning.distanceType</a> set to <a href="../../navigation/DistanceType.html">DistanceType.ahead</a> and <a href="../../navigation/DistanceType.html">DistanceType.passed</a>
+which is given when the location of the road sign is reached.
+A <a href="../../navigation/RoadSignWarning-class.html">RoadSignWarning</a> will not be given until the previous warning of that type has been passed.
+For example, a route with <a href="../../navigation/RoadSignWarning-class.html">RoadSignWarning</a> 120 meters and <a href="../../navigation/RoadSignWarning-class.html">RoadSignWarning</a> 160 meters ahead,
+the first <a class="deprecated" href="../../navigation/RoadSignWarning/distanceToRoadSignInMeters.html">RoadSignWarning.distanceToRoadSignInMeters</a> is 120 meters
+and the next <a class="deprecated" href="../../navigation/RoadSignWarning/distanceToRoadSignInMeters.html">RoadSignWarning.distanceToRoadSignInMeters</a> is then 40 meters,
+since that is the distance between the first and second warnings.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@Deprecated(&quot;Will be removed in v4.29.0. Use the `WarningListener` implementation instead.&quot;)
+
+factory RoadSignWarningListener(
+  void Function(RoadSignWarning) onRoadSignWarningUpdatedLambda,
+
+) =&gt; RoadSignWarningListener$Lambdas(
+  onRoadSignWarningUpdatedLambda,
+
+);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../navigation/navigation-library.html">navigation</a></li>
+    <li><a href="../../navigation/RoadSignWarningListener-class.html">RoadSignWarningListener</a></li>
+    <li class="self-crumb"><span class="deprecated">RoadSignWarningListener</span> factory constructor</li>
+</ol>
+
+
+    <h5>RoadSignWarningListener class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

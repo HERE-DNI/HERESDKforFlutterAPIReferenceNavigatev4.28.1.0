@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CatalogIdentifier class from the core.engine library, for the Dart programming language.">
+  <title>CatalogIdentifier class - core.engine library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core.engine/core.engine-library.html">core.engine.dart</a></li>
+    <li class="self-crumb">CatalogIdentifier class</li>
+  </ol>
+  <div class="self-name">CatalogIdentifier</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="core.engine&#47;core.engine-library-sidebar.html"
+    data-below-sidebar="core.engine&#47;CatalogIdentifier-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">CatalogIdentifier</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>This class is used to identify any catalog in the HERE platform.</p>
+<p>A catalog is a storage-representation to store map data on the HERE platform.
+The data inside a catalog is divided into layers, where each layer consists
+of datasets with similar functional attributes in the physical world.
+For example, there can be a layer for road-topology, a layer for
+road-attributes (such as speed limits) and a layer for places and business
+addresses. All these layers, in different geographic regions, can be grouped together into a
+catalog to create a representation of the world we live in, called HERE map.
+It can be also used to render a <code>MapView</code>. Each geographic region is cut into geospatial
+tiles for efficient search, map display, routing, map matching, and driver warnings.
+Each tile partitions the map data (in one or more layers, depending on the product)
+in the geolocation of that specific tile.
+The data inside a catalog is logically managed and access controlled
+as a single set. If you have any data that you want to bring to the HERE
+platform, you need a catalog to contain it.
+For additional information about catalogs, and related concepts of data representation
+on the HERE platform, refer to
+<a href="https://www.here.com/docs/bundle/data-api-developer-guide/page/rest/catalogs.html">the Data API</a>
+and <a href="https://www.here.com/docs/bundle/introduction-to-mapping-concepts-user-guide/page/topics/maps-layers-tiles.html">Introduction to Mapping Concepts</a></p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CatalogIdentifier" class="callable">
+          <span class="name"><a href="../core.engine/CatalogIdentifier/CatalogIdentifier.html">CatalogIdentifier</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hrn" class="property">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/hrn.html">hrn</a></span>
+  <span class="signature">&#8596; String</span>
+  
+
+</dt>
+<dd>
+  A HERE Resource Name (HRN) for this catalog. This is a unique string returned by the HERE platform when you add a new
+catalog to your project. For information about catalog creation process refer to
+<a href="https://www.here.com/docs/bundle/data-api-developer-guide/page/rest/creating-a-catalog.html">the Data API</a>
+By default, this field points to a default catalog on HERE platform, which contains data for the whole world excluding the region of Japan.
+Use <a href="../core.engine/CatalogConfiguration/getDefault.html">CatalogConfiguration.getDefault</a> to get the default HRN value for use with the HERE platform.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="version" class="property">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/version.html">version</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  A version number for a catalog. When accessing a catalog, this version must be specified.
+Set <code>null</code> to automatically get the latest version for a catalog.
+The field defaults to <code>null</code>.
+Since the data inside a catalog can be updated, each published modification needs to correlate
+to a specific version number.
+Note: when <code>CatalogIdentifier</code> created with <a href="../core.engine/DesiredCatalog-class.html">DesiredCatalog</a> then:
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../core.engine/CatalogIdentifier/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core.engine/core.engine-library.html">core.engine</a></li>
+    <li class="self-crumb">CatalogIdentifier class</li>
+</ol>
+
+
+    <h5>core.engine library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

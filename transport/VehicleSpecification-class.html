@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the VehicleSpecification class from the transport library, for the Dart programming language.">
+  <title>VehicleSpecification class - transport library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../transport/transport-library.html">transport.dart</a></li>
+    <li class="self-crumb">VehicleSpecification class</li>
+  </ol>
+  <div class="self-name">VehicleSpecification</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="transport&#47;transport-library-sidebar.html"
+    data-below-sidebar="transport&#47;VehicleSpecification-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">VehicleSpecification</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Contains vehicle related attributes.</p>
+<p>Examples: Dimensions, weight, axle count.
+Only the fields that are set are considered for restriction handling.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="VehicleSpecification" class="callable">
+          <span class="name"><a href="../transport/VehicleSpecification/VehicleSpecification.html">VehicleSpecification</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="axleCount" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/axleCount.html">axleCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines total number of axles in the vehicle. The provided value must be greater than or equal to 2.
+By default, it is not set.
+Route calculation: When not set, possible axle count restrictions will not be taken into consideration.
+Rendering: When set, truck restriction icons for an axle count greater than <a href="../transport/VehicleSpecification/axleCount.html">VehicleSpecification.axleCount</a> will not be displayed.
+When specifying <a href="../transport/VehicleSpecification/trailerAxleCount.html">VehicleSpecification.trailerAxleCount</a>, then <a href="../transport/VehicleSpecification/axleCount.html">VehicleSpecification.axleCount</a> is required and must be greater than <a href="../transport/VehicleSpecification/trailerAxleCount.html">VehicleSpecification.trailerAxleCount</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentWeightInKilograms" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/currentWeightInKilograms.html">currentWeightInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Current truck weight, including trailers and shipped goods currently loaded, specified in
+kilograms. The provided value must be greater than or equal to 0. If unspecified,
+it will default to <a href="../transport/VehicleSpecification/grossWeightInKilograms.html">VehicleSpecification.grossWeightInKilograms</a>.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="emptyWeightInKilograms" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/emptyWeightInKilograms.html">emptyWeightInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Empty weight of the vehicle without any load, excluding trailers, specified in kilograms.
+The provided value must be greater than or equal to 0.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="engineSizeInCubicCentimeters" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/engineSizeInCubicCentimeters.html">engineSizeInCubicCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Engine size of the scooter in cubic centimeters. Shouldn't be less than 1 or greater than 65535.
+Default value is <code>null</code>, which means the scooter route calculation ignores all engine size limits on the
+road.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="grossWeightInKilograms" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/grossWeightInKilograms.html">grossWeightInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Gross truck weight, including trailers and shipped goods when loaded at capacity, specified in
+kilograms. The provided value must be greater than or equal to 0. If unspecified,
+it will default to <a href="../transport/VehicleSpecification/currentWeightInKilograms.html">VehicleSpecification.currentWeightInKilograms</a>.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hazardousMaterials" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/hazardousMaterials.html">hazardousMaterials</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../transport/HazardousMaterial.html">HazardousMaterial</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Specifies a list of hazardous materials shipped in the vehicle.
+Refer to <a href="../transport/HazardousMaterial.html">HazardousMaterial</a> for the available options.
+By default, it is an empty list.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="heightInCentimeters" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/heightInCentimeters.html">heightInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Vehicle height in centimeters. The provided value must be in the range [0, 5000].
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isCommercial" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/isCommercial.html">isCommercial</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Specifies whether the vehicle is a commercial or a non-commercial vehicle.
+Defaults to <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isTruckLight" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/isTruckLight.html">isTruckLight</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  A flag indicating whether the truck is light enough to be classified more as a car than a truck in Japan.
+The flag should not be set to <code>true</code> in other countries than Japan.
+Defaults to <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="kingpinToRearAxleDistanceInCentimeters" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/kingpinToRearAxleDistanceInCentimeters.html">kingpinToRearAxleDistanceInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines the kingpin to rear axle distance, in centimeters.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="lastCharacterOfLicensePlate" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/lastCharacterOfLicensePlate.html">lastCharacterOfLicensePlate</a></span>
+  <span class="signature">&#8596; String?</span>
+  
+
+</dt>
+<dd>
+  Last character of license plate in String format. This value can be used to
+evaluate restrictions in environmental zones.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="lengthInCentimeters" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/lengthInCentimeters.html">lengthInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Vehicle length in centimeters. The provided value must be in the range [0, 30000].
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="occupancy" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/occupancy.html">occupancy</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Specifies the number of occupants in the vehicle, including driver,
+can affect the vehicle's ability to use HOV/carpool restricted lanes.
+Should not be less than 1 or greater than 255.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="payloadCapacityInKilograms" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/payloadCapacityInKilograms.html">payloadCapacityInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Allowed payload capacity, including trailers, specified in kilograms. The provided value
+must be greater then or equal to 0.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="preferredTruckNetworks" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/preferredTruckNetworks.html">preferredTruckNetworks</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../transport/TruckNetwork-class.html">TruckNetwork</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Specifies which road networks the truck is allowed to use.
+This option only takes effect when <a href="../transport/TransportSpecification/transportMode.html">TransportSpecification.transportMode</a>
+is set to <a href="../transport/TransportMode.html">TransportMode.networkRestrictedTruck</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../transport/VehicleSpecification/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="tiresCount" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/tiresCount.html">tiresCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  The total number of tires the vehicle has, i.e., the tires on the base vehicle and any attached trailers.
+By default, it is not set.
+Otherwise it is guaranteed to be in the range [1, 255].
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="trailerAxleCount" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/trailerAxleCount.html">trailerAxleCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines total number of axles across all the trailers attached to the vehicle.
+This number is included in <a href="../transport/VehicleSpecification/axleCount.html">VehicleSpecification.axleCount</a>, hence <a href="../transport/VehicleSpecification/trailerAxleCount.html">VehicleSpecification.trailerAxleCount</a> must be less than <a href="../transport/VehicleSpecification/axleCount.html">VehicleSpecification.axleCount</a>
+and greater than or equal to 1. <a href="../transport/VehicleSpecification/axleCount.html">VehicleSpecification.axleCount</a> and <a href="../transport/VehicleSpecification/trailerCount.html">VehicleSpecification.trailerCount</a> are required to specify <a href="../transport/VehicleSpecification/trailerAxleCount.html">VehicleSpecification.trailerAxleCount</a>.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="trailerCount" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/trailerCount.html">trailerCount</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Defines number of trailers attached to the vehicle. The provided value must be in the range [0, 255].
+By default, it is not set.
+When specifying <a href="../transport/VehicleSpecification/trailerAxleCount.html">VehicleSpecification.trailerAxleCount</a>, then <a href="../transport/VehicleSpecification/trailerCount.html">VehicleSpecification.trailerCount</a> is required and must be greater than 0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="truckCategory" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/truckCategory.html">truckCategory</a></span>
+  <span class="signature">&#8596; <a href="../transport/TruckCategory.html">TruckCategory</a>?</span>
+  
+
+</dt>
+<dd>
+  Defines the truck category.
+By default, it is not set.
+Rendering: <a href="../transport/VehicleSpecification/truckCategory.html">VehicleSpecification.truckCategory</a> is ignored and has no effect.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="tunnelCategory" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/tunnelCategory.html">tunnelCategory</a></span>
+  <span class="signature">&#8596; <a href="../transport/TunnelCategory.html">TunnelCategory</a>?</span>
+  
+
+</dt>
+<dd>
+  Specifies the tunnel categories to restrict certain route links.
+The route will pass only through tunnels of a less strict category.
+Refer to <a href="../transport/TunnelCategory.html">TunnelCategory</a> for the available options.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="weightPerAxleGroup" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/weightPerAxleGroup.html">weightPerAxleGroup</a></span>
+  <span class="signature">&#8596; <a href="../transport/WeightPerAxleGroup-class.html">WeightPerAxleGroup</a>?</span>
+  
+
+</dt>
+<dd>
+  Allows specification of axle weights in a more fine-grained way than <a href="../transport/VehicleSpecification/weightPerAxleInKilograms.html">VehicleSpecification.weightPerAxleInKilograms</a>.
+This is relevant in countries with signs and regulations that specify different limits for different axle
+groups, like the USA and Sweden.
+By default is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="weightPerAxleInKilograms" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/weightPerAxleInKilograms.html">weightPerAxleInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Heaviest weight per axle, regardless of axle type or axle group.
+It is evaluated against all axle weight restrictions, including single axle and tandem axle weight restrictions.
+The provided value must be greater or equal to 0.
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="widthInCentimeters" class="property">
+  <span class="name"><a href="../transport/VehicleSpecification/widthInCentimeters.html">widthInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Vehicle width in centimeters. The provided value must be in the range [0, 5000].
+By default, it is not set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../transport/VehicleSpecification/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../transport/VehicleSpecification/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../transport/VehicleSpecification/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../transport/transport-library.html">transport</a></li>
+    <li class="self-crumb">VehicleSpecification class</li>
+</ol>
+
+
+    <h5>transport library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

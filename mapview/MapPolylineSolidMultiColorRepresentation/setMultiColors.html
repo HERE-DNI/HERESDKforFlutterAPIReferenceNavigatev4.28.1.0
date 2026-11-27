@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the setMultiColors method from the MapPolylineSolidMultiColorRepresentation class, for the Dart programming language.">
+  <title>setMultiColors method - MapPolylineSolidMultiColorRepresentation class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview.dart</a></li>
+    <li><a href="../../mapview/MapPolylineSolidMultiColorRepresentation-class.html">MapPolylineSolidMultiColorRepresentation</a></li>
+    <li class="self-crumb">setMultiColors abstract method</li>
+  </ol>
+  <div class="self-name">setMultiColors</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;MapPolylineSolidMultiColorRepresentation-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">setMultiColors</span> abstract method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">bool</span>
+<span class="name ">setMultiColors</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="setMultiColors-param-colorStops"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter">double</span>&gt;</span></span> <span class="parameter-name">colorStops</span>, </span></li>
+<li><span class="parameter" id="setMultiColors-param-colorIndices"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter">int</span>&gt;</span></span> <span class="parameter-name">colorIndices</span>, </span></li>
+<li><span class="parameter" id="setMultiColors-param-colors"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span>&gt;</span></span> <span class="parameter-name">colors</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Sets lists of colors and multiple color segment stops for the polyline to be colored in.</p>
+<p>When this representation is already set on any <code>MapPolyline</code>, values will be applied on that <code>MapPolyline</code> right away.
+If this representation is not set on any <code>MapPolyline</code>, values will be applied once representation is set on a <code>MapPolyline</code>.</p>
+<p><strong>Note:</strong> This is a <strong>beta</strong> release of this feature and may contain bugs or exhibit unexpected behaviour. Related APIs are subject to change without a deprecation process.</p>
+<ul>
+<li>
+<p><code>colorStops</code> List containing color stop values indicating a change of color on a polyline.
+Color stops must be in the range of [0.0, 1.0].
+First color stop value in the list must be 0.0 and last color stop value in the list must be 1.0.
+Color stop values must be sorted in ascending order (e.g. 0.0, 0.2, 0.3, 1.0). Duplicate values are not allowed.
+Color stops number must be equal to the number of color indices + 1.
+Maximum size is 16384 color stops.
+An empty list is not allowed.</p>
+</li>
+<li>
+<p><code>colorIndices</code> List of color indices (from the color list) corresponding to the color stops.
+Value range is: [0, (color list size - 1)]. Values outside of the range are not allowed.
+Number of color indices must be equal to the number of color stop - 1.
+Maximum size is 16384 color indices.</p>
+</li>
+<li>
+<p><code>colors</code> List of colors.
+Maximum size is 1024 colors.
+An empty list is not allowed.</p>
+</li>
+</ul>
+<p>Returns <code>bool</code>. Value indicating whether parameters are valid and can be applied.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">bool setMultiColors(List&lt;double&gt; colorStops, List&lt;int&gt; colorIndices, List&lt;ui.Color&gt; colors);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview</a></li>
+    <li><a href="../../mapview/MapPolylineSolidMultiColorRepresentation-class.html">MapPolylineSolidMultiColorRepresentation</a></li>
+    <li class="self-crumb">setMultiColors abstract method</li>
+</ol>
+
+
+    <h5>MapPolylineSolidMultiColorRepresentation class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

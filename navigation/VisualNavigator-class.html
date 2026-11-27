@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the VisualNavigator class from the navigation library, for the Dart programming language.">
+  <title>VisualNavigator class - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation.dart</a></li>
+    <li class="self-crumb">VisualNavigator class</li>
+  </ol>
+  <div class="self-name">VisualNavigator</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="navigation&#47;navigation-library-sidebar.html"
+    data-below-sidebar="navigation&#47;VisualNavigator-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">VisualNavigator</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>This class provides all functionality of <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a>.</p>
+<p>In addition,
+it provides advanced rendering capabilities for a smooth navigation experience.
+This includes interpolation of location updates along a route during turn-by-turn navigation
+and during tracking mode. By default, suitable map view settings are automatically applied.
+For example, a predefined current location marker is rendered.
+Similar to <a href="../navigation/Navigator-class.html">Navigator</a>, this class continuously reacts to new locations
+provided from a location source and acts as a <a href="../core/LocationListener-class.html">LocationListener</a>.
+Note that the VisualNavigator takes control of the MapView's (maximum) frame rate when rendering,
+i.e., between <a href="../navigation/VisualNavigator/startRendering.html">VisualNavigator.startRendering</a> and <a href="../navigation/VisualNavigator/stopRendering.html">VisualNavigator.stopRendering</a> calls. It overwrites the MapView's frame
+rate when some camera behavior is set using the <a href="../navigation/VisualNavigator/guidanceFrameRate.html">VisualNavigator.guidanceFrameRate</a>. When no camera behavior
+is preset, the original MapView's frame rate (the value prior to the <a href="../navigation/VisualNavigator/startRendering.html">VisualNavigator.startRendering</a> call) will
+be used. While the VisualNavigator is rendering, direct changes in the MapView's frame rate can
+lead to unexpected behavior and therefore should be avoided.</p>
+<p><strong>Note:</strong> After version 4.31.0, <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> will no longer implement the
+Abstract class <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> directly. A <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> instance should
+therefore not be used where a <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> is required. To access the
+<a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> implementation associated with a <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a>, use its <a href="../navigation/VisualNavigator/navigator.html">VisualNavigator.navigator</a>
+property and call the interface methods on that object.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a></li>
+    </ul>
+  </dd>
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="VisualNavigator" class="callable">
+          <span class="name"><a href="../navigation/VisualNavigator/VisualNavigator.html">VisualNavigator</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="VisualNavigator.withNavigator" class="callable">
+          <span class="name"><a href="../navigation/VisualNavigator/VisualNavigator.withNavigator.html">VisualNavigator.withNavigator</a></span><span class="signature">(<span class="parameter" id="withNavigator-param-navigator"><span class="type-annotation"><a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a></span> <span class="parameter-name">navigator</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class using provided instance of <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> as source of data.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="VisualNavigator.withSdkEngine" class="callable">
+          <span class="name"><a href="../navigation/VisualNavigator/VisualNavigator.withSdkEngine.html">VisualNavigator.withSdkEngine</a></span><span class="signature">(<span class="parameter" id="withSdkEngine-param-sdkEngine"><span class="type-annotation"><a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a></span> <span class="parameter-name">sdkEngine</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="VisualNavigator.withSdkEngineAndNavigator" class="callable">
+          <span class="name"><a href="../navigation/VisualNavigator/VisualNavigator.withSdkEngineAndNavigator.html">VisualNavigator.withSdkEngineAndNavigator</a></span><span class="signature">(<span class="parameter" id="withSdkEngineAndNavigator-param-sdkEngine"><span class="type-annotation"><a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a></span> <span class="parameter-name">sdkEngine</span>, </span><span class="parameter" id="withSdkEngineAndNavigator-param-navigator"><span class="type-annotation"><a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a></span> <span class="parameter-name">navigator</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class using provided instance of <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> as source of data.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="borderCrossingWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/borderCrossingWarningListener.html">borderCrossingWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/BorderCrossingWarningListener-class.html">BorderCrossingWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about border crossings on the current road.
+Border crossing notifications are given only if a route is present.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about border crossings on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="borderCrossingWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/borderCrossingWarningOptions.html">borderCrossingWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/BorderCrossingWarningOptions-class.html">BorderCrossingWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Border crossing warning options to be passed to <a class="deprecated" href="../navigation/BorderCrossingWarningListener-class.html">BorderCrossingWarningListener</a>. These options
+allow the filtering of the border crossing warnings received and set the notification distances.
+Gets border crossing warning options to be passed to <a class="deprecated" href="../navigation/BorderCrossingWarningListener-class.html">BorderCrossingWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="cameraBehavior" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/cameraBehavior.html">cameraBehavior</a></span>
+  <span class="signature">&#8596; <a href="../navigation/CameraBehavior-class.html">CameraBehavior</a>?</span>
+  
+
+</dt>
+<dd>
+  Camera behavior which defines how the <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> handles the camera.
+Setting <code>null</code> disables any camera behavior with the result that the camera does not follow
+the current location and keeps the last active camera state, i.e., current zoom and tilt.
+Furthermore, when <code>null</code> is set map gestures can be used again to freely pan and zoom
+the map. In opposition, when a camera behavior is defined, then the map cannot be panned and
+zoomed by the user.
+The default value is an instance of <a href="../navigation/FixedCameraBehavior-class.html">FixedCameraBehavior</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="colors" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/colors.html">colors</a></span>
+  <span class="signature">&#8596; <a href="../navigation/VisualNavigatorColors-class.html">VisualNavigatorColors</a></span>
+  
+
+</dt>
+<dd>
+  Object containing colors used to render route progress and maneuver arrow visualization.
+Setting a new instance overwrites the default color settings as specified in <a href="../navigation/VisualNavigatorColors-class.html">VisualNavigatorColors</a>.
+Gets an object containing colors used to render route progress and maneuver arrow visualization.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentSituationLaneAssistanceViewListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/currentSituationLaneAssistanceViewListener.html">currentSituationLaneAssistanceViewListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/CurrentSituationLaneAssistanceViewListener-class.html">CurrentSituationLaneAssistanceViewListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive current situation lane assistance view notifications.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive current situation lane assistance view notifications.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="customLocationIndicator" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/customLocationIndicator.html">customLocationIndicator</a></span>
+  <span class="signature">&#8596; <a href="../mapview/LocationIndicator-class.html">LocationIndicator</a>?</span>
+  
+
+</dt>
+<dd>
+  Custom location indicator <a href="../mapview/LocationIndicator-class.html">LocationIndicator</a> which <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> uses instead of the default.
+If set, the user is responsible for adding and removing the object to/from the mapview.
+It is important to stop sending location updates to the provided <a href="../mapview/LocationIndicator-class.html">LocationIndicator</a>, since
+<a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> will control its position when rendering is active, i.e., between startRendering() and
+stopRendering() calls. By default this property is <code>null</code>,
+which means the default indicator is used, and <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> automatically adds and removes it to/from
+the mapview upon startRendering() and stopRendering() calls.
+Gets the currently set <a href="../mapview/LocationIndicator-class.html">LocationIndicator</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="dangerZoneWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/dangerZoneWarningListener.html">dangerZoneWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/DangerZoneWarningListener-class.html">DangerZoneWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notification on approaching danger zones.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive current danger zones notifications.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugGpxFilePath" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/debugGpxFilePath.html">debugGpxFilePath</a></span>
+  <span class="signature">&#8596; String?</span>
+  
+
+</dt>
+<dd>
+  Show the contents of a GPX file on the map.
+<strong>Note:</strong> This API should be used for debugging purposes only.
+Gets the path of the GPX file, is any available, currently being displayed on the map.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="destinationReachedListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/destinationReachedListener.html">destinationReachedListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/DestinationReachedListener-class.html">DestinationReachedListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive the notification about the arrival at the destination.
+Destination reached notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notify when the destination has been reached.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="environmentalZoneWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/environmentalZoneWarningListener.html">environmentalZoneWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/EnvironmentalZoneWarningListener-class.html">EnvironmentalZoneWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notification on approaching environmental zones.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive current environmental zones notifications.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="eventTextListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/eventTextListener.html">eventTextListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/EventTextListener-class.html">EventTextListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive text notifications when they are available.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+<strong>Note:</strong> In order to receive the text notification emitted for the traffic merge warner,
+when <code>TrafficMergeWarningOptions.enable_text_notification</code> has been enabled, the <code>sdk.navigation.EventTextListener</code> must be enabled as well.
+Gets the listener that notifies when a text notification is available.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="eventTextOptions" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/eventTextOptions.html">eventTextOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/EventTextOptions-class.html">EventTextOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Options used for text notifications.
+Notifications are only available if a route is present.
+Gets the text notification options.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="guidanceFrameRate" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/guidanceFrameRate.html">guidanceFrameRate</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  Frame rate used during guidance.
+Frame rate used during guidance.
+Default is 30fps.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../core/LocationListener/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="interpolatedLocationListener" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/interpolatedLocationListener.html">interpolatedLocationListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/InterpolatedLocationListener-class.html">InterpolatedLocationListener</a>?</span>
+  
+
+</dt>
+<dd>
+  Object to receive interpolated locations.
+For example, to pan a second instance of a <a href="../mapview/MapViewBase-class.html">MapViewBase</a> or move additional markers smoothly.
+The map-matched locations are used if available, otherwise the non-map-matched ones are used instead.
+Defaults to <code>null</code>.
+Gets the listener that receives interpolated locations.
+For example, to pan a second instance of a
+<a href="../mapview/MapViewBase-class.html">MapViewBase</a> or move additional markers smoothly. The map-matched locations are
+used if available, otherwise the non-map-matched ones are used instead.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isDebugModeEnabled" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isDebugModeEnabled.html">isDebugModeEnabled</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  When enabled, it shows useful information for debugging purposes.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isDynamicFrameRateEnabled" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isDynamicFrameRateEnabled.html">isDynamicFrameRateEnabled</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Flag used to enable or disable the dynamic frame rate.
+Controls whether the number of map updates is dynamically calculated based on
+the current zoom level. If the zoom level is low, i.e., the camera target distance is high,
+updates to LocationIndicator, MapCamera and <a href="../mapview/MapLayer-class.html">MapLayer</a> representing the route progress will
+happen less frequent. It is on by default.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isEnableTunnelExtrapolation" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/isEnableTunnelExtrapolation.html">isEnableTunnelExtrapolation</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd class="inherited">
+  Defines whether to enable or disable tunnel extrapolation.
+By default the tunnel extrapolation is enabled.
+Return <code>true</code> if tunnel extrapolation is enabled otherwise <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isExtrapolationEnabled" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isExtrapolationEnabled.html">isExtrapolationEnabled</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Defines whether the position extrapolation logic is enabled or not.
+The predicted location follows the geometry of the route (or road) ahead.
+By default it is enabled.
+Gets the current state of the position extrapolation logic.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isLocationAccuracyVisualized" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isLocationAccuracyVisualized.html">isLocationAccuracyVisualized</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Controls if the halo accuracy visualization of the default <a href="../mapview/LocationIndicator-class.html">LocationIndicator</a> is rendered or not.
+Does not affect halo accuracy indicator of the <a href="../navigation/VisualNavigator/customLocationIndicator.html">VisualNavigator.customLocationIndicator</a>.
+If <a href="../navigation/VisualNavigator/customLocationIndicator.html">VisualNavigator.customLocationIndicator</a> is set, then its halo accuracy indicator can be controlled
+using <a href="../mapview/LocationIndicator/isAccuracyVisualized.html">LocationIndicator.isAccuracyVisualized</a>.
+Gets a boolean indicating if the halo accuracy visualization of the default <a href="../mapview/LocationIndicator-class.html">LocationIndicator</a> is rendered or not.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isManeuverArrowsVisible" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isManeuverArrowsVisible.html">isManeuverArrowsVisible</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Maneuver arrows visibility which defines whether to perform maneuver arrow rendering during visual navigation.
+By default, it is enabled.
+Gets the current state of maneuver arrow rendering during visual navigation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isOffRoadDestinationVisible" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isOffRoadDestinationVisible.html">isOffRoadDestinationVisible</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Off road destination visibility which defines whether to show a dashed line between the map-matched and the original destination
+which is off-road. By default it is enabled.
+<strong>Note:</strong> The dashed line will be drawn only if the original destination is off-road.
+Gets the current state of off-road destination visualization during visual navigation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isPassthroughWaypointsHandlingEnabled" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/isPassthroughWaypointsHandlingEnabled.html">isPassthroughWaypointsHandlingEnabled</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd class="inherited">
+  Defines whether to enable or disable handling of passthrough waypoints.
+By default the handling of passthrough waypoints is disabled.
+Return <code>true</code> if handling of passthrough waypoints is enabled, otherwise - <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isRendering" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isRendering.html">isRendering</a></span>
+  <span class="signature">&#8594; bool</span>
+  
+
+</dt>
+<dd>
+  Returns a value indicating whether visual navigation rendering is enabled.
+Returns a value indicating whether visual navigation rendering is enabled.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isRouteProgressVisible" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isRouteProgressVisible.html">isRouteProgressVisible</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  <a href="../navigation/RouteProgress-class.html">RouteProgress</a> visibility which defines whether to perform route progress coloring ("eat-up") during visual navigation.
+By default, it is enabled.
+Gets the current state of route progress during visual navigation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isRouteVisible" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isRouteVisible.html">isRouteVisible</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  <a href="../routing/Route-class.html">Route</a> visibility which defines whether to perform route rendering during visual navigation.
+When enabled, the set <a href="../routing/Route-class.html">Route</a> will be rendered as a <a href="../mapview/MapLayer-class.html">MapLayer</a>.
+By default, it is enabled.
+Gets the current state of route rendering during visual navigation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isTrafficOnRouteVisible" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/isTrafficOnRouteVisible.html">isTrafficOnRouteVisible</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  A boolean which defines whether to perform rendering of traffic conditions on the route when <a href="../routing/Route-class.html">Route</a> visualization
+is enabled during visual navigation.
+When enabled the route's <a href="../mapview/MapLayer-class.html">MapLayer</a> will be enhanced with visualization of the traffic conditions.
+Colors used for this visualization are defined in <a href="../navigation/VisualNavigatorColors/trafficOnRouteColors.html">VisualNavigatorColors.trafficOnRouteColors</a>.
+The presented traffic information is either set by the user via <a href="../navigation/NavigatorInterface/trafficOnRoute.html">NavigatorInterface.trafficOnRoute</a> or
+is generated from historical traffic data stored in the map.
+<strong>Note:</strong> <code>VisualNavigator</code> does not perform automatic traffic data updates. The updated traffic information is available
+through the <code>sdk.routing.RoutingEngine.calculate_traffic_on_route</code> interface. The returned <a href="../routing/TrafficOnRoute-class.html">TrafficOnRoute</a>
+could then be used to update <code>sdk.navigation.NavigatorInterface.traffic_on_route</code> to refresh the traffic on route visualization.
+Defaults to <code>false</code>.
+Gets the current state whether traffic conditions on route should be displayed during visual navigation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="junctionViewLaneAssistanceListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/junctionViewLaneAssistanceListener.html">junctionViewLaneAssistanceListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/JunctionViewLaneAssistanceListener-class.html">JunctionViewLaneAssistanceListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive junction view lane assistance notifications.
+Junction view lane assistance notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive junction view lane assistance notifications.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="locationManager" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/locationManager.html">locationManager</a></span>
+  <span class="signature">&#8594; <a href="../mapmatcher/LocationManager-class.html">LocationManager</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The location manager used by the navigator for map-matched location processing.
+Gets the location manager instance used by the navigator.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="lowSpeedZoneWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/lowSpeedZoneWarningListener.html">lowSpeedZoneWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/LowSpeedZoneWarningListener-class.html">LowSpeedZoneWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about low speed zones on the current road.
+Low speed zone notifications are given regardless if a route is set. This listener is currently
+available <em>only</em> for Japan.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about low speed zones on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="maneuverArrowWidthFactor" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/maneuverArrowWidthFactor.html">maneuverArrowWidthFactor</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  A multiplier for <a href="../navigation/VisualNavigator/measureDependentWidth.html">VisualNavigator.measureDependentWidth</a> that defines the maneuver arrow line width.
+Gets the factor that scales the maneuver arrow line width defined by <a href="../navigation/VisualNavigator/measureDependentWidth.html">VisualNavigator.measureDependentWidth</a>.
+The default value is 1.0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maneuverNotificationOptions" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/maneuverNotificationOptions.html">maneuverNotificationOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/ManeuverNotificationOptions-class.html">ManeuverNotificationOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Options used for maneuver notifications.
+Notifications are only available if a route is present.
+Gets the maneuver notification options.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="maneuverViewLaneAssistanceListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/maneuverViewLaneAssistanceListener.html">maneuverViewLaneAssistanceListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/ManeuverViewLaneAssistanceListener-class.html">ManeuverViewLaneAssistanceListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive maneuver view lane assistance notifications.
+Maneuver view lane assistance notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive maneuver view lane assistance notifications.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="measureDependentWidth" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/measureDependentWidth.html">measureDependentWidth</a></span>
+  <span class="signature">&#8596; Map<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMeasure-class.html">MapMeasure</a></span>, <span class="type-parameter">double</span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The width of route polylines and maneuver arrows based on <a href="../mapview/MapMeasure-class.html">MapMeasure</a>
+values.
+A dictionary mapping <a href="../mapview/MapMeasure-class.html">MapMeasure</a> keys to widths values in
+density-independent pixels (dp).
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="milestoneStatusListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/milestoneStatusListener.html">milestoneStatusListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/MilestoneStatusListener-class.html">MilestoneStatusListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about the arrival at each <a href="../navigation/Milestone-class.html">Milestone</a> or missing it.
+It informs on all waypoints (passed or missed) that
+are of type <a href="../navigation/MilestoneType.html">MilestoneType.stopover</a> but excludes the
+starting waypoint.
+Waypoints of type <a href="../navigation/MilestoneType.html">MilestoneType.passthrough</a> are excluded, by default,
+but can be included via <a href="../navigation/NavigatorInterface/isPassthroughWaypointsHandlingEnabled.html">NavigatorInterface.isPassthroughWaypointsHandlingEnabled</a>.
+Milestone status notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notifies when a <a href="../navigation/Milestone-class.html">Milestone</a> has been reached or missed.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="navigableLocationListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/navigableLocationListener.html">navigableLocationListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/NavigableLocationListener-class.html">NavigableLocationListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about the current location.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notifies current location updates.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="navigator" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/navigator.html">navigator</a></span>
+  <span class="signature">&#8594; <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a></span>
+  
+
+</dt>
+<dd>
+  The <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> instance used by the <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a>.
+Gets the <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a> instance used by the <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a>.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="offRoadDestinationReachedListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/offRoadDestinationReachedListener.html">offRoadDestinationReachedListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/OffRoadDestinationReachedListener-class.html">OffRoadDestinationReachedListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive the notification about the arrival at the off-road destination.
+Off-road destination reached notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset
+the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notifies when the off-road destination has been reached.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="offRoadProgressListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/offRoadProgressListener.html">offRoadProgressListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/OffRoadProgressListener-class.html">OffRoadProgressListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive the notification about the off-road progress.
+Off-road progress notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset
+the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notifies about off-road progress.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="postActionListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/postActionListener.html">postActionListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/PostActionListener-class.html">PostActionListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive post action notifications, such as a charge action at a charging station.
+Post actions notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive post action notifications, such as a charge action at a charging station.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="railwayCrossingWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/railwayCrossingWarningListener.html">railwayCrossingWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/RailwayCrossingWarningListener-class.html">RailwayCrossingWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about railway crossings on the current road.
+Railway crossing notifications are given regardless if a route is set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about railway crossings on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="realisticViewWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/realisticViewWarningListener.html">realisticViewWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/RealisticViewWarningListener-class.html">RealisticViewWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about junction views on the current road.
+Setting <code>null</code> value to the listener will unset
+the listener.
+This feature requires a map version greater or equal to 67 in order to function properly.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about junction views on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="realisticViewWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/realisticViewWarningOptions.html">realisticViewWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RealisticViewWarningOptions-class.html">RealisticViewWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Realistic view warning options.
+It allow to filter realistic views to be passed to <a class="deprecated" href="../navigation/RealisticViewWarningListener-class.html">RealisticViewWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="roadAttributesListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/roadAttributesListener.html">roadAttributesListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RoadAttributesListener-class.html">RoadAttributesListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about attributes of the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about attributes of the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="roadSignWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/roadSignWarningListener.html">roadSignWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/RoadSignWarningListener-class.html">RoadSignWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about road signs on the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about road signs on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="roadSignWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/roadSignWarningOptions.html">roadSignWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RoadSignWarningOptions-class.html">RoadSignWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Road sign warning options that allow to filter road sings to be passed to <a class="deprecated" href="../navigation/RoadSignWarningListener-class.html">RoadSignWarningListener</a>.
+Gets road sign warning options that allow to filter road signs to be passed to <a class="deprecated" href="../navigation/RoadSignWarningListener-class.html">RoadSignWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="roadTextsListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/roadTextsListener.html">roadTextsListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RoadTextsListener-class.html">RoadTextsListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about the textual attributes of the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about the textual attributes of the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="route" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/route.html">route</a></span>
+  <span class="signature">&#8596; <a href="../routing/Route-class.html">Route</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  The route to navigate.
+Gets and sets the route that is being navigated.
+If not set, only the current location information will be
+provided through <a href="../navigation/NavigableLocationListener-class.html">NavigableLocationListener</a>.
+If set, both route progress (<a href="../navigation/RouteProgressListener-class.html">RouteProgressListener</a>) and route deviation
+(<a href="../navigation/RouteDeviationListener-class.html">RouteDeviationListener</a>) will receive notifications on updates.
+A route may fail to be set if it is generated by an incompatible engine, in which case the operation has no effect.
+Gets the route that is being navigated.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="routeDeviationListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/routeDeviationListener.html">routeDeviationListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RouteDeviationListener-class.html">RouteDeviationListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about deviations from the route if any occurs.
+Route deviation notifications only occurs if a route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notifies when deviation from the route is observed.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="routeProgressListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/routeProgressListener.html">routeProgressListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RouteProgressListener-class.html">RouteProgressListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about navigation route progress.
+Route progress notifications only occurs if the route has been set.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener that notifies when a route progress change occurs.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../core/LocationListener/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="safetyCameraWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/safetyCameraWarningListener.html">safetyCameraWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/SafetyCameraWarningListener-class.html">SafetyCameraWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive safety camera warner notifications.
+If a listener is present, notifications about
+safety speed cameras will be also sent via <a class="deprecated" href="../navigation/SafetyCameraWarningListener-class.html">SafetyCameraWarningListener</a>.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive safety camera warning notifications.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="safetyCameraWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/safetyCameraWarningOptions.html">safetyCameraWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/SafetyCameraWarningOptions-class.html">SafetyCameraWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Safety camera warning options to be passed to <a class="deprecated" href="../navigation/SafetyCameraWarningListener-class.html">SafetyCameraWarningListener</a>.
+These options allow the enabling or disabling the text notification for the warner.
+Gets safety camera warning options to be passed to <a class="deprecated" href="../navigation/SafetyCameraWarningListener-class.html">SafetyCameraWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="schoolZoneWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/schoolZoneWarningListener.html">schoolZoneWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/SchoolZoneWarningListener-class.html">SchoolZoneWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about school zones on the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+school zones on the current road.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about school zones on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="schoolZoneWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/schoolZoneWarningOptions.html">schoolZoneWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/SchoolZoneWarningOptions-class.html">SchoolZoneWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  School zone warning options
+It allow to configure school zone notifications to be passed to
+<a class="deprecated" href="../navigation/SchoolZoneWarningListener-class.html">SchoolZoneWarningListener</a>.
+Gets school zone warning options that allow to configure school zone notifications to be
+passed to <a class="deprecated" href="../navigation/SchoolZoneWarningListener-class.html">SchoolZoneWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="speedLimitListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/speedLimitListener.html">speedLimitListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/SpeedLimitListener-class.html">SpeedLimitListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about the speed limit of the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about the speed limit of the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="speedWarningListener" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/speedWarningListener.html">speedWarningListener</a></span>
+  <span class="signature">&#8596; <a href="../navigation/SpeedWarningListener-class.html">SpeedWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications when a speed limit on a road is exceeded or driving speed is restored back to normal.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications
+when a speed limit on a road is exceeded or driving speed is restored back to normal.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="speedWarningOptions" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/speedWarningOptions.html">speedWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/SpeedWarningOptions-class.html">SpeedWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Options used for the speed warning feature.
+Gets the speed warning options.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="tollStopWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/tollStopWarningListener.html">tollStopWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/TollStopWarningListener-class.html">TollStopWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive information on the upcoming toll stop.
+Setting <code>null</code> value to the listener will unset
+the listener.
+This is a <strong>beta release</strong> of this feature, so there could be a few bugs and unexpected
+behaviors. Related APIs may change for new releases without a deprecation process.
+Gets the listener to receive notifications about
+the the upcoming toll stop.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trackingTransportSpecification" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/trackingTransportSpecification.html">trackingTransportSpecification</a></span>
+  <span class="signature">&#8596; <a href="../transport/TransportSpecification-class.html">TransportSpecification</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Defines the transport specification for the <a href="../navigation/Navigator-class.html">Navigator</a>, when no route is present.
+Properly setting the transport specification optimizes the navigation experience, and improves
+resource consumption. An <a href="../transport/TransportSpecification-class.html">TransportSpecification</a> must have the <a href="../transport/TransportSpecification/transportMode.html">TransportSpecification.transportMode</a> set.
+A transport specification can have several parameters defined such as <a href="../transport/VehicleSpecification/lengthInCentimeters.html">VehicleSpecification.lengthInCentimeters</a>
+defined in <a href="../transport/TransportSpecification/vehicleSpecification.html">TransportSpecification.vehicleSpecification</a> to set the source of information describing the vehicle.
+By default the <a href="../transport/TransportSpecification-class.html">TransportSpecification</a> will have the transport mode set to <a href="../transport/TransportMode.html">TransportMode.car</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trafficMergeWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/trafficMergeWarningListener.html">trafficMergeWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/TrafficMergeWarningListener-class.html">TrafficMergeWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about merging traffic to the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about
+merging traffic to the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trafficMergeWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/trafficMergeWarningOptions.html">trafficMergeWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/TrafficMergeWarningOptions-class.html">TrafficMergeWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Merging traffic warning options that allow to configure merging traffic notifications to be passed to
+<a class="deprecated" href="../navigation/TrafficMergeWarningListener-class.html">TrafficMergeWarningListener</a>.
+Gets merging traffic warning options that allow to configure merging traffic notifications to be
+passed to <a class="deprecated" href="../navigation/TrafficMergeWarningListener-class.html">TrafficMergeWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trafficOnRoute" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/trafficOnRoute.html">trafficOnRoute</a></span>
+  <span class="signature">&#8596; <a href="../routing/TrafficOnRoute-class.html">TrafficOnRoute</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Traffic information for the current route.
+This impacts <code>RouteProgress</code> updates as the duration of the <code>SectionProgress</code> might change.
+However, the remaining distance and the route geometry will remain unchanged.
+Gets the traffic information for the current route.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="truckRestrictionsWarningListener" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/truckRestrictionsWarningListener.html">truckRestrictionsWarningListener</a></span>
+  <span class="signature">&#8596; <a class="deprecated" href="../navigation/TruckRestrictionsWarningListener-class.html">TruckRestrictionsWarningListener</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Object to receive notifications about truck restrictions on the current road.
+Setting <code>null</code> value to the listener will unset the listener.
+It returns <code>null</code> when no listener is set by an user.
+Gets the listener to receive notifications about
+truck restrictions on the current road.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="truckRestrictionsWarningOptions" class="property inherited">
+  <span class="name"><a class="deprecated" href="../navigation/NavigatorInterface/truckRestrictionsWarningOptions.html">truckRestrictionsWarningOptions</a></span>
+  <span class="signature">&#8596; <a href="../navigation/TruckRestrictionsWarningOptions-class.html">TruckRestrictionsWarningOptions</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Truck restrictions warning options that allow to filter truck restrictions to be passed to <a class="deprecated" href="../navigation/TruckRestrictionsWarningListener-class.html">TruckRestrictionsWarningListener</a>.
+Gets truck restrictions warning options that allow to filter truck restrictions to be
+passed to <a class="deprecated" href="../navigation/TruckRestrictionsWarningListener-class.html">TruckRestrictionsWarningListener</a>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="warnerEngine" class="property inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/warnerEngine.html">warnerEngine</a></span>
+  <span class="signature">&#8594; <a href="../warner/WarnerEngine-class.html">WarnerEngine</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Warner engine used by the navigator.
+This engine can be used to configure navigation warnings.
+Gets the warner engine used by the navigator.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="calculateRemainingDistanceInMeters" class="callable inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/calculateRemainingDistanceInMeters.html">calculateRemainingDistanceInMeters</a></span><span class="signature">(<wbr><span class="parameter" id="calculateRemainingDistanceInMeters-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span></span>)
+    <span class="returntype parameter">&#8594; int?</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  This method calculates the distance between the current position and given coordinates.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getManeuver" class="callable inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/getManeuver.html">getManeuver</a></span><span class="signature">(<wbr><span class="parameter" id="getManeuver-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../routing/Maneuver-class.html">Maneuver</a>?</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns maneuver at the given index.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getManeuverNotificationTimingOptionsWithTimingProfile" class="callable inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/getManeuverNotificationTimingOptionsWithTimingProfile.html">getManeuverNotificationTimingOptionsWithTimingProfile</a></span><span class="signature">(<wbr><span class="parameter" id="getManeuverNotificationTimingOptionsWithTimingProfile-param-transportMode"><span class="type-annotation"><a href="../transport/TransportMode.html">TransportMode</a></span> <span class="parameter-name">transportMode</span>, </span><span class="parameter" id="getManeuverNotificationTimingOptionsWithTimingProfile-param-timingProfile"><span class="type-annotation"><a href="../navigation/TimingProfile.html">TimingProfile</a></span> <span class="parameter-name">timingProfile</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/ManeuverNotificationTimingOptions-class.html">ManeuverNotificationTimingOptions</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns maneuver notification timing options with default values given the combination of transport mode and timing profile.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getWarningNotificationDistances" class="callable inherited">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/NavigatorInterface/getWarningNotificationDistances.html">getWarningNotificationDistances</a></span><span class="signature">(<wbr><span class="parameter" id="getWarningNotificationDistances-param-warningType"><span class="type-annotation"><a href="../navigation/WarningType.html">WarningType</a></span> <span class="parameter-name">warningType</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/WarningNotificationDistances-class.html">WarningNotificationDistances</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns the warning notification distances for the requested warning type.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../core/LocationListener/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onLocationUpdated" class="callable inherited">
+  <span class="name"><a href="../core/LocationListener/onLocationUpdated.html">onLocationUpdated</a></span><span class="signature">(<wbr><span class="parameter" id="onLocationUpdated-param-location"><span class="type-annotation"><a href="../core/Location-class.html">Location</a></span> <span class="parameter-name">location</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Called each time a new location is available.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="repeatLastManeuverNotification" class="callable inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/repeatLastManeuverNotification.html">repeatLastManeuverNotification</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Call of this function is used to trigger the navigator to repeat the last maneuver notification based on the current position.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setCustomOption" class="callable inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/setCustomOption.html">setCustomOption</a></span><span class="signature">(<wbr><span class="parameter" id="setCustomOption-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="setCustomOption-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  This method sets custom options that controls navigator behavior.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setManeuverNotificationTimingOptionsWithTimingProfile" class="callable inherited">
+  <span class="name"><a href="../navigation/NavigatorInterface/setManeuverNotificationTimingOptionsWithTimingProfile.html">setManeuverNotificationTimingOptionsWithTimingProfile</a></span><span class="signature">(<wbr><span class="parameter" id="setManeuverNotificationTimingOptionsWithTimingProfile-param-transportMode"><span class="type-annotation"><a href="../transport/TransportMode.html">TransportMode</a></span> <span class="parameter-name">transportMode</span>, </span><span class="parameter" id="setManeuverNotificationTimingOptionsWithTimingProfile-param-timingProfile"><span class="type-annotation"><a href="../navigation/TimingProfile.html">TimingProfile</a></span> <span class="parameter-name">timingProfile</span>, </span><span class="parameter" id="setManeuverNotificationTimingOptionsWithTimingProfile-param-options"><span class="type-annotation"><a href="../navigation/ManeuverNotificationTimingOptions-class.html">ManeuverNotificationTimingOptions</a></span> <span class="parameter-name">options</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Set timing option values for the combination of transport mode and timing profile.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setWarningNotificationDistances" class="callable inherited">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/NavigatorInterface/setWarningNotificationDistances.html">setWarningNotificationDistances</a></span><span class="signature">(<wbr><span class="parameter" id="setWarningNotificationDistances-param-warningType"><span class="type-annotation"><a href="../navigation/WarningType.html">WarningType</a></span> <span class="parameter-name">warningType</span>, </span><span class="parameter" id="setWarningNotificationDistances-param-warningNotificationDistances"><span class="type-annotation"><a href="../navigation/WarningNotificationDistances-class.html">WarningNotificationDistances</a></span> <span class="parameter-name">warningNotificationDistances</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Set the warning notification distances for the specified warning types.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="startRendering" class="callable">
+  <span class="name"><a href="../navigation/VisualNavigator/startRendering.html">startRendering</a></span><span class="signature">(<wbr><span class="parameter" id="startRendering-param-mapView"><span class="type-annotation"><a href="../mapview/MapViewBase-class.html">MapViewBase</a></span> <span class="parameter-name">mapView</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts visual navigation rendering.
+  
+
+</dd>
+
+        <dt id="stopRendering" class="callable">
+  <span class="name"><a href="../navigation/VisualNavigator/stopRendering.html">stopRendering</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stops visual navigation rendering.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../core/LocationListener/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../core/LocationListener/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
+
+    <dl class="properties">
+        <dt id="routeLayerOverlay" class="property">
+  <span class="name"><a href="../navigation/VisualNavigator/routeLayerOverlay.html">routeLayerOverlay</a></span>
+  <span class="signature">&#8594; String</span>
+  
+
+</dt>
+<dd>
+  Placeholder layer positioned above route polylines in the map layer stack.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="defaultRouteManeuverArrowMeasureDependentWidths" class="callable">
+  <span class="name"><a href="../navigation/VisualNavigator/defaultRouteManeuverArrowMeasureDependentWidths.html">defaultRouteManeuverArrowMeasureDependentWidths</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; Map<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMeasure-class.html">MapMeasure</a></span>, <span class="type-parameter">double</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Retrieves a dictionary of default route and maneuver arrow widths as a function of <a href="../mapview/MapMeasure-class.html">MapMeasure</a>s.
+  
+
+</dd>
+
+        <dt id="getAvailableLanguagesForManeuverNotifications" class="callable">
+  <span class="name"><a href="../navigation/VisualNavigator/getAvailableLanguagesForManeuverNotifications.html">getAvailableLanguagesForManeuverNotifications</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../core/LanguageCode.html">LanguageCode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the list of languages for maneuver notification currently available in the SDK.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation</a></li>
+    <li class="self-crumb">VisualNavigator class</li>
+</ol>
+
+
+    <h5>navigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

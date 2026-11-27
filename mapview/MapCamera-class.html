@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapCamera class from the mapview library, for the Dart programming language.">
+  <title>MapCamera class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview.dart</a></li>
+    <li class="self-crumb">MapCamera class</li>
+  </ol>
+  <div class="self-name">MapCamera</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;mapview-library-sidebar.html"
+    data-below-sidebar="mapview&#47;MapCamera-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapCamera</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Represents the camera looking onto the map view.</p>
+<p>Each map instance has exactly one camera that is used to manipulate
+the way the map is displayed.</p>
+<p>Any updates to the state of the camera will be applied while drawing the next map view frame
+and the current state of the camera reflects what is currently drawn inside the map view.</p>
+<p>Note: The camera can be configured and positioned even before a map scene is loaded for the first time.
+This allows for pre-setting the desired camera position, orientation, and zoom level, which will be
+applied once the map scene becomes available.</p>
+<p><b>Camera Model</b></p>
+<p><i>Camera Concepts and Units</i></p>
+<p>By default, HERE SDK uses an idealized Earth globe with a 3D-capable camera model. Being a 3D camera model means that the
+world position can be freely specified in geodetic 3D space (i.e. Earth centric) and the orientation can be freely changed around
+two axes - bearing (also known as head) and tilt (also known as pitch).</p>
+<p>The camera supports the look-at target with orientation on the ground way of setting up the camera in space. The camera is placed
+so that it looks at a specific geo-coordinates (placed at the <code>principal point</code>) from a given orientation and distance.</p>
+<ul>
+<li>the look-at target in geo-coordinates (latitude, longitude) in degrees and an <code>altitude</code> in meters above MSL (mean sea level) at the <code>principal point</code></li>
+<li>the <code>orientation</code> at the look-at target</li>
+<li>the distance of the camera from the look-at target, given as <code>distance</code> in meters or as <code>zoom-level</code></li>
+</ul>
+<p><i>Getting the current camera state</i></p>
+<p>The current camera state can be obtained by the <a href="../mapview/MapCamera/state.html">MapCamera.state</a> call. It contains information about the camera look-at target (geo-coordinates and orientation) in geodetic space.
+The values are returned for the current <code>principal point</code>. This can lead to surprising or unexpected values in cases where the camera position/orientation was specified for another screen point,
+e.g. when using <a href="../mapview/MapCameraUpdateFactory/lookAtArea.html">MapCameraUpdateFactory.lookAtArea</a> with a view rectangle, whose center does not coincide with the <code>principal point</code>.  In this case, the geo-coordinates of the
+look-at target will differ from the center of the geo-box used in the <code>lookAt</code> call.</p>
+<p><i>Geo coordinates</i></p>
+<p>Geo-coordinates are given in degrees and follow the common nomenclature of positive northern latitudes and positive eastern longitudes.</p>
+<p><i>Altitude</i></p>
+<p>When <code>altitude</code> is specified, it is always in meters above mean sea level (MSL).
+If this value is invalid (not-a-number) or not specified, then the terrain height at the given geo-coordinates will be looked up from the map.
+This is especially interesting in cases where terrain elevation is used within the map display.</p>
+<p><i>Distance vs zoom-level vs scale</i></p>
+<p>Map camera <code>distance</code>, <code>zoom-level</code> and <code>scale</code> determine how much of the world is visible on the HERE map. <code>Distance</code>, <code>zoom-level</code> and <code>scale</code> are
+directly connected and changing one will automatically change the others as well (except for <code>distance</code>/<code>scale</code> changes that map to <code>zoom-level</code> values &lt; 0 or &gt; 23).</p>
+<ul>
+<li><code>distance</code>: the distance from the camera to the look-at target on the surface of the Earth, in meters</li>
+<li><code>zoom-level</code>: the map zoom level, in the range [0, 23]. The relation between the width of the equator in logical pixels <code>w</code> and the zoom level <code>z</code> is: <code>w = 256 * 2^(z)</code></li>
+<li><code>scale</code>: the scale of the map at the look-at target in meters on screen per meters on Earth. So a scale of 0.001 shows 10 meters on Earth within 1 cm on screen.</li>
+</ul>
+<p>The following mapping represents the <code>zoom-level</code> values:</p>
+<table>
+<thead>
+<tr>
+<th>zoom-level</th>
+<th align="center">~ scale on screen (130dpi)</th>
+<th align="center">width of the equator in logical pixels</th>
+<th align="center">what can be seen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td align="center">1:800 million</td>
+<td align="center">256</td>
+<td align="center">Earth</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1:400 million</td>
+<td align="center">512</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>2</td>
+<td align="center">1:200 million</td>
+<td align="center">1024</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>3</td>
+<td align="center">1:100 million</td>
+<td align="center">2048</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>4</td>
+<td align="center">1:50 million</td>
+<td align="center">4096</td>
+<td align="center">A continent</td>
+</tr>
+<tr>
+<td>5</td>
+<td align="center">1:25 million</td>
+<td align="center">8192</td>
+<td align="center">Large roads</td>
+</tr>
+<tr>
+<td>6</td>
+<td align="center">1:12 million</td>
+<td align="center">16384</td>
+<td align="center">Large rivers</td>
+</tr>
+<tr>
+<td>7</td>
+<td align="center">1:6 million</td>
+<td align="center">32768</td>
+<td align="center">A country</td>
+</tr>
+<tr>
+<td>8</td>
+<td align="center">1:3 million</td>
+<td align="center">65536</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>9</td>
+<td align="center">1:1 million</td>
+<td align="center">131072</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>10</td>
+<td align="center">1:780 thousand</td>
+<td align="center">262144</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>11</td>
+<td align="center">1:390 thousand</td>
+<td align="center">524288</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>12</td>
+<td align="center">1:195 thousand</td>
+<td align="center">1048576</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>13</td>
+<td align="center">1:100 thousand</td>
+<td align="center">2097152</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>14</td>
+<td align="center">1:50 thousand</td>
+<td align="center">4194304</td>
+<td align="center">A city</td>
+</tr>
+<tr>
+<td>15</td>
+<td align="center">1:25 thousand</td>
+<td align="center">8388608</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>16</td>
+<td align="center">1:12 thousand</td>
+<td align="center">16777216</td>
+<td align="center">Buildings</td>
+</tr>
+<tr>
+<td>17</td>
+<td align="center">1:6 thousand</td>
+<td align="center">33554432</td>
+<td align="center">Landmarks</td>
+</tr>
+<tr>
+<td>18</td>
+<td align="center">1:3 thousand</td>
+<td align="center">67108864</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>19</td>
+<td align="center">1:1 thousand</td>
+<td align="center">134217728</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>20</td>
+<td align="center">1:7 hundred</td>
+<td align="center">268435456</td>
+<td align="center">Streets</td>
+</tr>
+<tr>
+<td>21</td>
+<td align="center">1:3 hundred</td>
+<td align="center">536870912</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>22</td>
+<td align="center">1:1 hundred</td>
+<td align="center">1073741824</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>23</td>
+<td align="center">1:95</td>
+<td align="center">2147483648</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><i>Orientation</i></p>
+<p>The camera <code>orientation</code> is composed of two parts:</p>
+<ul>
+<li><code>bearing</code>: also known as azimuth, the view direction in clockwise degrees; 0° = north, 90° = east, 180° = south, 270° = west</li>
+<li><code>tilt</code>: the angle in degrees from the vertical that the camera is looking down at the Earth; 0° = straight down.</li>
+</ul>
+<p><i>Changing the Camera</i></p>
+<p>All changes to the camera are encapsulated in camera updates that are created using the methods in the <a href="../mapview/MapCameraUpdateFactory-class.html">MapCameraUpdateFactory</a> class.</p>
+<p>These updates can then be applied to the <a href="../mapview/HereMapControllerCore-class.html">HereMapControllerCore</a> using <a href="../mapview/MapCamera/applyUpdate.html">MapCamera.applyUpdate</a>.</p>
+<p>Camera updates are queued and executed when the next frame is rendered. They are executed in the order in which they were applied.</p>
+<p><i>Animating the Camera</i></p>
+<p>Camera updates can be animated by first creating a camera animation using the methods in the <a href="../mapview/MapCameraAnimationFactory-class.html">MapCameraAnimationFactory</a> class and then applying this
+animation to the <a href="../mapview/HereMapControllerCore-class.html">HereMapControllerCore</a> using <a href="../mapview/MapCamera/startAnimationWithListener.html">MapCamera.startAnimationWithListener</a>.</p>
+<p>Only one camera animation for one camera component at a time is supported. Applying a new animation will cancel the active animation before the new one is started.
+The start position in this case is where ever the active animation happened to be at the time. Different components are camera state (<code>target pose</code> and <code>distance/zoom level/scale</code>)
+and camera projection (<code>field of view</code>, <code>focal length</code> and <code>principal point</code>).</p>
+<p>The running animations can also be canceled using <a href="../mapview/MapCamera/cancelAnimations.html">MapCamera.cancelAnimations</a> or individual ones using <a href="../mapview/MapCamera/cancelAnimation.html">MapCamera.cancelAnimation</a>.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapCamera" class="callable">
+          <span class="name"><a href="../mapview/MapCamera/MapCamera.html">MapCamera</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="boundingBox" class="property">
+  <span class="name"><a href="../mapview/MapCamera/boundingBox.html">boundingBox</a></span>
+  <span class="signature">&#8594; <a href="../core/GeoBox-class.html">GeoBox</a>?</span>
+  
+
+</dt>
+<dd>
+  Currently visible map area encompassed in a GeoBox.
+Note that this bounding box is always rectangular, and its sides are always
+parallel to the latitude and longitude. If the camera is rotated, the returned
+bounding box will be a circumscribed rectangle that is larger than the
+visible map area. Similarly, when the map is tilted (for example, if
+the map is tilted by 45 degrees), the visible map area represents
+a trapezoidal area in the world. Resulting value will then be a larger
+circumscribed rectangle that contains this trapezoid area.
+Because on this, corners of the resulting bounding box may be located
+outside of the currently visible area.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../mapview/MapCamera/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="limits" class="property">
+  <span class="name"><a href="../mapview/MapCamera/limits.html">limits</a></span>
+  <span class="signature">&#8594; <a href="../mapview/MapCameraLimits-class.html">MapCameraLimits</a></span>
+  
+
+</dt>
+<dd>
+  Controls limits for the camera settings.
+Gets a MapCameraLimits instance that controls limits for the camera settings.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="principalPoint" class="property">
+  <span class="name"><a href="../mapview/MapCamera/principalPoint.html">principalPoint</a></span>
+  <span class="signature">&#8596; <a href="../core/Point2D-class.html">Point2D</a></span>
+  
+
+</dt>
+<dd>
+  The pixel point where the target is placed within the map view.
+By default, the principal point is located at the center of the map view.
+It is set in pixels relative to the map view's origin top-left <code>(0, 0)</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../mapview/MapCamera/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="state" class="property">
+  <span class="name"><a href="../mapview/MapCamera/state.html">state</a></span>
+  <span class="signature">&#8594; <a href="../mapview/MapCameraState-class.html">MapCameraState</a></span>
+  
+
+</dt>
+<dd>
+  Current state of the camera that reflects what is currently drawn by the map view.
+Gets state of the camera that reflects what is currently drawn inside the map view.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addListener" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/addListener.html">addListener</a></span><span class="signature">(<wbr><span class="parameter" id="addListener-param-listener"><span class="type-annotation"><a href="../mapview/MapCameraListener-class.html">MapCameraListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a listener to this camera that will be notified
+every time the map is redrawn with new camera parameters.
+  
+
+</dd>
+
+        <dt id="applyUpdate" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/applyUpdate.html">applyUpdate</a></span><span class="signature">(<wbr><span class="parameter" id="applyUpdate-param-cameraUpdate"><span class="type-annotation"><a href="../mapview/MapCameraUpdate-class.html">MapCameraUpdate</a></span> <span class="parameter-name">cameraUpdate</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Applies camera update to the map camera.
+  
+
+</dd>
+
+        <dt id="cancelAnimation" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/cancelAnimation.html">cancelAnimation</a></span><span class="signature">(<wbr><span class="parameter" id="cancelAnimation-param-cameraAnimation"><span class="type-annotation"><a href="../mapview/MapCameraAnimation-class.html">MapCameraAnimation</a></span> <span class="parameter-name">cameraAnimation</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Cancels an ongoing camera animation.
+  
+
+</dd>
+
+        <dt id="cancelAnimations" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/cancelAnimations.html">cancelAnimations</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Cancels any ongoing camera animation.
+  
+
+</dd>
+
+        <dt id="dryApplyUpdate" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/dryApplyUpdate.html">dryApplyUpdate</a></span><span class="signature">(<wbr><span class="parameter" id="dryApplyUpdate-param-cameraUpdate"><span class="type-annotation"><a href="../mapview/MapCameraUpdate-class.html">MapCameraUpdate</a></span> <span class="parameter-name">cameraUpdate</span>, </span><span class="parameter" id="dryApplyUpdate-param-callback"><span class="type-annotation"><a href="../mapview/MapCameraDryCameraUpdateCallback.html">MapCameraDryCameraUpdateCallback</a></span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Computes result of applying camera update without changing state of the map camera.
+  
+
+</dd>
+
+        <dt id="lookAtAreaWithGeoOrientation" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/lookAtAreaWithGeoOrientation.html">lookAtAreaWithGeoOrientation</a></span><span class="signature">(<wbr><span class="parameter" id="lookAtAreaWithGeoOrientation-param-target"><span class="type-annotation"><a href="../core/GeoBox-class.html">GeoBox</a></span> <span class="parameter-name">target</span>, </span><span class="parameter" id="lookAtAreaWithGeoOrientation-param-orientation"><span class="type-annotation"><a href="../core/GeoOrientationUpdate-class.html">GeoOrientationUpdate</a></span> <span class="parameter-name">orientation</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes the camera look at the specified geodetic area.
+  
+
+</dd>
+
+        <dt id="lookAtAreaWithGeoOrientationAndViewRectangle" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/lookAtAreaWithGeoOrientationAndViewRectangle.html">lookAtAreaWithGeoOrientationAndViewRectangle</a></span><span class="signature">(<wbr><span class="parameter" id="lookAtAreaWithGeoOrientationAndViewRectangle-param-target"><span class="type-annotation"><a href="../core/GeoBox-class.html">GeoBox</a></span> <span class="parameter-name">target</span>, </span><span class="parameter" id="lookAtAreaWithGeoOrientationAndViewRectangle-param-orientation"><span class="type-annotation"><a href="../core/GeoOrientationUpdate-class.html">GeoOrientationUpdate</a></span> <span class="parameter-name">orientation</span>, </span><span class="parameter" id="lookAtAreaWithGeoOrientationAndViewRectangle-param-viewRectangle"><span class="type-annotation"><a href="../core/Rectangle2D-class.html">Rectangle2D</a></span> <span class="parameter-name">viewRectangle</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes the camera look at the specified geodetic area and pass a rectangle which specifies
+where the area should appear inside of the map view.
+  
+
+</dd>
+
+        <dt id="lookAtPoint" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/lookAtPoint.html">lookAtPoint</a></span><span class="signature">(<wbr><span class="parameter" id="lookAtPoint-param-target"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">target</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes the camera look at a new geodetic target, while
+preserving the current orientation and distance to the target.
+  
+
+</dd>
+
+        <dt id="lookAtPointWithGeoOrientationAndMeasure" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/lookAtPointWithGeoOrientationAndMeasure.html">lookAtPointWithGeoOrientationAndMeasure</a></span><span class="signature">(<wbr><span class="parameter" id="lookAtPointWithGeoOrientationAndMeasure-param-target"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">target</span>, </span><span class="parameter" id="lookAtPointWithGeoOrientationAndMeasure-param-orientation"><span class="type-annotation"><a href="../core/GeoOrientationUpdate-class.html">GeoOrientationUpdate</a></span> <span class="parameter-name">orientation</span>, </span><span class="parameter" id="lookAtPointWithGeoOrientationAndMeasure-param-zoom"><span class="type-annotation"><a href="../mapview/MapMeasure-class.html">MapMeasure</a></span> <span class="parameter-name">zoom</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes the camera look at the geodetic target with the given zoom and orientation.
+  
+
+</dd>
+
+        <dt id="lookAtPointWithMeasure" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/lookAtPointWithMeasure.html">lookAtPointWithMeasure</a></span><span class="signature">(<wbr><span class="parameter" id="lookAtPointWithMeasure-param-target"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">target</span>, </span><span class="parameter" id="lookAtPointWithMeasure-param-zoom"><span class="type-annotation"><a href="../mapview/MapMeasure-class.html">MapMeasure</a></span> <span class="parameter-name">zoom</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes the camera look at the geodetic target with the given zoom.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../mapview/MapCamera/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="orbitByWithGeoOrientation" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/orbitByWithGeoOrientation.html">orbitByWithGeoOrientation</a></span><span class="signature">(<wbr><span class="parameter" id="orbitByWithGeoOrientation-param-delta"><span class="type-annotation"><a href="../core/GeoOrientationUpdate-class.html">GeoOrientationUpdate</a></span> <span class="parameter-name">delta</span>, </span><span class="parameter" id="orbitByWithGeoOrientation-param-origin"><span class="type-annotation"><a href="../core/Point2D-class.html">Point2D</a></span> <span class="parameter-name">origin</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Orbits the camera around a specified view point by increasing tilt and bearing by specified
+delta values.
+  
+
+</dd>
+
+        <dt id="removeListener" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/removeListener.html">removeListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeListener-param-observer"><span class="type-annotation"><a href="../mapview/MapCameraListener-class.html">MapCameraListener</a></span> <span class="parameter-name">observer</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes the listener from the camera.
+  
+
+</dd>
+
+        <dt id="removeListeners" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/removeListeners.html">removeListeners</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all registered listeners.
+  
+
+</dd>
+
+        <dt id="setDistanceToTarget" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/setDistanceToTarget.html">setDistanceToTarget</a></span><span class="signature">(<wbr><span class="parameter" id="setDistanceToTarget-param-distanceInMeters"><span class="type-annotation">double</span> <span class="parameter-name">distanceInMeters</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes the camera look at current target from certain distance
+  
+
+</dd>
+
+        <dt id="setFarPlaneConfiguration" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/setFarPlaneConfiguration.html">setFarPlaneConfiguration</a></span><span class="signature">(<wbr><span class="parameter" id="setFarPlaneConfiguration-param-configs"><span class="type-annotation">Map<span class="signature">&lt;<wbr><span class="type-parameter">double</span>, <span class="type-parameter"><a href="../mapview/MapCameraFarPlaneConfiguration-class.html">MapCameraFarPlaneConfiguration</a></span>&gt;</span></span> <span class="parameter-name">configs</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets far plane distance configuration per zoom level.
+  
+
+</dd>
+
+        <dt id="setOrientationAtTarget" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/setOrientationAtTarget.html">setOrientationAtTarget</a></span><span class="signature">(<wbr><span class="parameter" id="setOrientationAtTarget-param-orientation"><span class="type-annotation"><a href="../core/GeoOrientationUpdate-class.html">GeoOrientationUpdate</a></span> <span class="parameter-name">orientation</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Changes camera orientation in relation to target location.
+  
+
+</dd>
+
+        <dt id="startAnimation" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/startAnimation.html">startAnimation</a></span><span class="signature">(<wbr><span class="parameter" id="startAnimation-param-cameraAnimation"><span class="type-annotation"><a href="../mapview/MapCameraAnimation-class.html">MapCameraAnimation</a></span> <span class="parameter-name">cameraAnimation</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts a given camera animation.
+  
+
+</dd>
+
+        <dt id="startAnimationWithListener" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/startAnimationWithListener.html">startAnimationWithListener</a></span><span class="signature">(<wbr><span class="parameter" id="startAnimationWithListener-param-cameraAnimation"><span class="type-annotation"><a href="../mapview/MapCameraAnimation-class.html">MapCameraAnimation</a></span> <span class="parameter-name">cameraAnimation</span>, </span><span class="parameter" id="startAnimationWithListener-param-animationListener"><span class="type-annotation"><a href="../animation/AnimationListener-class.html">AnimationListener</a></span> <span class="parameter-name">animationListener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts a given camera animation.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../mapview/MapCamera/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="zoomBy" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/zoomBy.html">zoomBy</a></span><span class="signature">(<wbr><span class="parameter" id="zoomBy-param-factor"><span class="type-annotation">double</span> <span class="parameter-name">factor</span>, </span><span class="parameter" id="zoomBy-param-origin"><span class="type-annotation"><a href="../core/Point2D-class.html">Point2D</a></span> <span class="parameter-name">origin</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Zooms in or out by a specified factor.
+  
+
+</dd>
+
+        <dt id="zoomTo" class="callable">
+  <span class="name"><a href="../mapview/MapCamera/zoomTo.html">zoomTo</a></span><span class="signature">(<wbr><span class="parameter" id="zoomTo-param-zoomLevel"><span class="type-annotation">double</span> <span class="parameter-name">zoomLevel</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Zooms to the specified zoom level.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../mapview/MapCamera/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview</a></li>
+    <li class="self-crumb">MapCamera class</li>
+</ol>
+
+
+    <h5>mapview library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Section class from the routing library, for the Dart programming language.">
+  <title>Section class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing.dart</a></li>
+    <li class="self-crumb">Section class</li>
+  </ol>
+  <div class="self-name">Section</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;routing-library-sidebar.html"
+    data-below-sidebar="routing&#47;Section-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Section</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A section is a part of the route between two stopovers.</p>
+<p>A stopover is a location on the route where a stop is made.</p>
+<p><strong>Note:</strong> A section contains a list of <a href="../routing/SectionNotice-class.html">SectionNotice</a> objects that describe
+<em>potential issues</em> after the route was calculated. If the list is non-empty, it
+is recommended to evaluate possible violations against the requested route options
+and reject the route if deemed necessary.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Section" class="callable">
+          <span class="name"><a href="../routing/Section/Section.html">Section</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="arrivalLocationTime" class="property">
+  <span class="name"><a href="../routing/Section/arrivalLocationTime.html">arrivalLocationTime</a></span>
+  <span class="signature">&#8594; <a href="../core/LocationTime-class.html">LocationTime</a>?</span>
+  
+
+</dt>
+<dd>
+  The arrival location time of this section.
+Gets the arrival location time of this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="arrivalPlace" class="property">
+  <span class="name"><a href="../routing/Section/arrivalPlace.html">arrivalPlace</a></span>
+  <span class="signature">&#8594; <a href="../routing/RoutePlace-class.html">RoutePlace</a></span>
+  
+
+</dt>
+<dd>
+  The arrival place.
+Describes the arrival place.
+Gets the arrival place.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="boundingBox" class="property">
+  <span class="name"><a href="../routing/Section/boundingBox.html">boundingBox</a></span>
+  <span class="signature">&#8594; <a href="../core/GeoBox-class.html">GeoBox</a></span>
+  
+
+</dt>
+<dd>
+  The closest rectangular area where this section fits in.
+Gets the closest rectangular area where this section fits in.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="consumptionInKilowattHours" class="property">
+  <span class="name"><a href="../routing/Section/consumptionInKilowattHours.html">consumptionInKilowattHours</a></span>
+  <span class="signature">&#8594; double?</span>
+  
+
+</dt>
+<dd>
+  Estimated net energy consumption (in kWh) if the transportation mode used for this route
+is an electric vehicle. Note that it can be negative due to energy recuperation.
+Gets estimated net energy consumption (in kWh) if the transportation mode used for this route
+is an electric vehicle. Note that it can be negative due to energy recuperation.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="departureLocationTime" class="property">
+  <span class="name"><a href="../routing/Section/departureLocationTime.html">departureLocationTime</a></span>
+  <span class="signature">&#8594; <a href="../core/LocationTime-class.html">LocationTime</a>?</span>
+  
+
+</dt>
+<dd>
+  The departure location time of this section.
+Gets the departure location time of this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="departurePlace" class="property">
+  <span class="name"><a href="../routing/Section/departurePlace.html">departurePlace</a></span>
+  <span class="signature">&#8594; <a href="../routing/RoutePlace-class.html">RoutePlace</a></span>
+  
+
+</dt>
+<dd>
+  Describes the departure place.
+Gets the departure place.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="duration" class="property">
+  <span class="name"><a href="../routing/Section/duration.html">duration</a></span>
+  <span class="signature">&#8594; Duration</span>
+  
+
+</dt>
+<dd>
+  The estimated time in seconds needed to travel along this section, including
+real-time traffic delays if available.
+Gets the estimated time in seconds needed to travel along this section, including
+real-time traffic delays if available.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="geometry" class="property">
+  <span class="name"><a href="../routing/Section/geometry.html">geometry</a></span>
+  <span class="signature">&#8594; <a href="../core/GeoPolyline-class.html">GeoPolyline</a></span>
+  
+
+</dt>
+<dd>
+  The <a href="../core/GeoPolyline-class.html">GeoPolyline</a> object representing the polyline of this section.
+Gets the <a href="../core/GeoPolyline-class.html">GeoPolyline</a> object representing the polyline of this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../routing/Section/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="indoorSectionDetails" class="property">
+  <span class="name"><a href="../routing/Section/indoorSectionDetails.html">indoorSectionDetails</a></span>
+  <span class="signature">&#8594; <a href="../routing/IndoorSectionDetails-class.html">IndoorSectionDetails</a>?</span>
+  
+
+</dt>
+<dd>
+  Indoor routing section information.
+Gets indoor routing section details.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="lengthInMeters" class="property">
+  <span class="name"><a href="../routing/Section/lengthInMeters.html">lengthInMeters</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The length of this section in meters.
+Gets the length of this section in meters.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="maneuvers" class="property">
+  <span class="name"><a href="../routing/Section/maneuvers.html">maneuvers</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/Maneuver-class.html">Maneuver</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The maneuvers for this section.
+Gets the maneuvers for this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="noThroughRestrictions" class="property">
+  <span class="name"><a href="../routing/Section/noThroughRestrictions.html">noThroughRestrictions</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/ViolatedRestriction-class.html">ViolatedRestriction</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The list of no through restriction
+The no through restriction area is part of the road network that do not allow through traffic.
+For example the <code>Resident only</code> sign indicates that vehicles are only allowed to enter this area if they are making a stop.
+This area will be set only if <code>origin</code>, <code>destination</code> or <code>via</code> waypoint will be requested within the area.
+list of no through restriction.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="passthroughWaypoints" class="property">
+  <span class="name"><a href="../routing/Section/passthroughWaypoints.html">passthroughWaypoints</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/PassThroughWaypoint-class.html">PassThroughWaypoint</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The list of passthrough waypoints in this section.
+Gets the list of passthrough waypoints in this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="postActions" class="property">
+  <span class="name"><a href="../routing/Section/postActions.html">postActions</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/PostAction-class.html">PostAction</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The post actions that must be done after the arrival at the end of the section.
+Gets the post actions that must be done after the arrival at the end of the section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="preActions" class="property">
+  <span class="name"><a href="../routing/Section/preActions.html">preActions</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/PreAction-class.html">PreAction</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The preceding actions that must be done prior to departure at the beginning of the section.
+Gets the preceding actions that must be done prior to departure at the beginning of the section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../routing/Section/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sectionNotices" class="property">
+  <span class="name"><a href="../routing/Section/sectionNotices.html">sectionNotices</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/SectionNotice-class.html">SectionNotice</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The notices which explain the issues encountered during processing of this section.
+For example, while the scooter transport mode is selected, if no reasonable alternative route is
+possible except violating controlled-access to highway rule for the section, one notice is generated
+for the violation. The user must judge all the notices carefully before proceeding.
+Gets the notices which explains the issues encountered during processing of this section.
+For example, while the scooter transport mode is selected, if no reasonable alternative route is
+possible except violating controlled-access to highway rule for the section, one notice is generated
+for the violation. The user must judge all the notices carefully before proceeding.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="sectionTransportMode" class="property">
+  <span class="name"><a href="../routing/Section/sectionTransportMode.html">sectionTransportMode</a></span>
+  <span class="signature">&#8594; <a href="../routing/SectionTransportMode.html">SectionTransportMode</a></span>
+  
+
+</dt>
+<dd>
+  The transport mode of this section.
+Gets the transport mode of this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="spans" class="property">
+  <span class="name"><a href="../routing/Section/spans.html">spans</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/Span-class.html">Span</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The <a href="../routing/Span-class.html">Span</a>'s that constitute this section.
+Gets the <a href="../routing/Span-class.html">Span</a>'s that constitute this section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="tolls" class="property">
+  <span class="name"><a href="../routing/Section/tolls.html">tolls</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/Toll-class.html">Toll</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  All the tolls for this section.
+Note that tolls are found depending on the transport mode.
+For example, if pedestrian or bicycle transport mode specified, route sections have no tolls. Indoor
+route sections have no tolls, too.
+<strong>Note</strong>: If you're using the <code>OfflineRoutingEngine</code>, be aware that this feature is
+currently in <strong>beta</strong>. As a result, there may be some bugs or unexpected behaviors.
+Additionally, this feature and related APIs may be updated in future releases
+without going through the deprecation process. Note that the <code>OfflineRoutingEngine</code>
+is only available with the Navigate license. If you're using the
+<code>RoutingEngine</code>, this feature is considered to be stable.
+Gets all the tolls for this section. Note that tolls are found depending on the
+transport mode. For example, if pedestrian or bicycle transport mode specified, route sections have no tolls.
+Indoor route sections have no tolls, too.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="trafficDelay" class="property">
+  <span class="name"><a href="../routing/Section/trafficDelay.html">trafficDelay</a></span>
+  <span class="signature">&#8594; Duration</span>
+  
+
+</dt>
+<dd>
+  The estimated extra time in seconds spent due to traffic delays along this section. Negative values
+indicate that the route can be traversed faster than usual.
+Gets the estimated extra time in seconds spent due to traffic delays along this section.
+Negative values indicate that the route can be traversed faster than usual.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="trafficIncidents" class="property">
+  <span class="name"><a href="../routing/Section/trafficIncidents.html">trafficIncidents</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../routing/TrafficIncidentOnRoute-class.html">TrafficIncidentOnRoute</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The list of traffic incidents that are found on the section.
+the list of traffic incidents that are found on the section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="transitDetails" class="property">
+  <span class="name"><a href="../routing/Section/transitDetails.html">transitDetails</a></span>
+  <span class="signature">&#8594; <a href="../routing/TransitSectionDetails-class.html">TransitSectionDetails</a>?</span>
+  
+
+</dt>
+<dd>
+  The transit details which are avilable for transit sections of a route.
+Gets the details of a transit section.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../routing/Section/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../routing/Section/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../routing/Section/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing</a></li>
+    <li class="self-crumb">Section class</li>
+</ol>
+
+
+    <h5>routing library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

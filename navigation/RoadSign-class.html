@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RoadSign class from the navigation library, for the Dart programming language.">
+  <title>RoadSign class - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation.dart</a></li>
+    <li class="self-crumb">RoadSign class</li>
+  </ol>
+  <div class="self-name">RoadSign</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="navigation&#47;navigation-library-sidebar.html"
+    data-below-sidebar="navigation&#47;RoadSign-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">RoadSign</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Describes a road sign.</p>
+<p><strong>Note:</strong> This is a <strong>beta</strong> release of this feature and may contain bugs or exhibit unexpected behaviour. Related APIs are subject to change without a deprecation process.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="RoadSign" class="callable">
+          <span class="name"><a href="../navigation/RoadSign/RoadSign.html">RoadSign</a></span><span class="signature">(<span class="parameter" id="-param-offsetInMeters"><span class="type-annotation">int</span> <span class="parameter-name">offsetInMeters</span>, </span><span class="parameter" id="-param-travelDirection"><span class="type-annotation"><a href="../routing/TravelDirection.html">TravelDirection</a></span> <span class="parameter-name">travelDirection</span>, </span><span class="parameter" id="-param-roadSignType"><span class="type-annotation"><a href="../navigation/RoadSignType.html">RoadSignType</a></span> <span class="parameter-name">roadSignType</span>, </span><span class="parameter" id="-param-roadSignCategory"><span class="type-annotation"><a href="../navigation/RoadSignCategory.html">RoadSignCategory</a></span> <span class="parameter-name">roadSignCategory</span>, </span><span class="parameter" id="-param-isPrioritySign"><span class="type-annotation">bool</span> <span class="parameter-name">isPrioritySign</span>, </span><span class="parameter" id="-param-generalWarningType"><span class="type-annotation"><a href="../navigation/GeneralWarningRoadSignType.html">GeneralWarningRoadSignType</a></span> <span class="parameter-name">generalWarningType</span>, </span><span class="parameter" id="-param-vehicleTypes"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../navigation/RoadSignVehicleType.html">RoadSignVehicleType</a></span>&gt;</span></span> <span class="parameter-name">vehicleTypes</span>, </span><span class="parameter" id="-param-weatherType"><span class="type-annotation"><a href="../navigation/WeatherType.html">WeatherType</a></span> <span class="parameter-name">weatherType</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="generalWarningType" class="property">
+  <span class="name"><a href="../navigation/RoadSign/generalWarningType.html">generalWarningType</a></span>
+  <span class="signature">&#8596; <a href="../navigation/GeneralWarningRoadSignType.html">GeneralWarningRoadSignType</a></span>
+  
+
+</dt>
+<dd>
+  Specifies the general warning to which the road sign belongs.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../navigation/RoadSign/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isPrioritySign" class="property">
+  <span class="name"><a href="../navigation/RoadSign/isPrioritySign.html">isPrioritySign</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Flag indicating if the road sign is a priority sign. This flag will be set to <code>true</code> only for <a href="../navigation/RoadSign/roadSignCategory.html">RoadSign.roadSignCategory</a> with value
+<a href="../navigation/RoadSignCategory.html">RoadSignCategory.regulatorySign</a>. Examples of road signs types with priority flag set to <code>true</code> are <a href="../navigation/RoadSignType.html">RoadSignType.priorityOverOncomingTraffic</a>,
+<a href="../navigation/RoadSignType.html">RoadSignType.yieldToOncomingTraffic</a>, <a href="../navigation/RoadSignType.html">RoadSignType.stopSign</a>, <a href="../navigation/RoadSignType.html">RoadSignType.yield</a>, <a href="../navigation/RoadSignType.html">RoadSignType.yieldToBicycles</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="localizedDuration" class="property">
+  <span class="name"><a href="../navigation/RoadSign/localizedDuration.html">localizedDuration</a></span>
+  <span class="signature">&#8596; <a href="../core/LocalizedText-class.html">LocalizedText</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional length information during which the warning is applicable.
+Usually, this information is shown on a separate shield below the main shield.
+For example, a sign may warn on playing children for a length of 100 m, starting from
+the location of the warning sign.
+The length information (most likely with units) is given as printed on the local road sign.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="localizedPreWarning" class="property">
+  <span class="name"><a href="../navigation/RoadSign/localizedPreWarning.html">localizedPreWarning</a></span>
+  <span class="signature">&#8596; <a href="../core/LocalizedText-class.html">LocalizedText</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional pre-warning in terms of distance, of the upcoming warning or regulation.
+The pre-warning information is given as printed on the local road sign.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="localizedSignValue" class="property">
+  <span class="name"><a href="../navigation/RoadSign/localizedSignValue.html">localizedSignValue</a></span>
+  <span class="signature">&#8596; <a href="../core/LocalizedText-class.html">LocalizedText</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional value visible on the main sign related to specific road sign types, as it is printed on the local road sign.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="localizedValidityTime" class="property">
+  <span class="name"><a href="../navigation/RoadSign/localizedValidityTime.html">localizedValidityTime</a></span>
+  <span class="signature">&#8596; <a href="../core/LocalizedText-class.html">LocalizedText</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional text visible on the supplemental sign indicating specific
+time(s) at which the road sign is applicable.
+The time information is given as printed on the local road sign.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="offsetInMeters" class="property">
+  <span class="name"><a href="../navigation/RoadSign/offsetInMeters.html">offsetInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The offset in meters from the beginning of the segment to the location of the road sign
+in positive direction.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="roadSignCategory" class="property">
+  <span class="name"><a href="../navigation/RoadSign/roadSignCategory.html">roadSignCategory</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RoadSignCategory.html">RoadSignCategory</a></span>
+  
+
+</dt>
+<dd>
+  The main category to which the road sign belongs. It defines the general purpose of the sign (e.g.: regulatory sign).
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="roadSignType" class="property">
+  <span class="name"><a href="../navigation/RoadSign/roadSignType.html">roadSignType</a></span>
+  <span class="signature">&#8596; <a href="../navigation/RoadSignType.html">RoadSignType</a></span>
+  
+
+</dt>
+<dd>
+  Type of the road sign.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../navigation/RoadSign/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="travelDirection" class="property">
+  <span class="name"><a href="../navigation/RoadSign/travelDirection.html">travelDirection</a></span>
+  <span class="signature">&#8596; <a href="../routing/TravelDirection.html">TravelDirection</a></span>
+  
+
+</dt>
+<dd>
+  Segment direction which the road sign is applied.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="vehicleTypes" class="property">
+  <span class="name"><a href="../navigation/RoadSign/vehicleTypes.html">vehicleTypes</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../navigation/RoadSignVehicleType.html">RoadSignVehicleType</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Specifies a list of vehicle types for which the road sign is applicable.
+The list will be empty when the road sign is applicable for all vehicles including cars.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="weatherType" class="property">
+  <span class="name"><a href="../navigation/RoadSign/weatherType.html">weatherType</a></span>
+  <span class="signature">&#8596; <a href="../navigation/WeatherType.html">WeatherType</a></span>
+  
+
+</dt>
+<dd>
+  Specifies the weather type for which the sign is applicable. If weather type is <a href="../navigation/WeatherType.html">WeatherType.unknown</a>,
+the sign is actual for all weather types.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../navigation/RoadSign/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../navigation/RoadSign/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../navigation/RoadSign/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation</a></li>
+    <li class="self-crumb">RoadSign class</li>
+</ol>
+
+
+    <h5>navigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

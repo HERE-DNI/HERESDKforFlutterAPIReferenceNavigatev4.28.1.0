@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Maneuver class from the routing library, for the Dart programming language.">
+  <title>Maneuver class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing.dart</a></li>
+    <li class="self-crumb">Maneuver class</li>
+  </ol>
+  <div class="self-name">Maneuver</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;routing-library-sidebar.html"
+    data-below-sidebar="routing&#47;Maneuver-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Maneuver</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>This class provides all the information for a maneuver.</p>
+<p>The directional information (e.g. road names, road
+numbers and signpost direction) is stored in <a href="../routing/Maneuver/roadTexts.html">Maneuver.roadTexts</a> and <a href="../routing/Maneuver/nextRoadTexts.html">Maneuver.nextRoadTexts</a> attributes.
+As for the motorway exit information, it can be obtained from <a href="../routing/Maneuver/exitSignTexts.html">Maneuver.exitSignTexts</a> attribute.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Maneuver" class="callable">
+          <span class="name"><a href="../routing/Maneuver/Maneuver.html">Maneuver</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="action" class="property">
+  <span class="name"><a href="../routing/Maneuver/action.html">action</a></span>
+  <span class="signature">&#8594; <a href="../routing/ManeuverAction.html">ManeuverAction</a></span>
+  
+
+</dt>
+<dd>
+  Indicates the maneuver action.
+Gets the maneuver action.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="coordinates" class="property">
+  <span class="name"><a href="../routing/Maneuver/coordinates.html">coordinates</a></span>
+  <span class="signature">&#8594; <a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span>
+  
+
+</dt>
+<dd>
+  Geographic coordinates where the maneuver is located.
+Gets the geographic coordinates where the maneuver is located.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="countryCode" class="property">
+  <span class="name"><a href="../routing/Maneuver/countryCode.html">countryCode</a></span>
+  <span class="signature">&#8594; String?</span>
+  
+
+</dt>
+<dd>
+  The country code of the maneuver position. The value is <code>null</code> when no data is available.
+Gets the country code of the maneuver position. The value is <code>null</code> when no data is available.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="duration" class="property">
+  <span class="name"><a href="../routing/Maneuver/duration.html">duration</a></span>
+  <span class="signature">&#8594; Duration</span>
+  
+
+</dt>
+<dd>
+  The estimated time in seconds needed to perform the maneuver.
+Gets the estimated time in seconds needed to perform the maneuver.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="exitSignTexts" class="property">
+  <span class="name"><a href="../routing/Maneuver/exitSignTexts.html">exitSignTexts</a></span>
+  <span class="signature">&#8594; <a href="../core/LocalizedTexts-class.html">LocalizedTexts</a></span>
+  
+
+</dt>
+<dd>
+  The textual attributes of the exit sign. These might contain exit number(s) and/or name(s).
+These attributes are only available for the Navigate license.
+Otherwise, the attributes are always empty.
+Gets the textual attributes of the exit sign. These might contain exit number(s) and/or name(s).
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../routing/Maneuver/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="intersectionNames" class="property">
+  <span class="name"><a href="../routing/Maneuver/intersectionNames.html">intersectionNames</a></span>
+  <span class="signature">&#8594; <a href="../core/LocalizedTexts-class.html">LocalizedTexts</a></span>
+  
+
+</dt>
+<dd>
+  The textual attributes of the intersection.
+These attributes are only available for the Navigate license.
+Otherwise, the attributes are always empty.
+<strong>Note:</strong> Routes calculated with OfflineRoutingEngine are not supported.
+Gets the textual attributes of the intersection.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="lengthInMeters" class="property">
+  <span class="name"><a href="../routing/Maneuver/lengthInMeters.html">lengthInMeters</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The length of the maneuver in meters.
+Gets the length of the maneuver in meters.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="nextRoadTexts" class="property">
+  <span class="name"><a href="../routing/Maneuver/nextRoadTexts.html">nextRoadTexts</a></span>
+  <span class="signature">&#8594; <a href="../routing/RoadTexts-class.html">RoadTexts</a></span>
+  
+
+</dt>
+<dd>
+  The textual attributes of the next road containing the corresponding road name(s) and road number(s) after the maneuver point.
+These attributes are only available for the Navigate license.
+Otherwise, the attributes are always empty.
+Gets the textual attributes of the next road containing the corresponding road name(s) and road number(s) after the maneuver point.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="offset" class="property">
+  <span class="name"><a href="../routing/Maneuver/offset.html">offset</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  Index over <a href="../routing/Section/geometry.html">Section.geometry</a> where the maneuver is located.
+Gets the index over <a href="../routing/Section/geometry.html">Section.geometry</a> where the maneuver is located.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="roadTexts" class="property">
+  <span class="name"><a href="../routing/Maneuver/roadTexts.html">roadTexts</a></span>
+  <span class="signature">&#8594; <a href="../routing/RoadTexts-class.html">RoadTexts</a></span>
+  
+
+</dt>
+<dd>
+  The textual attributes of the current road containing road names, road numbers and signpost direction (towards) information.
+<strong>Note:</strong> These attributes are only available for the Navigate license.
+Otherwise, the attributes are always empty.
+Gets the textual attributes of the current road containing road names, road numbers and signpost direction (towards) information.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="roundaboutAngleInDegrees" class="property">
+  <span class="name"><a href="../routing/Maneuver/roundaboutAngleInDegrees.html">roundaboutAngleInDegrees</a></span>
+  <span class="signature">&#8594; double?</span>
+  
+
+</dt>
+<dd>
+  The angle represents the estimated rotation performed while traversing the roundabout.
+The angle is calculated between the route entry and exit points and reflects the
+overall direction change along the route through the roundabout.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../routing/Maneuver/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sectionIndex" class="property">
+  <span class="name"><a href="../routing/Maneuver/sectionIndex.html">sectionIndex</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  Index over <a href="../routing/Route/sections.html">Route.sections</a> indicating the section to which the maneuver belongs to.
+Gets the index over <a href="../routing/Route/sections.html">Route.sections</a> indicating the section to which the maneuver belongs to.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="signpost" class="property">
+  <span class="name"><a href="../routing/Maneuver/signpost.html">signpost</a></span>
+  <span class="signature">&#8594; <a href="../routing/Signpost-class.html">Signpost</a>?</span>
+  
+
+</dt>
+<dd>
+  Gets the <a href="../routing/Signpost-class.html">Signpost</a> object.
+Gets <a href="../routing/Signpost-class.html">Signpost</a> object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="spanIndex" class="property">
+  <span class="name"><a href="../routing/Maneuver/spanIndex.html">spanIndex</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  Index over <a href="../routing/Section/spans.html">Section.spans</a> indicating the first span after the maneuver point.
+<strong>Note:</strong> The span index for the last maneuvers (those maneuvers with maneuver action set to
+<a href="../routing/ManeuverAction.html">ManeuverAction.arrive</a>) cannot be used, since these maneuvers are placed after the last span of the route and
+the span index for them would be greater than the span list size.
+Gets the index over <a href="../routing/Section/spans.html">Section.spans</a> indicating the first span after the maneuver point.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="text" class="property">
+  <span class="name"><a href="../routing/Maneuver/text.html">text</a></span>
+  <span class="signature">&#8594; String</span>
+  
+
+</dt>
+<dd>
+  The maneuver instruction. The text is formatted and localized as specified via
+<a href="../routing/RouteTextOptions-class.html">RouteTextOptions</a>.
+<strong>Note for users of the Navigate license:</strong> This text is meant to be displayed in a preview context, whereas real-time <code>EventTextListener</code> texts are meant to be used
+for spoken voice announcements during a trip.
+Gets the maneuver instruction. The text is formatted and localized as specified via
+<a href="../routing/RouteTextOptions-class.html">RouteTextOptions</a>.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="turnAngleInDegrees" class="property">
+  <span class="name"><a href="../routing/Maneuver/turnAngleInDegrees.html">turnAngleInDegrees</a></span>
+  <span class="signature">&#8594; double?</span>
+  
+
+</dt>
+<dd>
+  The angle of the turn component of the maneuver.
+The angle increases clockwise and small values are used for going straight, i.e. a positive number
+means there is a right turn and a negative number is a left turn.
+Some maneuvers like Depart, Arrive and Roundabout pass doesn't have a well defined angle, so the value
+is omitted.
+<strong>Note:</strong> These attributes are only available for the Navigate license.
+Gets the angle of the turn component of the maneuver. The value is in degrees and from -180 to 180.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../routing/Maneuver/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../routing/Maneuver/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../routing/Maneuver/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing</a></li>
+    <li class="self-crumb">Maneuver class</li>
+</ol>
+
+
+    <h5>routing library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

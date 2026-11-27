@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapMarker class from the mapview library, for the Dart programming language.">
+  <title>MapMarker class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview.dart</a></li>
+    <li class="self-crumb">MapMarker class</li>
+  </ol>
+  <div class="self-name">MapMarker</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;mapview-library-sidebar.html"
+    data-below-sidebar="mapview&#47;MapMarker-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapMarker</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p><code>MapMarker</code> is used to draw images on the map, for example to mark a specific location.</p>
+<p>By default, the marker is centered on the given geographic coordinates.
+Markers keep their size regardless of the current zoom level of the map view.</p>
+<p>The image to be displayed is represented by <a href="../mapview/MapImage-class.html">MapImage</a> object. For performance reasons,
+it is highly recommended to reuse a single instance of the image when creating multiple
+identical markers.</p>
+<p>To display the map marker, it needs to be added to the scene using <a href="../mapview/MapScene/addMapMarker.html">MapScene.addMapMarker</a>.
+To stop displaying it, remove it from the scene using <a href="../mapview/MapScene/removeMapMarker.html">MapScene.removeMapMarker</a>.</p>
+<p>The display of a map marker is only guaranteed in case its origin is within the viewport.
+At the moment, this is a known limitation that mostly affects map markers which are visually
+large and cover a sizeable part of the viewport.</p>
+<p><strong>Note:</strong>
+Due to technical limitations using the MapMarkers API to add a very large number of markers
+(several thousands, especially 10000+) is not recommended. Adding this many markers will have a
+negative impact on the performance leading to stuttering of the app and lower frame rates.
+To work around this limitation the following approach can be used:
+Register to map camera updates using <a href="../mapview/MapCamera/addListener.html">MapCamera.addListener</a>. Query the bounding box of the
+camera viewport using <a href="../mapview/MapCamera/boundingBox.html">MapCamera.boundingBox</a> (it may be extended)
+and then use the method <a href="../core/GeoBox/containsGeoCoordinates.html">GeoBox.containsGeoCoordinates</a> in combination with
+<a href="../mapview/MapCameraState/distanceToTargetInMeters.html">MapCameraState.distanceToTargetInMeters</a> to determine which MapMarkers are actually visible
+to the user in the current camera viewport and thus need to be added to the map.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapMarker" class="callable">
+          <span class="name"><a href="../mapview/MapMarker/MapMarker.html">MapMarker</a></span><span class="signature">(<span class="parameter" id="-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span>, </span><span class="parameter" id="-param-image"><span class="type-annotation"><a href="../mapview/MapImage-class.html">MapImage</a></span> <span class="parameter-name">image</span></span>)</span>
+        </dt>
+        <dd>
+          Creates an instance of a marker at given coordinates, represented by specified image.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="MapMarker.withAnchor" class="callable">
+          <span class="name"><a href="../mapview/MapMarker/MapMarker.withAnchor.html">MapMarker.withAnchor</a></span><span class="signature">(<span class="parameter" id="withAnchor-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span>, </span><span class="parameter" id="withAnchor-param-image"><span class="type-annotation"><a href="../mapview/MapImage-class.html">MapImage</a></span> <span class="parameter-name">image</span>, </span><span class="parameter" id="withAnchor-param-anchor"><span class="type-annotation"><a href="../core/Anchor2D-class.html">Anchor2D</a></span> <span class="parameter-name">anchor</span></span>)</span>
+        </dt>
+        <dd>
+          Creates an instance of a marker at given coordinates, represented by specified image,
+with anchor point specifying how the image is positioned relative to the marker's coordinates.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="MapMarker.withImageAndElevationTarget" class="callable">
+          <span class="name"><a href="../mapview/MapMarker/MapMarker.withImageAndElevationTarget.html">MapMarker.withImageAndElevationTarget</a></span><span class="signature">(<span class="parameter" id="withImageAndElevationTarget-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span>, </span><span class="parameter" id="withImageAndElevationTarget-param-image"><span class="type-annotation"><a href="../mapview/MapImage-class.html">MapImage</a></span> <span class="parameter-name">image</span>, </span><span class="parameter" id="withImageAndElevationTarget-param-elevationTarget"><span class="type-annotation"><a href="../mapview/ElevationTarget-class.html">ElevationTarget</a></span> <span class="parameter-name">elevationTarget</span></span>)</span>
+        </dt>
+        <dd>
+          Creates an instance of a marker at given coordinates, represented by specified image with specified elevation target.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="MapMarker.withImageAndText" class="callable">
+          <span class="name"><a href="../mapview/MapMarker/MapMarker.withImageAndText.html">MapMarker.withImageAndText</a></span><span class="signature">(<span class="parameter" id="withImageAndText-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span>, </span><span class="parameter" id="withImageAndText-param-image"><span class="type-annotation"><a href="../mapview/MapImage-class.html">MapImage</a></span> <span class="parameter-name">image</span>, </span><span class="parameter" id="withImageAndText-param-text"><span class="type-annotation">String</span> <span class="parameter-name">text</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a <code>MapMarker</code> instance at given coordinates with specified image and text and a default text style.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="anchor" class="property">
+  <span class="name"><a href="../mapview/MapMarker/anchor.html">anchor</a></span>
+  <span class="signature">&#8596; <a href="../core/Anchor2D-class.html">Anchor2D</a></span>
+  
+
+</dt>
+<dd>
+  The anchor point for the marker image which specifies the position offset relative
+to the marker's coordinates.
+Gets current anchor point for the marker image.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="coordinates" class="property">
+  <span class="name"><a href="../mapview/MapMarker/coordinates.html">coordinates</a></span>
+  <span class="signature">&#8596; <a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span>
+  
+
+</dt>
+<dd>
+  The point on the map where the map marker is drawn.
+Gets the point on the map where the marker is drawn.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="drawOrder" class="property">
+  <span class="name"><a href="../mapview/MapMarker/drawOrder.html">drawOrder</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The draw order of this marker relative to other markers.
+Gets draw order of this marker relative to other markers. The default value is 0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="elevationTarget" class="property">
+  <span class="name"><a href="../mapview/MapMarker/elevationTarget.html">elevationTarget</a></span>
+  <span class="signature">&#8594; <a href="../mapview/ElevationTarget-class.html">ElevationTarget</a>?</span>
+  
+
+</dt>
+<dd>
+  Elevation target of the marker.
+Gets the elevation target of the marker. Returns <code>null</code> if no elevation target was specified.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="fadeDuration" class="property">
+  <span class="name"><a href="../mapview/MapMarker/fadeDuration.html">fadeDuration</a></span>
+  <span class="signature">&#8596; Duration</span>
+  
+
+</dt>
+<dd>
+  Duration of a fade-in effect on marker addition to a scene or a fade-out effect on marker removal from a scene.
+Gets the current duration of a fade-in effect on marker addition to a scene or a fade-out effect on marker removal from a scene.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../mapview/MapMarker/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="image" class="property">
+  <span class="name"><a href="../mapview/MapMarker/image.html">image</a></span>
+  <span class="signature">&#8596; <a href="../mapview/MapImage-class.html">MapImage</a></span>
+  
+
+</dt>
+<dd>
+  Image representing the marker on the screen.
+Gets currently used map image.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isIconOverlapAllowed" class="property">
+  <span class="name"><a class="deprecated" href="../mapview/MapMarker/isIconOverlapAllowed.html">isIconOverlapAllowed</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Determines if the icon can overlap other icons.
+Returns <code>true</code> if the icon is allowed to overlap other icons, <code>false</code> otherwise.
+Defaults to <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isOverlapAllowed" class="property">
+  <span class="name"><a href="../mapview/MapMarker/isOverlapAllowed.html">isOverlapAllowed</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Determines whether or not the marker can overlap other markers.
+Returns <code>true</code> if the marker allows overlap with other markers, <code>false</code> otherwise.
+Defaults to <code>true</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isTextOptional" class="property">
+  <span class="name"><a href="../mapview/MapMarker/isTextOptional.html">isTextOptional</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Determines if the marker can be displayed with icon and without text.
+Returns <code>true</code> if the marker allows text to be hidden, <code>false</code> otherwise.
+Defaults to <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="metadata" class="property">
+  <span class="name"><a href="../mapview/MapMarker/metadata.html">metadata</a></span>
+  <span class="signature">&#8596; <a href="../core/Metadata-class.html">Metadata</a>?</span>
+  
+
+</dt>
+<dd>
+  The Metadata instance attached to this marker, see <a href="../core/Metadata-class.html">Metadata</a>.
+Gets the Metadata instance attached to this marker.
+This will be <code>null</code> if nothing has been attached before.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="opacity" class="property">
+  <span class="name"><a href="../mapview/MapMarker/opacity.html">opacity</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  Opacity, the factor applied to the alpha channel of the marker image.
+Gets the current opacity of the marker image. Value is in the range of [0.0, 1.0].
+Default value is 1.0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../mapview/MapMarker/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scale" class="property">
+  <span class="name"><a href="../mapview/MapMarker/scale.html">scale</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  Scale factor applied to the marker image before rendering.
+Gets the scale factor applied to the marker image. Default value is 1.0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="text" class="property">
+  <span class="name"><a href="../mapview/MapMarker/text.html">text</a></span>
+  <span class="signature">&#8596; String</span>
+  
+
+</dt>
+<dd>
+  The text to be drawn on the map along with the image of the <code>MapMarker</code>.
+Gets the text drawn on the map by the <code>MapMarker</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="textStyle" class="property">
+  <span class="name"><a href="../mapview/MapMarker/textStyle.html">textStyle</a></span>
+  <span class="signature">&#8596; <a href="../mapview/MapMarkerTextStyle-class.html">MapMarkerTextStyle</a></span>
+  
+
+</dt>
+<dd>
+  The <code>TextStyle</code> applied to the text of the <code>MapMarker</code>.
+Gets a copy of the <code>TextStyle</code> currently in use by the <code>MapMarker</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="visibilityRanges" class="property">
+  <span class="name"><a href="../mapview/MapMarker/visibilityRanges.html">visibilityRanges</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMeasureRange-class.html">MapMeasureRange</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The list of visibility ranges. The map marker is visible only inside these map measure ranges.
+Gets the list of visibility ranges. The map marker is visible only inside these map measure
+ranges. When empty (the default), the map marker is visible without map measure restrictions.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="cancelAnimation" class="callable">
+  <span class="name"><a href="../mapview/MapMarker/cancelAnimation.html">cancelAnimation</a></span><span class="signature">(<wbr><span class="parameter" id="cancelAnimation-param-animation"><span class="type-annotation"><a href="../animation/MapMarkerAnimation-class.html">MapMarkerAnimation</a></span> <span class="parameter-name">animation</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Cancels single ongoing animation.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../mapview/MapMarker/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="startAnimation" class="callable">
+  <span class="name"><a href="../mapview/MapMarker/startAnimation.html">startAnimation</a></span><span class="signature">(<wbr><span class="parameter" id="startAnimation-param-animation"><span class="type-annotation"><a href="../animation/MapMarkerAnimation-class.html">MapMarkerAnimation</a></span> <span class="parameter-name">animation</span>, </span><span class="parameter" id="startAnimation-param-animationListener"><span class="type-annotation"><a href="../animation/AnimationListener-class.html">AnimationListener</a>?</span> <span class="parameter-name">animationListener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts animation of this map marker according to provided <a href="../animation/MapMarkerAnimation-class.html">MapMarkerAnimation</a>.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../mapview/MapMarker/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../mapview/MapMarker/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview</a></li>
+    <li class="self-crumb">MapMarker class</li>
+</ol>
+
+
+    <h5>mapview library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

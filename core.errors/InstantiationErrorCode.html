@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the InstantiationErrorCode enum from the core.errors library, for the Dart programming language.">
+  <title>InstantiationErrorCode enum - core.errors library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core.errors/core.errors-library.html">core.errors.dart</a></li>
+    <li class="self-crumb">InstantiationErrorCode enum</li>
+  </ol>
+  <div class="self-name">InstantiationErrorCode</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="core.errors&#47;core.errors-library-sidebar.html"
+    data-below-sidebar="core.errors&#47;InstantiationErrorCode-enum-sidebar.html">
+    <div>
+
+      <h1>
+        <span class="kind-enum">InstantiationErrorCode</span>
+        enum 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>Instantiation error.</p>
+</section>
+
+
+
+      <section class="summary offset-anchor" id="values">
+        <h2>Values</h2>
+
+        <dl class="properties">
+            <dt id="illegalArguments" class="constant">
+    <span class="name ">illegalArguments</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Illegal arguments.</p>
+  
+
+</dd>
+
+            <dt id="failed" class="constant">
+    <span class="name ">failed</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Instantiation attempt failed. Please check log for error.</p>
+  
+
+</dd>
+
+            <dt id="sharedSdkEngineNotInstantiated" class="constant">
+    <span class="name ">sharedSdkEngineNotInstantiated</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Instantiation attempt failed because the shared SDK engine is not instantiated.
+Please initialise the SDK.</p>
+  
+
+</dd>
+
+            <dt id="cacheFolderAccessDenied" class="constant">
+    <span class="name ">cacheFolderAccessDenied</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Access to the specified cache folder is denied</p>
+  
+
+</dd>
+
+            <dt id="persistentMapStorageFolderAccessDenied" class="constant">
+    <span class="name ">persistentMapStorageFolderAccessDenied</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Access to the specified persistent map storage folder is denied
+This may occur on Android due to insufficient permissions or scoped storage restrictions
+(e.g. attempting to access paths outside the application sandbox such as /sdcard/...).
+Use application-specific directories (e.g. getFilesDir(), getExternalFilesDir())
+or ensure the app has appropriate access rights to the provided path.
+For detailed guidance, see the official Android documentation:
+<a href="https://developer.android.com/guide/topics/permissions/overview">https://developer.android.com/guide/topics/permissions/overview</a></p>
+  
+
+</dd>
+
+            <dt id="failedToLockCacheFolder" class="constant">
+    <span class="name ">failedToLockCacheFolder</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>The cache folder for the given access key ID is locked by another <code>SDKNativeEngine</code> instance.
+Dispose or destroy the existing shared instance before creating a new one.
+For Flutter, call <code>await SDKNativeEngine.sharedInstance?.dispose();</code>.</p>
+  
+
+</dd>
+
+            <dt id="failedToCreateAnalyticsService" class="constant">
+    <span class="name ">failedToCreateAnalyticsService</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Analytics service can not be created</p>
+  
+
+</dd>
+
+            <dt id="accessKeyContainsIllegalSymbol" class="constant">
+    <span class="name ">accessKeyContainsIllegalSymbol</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Access key contains illegal symbols.
+The below characters are not supported:
+A. '(single quote)
+B. "(double quote)</p>
+  
+
+</dd>
+
+            <dt id="accessKeySecretContainsIllegalSymbol" class="constant">
+    <span class="name ">accessKeySecretContainsIllegalSymbol</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Access key secret contains illegal symbols.
+The below characters are not supported:
+A. '(single quote)
+B. "(double quote)</p>
+  
+
+</dd>
+
+            <dt id="layerConfigurationMismatch" class="constant">
+    <span class="name ">layerConfigurationMismatch</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Please check SDKOptions.layerConfiguration against SDK modules configuration.</p>
+  
+
+</dd>
+
+            <dt id="sdkEngineAlreadyDisposed" class="constant">
+    <span class="name ">sdkEngineAlreadyDisposed</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Instantiation attempt failed because the <code>dispose()</code> method from <code>SDKNativeEngine</code>
+was called already.</p>
+  
+
+</dd>
+
+            <dt id="invalidCatalogConfiguration" class="constant">
+    <span class="name ">invalidCatalogConfiguration</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p><code>CatalogConfiguration</code> contains invalid parameters.
+Check the corectness of HRNs and versions.</p>
+  
+
+</dd>
+
+            <dt id="dataFolderAccessDenied" class="constant">
+    <span class="name ">dataFolderAccessDenied</span>
+  <span class="signature">&#8594; const <a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>
+  
+
+</dt>
+<dd>
+  <p>Access to the specified data folder is denied</p>
+  
+
+</dd>
+
+        </dl>
+      </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../core.errors/InstantiationErrorCode/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="index" class="property inherited">
+  <span class="name"><a href="../core.errors/InstantiationErrorCode/index.html">index</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  A numeric identifier for the enumerated value.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../core.errors/InstantiationErrorCode/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../core.errors/InstantiationErrorCode/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../core.errors/InstantiationErrorCode/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../core.errors/InstantiationErrorCode/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="values" class="constant">
+    <span class="name "><a href="../core.errors/InstantiationErrorCode/values-constant.html">values</a></span>
+  <span class="signature">&#8594; const List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../core.errors/InstantiationErrorCode.html">InstantiationErrorCode</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A constant List of the values in this enum, in order of their declaration.
+  
+
+</dd>
+
+    </dl>
+  </section>
+</div><!-- /.main-content -->
+
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core.errors/core.errors-library.html">core.errors</a></li>
+    <li class="self-crumb">InstantiationErrorCode enum</li>
+</ol>
+
+
+  <h5>core.errors library</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div>
+
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!-- /.sidebar-offcanvas -->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

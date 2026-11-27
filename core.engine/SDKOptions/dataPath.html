@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the dataPath property from the SDKOptions class, for the Dart programming language.">
+  <title>dataPath property - SDKOptions class - core.engine library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../core.engine/core.engine-library.html">core.engine.dart</a></li>
+    <li><a href="../../core.engine/SDKOptions-class.html">SDKOptions</a></li>
+    <li class="self-crumb">dataPath property</li>
+  </ol>
+  <div class="self-name">dataPath</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="core.engine&#47;SDKOptions-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-property">dataPath</span> property 
+</h1></div>
+
+      <section class="multi-line-signature">
+        
+        String
+        <span class="name ">dataPath</span>
+        <div class="features"><span class="feature">getter/setter pair</span></div>
+
+      </section>
+      
+<section class="desc markdown">
+  <p>Path used for storing application internal data, such as the offline search index and other essential data required for proper functionality.</p>
+<p><strong>Note:</strong> For common use cases, prefer <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a>, or keep the default paths. Use <code>dataPath</code> only as a fallback if <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a> is not writable, for example, when you have an agreement with HERE to flash data at factory time.</p>
+<p>By default, this returns an empty string. In this case, the same path as <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a> will be used.
+If an absolute path is set, it will be used instead.
+If a relative path is set then directory
+<code>Application Library directory</code> for iOS and <code>Context.getFilesDir().getPath()</code> for Android is used as parent path.
+Application must have read/write permissions to the given desired path.
+It is recommended that the application has exclusive access to this path.
+Avoid using shared or public directories such as <code>Download</code> or <code>Documents</code>.
+Using such directories may cause certain HERE SDK features to behave with limitations.
+For example, index creation for offline search may fail or not function as expected.
+It is recommended not to use the application cache paths like
+<code>&lt;Application_Home&gt;/Library/Caches</code> for iOS and <code>Context.getCacheDir().getPath()</code> for Android, since operating system manages data in this location
+and data can be deleted if the device is low on storage space, which will result in application malfunction.
+The path can be on internal or external storage. The internal storage is recommended due to the file I/O speed.
+Note:
+If the <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a> is writable, <code>dataPath</code> can be left empty.
+If the <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a> is not writable, <code>dataPath</code> must be set and also be writable. Note that <code>dataPath</code> is used to store essential HERE SDK data.</p>
+<p><strong>Important:</strong>
+There is no automatic migration of stored data between the <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a> and the <code>dataPath</code>. For ease of management,
+it's recommended to set the persistence path as writable and ignore <code>dataPath</code>.
+If <code>dataPath</code> is set differently from the <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a>, some data that would typically be saved in the <a href="../../core.engine/SDKOptions/persistentMapStoragePath.html">SDKOptions.persistentMapStoragePath</a> will now be saved to <code>dataPath</code>.
+If <code>dataPath</code> is set and later unset, any data stored there will remain inaccessible and will not be migrated back.</p>
+</section>
+
+      
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">String dataPath;</code></pre>
+</section>
+
+
+</div> <!-- /.main-content -->
+
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../core.engine/core.engine-library.html">core.engine</a></li>
+    <li><a href="../../core.engine/SDKOptions-class.html">SDKOptions</a></li>
+    <li class="self-crumb">dataPath property</li>
+</ol>
+
+
+  <h5>SDKOptions class</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
+
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

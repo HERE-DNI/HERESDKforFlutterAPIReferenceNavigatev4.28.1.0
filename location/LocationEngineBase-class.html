@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the LocationEngineBase class from the location library, for the Dart programming language.">
+  <title>LocationEngineBase class - location library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../location/location-library.html">location.dart</a></li>
+    <li class="self-crumb">LocationEngineBase class</li>
+  </ol>
+  <div class="self-name">LocationEngineBase</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="location&#47;location-library-sidebar.html"
+    data-below-sidebar="location&#47;LocationEngineBase-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">LocationEngineBase</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Public abstract class that describes the behaviour of <code>LocationEngine</code>.</p>
+<p>Implementation is platform-specific.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+          <dt>Implementers</dt>
+          <dd><ul class="comma-separated clazz-relationships">
+              <li><a href="../location/LocationEngine-class.html">LocationEngine</a></li>
+          </ul></dd>
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="LocationEngineBase" class="callable">
+          <span class="name"><a href="../location/LocationEngineBase/LocationEngineBase.html">LocationEngineBase</a></span><span class="signature">(<span class="parameter" id="-param-startWithLocationAccuracyLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">startWithLocationAccuracyLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationAccuracy.html">LocationAccuracy</a></span></span>), </span><span class="parameter" id="-param-startWithLocationOptionsLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">startWithLocationOptionsLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationOptions-class.html">LocationOptions</a></span></span>), </span><span class="parameter" id="-param-updateLocationAccuracyLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">updateLocationAccuracyLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationAccuracy.html">LocationAccuracy</a></span></span>), </span><span class="parameter" id="-param-updateLocationOptionsLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">updateLocationOptionsLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationOptions-class.html">LocationOptions</a></span></span>), </span><span class="parameter" id="-param-stopLambda"><span class="type-annotation">void</span> <span class="parameter-name">stopLambda</span>(), </span><span class="parameter" id="-param-confirmHEREPrivacyNoticeInclusionLambda"><span class="type-annotation"><a href="../location/ConfirmationStatus.html">ConfirmationStatus</a></span> <span class="parameter-name">confirmHEREPrivacyNoticeInclusionLambda</span>(), </span><span class="parameter" id="-param-confirmHEREPrivacyNoticeExceptionLambda"><span class="type-annotation"><a href="../location/ConfirmationStatus.html">ConfirmationStatus</a></span> <span class="parameter-name">confirmHEREPrivacyNoticeExceptionLambda</span>(), </span><span class="parameter" id="-param-addLocationListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">addLocationListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../core/LocationListener-class.html">LocationListener</a></span></span>), </span><span class="parameter" id="-param-removeLocationListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">removeLocationListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../core/LocationListener-class.html">LocationListener</a></span></span>), </span><span class="parameter" id="-param-addLocationStatusListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">addLocationStatusListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationStatusListener-class.html">LocationStatusListener</a></span></span>), </span><span class="parameter" id="-param-removeLocationStatusListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">removeLocationStatusListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationStatusListener-class.html">LocationStatusListener</a></span></span>), </span><span class="parameter" id="-param-addLocationIssueListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">addLocationIssueListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationIssueListener-class.html">LocationIssueListener</a></span></span>), </span><span class="parameter" id="-param-removeLocationIssueListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">removeLocationIssueListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../location/LocationIssueListener-class.html">LocationIssueListener</a></span></span>), </span><span class="parameter" id="-param-addOrientationListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">addOrientationListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../core/OrientationListener-class.html">OrientationListener</a></span></span>), </span><span class="parameter" id="-param-removeOrientationListenerLambda"><span class="type-annotation">void</span> <span class="parameter-name">removeOrientationListenerLambda</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="../core/OrientationListener-class.html">OrientationListener</a></span></span>), </span><span class="parameter" id="-param-setBackgroundLocationAllowedLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">setBackgroundLocationAllowedLambda</span>(<span class="parameter" id="param-"><span class="type-annotation">bool</span></span>), </span><span class="parameter" id="-param-getBackgroundLocationAllowedLambda"><span class="type-annotation">bool</span> <span class="parameter-name">getBackgroundLocationAllowedLambda</span>(), </span><span class="parameter" id="-param-setBackgroundLocationIndicatorVisibleLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">setBackgroundLocationIndicatorVisibleLambda</span>(<span class="parameter" id="param-"><span class="type-annotation">bool</span></span>), </span><span class="parameter" id="-param-getBackgroundLocationIndicatorVisibleLambda"><span class="type-annotation">bool</span> <span class="parameter-name">getBackgroundLocationIndicatorVisibleLambda</span>(), </span><span class="parameter" id="-param-setPauseLocationUpdatesAutomaticallyLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">setPauseLocationUpdatesAutomaticallyLambda</span>(<span class="parameter" id="param-"><span class="type-annotation">bool</span></span>), </span><span class="parameter" id="-param-getPauseLocationUpdatesAutomaticallyLambda"><span class="type-annotation">bool</span> <span class="parameter-name">getPauseLocationUpdatesAutomaticallyLambda</span>(), </span><span class="parameter" id="-param-setLastKnownLocationPersistentLambda"><span class="type-annotation"><a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span> <span class="parameter-name">setLastKnownLocationPersistentLambda</span>(<span class="parameter" id="param-"><span class="type-annotation">bool</span></span>), </span><span class="parameter" id="-param-internalsetCallListenerFromMainThreadEnabledLambda"><span class="type-annotation">void</span> <span class="parameter-name">internalsetCallListenerFromMainThreadEnabledLambda</span>(<span class="parameter" id="param-"><span class="type-annotation">bool</span></span>), </span><span class="parameter" id="-param-lastKnownLocationGetLambda"><span class="type-annotation"><a href="../core/Location-class.html">Location</a>?</span> <span class="parameter-name">lastKnownLocationGetLambda</span>(), </span><span class="parameter" id="-param-isStartedGetLambda"><span class="type-annotation">bool</span> <span class="parameter-name">isStartedGetLambda</span>()</span>)</span>
+        </dt>
+        <dd>
+          Public abstract class that describes the behaviour of <code>LocationEngine</code>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../location/LocationEngineBase/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isStarted" class="property">
+  <span class="name"><a href="../location/LocationEngineBase/isStarted.html">isStarted</a></span>
+  <span class="signature">&#8594; bool</span>
+  
+
+</dt>
+<dd>
+  Checks if the engine is in started state.
+Checks if the engine is in started state.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="lastKnownLocation" class="property">
+  <span class="name"><a href="../location/LocationEngineBase/lastKnownLocation.html">lastKnownLocation</a></span>
+  <span class="signature">&#8594; <a href="../core/Location-class.html">Location</a>?</span>
+  
+
+</dt>
+<dd>
+  The last known location obtained by the <code>LocationEngine</code>. It is persisted throughout the app's lifecycle.
+This property can be obtained without starting the <code>LocationEngine</code>. However, the initial value might be <code>null</code>
+if no location has ever been obtained by the <code>LocationEngine</code>.
+The time attribute of the <code>Location</code> object indicates when the last location was obtained.
+Note: In order to receive continuous location updates, add a <code>LocationListener</code>.
+Gets the last known location obtained by the <code>LocationEngine</code>. It is persisted throughout the app's lifecycle.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../location/LocationEngineBase/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addLocationIssueListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/addLocationIssueListener.html">addLocationIssueListener</a></span><span class="signature">(<wbr><span class="parameter" id="addLocationIssueListener-param-listener"><span class="type-annotation"><a href="../location/LocationIssueListener-class.html">LocationIssueListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a <a href="../location/LocationIssueListener-class.html">LocationIssueListener</a> to the engine to get notified when a location issue has occurred.
+  
+
+</dd>
+
+        <dt id="addLocationListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/addLocationListener.html">addLocationListener</a></span><span class="signature">(<wbr><span class="parameter" id="addLocationListener-param-listener"><span class="type-annotation"><a href="../core/LocationListener-class.html">LocationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a <code>LocationListener</code> to the engine to get notified when there is a new location
+update available.
+  
+
+</dd>
+
+        <dt id="addLocationStatusListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/addLocationStatusListener.html">addLocationStatusListener</a></span><span class="signature">(<wbr><span class="parameter" id="addLocationStatusListener-param-listener"><span class="type-annotation"><a href="../location/LocationStatusListener-class.html">LocationStatusListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a <code>LocationStatusListener</code>
+to the engine to get notified when there is an important status change.
+  
+
+</dd>
+
+        <dt id="addOrientationListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/addOrientationListener.html">addOrientationListener</a></span><span class="signature">(<wbr><span class="parameter" id="addOrientationListener-param-listener"><span class="type-annotation"><a href="../core/OrientationListener-class.html">OrientationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds an OrientationListener to the engine.
+  
+
+</dd>
+
+        <dt id="confirmHEREPrivacyNoticeException" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/confirmHEREPrivacyNoticeException.html">confirmHEREPrivacyNoticeException</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../location/ConfirmationStatus.html">ConfirmationStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  By calling this method, the application developer confirms that they have received an exceptional permission
+from HERE in written form to <strong>not</strong> include a reference to the HERE Privacy Notice.
+  
+
+</dd>
+
+        <dt id="confirmHEREPrivacyNoticeInclusion" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/confirmHEREPrivacyNoticeInclusion.html">confirmHEREPrivacyNoticeInclusion</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../location/ConfirmationStatus.html">ConfirmationStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  It is the responsibility of the application developer to ensure that
+the application user is informed about the collection of characteristic information
+regarding nearby mobile and Wi-Fi network signals.
+  
+
+</dd>
+
+        <dt id="getBackgroundLocationAllowed" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/getBackgroundLocationAllowed.html">getBackgroundLocationAllowed</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Check if application's background location updates are enabled.
+  
+
+</dd>
+
+        <dt id="getBackgroundLocationIndicatorVisible" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/getBackgroundLocationIndicatorVisible.html">getBackgroundLocationIndicatorVisible</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Check if application's background location indicator is visible.
+  
+
+</dd>
+
+        <dt id="getPauseLocationUpdatesAutomatically" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/getPauseLocationUpdatesAutomatically.html">getPauseLocationUpdatesAutomatically</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Check if automatic pausing of location updates are enabled.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngineBase/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeLocationIssueListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/removeLocationIssueListener.html">removeLocationIssueListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeLocationIssueListener-param-listener"><span class="type-annotation"><a href="../location/LocationIssueListener-class.html">LocationIssueListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a <a href="../location/LocationIssueListener-class.html">LocationIssueListener</a> from the engine.
+  
+
+</dd>
+
+        <dt id="removeLocationListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/removeLocationListener.html">removeLocationListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeLocationListener-param-listener"><span class="type-annotation"><a href="../core/LocationListener-class.html">LocationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a <code>LocationListener</code> from the engine.
+  
+
+</dd>
+
+        <dt id="removeLocationStatusListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/removeLocationStatusListener.html">removeLocationStatusListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeLocationStatusListener-param-listener"><span class="type-annotation"><a href="../location/LocationStatusListener-class.html">LocationStatusListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a <code>LocationStatusListener</code>
+from the engine.
+  
+
+</dd>
+
+        <dt id="removeOrientationListener" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/removeOrientationListener.html">removeOrientationListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeOrientationListener-param-listener"><span class="type-annotation"><a href="../core/OrientationListener-class.html">OrientationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes an OrientationListener from the engine.
+  
+
+</dd>
+
+        <dt id="setBackgroundLocationAllowed" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/setBackgroundLocationAllowed.html">setBackgroundLocationAllowed</a></span><span class="signature">(<wbr><span class="parameter" id="setBackgroundLocationAllowed-param-allowed"><span class="type-annotation">bool</span> <span class="parameter-name">allowed</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Enables or disables background location updates for an application.
+  
+
+</dd>
+
+        <dt id="setBackgroundLocationIndicatorVisible" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/setBackgroundLocationIndicatorVisible.html">setBackgroundLocationIndicatorVisible</a></span><span class="signature">(<wbr><span class="parameter" id="setBackgroundLocationIndicatorVisible-param-visible"><span class="type-annotation">bool</span> <span class="parameter-name">visible</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Controls visibility of application's background location indicator.
+  
+
+</dd>
+
+        <dt id="setLastKnownLocationPersistent" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/setLastKnownLocationPersistent.html">setLastKnownLocationPersistent</a></span><span class="signature">(<wbr><span class="parameter" id="setLastKnownLocationPersistent-param-persistent"><span class="type-annotation">bool</span> <span class="parameter-name">persistent</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Enables or disables saving of last known location so that it persists between application sessions.
+  
+
+</dd>
+
+        <dt id="setPauseLocationUpdatesAutomatically" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/setPauseLocationUpdatesAutomatically.html">setPauseLocationUpdatesAutomatically</a></span><span class="signature">(<wbr><span class="parameter" id="setPauseLocationUpdatesAutomatically-param-allowed"><span class="type-annotation">bool</span> <span class="parameter-name">allowed</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Controls automatic pausing of location updates e.g.
+  
+
+</dd>
+
+        <dt id="startWithLocationAccuracy" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/startWithLocationAccuracy.html">startWithLocationAccuracy</a></span><span class="signature">(<wbr><span class="parameter" id="startWithLocationAccuracy-param-locationAccuracy"><span class="type-annotation"><a href="../location/LocationAccuracy.html">LocationAccuracy</a></span> <span class="parameter-name">locationAccuracy</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts the location engine with desired <a href="../location/LocationAccuracy.html">LocationAccuracy</a>.
+  
+
+</dd>
+
+        <dt id="startWithLocationOptions" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/startWithLocationOptions.html">startWithLocationOptions</a></span><span class="signature">(<wbr><span class="parameter" id="startWithLocationOptions-param-locationOptions"><span class="type-annotation"><a href="../location/LocationOptions-class.html">LocationOptions</a></span> <span class="parameter-name">locationOptions</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts the location engine with desired <a href="../location/LocationOptions-class.html">LocationOptions</a>.
+  
+
+</dd>
+
+        <dt id="stop" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/stop.html">stop</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stops the location engine.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngineBase/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateLocationAccuracy" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/updateLocationAccuracy.html">updateLocationAccuracy</a></span><span class="signature">(<wbr><span class="parameter" id="updateLocationAccuracy-param-locationAccuracy"><span class="type-annotation"><a href="../location/LocationAccuracy.html">LocationAccuracy</a></span> <span class="parameter-name">locationAccuracy</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Reconfigures the location engine with desired <a href="../location/LocationAccuracy.html">LocationAccuracy</a>.
+  
+
+</dd>
+
+        <dt id="updateLocationOptions" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/updateLocationOptions.html">updateLocationOptions</a></span><span class="signature">(<wbr><span class="parameter" id="updateLocationOptions-param-locationOptions"><span class="type-annotation"><a href="../location/LocationOptions-class.html">LocationOptions</a></span> <span class="parameter-name">locationOptions</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Reconfigures the location engine with desired <a href="../location/LocationOptions-class.html">LocationOptions</a>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngineBase/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="makeLocationEngine" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/makeLocationEngine.html">makeLocationEngine</a></span><span class="signature">(<wbr><span class="parameter" id="makeLocationEngine-param-sdkEngine"><span class="type-annotation"><a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a></span> <span class="parameter-name">sdkEngine</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineBase-class.html">LocationEngineBase</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates instance of <code>LocationEngine</code> using factory, registered on platform side
+  
+
+</dd>
+
+        <dt id="makeLocationEngineFromSharedSdkNativeEngine" class="callable">
+  <span class="name"><a href="../location/LocationEngineBase/makeLocationEngineFromSharedSdkNativeEngine.html">makeLocationEngineFromSharedSdkNativeEngine</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineBase-class.html">LocationEngineBase</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates instance of <code>LocationEngine</code> using factory, registered on platform side
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../location/location-library.html">location</a></li>
+    <li class="self-crumb">LocationEngineBase class</li>
+</ol>
+
+
+    <h5>location library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

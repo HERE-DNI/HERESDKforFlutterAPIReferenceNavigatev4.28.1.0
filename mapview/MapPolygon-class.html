@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapPolygon class from the mapview library, for the Dart programming language.">
+  <title>MapPolygon class - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview.dart</a></li>
+    <li class="self-crumb">MapPolygon class</li>
+  </ol>
+  <div class="self-name">MapPolygon</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="mapview&#47;mapview-library-sidebar.html"
+    data-below-sidebar="mapview&#47;MapPolygon-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapPolygon</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A visual representation of a polygon on the map.</p>
+<p>Can be used to visualize areas of all shapes
+and sizes.</p>
+<p>The geometry to be visualized is represented by an instance of <a href="../core/GeoPolygon-class.html">GeoPolygon</a>.
+To display circular areas (for example, a position accuracy indicator) use a GeoPolygon
+created from a <a href="../core/GeoCircle-class.html">GeoCircle</a> using <a href="../core/GeoPolygon/GeoPolygon.withGeoCircle.html">GeoPolygon.withGeoCircle</a>.</p>
+<p>Note:</p>
+<ul>
+<li>The polygon shape should not cover more than half of the globe,
+otherwise unexpected results may occur.</li>
+<li>Polygons which are self-intersecting are not supported and may lead to render
+artifacts.</li>
+<li>The inner boundaries (holes) specified in the GeoPolygon are ignored.</li>
+</ul>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapPolygon" class="callable">
+          <span class="name"><a href="../mapview/MapPolygon/MapPolygon.html">MapPolygon</a></span><span class="signature">(<span class="parameter" id="-param-geometry"><span class="type-annotation"><a href="../core/GeoPolygon-class.html">GeoPolygon</a></span> <span class="parameter-name">geometry</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">color</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new MapPolygon instance with outline visualization disabled and containing the geometry passed in.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="MapPolygon.withOutlineColorAndOutlineWidthInPixels" class="callable">
+          <span class="name"><a href="../mapview/MapPolygon/MapPolygon.withOutlineColorAndOutlineWidthInPixels.html">MapPolygon.withOutlineColorAndOutlineWidthInPixels</a></span><span class="signature">(<span class="parameter" id="withOutlineColorAndOutlineWidthInPixels-param-geometry"><span class="type-annotation"><a href="../core/GeoPolygon-class.html">GeoPolygon</a></span> <span class="parameter-name">geometry</span>, </span><span class="parameter" id="withOutlineColorAndOutlineWidthInPixels-param-color"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">color</span>, </span><span class="parameter" id="withOutlineColorAndOutlineWidthInPixels-param-outlineColor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">outlineColor</span>, </span><span class="parameter" id="withOutlineColorAndOutlineWidthInPixels-param-outlineWidthInPixels"><span class="type-annotation">double</span> <span class="parameter-name">outlineWidthInPixels</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new MapPolygon instance with outline visualization enabled and containing the geometry passed in.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="drawOrder" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/drawOrder.html">drawOrder</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The draw order of this map polygon relative to other map polygons.
+Gets the draw order of this map polygon relative to other map polygons. Default value is 0.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="fillColor" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/fillColor.html">fillColor</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Color of the polygon's fill.
+Gets the current color of the fill.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="geometry" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/geometry.html">geometry</a></span>
+  <span class="signature">&#8596; <a href="../core/GeoPolygon-class.html">GeoPolygon</a></span>
+  
+
+</dt>
+<dd>
+  The geometry of the polygon. Setting a new geometry will update the appearance.
+Gets the current geometry of the polygon.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../mapview/MapPolygon/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="metadata" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/metadata.html">metadata</a></span>
+  <span class="signature">&#8596; <a href="../core/Metadata-class.html">Metadata</a>?</span>
+  
+
+</dt>
+<dd>
+  The Metadata instance attached to this polygon, <code>null</code> by default.
+Gets the Metadata instance attached to this polygon.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="outlineColor" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/outlineColor.html">outlineColor</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  The color of the polygon outline.
+Gets the color of the polygon outline. The default outline color is opaque white.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="outlineWidth" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/outlineWidth.html">outlineWidth</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  The width of the polygon outline in pixels.
+Gets the outline width of the polygon in pixels.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../mapview/MapPolygon/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="visibilityRanges" class="property">
+  <span class="name"><a href="../mapview/MapPolygon/visibilityRanges.html">visibilityRanges</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../mapview/MapMeasureRange-class.html">MapMeasureRange</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The list of visibility ranges. The map polygon is visible only inside these map measure ranges.
+Gets the list of visibility ranges. The map polygon is visible only inside these map measure
+ranges. When empty (the default), the map polygon is visible without map measure restrictions.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../mapview/MapPolygon/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../mapview/MapPolygon/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../mapview/MapPolygon/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../mapview/mapview-library.html">mapview</a></li>
+    <li class="self-crumb">MapPolygon class</li>
+</ol>
+
+
+    <h5>mapview library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

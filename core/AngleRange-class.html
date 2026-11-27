@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the AngleRange class from the core library, for the Dart programming language.">
+  <title>AngleRange class - core library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core/core-library.html">core.dart</a></li>
+    <li class="self-crumb">AngleRange class</li>
+  </ol>
+  <div class="self-name">AngleRange</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="core&#47;core-library-sidebar.html"
+    data-below-sidebar="core&#47;AngleRange-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">AngleRange</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Represents angle ranges as a circular sector by using an absolute start angle
+and a relative range angle called extent.</p>
+<p>They both define a sector on a
+circle. All angles are in degrees and are clockwise-oriented.
+By default, the AngleRange represents the entire circle, the value is in the range of [0, 360].
+Values will be corrected during construction using normalization
+for the start angle and clamping for the extent angle, ensuring a valid range
+for all possible inputs.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="https://pub.dev/documentation/meta/1.18.0/meta/immutable-constant.html">immutable</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="AngleRange" class="callable">
+          <span class="name"><a href="../core/AngleRange/AngleRange.html">AngleRange</a></span><span class="signature">(<span class="parameter" id="-param-start"><span class="type-annotation">double</span> <span class="parameter-name">start</span>, </span><span class="parameter" id="-param-extent"><span class="type-annotation">double</span> <span class="parameter-name">extent</span></span>)</span>
+        </dt>
+        <dd>
+          Constructs an AngleRange from the provided start and extent angles.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="AngleRange.fullCircle" class="callable">
+          <span class="name"><a href="../core/AngleRange/AngleRange.fullCircle.html">AngleRange.fullCircle</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Constructs a range covering a full circle.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="extent" class="property">
+  <span class="name"><a href="../core/AngleRange/extent.html">extent</a></span>
+  <span class="signature">&#8594; double</span>
+  
+
+</dt>
+<dd>
+  The angle range extent, running clockwise, in degrees from start.
+The value is in the range of [0, 360] degrees.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../core/AngleRange/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../core/AngleRange/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="start" class="property">
+  <span class="name"><a href="../core/AngleRange/start.html">start</a></span>
+  <span class="signature">&#8594; double</span>
+  
+
+</dt>
+<dd>
+  Start angle, running clockwise, in degrees from north.
+The value is in the range of [0, 360) degrees.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="closestInRange" class="callable">
+  <span class="name"><a href="../core/AngleRange/closestInRange.html">closestInRange</a></span><span class="signature">(<wbr><span class="parameter" id="closestInRange-param-angleClockwiseInDegreesFromNorth"><span class="type-annotation">double</span> <span class="parameter-name">angleClockwiseInDegreesFromNorth</span></span>)
+    <span class="returntype parameter">&#8594; double</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the angle that is closest to the given one and in range.
+  
+
+</dd>
+
+        <dt id="inRange" class="callable">
+  <span class="name"><a href="../core/AngleRange/inRange.html">inRange</a></span><span class="signature">(<wbr><span class="parameter" id="inRange-param-angleClockwiseInDegreesFromNorth"><span class="type-annotation">double</span> <span class="parameter-name">angleClockwiseInDegreesFromNorth</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Check if a given angle in degrees, clockwise from north is in range or not.
+  
+
+</dd>
+
+        <dt id="max" class="callable">
+  <span class="name"><a href="../core/AngleRange/max.html">max</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; double</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the maximum angle defined by the range in degrees, clockwise from north,
+normalized to [0,360).
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../core/AngleRange/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../core/AngleRange/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../core/AngleRange/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="fromDirectionDegreesClockwise" class="callable">
+  <span class="name"><a href="../core/AngleRange/fromDirectionDegreesClockwise.html">fromDirectionDegreesClockwise</a></span><span class="signature">(<wbr><span class="parameter" id="fromDirectionDegreesClockwise-param-center"><span class="type-annotation">double</span> <span class="parameter-name">center</span>, </span><span class="parameter" id="fromDirectionDegreesClockwise-param-extent"><span class="type-annotation">double</span> <span class="parameter-name">extent</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../core/AngleRange-class.html">AngleRange</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Constructs an AngleRange from the provided center angle defining the
+direction and an angular width to extent the range by 50% clockwise and
+50% counter-clockwise from its center angle.
+  
+
+</dd>
+
+        <dt id="fromMinMaxDegreesClockwise" class="callable">
+  <span class="name"><a href="../core/AngleRange/fromMinMaxDegreesClockwise.html">fromMinMaxDegreesClockwise</a></span><span class="signature">(<wbr><span class="parameter" id="fromMinMaxDegreesClockwise-param-min"><span class="type-annotation">double</span> <span class="parameter-name">min</span>, </span><span class="parameter" id="fromMinMaxDegreesClockwise-param-max"><span class="type-annotation">double</span> <span class="parameter-name">max</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../core/AngleRange-class.html">AngleRange</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Constructs an AngleRange from the provided minimum and maximum angles.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core/core-library.html">core</a></li>
+    <li class="self-crumb">AngleRange class</li>
+</ol>
+
+
+    <h5>core library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

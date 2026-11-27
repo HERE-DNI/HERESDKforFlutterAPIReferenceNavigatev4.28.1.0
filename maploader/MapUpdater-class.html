@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapUpdater class from the maploader library, for the Dart programming language.">
+  <title>MapUpdater class - maploader library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../maploader/maploader-library.html">maploader.dart</a></li>
+    <li class="self-crumb">MapUpdater class</li>
+  </ol>
+  <div class="self-name">MapUpdater</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="maploader&#47;maploader-library-sidebar.html"
+    data-below-sidebar="maploader&#47;MapUpdater-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapUpdater</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A class for updating regions previously downloaded using the <a href="../maploader/MapDownloader-class.html">MapDownloader</a>.</p>
+<p>First, updates for the regions are downloaded. Once the download is complete, the update process begins,
+installing the new content.
+It is recommended to regularly call <a href="../maploader/MapUpdater/retrieveCatalogsUpdateInfo.html">MapUpdater.retrieveCatalogsUpdateInfo</a> to check for available updates
+for any downloaded regions.</p>
+<p>If updates are available, regions can be updated asynchronously using <a href="../maploader/MapUpdater/updateCatalog.html">MapUpdater.updateCatalog</a>.
+The <a href="../maploader/MapUpdateProgressListener-class.html">MapUpdateProgressListener</a> provides update progress for each region.</p>
+<p>Incremental map updates are supported, by default: Instead of downloading an entire region,
+only the parts that have changed will be installed. This results in a faster update process.
+MapUpdater also aligns previously downloaded content with <code>LayerConfiguration</code> changes made via <code>SDKOptions</code>.</p>
+<p>Note that patching (also called "incremental updates") is only supported for up to 8 versions. For example, if an update started
+with version x.y.0 then it will be supported till x.y.8 and stopped starting with x.y.9.
+Usually, map updates are released weekly. Incremental updates will stop after 2 months and a full update is performed instead.</p>
+<p>In case of an error, the previous map data remains available for use. It is only replaced
+after new map data has been successfully downloaded. Regions that fail to update
+must be retried in a new call. Paused updates can be resumed later.</p>
+<p>During the update process, <a href="../maploader/MapUpdater-class.html">MapUpdater</a> internally retries failed downloads
+until a timeout occurs. If this happens, it is reported via <a href="../maploader/MapUpdateProgressListener-class.html">MapUpdateProgressListener</a>.</p>
+<p>If the user cancels the update process during the update phase, it is ignored.
+The update phase begins after all content has been downloaded, then the HERE SDK installs
+and replaces the existing regions. Cancellation is only possible during the download phase,
+and a successful cancellation is indicated via <a href="../maploader/MapUpdateProgressListener/onComplete.html">MapUpdateProgressListener.onComplete</a>.</p>
+<p>Note that a <a href="../maploader/MapLoaderError.html">MapLoaderError.notReady</a> occurs when the <a href="../maploader/MapDownloader-class.html">MapDownloader</a> is used in parallel.
+In general, background updates are not supported explicitly, as the OS can abort background processes.
+In addition, the OfflineSearchEngine and the OfflineRoutingEngine cannot be used while a map update is
+in progress and it will be indicated by a <a href="../maploader/MapLoaderError.html">MapLoaderError</a>.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapUpdater" class="callable">
+          <span class="name"><a href="../maploader/MapUpdater/MapUpdater.html">MapUpdater</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../maploader/MapUpdater/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../maploader/MapUpdater/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="taskCount" class="property">
+  <span class="name"><a href="../maploader/MapUpdater/taskCount.html">taskCount</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The number of concurrent tasks for downloading a map.
+A valid task count is between 1 to 64. When the value set is outside the valid range,
+then it is clamped to a valid range:
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="updateStatistics" class="property">
+  <span class="name"><a href="../maploader/MapUpdater/updateStatistics.html">updateStatistics</a></span>
+  <span class="signature">&#8594; <a href="../maploader/UpdateStatistics-class.html">UpdateStatistics</a></span>
+  
+
+</dt>
+<dd>
+  Map update statistics for the current application session.
+In the event of binary updates, patches are downloaded and applied. This
+property helps to  determine the success or failure rate of applied patches.
+Map update statistics for the ongoing session of the current application.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="getCurrentMapVersion" class="callable">
+  <span class="name"><a href="../maploader/MapUpdater/getCurrentMapVersion.html">getCurrentMapVersion</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../maploader/MapVersionHandle-class.html">MapVersionHandle</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a handle that contains the map version of the already downloaded and installed regions.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../maploader/MapUpdater/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="retrieveCatalogsUpdateInfo" class="callable">
+  <span class="name"><a href="../maploader/MapUpdater/retrieveCatalogsUpdateInfo.html">retrieveCatalogsUpdateInfo</a></span><span class="signature">(<wbr><span class="parameter" id="retrieveCatalogsUpdateInfo-param-callback"><span class="type-annotation"><a href="../maploader/CatalogsUpdateInfoCallback.html">CatalogsUpdateInfoCallback</a></span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../core.threading/TaskHandle-class.html">TaskHandle</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Retrieves information of all catalogs that have newer version available.
+  
+
+</dd>
+
+        <dt id="setVersionCommitPolicy" class="callable">
+  <span class="name"><a href="../maploader/MapUpdater/setVersionCommitPolicy.html">setVersionCommitPolicy</a></span><span class="signature">(<wbr><span class="parameter" id="setVersionCommitPolicy-param-versionCommitPolicy"><span class="type-annotation"><a href="../maploader/MapUpdaterMapUpdateVersionCommitPolicy.html">MapUpdaterMapUpdateVersionCommitPolicy</a></span> <span class="parameter-name">versionCommitPolicy</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the map update version policy.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../maploader/MapUpdater/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateCatalog" class="callable">
+  <span class="name"><a href="../maploader/MapUpdater/updateCatalog.html">updateCatalog</a></span><span class="signature">(<wbr><span class="parameter" id="updateCatalog-param-catalogInfo"><span class="type-annotation"><a href="../maploader/CatalogUpdateInfo-class.html">CatalogUpdateInfo</a></span> <span class="parameter-name">catalogInfo</span>, </span><span class="parameter" id="updateCatalog-param-callback"><span class="type-annotation"><a href="../maploader/CatalogUpdateProgressListener-class.html">CatalogUpdateProgressListener</a></span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../maploader/CatalogUpdateTask-class.html">CatalogUpdateTask</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Performs an asynchronous request for each catalog to update map data to the latest available version.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../maploader/MapUpdater/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="fromSdkEngineAsync" class="callable">
+  <span class="name"><a href="../maploader/MapUpdater/fromSdkEngineAsync.html">fromSdkEngineAsync</a></span><span class="signature">(<wbr><span class="parameter" id="fromSdkEngineAsync-param-sdkEngine"><span class="type-annotation"><a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a></span> <span class="parameter-name">sdkEngine</span>, </span><span class="parameter" id="fromSdkEngineAsync-param-mapUpdaterConstructionCallback"><span class="type-annotation"><a href="../maploader/MapUpdaterConstructionCallback.html">MapUpdaterConstructionCallback</a></span> <span class="parameter-name">mapUpdaterConstructionCallback</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets a single instance of this class per provided <a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../maploader/maploader-library.html">maploader</a></li>
+    <li class="self-crumb">MapUpdater class</li>
+</ol>
+
+
+    <h5>maploader library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

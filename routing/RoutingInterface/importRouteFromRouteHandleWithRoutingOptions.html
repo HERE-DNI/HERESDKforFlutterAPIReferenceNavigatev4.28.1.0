@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the importRouteFromRouteHandleWithRoutingOptions method from the RoutingInterface class, for the Dart programming language.">
+  <title>importRouteFromRouteHandleWithRoutingOptions method - RoutingInterface class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../routing/routing-library.html">routing.dart</a></li>
+    <li><a href="../../routing/RoutingInterface-class.html">RoutingInterface</a></li>
+    <li class="self-crumb">importRouteFromRouteHandleWithRoutingOptions abstract method</li>
+  </ol>
+  <div class="self-name">importRouteFromRouteHandleWithRoutingOptions</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;RoutingInterface-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">importRouteFromRouteHandleWithRoutingOptions</span> abstract method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="../../core.threading/TaskHandle-class.html">TaskHandle</a></span>
+<span class="name ">importRouteFromRouteHandleWithRoutingOptions</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="importRouteFromRouteHandleWithRoutingOptions-param-routeHandle"><span class="type-annotation"><a href="../../routing/RouteHandle-class.html">RouteHandle</a></span> <span class="parameter-name">routeHandle</span>, </span></li>
+<li><span class="parameter" id="importRouteFromRouteHandleWithRoutingOptions-param-options"><span class="type-annotation"><a href="../../routing/RoutingOptions-class.html">RoutingOptions</a></span> <span class="parameter-name">options</span>, </span></li>
+<li><span class="parameter" id="importRouteFromRouteHandleWithRoutingOptions-param-callback"><span class="type-annotation"><a href="../../routing/CalculateRouteCallback.html">CalculateRouteCallback</a></span> <span class="parameter-name">callback</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Asynchronously recreates a route from the <a href="../../routing/RouteHandle-class.html">RouteHandle</a> provided, i.e.</p>
+<p>refreshes a previously
+calculated route, with the specified <a href="../../routing/RoutingOptions-class.html">RoutingOptions</a>.</p>
+<p>A route handle can be invalid when the map data changes that is used by the HERE sdk to recreate the route. This happens regularly.
+Therefore, the route handle is not meant to be persisted for a longer time.</p>
+<ul>
+<li>
+<p><code>routeHandle</code> The route handle holding the route to be refreshed.</p>
+</li>
+<li>
+<p><code>options</code> Options to import the route from handle.</p>
+</li>
+<li>
+<p><code>callback</code> Callback object that will be invoked after refreshing the route.
+It is always invoked on the main thread.</p>
+</li>
+</ul>
+<p>Returns <a href="../../core.threading/TaskHandle-class.html">TaskHandle</a>. Handle that will be used to manipulate the execution of the task.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">TaskHandle importRouteFromRouteHandleWithRoutingOptions(RouteHandle routeHandle, RoutingOptions options, CalculateRouteCallback callback);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../routing/routing-library.html">routing</a></li>
+    <li><a href="../../routing/RoutingInterface-class.html">RoutingInterface</a></li>
+    <li class="self-crumb">importRouteFromRouteHandleWithRoutingOptions abstract method</li>
+</ol>
+
+
+    <h5>RoutingInterface class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapImage.withFilePathAndWidthAndHeight constructor from Class MapImage from the mapview library, for the Dart programming language.">
+  <title>MapImage.withFilePathAndWidthAndHeight constructor - MapImage - mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview.dart</a></li>
+    <li><a href="../../mapview/MapImage-class.html">MapImage</a></li>
+    <li class="self-crumb">MapImage.withFilePathAndWidthAndHeight factory constructor</li>
+  </ol>
+  <div class="self-name">MapImage.withFilePathAndWidthAndHeight</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="mapview&#47;MapImage-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">MapImage.withFilePathAndWidthAndHeight</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">MapImage.withFilePathAndWidthAndHeight</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="withFilePathAndWidthAndHeight-param-filePath"><span class="type-annotation">String</span> <span class="parameter-name">filePath</span>, </span></li>
+<li><span class="parameter" id="withFilePathAndWidthAndHeight-param-width"><span class="type-annotation">int</span> <span class="parameter-name">width</span>, </span></li>
+<li><span class="parameter" id="withFilePathAndWidthAndHeight-param-height"><span class="type-annotation">int</span> <span class="parameter-name">height</span></span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates a new map image from the provided path to the SVG Tiny or PNG image.</p>
+<p>Will throw an error if either the height or width equals zero or the path is empty.</p>
+<p>Trying to load a file that is not compliant with SVG Tiny or PNG results
+in an undefined behavior. In particular, loading SVG that exceeds Tiny SVG
+specification may result in an image that exhibits unexpected artifacts.</p>
+<p>The caller must ensure that the file remains accessible for the entire duration of its usage by the
+SDK. If that cannot be ensured, then it is recommended to either copy the file to a location that
+remains accessible for the entire duration of its usage by the SDK or load and pass the file content
+to one of the <code>MapImage</code> constructors that creates instances out of image data
+(<a href="../../mapview/MapImage/MapImage.withPixelDataAndImageFormat.html">MapImage.withPixelDataAndImageFormat</a>, <a href="../../mapview/MapImage/MapImage.withImageDataImageFormatWidthAndHeight.html">MapImage.withImageDataImageFormatWidthAndHeight</a>).}</p>
+<p>Please note that on iOS, file paths that originate, for example from a file picker (like <code>FilePicker</code>)
+can be deleted by the system while the application is still running.</p>
+<ul>
+<li>
+<p><code>filePath</code> The path to image file.</p>
+</li>
+<li>
+<p><code>width</code> The width of image in pixels.</p>
+</li>
+<li>
+<p><code>height</code> The height of image in pixels.</p>
+</li>
+</ul>
+<p>Throws <a href="../../core.errors/InstantiationException-class.html">InstantiationException</a>. Indicates what went wrong when the instantiation was attempted.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory MapImage.withFilePathAndWidthAndHeight(String filePath, int width, int height) =&gt; $prototype.withFilePathAndWidthAndHeight(filePath, width, height);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../mapview/mapview-library.html">mapview</a></li>
+    <li><a href="../../mapview/MapImage-class.html">MapImage</a></li>
+    <li class="self-crumb">MapImage.withFilePathAndWidthAndHeight factory constructor</li>
+</ol>
+
+
+    <h5>MapImage class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

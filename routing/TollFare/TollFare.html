@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the TollFare constructor from Class TollFare from the routing library, for the Dart programming language.">
+  <title>TollFare constructor - TollFare - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../routing/routing-library.html">routing.dart</a></li>
+    <li><a href="../../routing/TollFare-class.html">TollFare</a></li>
+    <li class="self-crumb">TollFare constructor</li>
+  </ol>
+  <div class="self-name">TollFare</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="routing&#47;TollFare-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">TollFare</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">TollFare</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="-param-currency"><span class="type-annotation">String</span> <span class="parameter-name">currency</span>, </span></li>
+<li><span class="parameter" id="-param-price"><span class="type-annotation">double</span> <span class="parameter-name">price</span>, </span></li>
+<li><span class="parameter" id="-param-paymentMethods"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../routing/PaymentMethod.html">PaymentMethod</a></span>&gt;</span></span> <span class="parameter-name">paymentMethods</span>, [</span></li>
+<li><span class="parameter" id="-param-timeRule"><span class="type-annotation"><a href="../../core/TimeRule-class.html">TimeRule</a>?</span> <span class="parameter-name">timeRule</span> = <span class="default-value">null</span>, </span></li>
+<li><span class="parameter" id="-param-transponders"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span> <span class="parameter-name">transponders</span> = <span class="default-value">const []</span>, </span></li>
+<li><span class="parameter" id="-param-pass"><span class="type-annotation"><a href="../../routing/TollFarePass-class.html">TollFarePass</a>?</span> <span class="parameter-name">pass</span> = <span class="default-value">null</span>, </span></li>
+</ol>])
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates a new instance.</p>
+<ul>
+<li><code>currency</code> The currency in which the toll is to be paid in ISO 4217 format, e.g. "USD".</li>
+<li><code>price</code> The amount of the toll be paid.</li>
+<li><code>paymentMethods</code> The list of accepted payment methods like cash and credit card.</li>
+<li><code>timeRule</code> The time domain when this fare is valid.
+If this field is missing, it means the fare is always valid.
+For a detailed description of the Time Domain specification and usage in routing services, please refer to
+the documentation available in the <a href="https://www.here.com/docs/bundle/routing-api-developer-guide-v8/page/topics/time-domain.html">Time Domain</a></li>
+<li><code>transponders</code> The list of available transponders.</li>
+<li><code>pass</code> Specifies whether this <a href="../../routing/TollFare-class.html">TollFare</a> is a multi-travel pass, and its characteristics.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">TollFare(String currency, double price, List&lt;PaymentMethod&gt; paymentMethods, [TimeRule? timeRule = null, List&lt;String&gt; transponders = const [], TollFarePass? pass = null])
+  : currency = currency, price = price, paymentMethods = paymentMethods, timeRule = timeRule, transponders = transponders, pass = pass ?? null;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../routing/routing-library.html">routing</a></li>
+    <li><a href="../../routing/TollFare-class.html">TollFare</a></li>
+    <li class="self-crumb">TollFare constructor</li>
+</ol>
+
+
+    <h5>TollFare class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

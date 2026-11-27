@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the AreaCameraBehavior class from the navigation library, for the Dart programming language.">
+  <title>AreaCameraBehavior class - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation.dart</a></li>
+    <li class="self-crumb">AreaCameraBehavior class</li>
+  </ol>
+  <div class="self-name">AreaCameraBehavior</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="navigation&#47;navigation-library-sidebar.html"
+    data-below-sidebar="navigation&#47;AreaCameraBehavior-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">AreaCameraBehavior</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Use this class to show an overview of geo points.</p>
+<p>By default, the orientation of the camera will be
+perpendicular to the Earth's surface (ie. looking towards the center of the Earth),
+while bearing will be towards north.</p>
+<p><strong>Note:</strong> This is a <strong>beta</strong> release of this feature and may contain bugs or exhibit unexpected behaviour. Related APIs are subject to change without a deprecation process.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="../navigation/CameraBehavior-class.html">CameraBehavior</a></li>
+    </ul>
+  </dd>
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="AreaCameraBehavior" class="callable">
+          <span class="name"><a href="../navigation/AreaCameraBehavior/AreaCameraBehavior.html">AreaCameraBehavior</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Creates a new instance of this class.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="cameraAnimationDuration" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/cameraAnimationDuration.html">cameraAnimationDuration</a></span>
+  <span class="signature">&#8596; Duration</span>
+  
+
+</dt>
+<dd>
+  The duration of camera animation in milliseconds.
+If there is an animation, it lasts for this duration.
+Defaults to 500 milliseconds, or half a second.
+Gets the current animation duration in milliseconds.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="cameraBearingInDegrees" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/cameraBearingInDegrees.html">cameraBearingInDegrees</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  Camera bearing in degrees.
+The direction in which the camera will point in degrees clockwise, relative to
+true North. The input should range between [0, 360]. Defaults to true North (0 degrees).
+Gets the current camera bearing.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="cameraTiltInDegrees" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/cameraTiltInDegrees.html">cameraTiltInDegrees</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  Camera tilt in degrees.
+The tilt of the camera relative to the axis perpendicular to the ground. Defaults to
+0 degrees, meaning that it will look straight down into the ground.
+Gets the current camera tilt.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="cameraTransitionMode" class="property inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/cameraTransitionMode.html">cameraTransitionMode</a></span>
+  <span class="signature">&#8596; <a href="../navigation/CameraTransitionMode.html">CameraTransitionMode</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Defines how the camera starts following the current position when this camera
+behavior becomes active.
+Use <a href="../navigation/CameraTransitionMode.html">CameraTransitionMode.instant</a> to skip the camera animation, for example
+when returning from a route overview to guidance.
+The default value is <a href="../navigation/CameraTransitionMode.html">CameraTransitionMode.animated</a>.
+Gets the currently set camera transition mode.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isCurrentPositionIncluded" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/isCurrentPositionIncluded.html">isCurrentPositionIncluded</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Include current position in camera view.
+Decides if the current position should be added to the set of visible points.
+Note that if the current position is in the vicinity of any of the visible points, setting this to
+<code>false</code> will not explicitly exclude the current position from the camera view. However if displaying
+an area potentially away from the current position, this does need to be explicitly set to <code>false</code>
+or it will try to include the current position. Defaults to false.
+Gets whether to include the current position.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxZoom" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/maxZoom.html">maxZoom</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Maximal allowed zoom.
+Defines maximal zoom level to be applied to enclose geodetic bounding box.
+When not set, default maximal zoom is effectively applied.
+Gets maximal allowed zoom.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="minZoom" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/minZoom.html">minZoom</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Minimal allowed zoom.
+Defines minimal zoom level to be applied to enclose geodetic bounding box.
+When not set, default minimal zoom is effectively applied.
+Gets minimal allowed zoom.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="normalizedPrincipalPoint" class="property inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/normalizedPrincipalPoint.html">normalizedPrincipalPoint</a></span>
+  <span class="signature">&#8596; <a href="../core/Anchor2D-class.html">Anchor2D</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The normalized principal point.
+Normalized principal point to be used during navigation.
+Defaults to (0.5, 0.775), which means the camera will use the position slightly at the bottom
+of the mapview.
+Gets the currently set normalized principal point to be used during navigation.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="principalPointAnimationDuration" class="property">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/principalPointAnimationDuration.html">principalPointAnimationDuration</a></span>
+  <span class="signature">&#8596; Duration</span>
+  
+
+</dt>
+<dd>
+  The duration of principal point animation in milliseconds.
+If the principal point is changed, the change is animated over this duration.
+Defaults to 500 milliseconds, or half a second.
+Gets the current principal point animation duration in milliseconds.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="viewRectangle" class="property inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/viewRectangle.html">viewRectangle</a></span>
+  <span class="signature">&#8596; <a href="../core/Rectangle2D-class.html">Rectangle2D</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  The view rectangle for camera updates.
+Defines a sub-space of the screen that the behavior should consider
+for camera updates. Using a view rectangle keeps the camera positioning consistent
+across different screen types and orientations without per-screen principal point
+adjustments.
+Defaults to <code>null</code>. If not set, it uses the viewport bounds of the underlying map view.
+Gets the current view rectangle, if it's set.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="getVisiblePoints" class="callable">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/getVisiblePoints.html">getVisiblePoints</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets configured visible geo points.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setVisiblePoints" class="callable">
+  <span class="name"><a href="../navigation/AreaCameraBehavior/setVisiblePoints.html">setVisiblePoints</a></span><span class="signature">(<wbr><span class="parameter" id="setVisiblePoints-param-visiblePoints"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span>&gt;</span></span> <span class="parameter-name">visiblePoints</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the list of geo points to show in the camera view.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../navigation/CameraBehavior/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation</a></li>
+    <li class="self-crumb">AreaCameraBehavior class</li>
+</ol>
+
+
+    <h5>navigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

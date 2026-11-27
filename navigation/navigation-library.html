@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="navigation library API docs, for the Dart programming language.">
+  <title>navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li class="self-crumb">navigation.dart</li>
+  </ol>
+  <div class="self-name">navigation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="navigation&#47;navigation-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">navigation</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+          <dt id="AreaCameraBehavior">
+  <span class="name "><a href="../navigation/AreaCameraBehavior-class.html">AreaCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Use this class to show an overview of geo points.
+</dd>
+
+          <dt id="AutomotiveCameraBehavior">
+  <span class="name "><a href="../navigation/AutomotiveCameraBehavior-class.html">AutomotiveCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  High-level camera controller for automotive navigation that delegates to either a
+<a href="../navigation/TrackingCameraBehavior-class.html">TrackingCameraBehavior</a> for following the vehicle or an <a href="../navigation/AreaCameraBehavior-class.html">AreaCameraBehavior</a> for showing
+geographic regions.
+</dd>
+
+          <dt id="BorderCrossingWarning">
+  <span class="name "><a href="../navigation/BorderCrossingWarning-class.html">BorderCrossingWarning</a></span> 
+
+</dt>
+<dd>
+  A border crossing.
+</dd>
+
+          <dt id="BorderCrossingWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/BorderCrossingWarningListener-class.html">BorderCrossingWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive border crossing warnings for country and state borders.
+</dd>
+
+          <dt id="BorderCrossingWarningOptions">
+  <span class="name "><a href="../navigation/BorderCrossingWarningOptions-class.html">BorderCrossingWarningOptions</a></span> 
+
+</dt>
+<dd>
+  Border crossing warning options.
+</dd>
+
+          <dt id="CameraBehavior">
+  <span class="name "><a href="../navigation/CameraBehavior-class.html">CameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Abstract class used to change implement different
+camera behaviors.
+</dd>
+
+          <dt id="CameraHdTransition">
+  <span class="name "><a href="../navigation/CameraHdTransition-class.html">CameraHdTransition</a></span> 
+
+</dt>
+<dd>
+  Abstract class used to implement HD roads support
+for camera behaviors.
+</dd>
+
+          <dt id="CurrentSituationLaneAssistanceView">
+  <span class="name "><a href="../navigation/CurrentSituationLaneAssistanceView-class.html">CurrentSituationLaneAssistanceView</a></span> 
+
+</dt>
+<dd>
+  A class that provides current situation lane assistance view
+information for the street at the current location.
+</dd>
+
+          <dt id="CurrentSituationLaneAssistanceViewListener">
+  <span class="name "><a href="../navigation/CurrentSituationLaneAssistanceViewListener-class.html">CurrentSituationLaneAssistanceViewListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be
+implemented in order to receive notifications on <a href="../navigation/CurrentSituationLaneAssistanceView-class.html">CurrentSituationLaneAssistanceView</a>.
+</dd>
+
+          <dt id="CurrentSituationLaneView">
+  <span class="name "><a href="../navigation/CurrentSituationLaneView-class.html">CurrentSituationLaneView</a></span> 
+
+</dt>
+<dd>
+  A class that provides current situation lane assistance view
+information for the street at the current position of a single lane.
+</dd>
+
+          <dt id="CustomPanningData">
+  <span class="name "><a href="../navigation/CustomPanningData-class.html">CustomPanningData</a></span> 
+
+</dt>
+<dd>
+  This class contains all the information regarding the next angular panning element, including
+a new estimated audio cue duration, and a new set of initial and sweep angular angle,
+allowing the customization of the spatial audio trajectories for any type of notification,
+such as speed or merge warners, maneuvers or even roundabouts notifications.
+</dd>
+
+          <dt id="DangerZoneWarning">
+  <span class="name "><a href="../navigation/DangerZoneWarning-class.html">DangerZoneWarning</a></span> 
+
+</dt>
+<dd>
+  Represents danger zones.
+</dd>
+
+          <dt id="DangerZoneWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/DangerZoneWarningListener-class.html">DangerZoneWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive notifications about the Danger zones.
+</dd>
+
+          <dt id="DestinationReachedListener">
+  <span class="name "><a href="../navigation/DestinationReachedListener-class.html">DestinationReachedListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be
+implemented in order to receive notifications from this class about the
+arrival at the destination.
+</dd>
+
+          <dt id="DimensionRestriction">
+  <span class="name "><a href="../navigation/DimensionRestriction-class.html">DimensionRestriction</a></span> 
+
+</dt>
+<dd>
+  Defines a dimension restriction.
+</dd>
+
+          <dt id="DynamicCameraBehavior">
+  <span class="name "><a href="../navigation/DynamicCameraBehavior-class.html">DynamicCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Use this class to follow the current location of the user: The camera will look at
+the target location that was fed into the navigator instance, gradually zooming in as the user
+approaches each maneuver and zooming out after the user passes them.
+</dd>
+
+          <dt id="EnvironmentalZoneWarning">
+  <span class="name "><a href="../navigation/EnvironmentalZoneWarning-class.html">EnvironmentalZoneWarning</a></span> 
+
+</dt>
+<dd>
+  Represents Environmental zones.
+</dd>
+
+          <dt id="EnvironmentalZoneWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/EnvironmentalZoneWarningListener-class.html">EnvironmentalZoneWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive notifications about the environmental zones.
+</dd>
+
+          <dt id="EventText">
+  <span class="name "><a href="../navigation/EventText-class.html">EventText</a></span> 
+
+</dt>
+<dd>
+  Contains all the information regarding the next text announcement.
+</dd>
+
+          <dt id="EventTextListener">
+  <span class="name "><a href="../navigation/EventTextListener-class.html">EventTextListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive notifications
+when text notifications are available from <a href="../navigation/Navigator-class.html">Navigator</a>.
+</dd>
+
+          <dt id="EventTextOptions">
+  <span class="name "><a href="../navigation/EventTextOptions-class.html">EventTextOptions</a></span> 
+
+</dt>
+<dd>
+  Text notifications options.
+</dd>
+
+          <dt id="FixedCameraBehavior">
+  <span class="name "><a href="../navigation/FixedCameraBehavior-class.html">FixedCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Use this class to follow the current location of the user: The camera will permanently look at
+the target location that was fed into the navigator instance.
+</dd>
+
+          <dt id="GPXDocument">
+  <span class="name "><a href="../navigation/GPXDocument-class.html">GPXDocument</a></span> 
+
+</dt>
+<dd>
+  Use the GPXDocument to load the GPX file.
+</dd>
+
+          <dt id="GPXOptions">
+  <span class="name "><a href="../navigation/GPXOptions-class.html">GPXOptions</a></span> 
+
+</dt>
+<dd>
+  Options used when reading the GPX file.
+</dd>
+
+          <dt id="GPXTrack">
+  <span class="name "><a href="../navigation/GPXTrack-class.html">GPXTrack</a></span> 
+
+</dt>
+<dd>
+  Single track from the <a href="../navigation/GPXDocument-class.html">GPXDocument</a>.
+</dd>
+
+          <dt id="GPXTrackWriter">
+  <span class="name "><a href="../navigation/GPXTrackWriter-class.html">GPXTrackWriter</a></span> 
+
+</dt>
+<dd>
+  Writes GPX track points to <a href="../navigation/GPXTrack-class.html">GPXTrack</a>.
+</dd>
+
+          <dt id="InterpolatedLocationListener">
+  <span class="name "><a href="../navigation/InterpolatedLocationListener-class.html">InterpolatedLocationListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented
+in order to receive interpolated locations.
+</dd>
+
+          <dt id="JunctionViewLaneAssistance">
+  <span class="name "><a href="../navigation/JunctionViewLaneAssistance-class.html">JunctionViewLaneAssistance</a></span> 
+
+</dt>
+<dd>
+  A class that provides lane assistance information for the next complex junction
+in order to keep following the route.
+</dd>
+
+          <dt id="JunctionViewLaneAssistanceListener">
+  <span class="name "><a href="../navigation/JunctionViewLaneAssistanceListener-class.html">JunctionViewLaneAssistanceListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be
+implemented in order to receive notifications on <a href="../navigation/JunctionViewLaneAssistance-class.html">JunctionViewLaneAssistance</a>.
+</dd>
+
+          <dt id="Lane">
+  <span class="name "><a href="../navigation/Lane-class.html">Lane</a></span> 
+
+</dt>
+<dd>
+  A class that provides information for a lane.
+</dd>
+
+          <dt id="LaneAccess">
+  <span class="name "><a href="../navigation/LaneAccess-class.html">LaneAccess</a></span> 
+
+</dt>
+<dd>
+  A class which identifies the vehicle type(s) allowed to
+access a lane.
+</dd>
+
+          <dt id="LaneDirectionCategory">
+  <span class="name "><a href="../navigation/LaneDirectionCategory-class.html">LaneDirectionCategory</a></span> 
+
+</dt>
+<dd>
+  Indicates the directions of a lane.
+</dd>
+
+          <dt id="LaneMarkings">
+  <span class="name "><a href="../navigation/LaneMarkings-class.html">LaneMarkings</a></span> 
+
+</dt>
+<dd>
+  A class that provides information for the lane markings.
+</dd>
+
+          <dt id="LaneType">
+  <span class="name "><a href="../navigation/LaneType-class.html">LaneType</a></span> 
+
+</dt>
+<dd>
+  A class that provides information on the available lane properties.
+</dd>
+
+          <dt id="LocationSimulator">
+  <span class="name "><a href="../navigation/LocationSimulator-class.html">LocationSimulator</a></span> 
+
+</dt>
+<dd>
+  Use the <code>LocationSimulator</code> to generate locations along a route or a GPX document.
+</dd>
+
+          <dt id="LocationSimulatorOptions">
+  <span class="name "><a href="../navigation/LocationSimulatorOptions-class.html">LocationSimulatorOptions</a></span> 
+
+</dt>
+<dd>
+  Options to specify how the location simulator will behave.
+</dd>
+
+          <dt id="LowSpeedZoneWarning">
+  <span class="name "><a href="../navigation/LowSpeedZoneWarning-class.html">LowSpeedZoneWarning</a></span> 
+
+</dt>
+<dd>
+  A class that provides low speed zone.
+</dd>
+
+          <dt id="LowSpeedZoneWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/LowSpeedZoneWarningListener-class.html">LowSpeedZoneWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive low speed zone warnings.
+</dd>
+
+          <dt id="ManeuverNotificationDetails">
+  <span class="name "><a href="../navigation/ManeuverNotificationDetails-class.html">ManeuverNotificationDetails</a></span> 
+
+</dt>
+<dd>
+  This class provides the information regarding the next maneuver to be triggered
+</dd>
+
+          <dt id="ManeuverNotificationOptions">
+  <span class="name "><a href="../navigation/ManeuverNotificationOptions-class.html">ManeuverNotificationOptions</a></span> 
+
+</dt>
+<dd>
+  A class containing all options to be used when generating maneuver notifications.
+</dd>
+
+          <dt id="ManeuverNotificationTimingOptions">
+  <span class="name "><a href="../navigation/ManeuverNotificationTimingOptions-class.html">ManeuverNotificationTimingOptions</a></span> 
+
+</dt>
+<dd>
+  A class defining timing and distance thresholds for maneuver notifications.
+</dd>
+
+          <dt id="ManeuverProgress">
+  <span class="name "><a href="../navigation/ManeuverProgress-class.html">ManeuverProgress</a></span> 
+
+</dt>
+<dd>
+  Indicates a user's progress to a <a href="../routing/Maneuver-class.html">Maneuver</a>.
+</dd>
+
+          <dt id="ManeuverViewLaneAssistance">
+  <span class="name "><a href="../navigation/ManeuverViewLaneAssistance-class.html">ManeuverViewLaneAssistance</a></span> 
+
+</dt>
+<dd>
+  A class that provides lane assistance information for the next maneuver(s).
+</dd>
+
+          <dt id="ManeuverViewLaneAssistanceListener">
+  <span class="name "><a href="../navigation/ManeuverViewLaneAssistanceListener-class.html">ManeuverViewLaneAssistanceListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be
+implemented in order to receive notifications on <a href="../navigation/ManeuverViewLaneAssistance-class.html">ManeuverViewLaneAssistance</a>.
+</dd>
+
+          <dt id="MapMatchedLocation">
+  <span class="name "><a href="../navigation/MapMatchedLocation-class.html">MapMatchedLocation</a></span> 
+
+</dt>
+<dd>
+  Describes a map-matched location in the world at a given time.
+</dd>
+
+          <dt id="Milestone">
+  <span class="name "><a href="../navigation/Milestone-class.html">Milestone</a></span> 
+
+</dt>
+<dd>
+  Represents information about the waypoints along the route.
+</dd>
+
+          <dt id="MilestoneStatusListener">
+  <span class="name "><a href="../navigation/MilestoneStatusListener-class.html">MilestoneStatusListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be
+implemented in order to receive notifications from this class about the
+arrival at each <a href="../navigation/Milestone-class.html">Milestone</a> or missing it.
+</dd>
+
+          <dt id="NavigableLocation">
+  <span class="name "><a href="../navigation/NavigableLocation-class.html">NavigableLocation</a></span> 
+
+</dt>
+<dd>
+  Contains all the relevant information on the current location.
+</dd>
+
+          <dt id="NavigableLocationListener">
+  <span class="name "><a href="../navigation/NavigableLocationListener-class.html">NavigableLocationListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive notifications
+about the current location from <a href="../navigation/Navigator-class.html">Navigator</a>.
+</dd>
+
+          <dt id="Navigator">
+  <span class="name "><a href="../navigation/Navigator-class.html">Navigator</a></span> 
+
+</dt>
+<dd>
+  This class provides the basic navigation functionality.
+</dd>
+
+          <dt id="NavigatorInterface">
+  <span class="name "><a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a></span> 
+
+</dt>
+<dd>
+  This abstract class provides the basic functionality needed to run a navigation session.
+</dd>
+
+          <dt id="OffRoadDestinationReachedListener">
+  <span class="name "><a href="../navigation/OffRoadDestinationReachedListener-class.html">OffRoadDestinationReachedListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be
+implemented in order to receive notifications from this class about the
+arrival at the off-road destination.
+</dd>
+
+          <dt id="OffRoadProgress">
+  <span class="name "><a href="../navigation/OffRoadProgress-class.html">OffRoadProgress</a></span> 
+
+</dt>
+<dd>
+  Represents the information needed to help the users to reach their off-road destination.
+</dd>
+
+          <dt id="OffRoadProgressListener">
+  <span class="name "><a href="../navigation/OffRoadProgressListener-class.html">OffRoadProgressListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to
+receive notifications about the current off-road location from <a href="../navigation/Navigator-class.html">Navigator</a>.
+</dd>
+
+          <dt id="PostActionListener">
+  <span class="name "><a href="../navigation/PostActionListener-class.html">PostActionListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to
+receive post action notifications.
+</dd>
+
+          <dt id="RailwayCrossingWarning">
+  <span class="name "><a href="../navigation/RailwayCrossingWarning-class.html">RailwayCrossingWarning</a></span> 
+
+</dt>
+<dd>
+  A class that provides railway crossing.
+</dd>
+
+          <dt id="RailwayCrossingWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/RailwayCrossingWarningListener-class.html">RailwayCrossingWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive railway crossing warnings.
+</dd>
+
+          <dt id="RealisticViewRasterImage">
+  <span class="name "><a href="../navigation/RealisticViewRasterImage-class.html">RealisticViewRasterImage</a></span> 
+
+</dt>
+<dd>
+  A realistic view.
+</dd>
+
+          <dt id="RealisticViewVectorImage">
+  <span class="name "><a href="../navigation/RealisticViewVectorImage-class.html">RealisticViewVectorImage</a></span> 
+
+</dt>
+<dd>
+  A realistic view of a junction.
+</dd>
+
+          <dt id="RealisticViewWarning">
+  <span class="name "><a href="../navigation/RealisticViewWarning-class.html">RealisticViewWarning</a></span> 
+
+</dt>
+<dd>
+  A realistic view notification.
+</dd>
+
+          <dt id="RealisticViewWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/RealisticViewWarningListener-class.html">RealisticViewWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive realistic view warnings.
+</dd>
+
+          <dt id="RealisticViewWarningOptions">
+  <span class="name "><a href="../navigation/RealisticViewWarningOptions-class.html">RealisticViewWarningOptions</a></span> 
+
+</dt>
+<dd>
+  Realistic view warning options.
+</dd>
+
+          <dt id="RoadAttributes">
+  <span class="name "><a href="../navigation/RoadAttributes-class.html">RoadAttributes</a></span> 
+
+</dt>
+<dd>
+  Road attributes, including usage and physical characteristics.
+</dd>
+
+          <dt id="RoadAttributesListener">
+  <span class="name "><a href="../navigation/RoadAttributesListener-class.html">RoadAttributesListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive attributes of the current road.
+</dd>
+
+          <dt id="RoadSign">
+  <span class="name "><a href="../navigation/RoadSign-class.html">RoadSign</a></span> 
+
+</dt>
+<dd>
+  Describes a road sign.
+</dd>
+
+          <dt id="RoadSignWarning">
+  <span class="name "><a href="../navigation/RoadSignWarning-class.html">RoadSignWarning</a></span> 
+
+</dt>
+<dd>
+  A road sign.
+</dd>
+
+          <dt id="RoadSignWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/RoadSignWarningListener-class.html">RoadSignWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive road sign warnings.
+</dd>
+
+          <dt id="RoadSignWarningOptions">
+  <span class="name "><a href="../navigation/RoadSignWarningOptions-class.html">RoadSignWarningOptions</a></span> 
+
+</dt>
+<dd>
+  A class that provides road sign warning options.
+</dd>
+
+          <dt id="RoadTextsListener">
+  <span class="name "><a href="../navigation/RoadTextsListener-class.html">RoadTextsListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive textual attributes of the current road.
+</dd>
+
+          <dt id="RouteDeviation">
+  <span class="name "><a href="../navigation/RouteDeviation-class.html">RouteDeviation</a></span> 
+
+</dt>
+<dd>
+  Contains all the relevant information on a deviation from the route.
+</dd>
+
+          <dt id="RouteDeviationListener">
+  <span class="name "><a href="../navigation/RouteDeviationListener-class.html">RouteDeviationListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to
+receive notifications
+about route deviations from <a href="../navigation/Navigator-class.html">Navigator</a>.
+</dd>
+
+          <dt id="RouteMatchedLocation">
+  <span class="name "><a href="../navigation/RouteMatchedLocation-class.html">RouteMatchedLocation</a></span> 
+
+</dt>
+<dd>
+  Represents a location matched to a specific position on a navigation route.
+</dd>
+
+          <dt id="RouteProgress">
+  <span class="name "><a href="../navigation/RouteProgress-class.html">RouteProgress</a></span> 
+
+</dt>
+<dd>
+  Contains all the relevant information on the user's progress along a route.
+</dd>
+
+          <dt id="RouteProgressColors">
+  <span class="name "><a href="../navigation/RouteProgressColors-class.html">RouteProgressColors</a></span> 
+
+</dt>
+<dd>
+  This struct contains colors for the route progress visualization.
+</dd>
+
+          <dt id="RouteProgressListener">
+  <span class="name "><a href="../navigation/RouteProgressListener-class.html">RouteProgressListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive notifications
+about the route progress from <a href="../navigation/Navigator-class.html">Navigator</a>.
+</dd>
+
+          <dt id="SafetyCameraWarning">
+  <span class="name "><a href="../navigation/SafetyCameraWarning-class.html">SafetyCameraWarning</a></span> 
+
+</dt>
+<dd>
+  A class that provides safety camera warning information.
+</dd>
+
+          <dt id="SafetyCameraWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/SafetyCameraWarningListener-class.html">SafetyCameraWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive notifications on safety cameras.
+</dd>
+
+          <dt id="SafetyCameraWarningOptions">
+  <span class="name "><a href="../navigation/SafetyCameraWarningOptions-class.html">SafetyCameraWarningOptions</a></span> 
+
+</dt>
+<dd>
+  Safety camera warning options.
+</dd>
+
+          <dt id="SchoolZoneWarning">
+  <span class="name "><a href="../navigation/SchoolZoneWarning-class.html">SchoolZoneWarning</a></span> 
+
+</dt>
+<dd>
+  A school zone warning which notifies about a school zone presence on road with a speed limit
+different than the default speed limit applicable for cars.
+</dd>
+
+          <dt id="SchoolZoneWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/SchoolZoneWarningListener-class.html">SchoolZoneWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive school zone warnings.
+</dd>
+
+          <dt id="SchoolZoneWarningOptions">
+  <span class="name "><a href="../navigation/SchoolZoneWarningOptions-class.html">SchoolZoneWarningOptions</a></span> 
+
+</dt>
+<dd>
+  School zone warning options.
+</dd>
+
+          <dt id="SectionProgress">
+  <span class="name "><a href="../navigation/SectionProgress-class.html">SectionProgress</a></span> 
+
+</dt>
+<dd>
+  Indicates a user's progress along a <a href="../routing/Section-class.html">Section</a>.
+</dd>
+
+          <dt id="SpatialAudioCuePanning">
+  <span class="name "><a href="../navigation/SpatialAudioCuePanning-class.html">SpatialAudioCuePanning</a></span> 
+
+</dt>
+<dd>
+  Use the <a href="../navigation/SpatialAudioCuePanning-class.html">SpatialAudioCuePanning</a> to notify each of the azimuths which compose a spatial audio
+trajectory along the audio cue.
+</dd>
+
+          <dt id="SpatialNotificationDetails">
+  <span class="name "><a href="../navigation/SpatialNotificationDetails-class.html">SpatialNotificationDetails</a></span> 
+
+</dt>
+<dd>
+  This class provides all the information for a spatial text notification, including the
+maneuver data and extra data which is required to set the direction of spatialization
+of the audio cue.
+</dd>
+
+          <dt id="SpatialTrajectoryData">
+  <span class="name "><a href="../navigation/SpatialTrajectoryData-class.html">SpatialTrajectoryData</a></span> 
+
+</dt>
+<dd>
+  This struct provides all the information regarding an angular panning element, including the panning angle
+and whether or not it is the last element on the spatial audio trajectory.
+</dd>
+
+          <dt id="SpeedBasedCameraBehavior">
+  <span class="name "><a href="../navigation/SpeedBasedCameraBehavior-class.html">SpeedBasedCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Use this class to follow the current location of the user, zooming in and out and changing
+camera tilt according to the current speed.
+</dd>
+
+          <dt id="SpeedBasedCameraBehaviorProfileValue">
+  <span class="name "><a href="../navigation/SpeedBasedCameraBehaviorProfileValue-class.html">SpeedBasedCameraBehaviorProfileValue</a></span> 
+
+</dt>
+<dd>
+  A single profile value which indicates the speed range in which it applies to its zoom and
+tilt configuration.
+</dd>
+
+          <dt id="SpeedLimit">
+  <span class="name "><a href="../navigation/SpeedLimit-class.html">SpeedLimit</a></span> 
+
+</dt>
+<dd>
+  Represents the speed limit of the current road.
+</dd>
+
+          <dt id="SpeedLimitListener">
+  <span class="name "><a href="../navigation/SpeedLimitListener-class.html">SpeedLimitListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive the speed limit of the current road.
+</dd>
+
+          <dt id="SpeedLimitOffset">
+  <span class="name "><a href="../navigation/SpeedLimitOffset-class.html">SpeedLimitOffset</a></span> 
+
+</dt>
+<dd>
+  A class that represents two separate speed limit offsets for higher and lower speed limits.
+</dd>
+
+          <dt id="SpeedWarningListener">
+  <span class="name "><a href="../navigation/SpeedWarningListener-class.html">SpeedWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class should be implemented in order to receive notifications
+when a speed limit on a road is exceeded or driving speed is restored back to normal.
+</dd>
+
+          <dt id="SpeedWarningOptions">
+  <span class="name "><a href="../navigation/SpeedWarningOptions-class.html">SpeedWarningOptions</a></span> 
+
+</dt>
+<dd>
+  A class that contains all options to be used for the speed limit warnings.
+</dd>
+
+          <dt id="TollBooth">
+  <span class="name "><a href="../navigation/TollBooth-class.html">TollBooth</a></span> 
+
+</dt>
+<dd>
+  A class that provides information of a toll stop.
+</dd>
+
+          <dt id="TollBoothLane">
+  <span class="name "><a href="../navigation/TollBoothLane-class.html">TollBoothLane</a></span> 
+
+</dt>
+<dd>
+  A class that provides information for a toll booth.
+</dd>
+
+          <dt id="TollStop">
+  <span class="name "><a href="../navigation/TollStop-class.html">TollStop</a></span> 
+
+</dt>
+<dd>
+  A class that provides information for a toll stop with multiple toll booths.
+</dd>
+
+          <dt id="TollStopWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/TollStopWarningListener-class.html">TollStopWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive information on the upcoming toll booth structure.
+</dd>
+
+          <dt id="TrackingCameraBehavior">
+  <span class="name "><a href="../navigation/TrackingCameraBehavior-class.html">TrackingCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Use this class to follow a moving target.
+</dd>
+
+          <dt id="TrackingCameraBehaviorDynamicSpeedOptions">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorDynamicSpeedOptions-class.html">TrackingCameraBehaviorDynamicSpeedOptions</a></span> 
+
+</dt>
+<dd>
+  Defines the animation speed of camera attributes, how quickly they move
+toward their target values.
+</dd>
+
+          <dt id="TrackingCameraBehaviorFunctionalRoadClassZoomPolicyOptions">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorFunctionalRoadClassZoomPolicyOptions-class.html">TrackingCameraBehaviorFunctionalRoadClassZoomPolicyOptions</a></span> 
+
+</dt>
+<dd>
+  Configuration for mapping functional road classes to zoom values.
+</dd>
+
+          <dt id="TrackingCameraBehaviorManeuverModeConfiguration">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorManeuverModeConfiguration-class.html">TrackingCameraBehaviorManeuverModeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Configuration that defines how <a href="../navigation/TrackingCameraBehavior-class.html">TrackingCameraBehavior</a> reacts to nearby maneuvers.
+</dd>
+
+          <dt id="TrackingCameraBehaviorManeuverRule">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorManeuverRule-class.html">TrackingCameraBehaviorManeuverRule</a></span> 
+
+</dt>
+<dd>
+  Defines a single rule that determines how <a href="../navigation/TrackingCameraBehavior-class.html">TrackingCameraBehavior</a> reacts to nearby
+maneuvers when the current position matches this rule.
+</dd>
+
+          <dt id="TrackingCameraBehaviorManeuverRuleConfiguration">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorManeuverRuleConfiguration-class.html">TrackingCameraBehaviorManeuverRuleConfiguration</a></span> 
+
+</dt>
+<dd>
+  A matched rule configuration holding a target value and the distance thresholds
+that determine when the rule becomes active around a maneuver point.
+</dd>
+
+          <dt id="TrackingCameraBehaviorManeuverRuleOptions">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorManeuverRuleOptions-class.html">TrackingCameraBehaviorManeuverRuleOptions</a></span> 
+
+</dt>
+<dd>
+  Defines a set of configurations specific to a <a href="../navigation/TrackingCameraBehaviorManeuverRule-class.html">TrackingCameraBehaviorManeuverRule</a>.
+</dd>
+
+          <dt id="TrackingCameraBehaviorSpeedBasedTiltEntry">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorSpeedBasedTiltEntry-class.html">TrackingCameraBehaviorSpeedBasedTiltEntry</a></span> 
+
+</dt>
+<dd>
+  Definition of single speed-based tilt entry used in <a href="../navigation/TrackingCameraBehaviorSpeedBasedTiltPolicyOptions-class.html">TrackingCameraBehaviorSpeedBasedTiltPolicyOptions</a>.
+</dd>
+
+          <dt id="TrackingCameraBehaviorSpeedBasedTiltPolicyOptions">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorSpeedBasedTiltPolicyOptions-class.html">TrackingCameraBehaviorSpeedBasedTiltPolicyOptions</a></span> 
+
+</dt>
+<dd>
+  Configuration for the speed-based tilt policy.
+</dd>
+
+          <dt id="TrackingCameraBehaviorSpeedBasedZoomPolicyOptions">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorSpeedBasedZoomPolicyOptions-class.html">TrackingCameraBehaviorSpeedBasedZoomPolicyOptions</a></span> 
+
+</dt>
+<dd>
+  Configuration for computing zoom values from speed thresholds defined per road classification.
+</dd>
+
+          <dt id="TrackingCameraBehaviorSpeedThreshold">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorSpeedThreshold-class.html">TrackingCameraBehaviorSpeedThreshold</a></span> 
+
+</dt>
+<dd>
+  Defines a zoom value triggered when the vehicle reaches a specific speed.
+</dd>
+
+          <dt id="TrackingCameraBehaviorTiltPolicy">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorTiltPolicy-class.html">TrackingCameraBehaviorTiltPolicy</a></span> 
+
+</dt>
+<dd>
+  Defines tilt behavior in different policy settings.
+</dd>
+
+          <dt id="TrackingCameraBehaviorZoomPolicy">
+  <span class="name "><a href="../navigation/TrackingCameraBehaviorZoomPolicy-class.html">TrackingCameraBehaviorZoomPolicy</a></span> 
+
+</dt>
+<dd>
+  Defines zoom behavior in different policy settings.
+</dd>
+
+          <dt id="TrafficMergeWarning">
+  <span class="name "><a href="../navigation/TrafficMergeWarning-class.html">TrafficMergeWarning</a></span> 
+
+</dt>
+<dd>
+  A class that provides warning for merging traffic.
+</dd>
+
+          <dt id="TrafficMergeWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/TrafficMergeWarningListener-class.html">TrafficMergeWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive traffic merge warnings.
+</dd>
+
+          <dt id="TrafficMergeWarningOptions">
+  <span class="name "><a href="../navigation/TrafficMergeWarningOptions-class.html">TrafficMergeWarningOptions</a></span> 
+
+</dt>
+<dd>
+  A class that provides traffic merge warning options.
+</dd>
+
+          <dt id="TrafficOnRouteColors">
+  <span class="name "><a href="../navigation/TrafficOnRouteColors-class.html">TrafficOnRouteColors</a></span> 
+
+</dt>
+<dd>
+  This type contains colors used for the traffic with jam factor greater or equal to 4.0 on route
+ahead of the current location visualization.
+</dd>
+
+          <dt id="TransitionCameraBehavior">
+  <span class="name "><a href="../navigation/TransitionCameraBehavior-class.html">TransitionCameraBehavior</a></span> 
+
+</dt>
+<dd>
+  Provides a generic dynamic camera behavior that transitions between two pre-configured camera behaviors
+based on lane detection and data consistency.
+</dd>
+
+          <dt id="TruckRestrictionsWarningListener">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/TruckRestrictionsWarningListener-class.html">TruckRestrictionsWarningListener</a></span> 
+
+</dt>
+<dd>
+  This abstract class
+should be implemented in order to receive truck restriction warnings.
+</dd>
+
+          <dt id="TruckRestrictionsWarningOptions">
+  <span class="name "><a href="../navigation/TruckRestrictionsWarningOptions-class.html">TruckRestrictionsWarningOptions</a></span> 
+
+</dt>
+<dd>
+  Truck restrictions warning options.
+</dd>
+
+          <dt id="TruckRestrictionWarning">
+  <span class="name "><a href="../navigation/TruckRestrictionWarning-class.html">TruckRestrictionWarning</a></span> 
+
+</dt>
+<dd>
+  Represents truck restrictions.
+</dd>
+
+          <dt id="VisualNavigator">
+  <span class="name "><a href="../navigation/VisualNavigator-class.html">VisualNavigator</a></span> 
+
+</dt>
+<dd>
+  This class provides all functionality of <a href="../navigation/NavigatorInterface-class.html">NavigatorInterface</a>.
+</dd>
+
+          <dt id="VisualNavigatorColors">
+  <span class="name "><a href="../navigation/VisualNavigatorColors-class.html">VisualNavigatorColors</a></span> 
+
+</dt>
+<dd>
+  This class contains colors used by <a href="../navigation/VisualNavigator-class.html">VisualNavigator</a> to render
+the route and the maneuver arrow visualization.
+</dd>
+
+          <dt id="WarningNotificationDistances">
+  <span class="name "><a href="../navigation/WarningNotificationDistances-class.html">WarningNotificationDistances</a></span> 
+
+</dt>
+<dd>
+  Distances for emitting warnings according to the timing profile.
+</dd>
+
+          <dt id="WeightRestriction">
+  <span class="name "><a href="../navigation/WeightRestriction-class.html">WeightRestriction</a></span> 
+
+</dt>
+<dd>
+  Defines a weight restriction.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+          <dt id="ArrivalNotificationOption">
+  <span class="name "><a href="../navigation/ArrivalNotificationOption.html">ArrivalNotificationOption</a></span> 
+
+</dt>
+<dd>
+  Indicates arrival point type to announce in maneuver notification.
+</dd>
+
+          <dt id="AspectRatio">
+  <span class="name "><a href="../navigation/AspectRatio.html">AspectRatio</a></span> 
+
+</dt>
+<dd>
+  The aspect ratio of the image.
+</dd>
+
+          <dt id="AutomotiveCameraBehaviorActiveCameraType">
+  <span class="name "><a href="../navigation/AutomotiveCameraBehaviorActiveCameraType.html">AutomotiveCameraBehaviorActiveCameraType</a></span> 
+
+</dt>
+<dd>
+  Identifies which child camera is currently active.
+</dd>
+
+          <dt id="AutomotiveCameraBehaviorOrientationMode">
+  <span class="name "><a href="../navigation/AutomotiveCameraBehaviorOrientationMode.html">AutomotiveCameraBehaviorOrientationMode</a></span> 
+
+</dt>
+<dd>
+  Visual presentation mode applied to the <a href="../navigation/TrackingCameraBehavior-class.html">TrackingCameraBehavior</a>.
+</dd>
+
+          <dt id="BorderCrossingType">
+  <span class="name "><a href="../navigation/BorderCrossingType.html">BorderCrossingType</a></span> 
+
+</dt>
+<dd>
+  Type of a border crossing given in a <a href="../navigation/BorderCrossingWarning-class.html">BorderCrossingWarning</a>.
+</dd>
+
+          <dt id="CameraTransitionMode">
+  <span class="name "><a href="../navigation/CameraTransitionMode.html">CameraTransitionMode</a></span> 
+
+</dt>
+<dd>
+  Defines how the camera starts following the current position when a camera behavior becomes
+active.
+</dd>
+
+          <dt id="DimensionRestrictionType">
+  <span class="name "><a href="../navigation/DimensionRestrictionType.html">DimensionRestrictionType</a></span> 
+
+</dt>
+<dd>
+  Defines the type of a dimension restriction.
+</dd>
+
+          <dt id="DirectionInformationUsageOption">
+  <span class="name "><a href="../navigation/DirectionInformationUsageOption.html">DirectionInformationUsageOption</a></span> 
+
+</dt>
+<dd>
+  Indicates the option of direction information included in the notification.
+</dd>
+
+          <dt id="DistanceType">
+  <span class="name deprecated"><a class="deprecated" href="../navigation/DistanceType.html">DistanceType</a></span> 
+
+</dt>
+<dd>
+  <strong>Note:</strong> The distance types are being given for warnings at distances which can be configured
+via options specific for each warner.
+</dd>
+
+          <dt id="DividerMarker">
+  <span class="name "><a href="../navigation/DividerMarker.html">DividerMarker</a></span> 
+
+</dt>
+<dd>
+  Indicates the divider between the lanes.
+</dd>
+
+          <dt id="GeneralWarningRoadSignType">
+  <span class="name "><a href="../navigation/GeneralWarningRoadSignType.html">GeneralWarningRoadSignType</a></span> 
+
+</dt>
+<dd>
+  Type of a general warning that a road sign represents.
+</dd>
+
+          <dt id="LaneDirection">
+  <span class="name "><a href="../navigation/LaneDirection.html">LaneDirection</a></span> 
+
+</dt>
+<dd>
+  This enum defines the lane direction.
+</dd>
+
+          <dt id="LaneRecommendationState">
+  <span class="name "><a href="../navigation/LaneRecommendationState.html">LaneRecommendationState</a></span> 
+
+</dt>
+<dd>
+  Indicates whether this lane leads to the next maneuvers or not.
+</dd>
+
+          <dt id="ManeuverNotificationType">
+  <span class="name "><a href="../navigation/ManeuverNotificationType.html">ManeuverNotificationType</a></span> 
+
+</dt>
+<dd>
+  Indicates the type of the maneuver notification.
+</dd>
+
+          <dt id="MilestoneStatus">
+  <span class="name "><a href="../navigation/MilestoneStatus.html">MilestoneStatus</a></span> 
+
+</dt>
+<dd>
+  This enum represents the status of the <a href="../navigation/Milestone-class.html">Milestone</a>.
+</dd>
+
+          <dt id="MilestoneType">
+  <span class="name "><a href="../navigation/MilestoneType.html">MilestoneType</a></span> 
+
+</dt>
+<dd>
+  This enum represents the type of the <a href="../navigation/Milestone-class.html">Milestone</a>.
+</dd>
+
+          <dt id="NaturalGuidanceType">
+  <span class="name "><a href="../navigation/NaturalGuidanceType.html">NaturalGuidanceType</a></span> 
+
+</dt>
+<dd>
+  Indicates the type of the natural guidance element.
+</dd>
+
+          <dt id="NotificationFormatOption">
+  <span class="name "><a href="../navigation/NotificationFormatOption.html">NotificationFormatOption</a></span> 
+
+</dt>
+<dd>
+  Indicates the formatting option of phoneme included in the notification.
+</dd>
+
+          <dt id="RoadClassification">
+  <span class="name "><a href="../navigation/RoadClassification.html">RoadClassification</a></span> 
+
+</dt>
+<dd>
+  Classification of the surrounding road environment.
+</dd>
+
+          <dt id="RoadSignCategory">
+  <span class="name "><a href="../navigation/RoadSignCategory.html">RoadSignCategory</a></span> 
+
+</dt>
+<dd>
+  Road sign category defining a general purpose of the sign.
+</dd>
+
+          <dt id="RoadSignType">
+  <span class="name "><a href="../navigation/RoadSignType.html">RoadSignType</a></span> 
+
+</dt>
+<dd>
+  A road sign type classifying road signs that can appear along a road.
+</dd>
+
+          <dt id="RoadSignVehicleType">
+  <span class="name "><a href="../navigation/RoadSignVehicleType.html">RoadSignVehicleType</a></span> 
+
+</dt>
+<dd>
+  Vehicle type for which a road sign is applicable.
+</dd>
+
+          <dt id="SafetyCameraType">
+  <span class="name "><a href="../navigation/SafetyCameraType.html">SafetyCameraType</a></span> 
+
+</dt>
+<dd>
+  Indicates the type of the safety camera.
+</dd>
+
+          <dt id="SpeedWarningStatus">
+  <span class="name "><a href="../navigation/SpeedWarningStatus.html">SpeedWarningStatus</a></span> 
+
+</dt>
+<dd>
+  This enum represents the status of the speed warning feature.
+</dd>
+
+          <dt id="TextNotificationType">
+  <span class="name "><a href="../navigation/TextNotificationType.html">TextNotificationType</a></span> 
+
+</dt>
+<dd>
+  Different types of text notifications.
+</dd>
+
+          <dt id="TimingProfile">
+  <span class="name "><a href="../navigation/TimingProfile.html">TimingProfile</a></span> 
+
+</dt>
+<dd>
+  Identifies the timing profile used for emitting notifications and warnings.
+</dd>
+
+          <dt id="TollCollectionMethod">
+  <span class="name "><a href="../navigation/TollCollectionMethod.html">TollCollectionMethod</a></span> 
+
+</dt>
+<dd>
+  Available payment methods.
+</dd>
+
+          <dt id="TrafficMergeRoadType">
+  <span class="name "><a href="../navigation/TrafficMergeRoadType.html">TrafficMergeRoadType</a></span> 
+
+</dt>
+<dd>
+  The type of road which is merging onto the current road.
+</dd>
+
+          <dt id="TrafficMergeSide">
+  <span class="name "><a href="../navigation/TrafficMergeSide.html">TrafficMergeSide</a></span> 
+
+</dt>
+<dd>
+  The side from where the merging traffic is joining with the current highway.
+</dd>
+
+          <dt id="WarningType">
+  <span class="name "><a href="../navigation/WarningType.html">WarningType</a></span> 
+
+</dt>
+<dd>
+  Identifies the warning type.
+</dd>
+
+          <dt id="WeatherType">
+  <span class="name "><a href="../navigation/WeatherType.html">WeatherType</a></span> 
+
+</dt>
+<dd>
+  Weather type attached to <code>RoadSignWarning</code> or <code>VehicleRestriction.Condition</code> which limits the conditions for which the sign is applicable.
+</dd>
+
+          <dt id="WeightRestrictionType">
+  <span class="name "><a href="../navigation/WeightRestrictionType.html">WeightRestrictionType</a></span> 
+
+</dt>
+<dd>
+  Defines the type of a weight restriction.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl>
+          
+  <dt id="SpatialAudioCuePanningspatialAzimuthStarted" class="callable">
+    <span class="name"><a href="../navigation/SpatialAudioCuePanningspatialAzimuthStarted.html">SpatialAudioCuePanningspatialAzimuthStarted</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-spatialTrajectoryData"><span class="type-annotation"><a href="../navigation/SpatialTrajectoryData-class.html">SpatialTrajectoryData</a></span> <span class="parameter-name">spatialTrajectoryData</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Called once <code>startAngularPanning()</code> starts.
+    
+
+  </dd>
+
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li class="self-crumb">navigation.dart</li>
+</ol>
+
+
+    <h5><span class="package-name">here_sdk</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../animation/animation-library.html">animation</a></li>
+      <li><a href="../core/core-library.html">core</a></li>
+      <li><a href="../core.engine/core.engine-library.html">core.engine</a></li>
+      <li><a href="../core.errors/core.errors-library.html">core.errors</a></li>
+      <li><a href="../core.threading/core.threading-library.html">core.threading</a></li>
+      <li><a href="../electronic_horizon/electronic_horizon-library.html">electronic_horizon</a></li>
+      <li><a href="../ev/ev-library.html">ev</a></li>
+      <li><a href="../gestures/gestures-library.html">gestures</a></li>
+      <li><a href="../location/location-library.html">location</a></li>
+      <li><a href="../mapdata/mapdata-library.html">mapdata</a></li>
+      <li><a href="../mapdata.ocm/mapdata.ocm-library.html">mapdata.ocm</a></li>
+      <li><a href="../maploader/maploader-library.html">maploader</a></li>
+      <li><a href="../maploader.remote.connection/maploader.remote.connection-library.html">maploader.remote.connection</a></li>
+      <li><a href="../mapmatcher/mapmatcher-library.html">mapmatcher</a></li>
+      <li><a href="../mapview/mapview-library.html">mapview</a></li>
+      <li><a href="../mapview.datasource/mapview.datasource-library.html">mapview.datasource</a></li>
+      <li><a href="../mapview.mapobject/mapview.mapobject-library.html">mapview.mapobject</a></li>
+      <li><a href="../navigation/navigation-library.html">navigation</a></li>
+      <li><a href="../prefetcher/prefetcher-library.html">prefetcher</a></li>
+      <li><a href="../routing/routing-library.html">routing</a></li>
+      <li><a href="../search/search-library.html">search</a></li>
+      <li><a href="../traffic/traffic-library.html">traffic</a></li>
+      <li><a href="../trafficawarenavigation/trafficawarenavigation-library.html">trafficawarenavigation</a></li>
+      <li><a href="../trafficbroadcast/trafficbroadcast-library.html">trafficbroadcast</a></li>
+      <li><a href="../transport/transport-library.html">transport</a></li>
+      <li><a href="../venue/venue-library.html">venue</a></li>
+      <li><a href="../venue.control/venue.control-library.html">venue.control</a></li>
+      <li><a href="../venue.data/venue.data-library.html">venue.data</a></li>
+      <li><a href="../venue.routing/venue.routing-library.html">venue.routing</a></li>
+      <li><a href="../venue.service/venue.service-library.html">venue.service</a></li>
+      <li><a href="../venue.style/venue.style-library.html">venue.style</a></li>
+      <li><a href="../warner/warner-library.html">warner</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>navigation library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="mapview library API docs, for the Dart programming language.">
+  <title>mapview library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li class="self-crumb">mapview.dart</li>
+  </ol>
+  <div class="self-name">mapview</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="mapview&#47;mapview-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">mapview</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+          <dt id="AssetsManager">
+  <span class="name "><a href="../mapview/AssetsManager-class.html">AssetsManager</a></span> 
+
+</dt>
+<dd>
+  Assets manager interface.
+</dd>
+
+          <dt id="DashPattern">
+  <span class="name "><a href="../mapview/DashPattern-class.html">DashPattern</a></span> 
+
+</dt>
+<dd>
+  Represents a dash pattern for map polyline.
+</dd>
+
+          <dt id="ElevationTarget">
+  <span class="name "><a href="../mapview/ElevationTarget-class.html">ElevationTarget</a></span> 
+
+</dt>
+<dd>
+  Represents an elevation placement target.
+</dd>
+
+          <dt id="ElevationTargetFactory">
+  <span class="name "><a href="../mapview/ElevationTargetFactory-class.html">ElevationTargetFactory</a></span> 
+
+</dt>
+<dd>
+  Factory for creating <a href="../mapview/ElevationTarget-class.html">ElevationTarget</a> instances.
+</dd>
+
+          <dt id="HereMap">
+  <span class="name "><a href="../mapview/HereMap-class.html">HereMap</a></span> 
+
+</dt>
+<dd>
+  Widget that displays a map. To interact with the map, use the
+<a href="../mapview/HereMapController-class.html">HereMapController</a> object that is passed to <a href="../mapview/HereMapCreatedCallback.html">HereMapCreatedCallback</a>
+Note: Before using this class, <a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a> must be already initialized.
+</dd>
+
+          <dt id="HereMapController">
+  <span class="name "><a href="../mapview/HereMapController-class.html">HereMapController</a></span> 
+
+</dt>
+<dd>
+  Allows interacting with the map displayed by <a href="../mapview/HereMap-class.html">HereMap</a> widget.
+</dd>
+
+          <dt id="HereMapControllerCore">
+  <span class="name "><a href="../mapview/HereMapControllerCore-class.html">HereMapControllerCore</a></span> 
+
+</dt>
+<dd>
+  The representation of a dynamic and interactive geographic map.
+</dd>
+
+          <dt id="HereMapOptions">
+  <span class="name "><a href="../mapview/HereMapOptions-class.html">HereMapOptions</a></span> 
+
+</dt>
+<dd>
+  Options used for initialization of map view
+</dd>
+
+          <dt id="IconProvider">
+  <span class="name "><a href="../mapview/IconProvider-class.html">IconProvider</a></span> 
+
+</dt>
+<dd>
+  This provider creates icons from a given set of parameters for map content and constraints
+for icon dimensions for a particular map scheme. The icon creation currently does not rely
+on map data. Therefore, it works without online connection.
+</dd>
+
+          <dt id="JsonStyleFactory">
+  <span class="name "><a href="../mapview/JsonStyleFactory-class.html">JsonStyleFactory</a></span> 
+
+</dt>
+<dd>
+  A factory of <a href="../mapview/Style-class.html">Style</a> objects from styles defined in JSON format.
+</dd>
+
+          <dt id="JsonStyleFactoryInstantiationErrorDetails">
+  <span class="name "><a href="../mapview/JsonStyleFactoryInstantiationErrorDetails-class.html">JsonStyleFactoryInstantiationErrorDetails</a></span> 
+
+</dt>
+<dd>
+  Describes the reason for failing to create a <a href="../mapview/Style-class.html">Style</a> from a JSON source.
+</dd>
+
+          <dt id="LocationIndicator">
+  <span class="name "><a href="../mapview/LocationIndicator-class.html">LocationIndicator</a></span> 
+
+</dt>
+<dd>
+  A graphical object to represent the location of the user on the map.
+</dd>
+
+          <dt id="MapArrow">
+  <span class="name "><a href="../mapview/MapArrow-class.html">MapArrow</a></span> 
+
+</dt>
+<dd>
+  A visual representation of an arrow on the map.
+</dd>
+
+          <dt id="MapCamera">
+  <span class="name "><a href="../mapview/MapCamera-class.html">MapCamera</a></span> 
+
+</dt>
+<dd>
+  Represents the camera looking onto the map view.
+</dd>
+
+          <dt id="MapCameraAnimation">
+  <span class="name "><a href="../mapview/MapCameraAnimation-class.html">MapCameraAnimation</a></span> 
+
+</dt>
+<dd>
+  An animation that can be applied to a <a href="../mapview/MapCamera-class.html">MapCamera</a>.
+</dd>
+
+          <dt id="MapCameraAnimationFactory">
+  <span class="name "><a href="../mapview/MapCameraAnimationFactory-class.html">MapCameraAnimationFactory</a></span> 
+
+</dt>
+<dd>
+  Factory for creating MapCameraAnimation objects to change map's camera over time.
+</dd>
+
+          <dt id="MapCameraFarPlaneConfiguration">
+  <span class="name "><a href="../mapview/MapCameraFarPlaneConfiguration-class.html">MapCameraFarPlaneConfiguration</a></span> 
+
+</dt>
+<dd>
+  Far plane distance configuration for a zoom level.
+</dd>
+
+          <dt id="MapCameraKeyframeTrack">
+  <span class="name "><a href="../mapview/MapCameraKeyframeTrack-class.html">MapCameraKeyframeTrack</a></span> 
+
+</dt>
+<dd>
+  Stores keyframes for interpolation of a camera property using a specific easing function
+and interpolation mode.
+</dd>
+
+          <dt id="MapCameraLimits">
+  <span class="name "><a href="../mapview/MapCameraLimits-class.html">MapCameraLimits</a></span> 
+
+</dt>
+<dd>
+  Controls constraints on map camera parameters.
+</dd>
+
+          <dt id="MapCameraListener">
+  <span class="name "><a href="../mapview/MapCameraListener-class.html">MapCameraListener</a></span> 
+
+</dt>
+<dd>
+  Abstract class for objects that want to get updates whenever the map is redrawn after
+camera parameters change.
+</dd>
+
+          <dt id="MapCameraState">
+  <span class="name "><a href="../mapview/MapCameraState-class.html">MapCameraState</a></span> 
+
+</dt>
+<dd>
+  Encapsulates state of the camera.
+</dd>
+
+          <dt id="MapCameraUpdate">
+  <span class="name "><a href="../mapview/MapCameraUpdate-class.html">MapCameraUpdate</a></span> 
+
+</dt>
+<dd>
+  An update that can be applied to the map camera.
+</dd>
+
+          <dt id="MapCameraUpdateFactory">
+  <span class="name "><a href="../mapview/MapCameraUpdateFactory-class.html">MapCameraUpdateFactory</a></span> 
+
+</dt>
+<dd>
+  Factory for creating MapCameraUpdate to change map's camera.
+</dd>
+
+          <dt id="MapContentSettings">
+  <span class="name "><a href="../mapview/MapContentSettings-class.html">MapContentSettings</a></span> 
+
+</dt>
+<dd>
+  Provides settings regarding map data which are applied globally to all map views.
+</dd>
+
+          <dt id="MapContext">
+  <span class="name "><a href="../mapview/MapContext-class.html">MapContext</a></span> 
+
+</dt>
+<dd>
+  MapContext is the rendering engine and the context in which virtual geographic maps get rendered.
+</dd>
+
+          <dt id="MapContextMemoryManagementOptions">
+  <span class="name "><a href="../mapview/MapContextMemoryManagementOptions-class.html">MapContextMemoryManagementOptions</a></span> 
+
+</dt>
+<dd>
+  Memory management options.
+</dd>
+
+          <dt id="MapContextMemoryManagementResult">
+  <span class="name "><a href="../mapview/MapContextMemoryManagementResult-class.html">MapContextMemoryManagementResult</a></span> 
+
+</dt>
+<dd>
+  Memory management result.
+</dd>
+
+          <dt id="MapContextSceneLoadCacheOptions">
+  <span class="name "><a href="../mapview/MapContextSceneLoadCacheOptions-class.html">MapContextSceneLoadCacheOptions</a></span> 
+
+</dt>
+<dd>
+  Options for scene load cache.
+</dd>
+
+          <dt id="MapFeatureModes">
+  <span class="name "><a href="../mapview/MapFeatureModes-class.html">MapFeatureModes</a></span> 
+
+</dt>
+<dd>
+  Holds constants for map feature modes, to be used with <a href="../mapview/MapScene/enableFeatures.html">MapScene.enableFeatures</a>.
+</dd>
+
+          <dt id="MapFeatures">
+  <span class="name "><a href="../mapview/MapFeatures-class.html">MapFeatures</a></span> 
+
+</dt>
+<dd>
+  Holds constants for map features, to be used with
+<a href="../mapview/MapScene/enableFeatures.html">MapScene.enableFeatures</a> and <a href="../mapview/MapScene/disableFeatures.html">MapScene.disableFeatures</a>.
+</dd>
+
+          <dt id="MapIdleListener">
+  <span class="name "><a href="../mapview/MapIdleListener-class.html">MapIdleListener</a></span> 
+
+</dt>
+<dd>
+  Used to detect when the map becomes idle or busy.
+</dd>
+
+          <dt id="MapImage">
+  <span class="name "><a href="../mapview/MapImage-class.html">MapImage</a></span> 
+
+</dt>
+<dd>
+  Represents a drawable resource that can be used by a <a href="../mapview/MapMarker-class.html">MapMarker</a>, <a href="../mapview/MapMarker3D-class.html">MapMarker3D</a> or <a href="../mapview/MapImageOverlay-class.html">MapImageOverlay</a> to be shown on the map.
+</dd>
+
+          <dt id="MapImageOverlay">
+  <span class="name "><a href="../mapview/MapImageOverlay-class.html">MapImageOverlay</a></span> 
+
+</dt>
+<dd>
+  <code>MapImageOverlay</code> is used to draw images over the map, at a view coordinate inside the map viewport.
+</dd>
+
+          <dt id="MapItemRepresentation">
+  <span class="name "><a href="../mapview/MapItemRepresentation-class.html">MapItemRepresentation</a></span> 
+
+</dt>
+<dd>
+  Base class to represent visual style of particular map items.
+</dd>
+
+          <dt id="MapLayer">
+  <span class="name "><a href="../mapview/MapLayer-class.html">MapLayer</a></span> 
+
+</dt>
+<dd>
+  Interface for managing a map layer.
+</dd>
+
+          <dt id="MapLayerBuilder">
+  <span class="name "><a href="../mapview/MapLayerBuilder-class.html">MapLayerBuilder</a></span> 
+
+</dt>
+<dd>
+  MapLayerBuilder is used to add layers to a map to visualise a dataset in a
+programmatic way without defining it upfront in the configuration files.
+</dd>
+
+          <dt id="MapLayerBuilderInstantiationErrorDetails">
+  <span class="name "><a href="../mapview/MapLayerBuilderInstantiationErrorDetails-class.html">MapLayerBuilderInstantiationErrorDetails</a></span> 
+
+</dt>
+<dd>
+  Describes the reason for failing to build a <a href="../mapview/MapLayer-class.html">MapLayer</a>.
+</dd>
+
+          <dt id="MapLayerMapMeasureDependentStorageLevels">
+  <span class="name "><a href="../mapview/MapLayerMapMeasureDependentStorageLevels-class.html">MapLayerMapMeasureDependentStorageLevels</a></span> 
+
+</dt>
+<dd>
+  Provides a mapping between a MapLayer map measure to datasource storage level.
+</dd>
+
+          <dt id="MapLayerPriority">
+  <span class="name "><a href="../mapview/MapLayerPriority-class.html">MapLayerPriority</a></span> 
+
+</dt>
+<dd>
+  MapLayerPriority class.
+</dd>
+
+          <dt id="MapLayerPriorityBuilder">
+  <span class="name "><a href="../mapview/MapLayerPriorityBuilder-class.html">MapLayerPriorityBuilder</a></span> 
+
+</dt>
+<dd>
+  MapLayerPriorityBuilder is an interface used to define the rendering priority of a layer
+and its categories, relative to other layers or layer-category pairs.
+</dd>
+
+          <dt id="MapLayerVisibilityRange">
+  <span class="name "><a href="../mapview/MapLayerVisibilityRange-class.html">MapLayerVisibilityRange</a></span> 
+
+</dt>
+<dd>
+  A layer's visibility along a zoom level range.
+</dd>
+
+          <dt id="MapMarker">
+  <span class="name "><a href="../mapview/MapMarker-class.html">MapMarker</a></span> 
+
+</dt>
+<dd>
+  <code>MapMarker</code> is used to draw images on the map, for example to mark a specific location.
+</dd>
+
+          <dt id="MapMarker3D">
+  <span class="name "><a href="../mapview/MapMarker3D-class.html">MapMarker3D</a></span> 
+
+</dt>
+<dd>
+  Represents a 3D shape drawn on the map at specified geodetic coordinates.
+</dd>
+
+          <dt id="MapMarker3DModel">
+  <span class="name "><a href="../mapview/MapMarker3DModel-class.html">MapMarker3DModel</a></span> 
+
+</dt>
+<dd>
+  Represents a 3D model that can be used by a <a href="../mapview/MapMarker3D-class.html">MapMarker3D</a> to be shown on the map.
+</dd>
+
+          <dt id="MapMarkerCluster">
+  <span class="name "><a href="../mapview/MapMarkerCluster-class.html">MapMarkerCluster</a></span> 
+
+</dt>
+<dd>
+  Groups map markers and enables their clustering to reduce visual clutter when there are many of
+them in a small area.
+</dd>
+
+          <dt id="MapMarkerClusterCounterStyle">
+  <span class="name "><a href="../mapview/MapMarkerClusterCounterStyle-class.html">MapMarkerClusterCounterStyle</a></span> 
+
+</dt>
+<dd>
+  Styling options for a marker cluster which is represented by the marker count as a text.
+</dd>
+
+          <dt id="MapMarkerClusterGrouping">
+  <span class="name "><a href="../mapview/MapMarkerClusterGrouping-class.html">MapMarkerClusterGrouping</a></span> 
+
+</dt>
+<dd>
+  Represents a group of map markers belonging to a cluster.
+</dd>
+
+          <dt id="MapMarkerClusterImageStyle">
+  <span class="name "><a href="../mapview/MapMarkerClusterImageStyle-class.html">MapMarkerClusterImageStyle</a></span> 
+
+</dt>
+<dd>
+  This class specifies the visual appearance of a cluster marker.
+</dd>
+
+          <dt id="MapMarkerTextStyle">
+  <span class="name "><a href="../mapview/MapMarkerTextStyle-class.html">MapMarkerTextStyle</a></span> 
+
+</dt>
+<dd>
+  Styling options for the text of a <a href="../mapview/MapMarker-class.html">MapMarker</a>.
+</dd>
+
+          <dt id="MapMeasure">
+  <span class="name "><a href="../mapview/MapMeasure-class.html">MapMeasure</a></span> 
+
+</dt>
+<dd>
+  A map measure.
+</dd>
+
+          <dt id="MapMeasureDependentRenderSize">
+  <span class="name "><a href="../mapview/MapMeasureDependentRenderSize-class.html">MapMeasureDependentRenderSize</a></span> 
+
+</dt>
+<dd>
+  Represents a render size, described as map measure dependent values.
+</dd>
+
+          <dt id="MapMeasureRange">
+  <span class="name "><a href="../mapview/MapMeasureRange-class.html">MapMeasureRange</a></span> 
+
+</dt>
+<dd>
+  A map measure range.
+</dd>
+
+          <dt id="MapObjectDescriptor">
+  <span class="name "><a href="../mapview/MapObjectDescriptor-class.html">MapObjectDescriptor</a></span> 
+
+</dt>
+<dd>
+  Interface represents descriptor of a pickable map object.
+</dd>
+
+          <dt id="MapPickResult">
+  <span class="name "><a href="../mapview/MapPickResult-class.html">MapPickResult</a></span> 
+
+</dt>
+<dd>
+  A class representing a map pick result.
+</dd>
+
+          <dt id="MapPolygon">
+  <span class="name "><a href="../mapview/MapPolygon-class.html">MapPolygon</a></span> 
+
+</dt>
+<dd>
+  A visual representation of a polygon on the map.
+</dd>
+
+          <dt id="MapPolyline">
+  <span class="name "><a href="../mapview/MapPolyline-class.html">MapPolyline</a></span> 
+
+</dt>
+<dd>
+  A visual representation of a line on the map.
+</dd>
+
+          <dt id="MapPolylineDashImageRepresentation">
+  <span class="name "><a href="../mapview/MapPolylineDashImageRepresentation-class.html">MapPolylineDashImageRepresentation</a></span> 
+
+</dt>
+<dd>
+  Represents a dash pattern for the map polyline consisting of images rendered with certain gaps
+from each other.
+</dd>
+
+          <dt id="MapPolylineDashRepresentation">
+  <span class="name "><a href="../mapview/MapPolylineDashRepresentation-class.html">MapPolylineDashRepresentation</a></span> 
+
+</dt>
+<dd>
+  Represents a dash pattern for map polyline where the dash can be rendered as a colored
+line and the gap can be either empty or colored.
+</dd>
+
+          <dt id="MapPolylineRepresentation">
+  <span class="name "><a href="../mapview/MapPolylineRepresentation-class.html">MapPolylineRepresentation</a></span> 
+
+</dt>
+<dd>
+  Base class to represent the visual appearance of a <a href="../mapview/MapPolyline-class.html">MapPolyline</a>.
+</dd>
+
+          <dt id="MapPolylineSolidMultiColorRepresentation">
+  <span class="name "><a href="../mapview/MapPolylineSolidMultiColorRepresentation-class.html">MapPolylineSolidMultiColorRepresentation</a></span> 
+
+</dt>
+<dd>
+  Representation allows map polyline to be colored in multiple specified color segments.
+</dd>
+
+          <dt id="MapPolylineSolidRepresentation">
+  <span class="name "><a href="../mapview/MapPolylineSolidRepresentation-class.html">MapPolylineSolidRepresentation</a></span> 
+
+</dt>
+<dd>
+  Representation for a solid line without outline.
+</dd>
+
+          <dt id="MapScene">
+  <span class="name "><a href="../mapview/MapScene-class.html">MapScene</a></span> 
+
+</dt>
+<dd>
+  Represents a map scene and exposes the functionality to manipulate its content.
+</dd>
+
+          <dt id="MapSceneLights">
+  <span class="name "><a href="../mapview/MapSceneLights-class.html">MapSceneLights</a></span> 
+
+</dt>
+<dd>
+  Manage the lights and their attributes in a scene.
+</dd>
+
+          <dt id="MapSceneLightsDirection">
+  <span class="name "><a href="../mapview/MapSceneLightsDirection-class.html">MapSceneLightsDirection</a></span> 
+
+</dt>
+<dd>
+  The direction of lights as a pair of azimuth and altitude angles.
+</dd>
+
+          <dt id="MapSceneLoadOptions">
+  <span class="name "><a href="../mapview/MapSceneLoadOptions-class.html">MapSceneLoadOptions</a></span> 
+
+</dt>
+<dd>
+  Represents the configuration options for loading a map scene.
+</dd>
+
+          <dt id="MapSceneLoadOptionsBuilder">
+  <span class="name "><a href="../mapview/MapSceneLoadOptionsBuilder-class.html">MapSceneLoadOptionsBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder for creating <a href="../mapview/MapSceneLoadOptions-class.html">MapSceneLoadOptions</a> instances.
+</dd>
+
+          <dt id="MapSceneLoadOptionsBuilderInstantiationErrorDetails">
+  <span class="name "><a href="../mapview/MapSceneLoadOptionsBuilderInstantiationErrorDetails-class.html">MapSceneLoadOptionsBuilderInstantiationErrorDetails</a></span> 
+
+</dt>
+<dd>
+  Describes the reason for failing to build a <a href="../mapview/MapSceneLoadOptions-class.html">MapSceneLoadOptions</a>.
+</dd>
+
+          <dt id="MapSceneMapPickFilter">
+  <span class="name "><a href="../mapview/MapSceneMapPickFilter-class.html">MapSceneMapPickFilter</a></span> 
+
+</dt>
+<dd>
+  Filter for the map content to be picked.
+</dd>
+
+          <dt id="MapViewBase">
+  <span class="name "><a href="../mapview/MapViewBase-class.html">MapViewBase</a></span> 
+
+</dt>
+<dd>
+  Represents the available public API from  <code>MapView</code>.
+</dd>
+
+          <dt id="MapViewLifecycleListener">
+  <span class="name "><a href="../mapview/MapViewLifecycleListener-class.html">MapViewLifecycleListener</a></span> 
+
+</dt>
+<dd>
+  Provides a mechanism for observing a lifecycle of a map view and/or implementing components
+whose lifecycle needs to be linked with that of a map view.
+</dd>
+
+          <dt id="MaterialReflectivity">
+  <span class="name "><a href="../mapview/MaterialReflectivity-class.html">MaterialReflectivity</a></span> 
+
+</dt>
+<dd>
+  Material reflectivity properties are used to enable per‑pixel lighting for supported map objects
+(e.g.
+</dd>
+
+          <dt id="Mesh">
+  <span class="name "><a href="../mapview/Mesh-class.html">Mesh</a></span> 
+
+</dt>
+<dd>
+  Represents a mesh in 3D space.
+</dd>
+
+          <dt id="MeshBuilder">
+  <span class="name "><a href="../mapview/MeshBuilder-class.html">MeshBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder for meshes.
+</dd>
+
+          <dt id="PickMapContentResult">
+  <span class="name "><a href="../mapview/PickMapContentResult-class.html">PickMapContentResult</a></span> 
+
+</dt>
+<dd>
+  A class that contains possible results from picking map content on the map scene.
+</dd>
+
+          <dt id="PickMapItemsResult">
+  <span class="name "><a href="../mapview/PickMapItemsResult-class.html">PickMapItemsResult</a></span> 
+
+</dt>
+<dd>
+  Carries results from the picking of map items on the map scene.
+</dd>
+
+          <dt id="PickTrafficIncidentResult">
+  <span class="name "><a href="../mapview/PickTrafficIncidentResult-class.html">PickTrafficIncidentResult</a></span> 
+
+</dt>
+<dd>
+  Carries the result of picking a Carto traffic incident object.
+</dd>
+
+          <dt id="PickVehicleRestrictionsResult">
+  <span class="name "><a href="../mapview/PickVehicleRestrictionsResult-class.html">PickVehicleRestrictionsResult</a></span> 
+
+</dt>
+<dd>
+  Carries the result of picking a vehicle restriction object.
+</dd>
+
+          <dt id="QuadMeshBuilder">
+  <span class="name "><a href="../mapview/QuadMeshBuilder-class.html">QuadMeshBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder for a single quad.
+</dd>
+
+          <dt id="RenderSize">
+  <span class="name "><a href="../mapview/RenderSize-class.html">RenderSize</a></span> 
+
+</dt>
+<dd>
+  Represents size of visual elements drawn on the map.
+</dd>
+
+          <dt id="RoadShieldIconProperties">
+  <span class="name "><a href="../mapview/RoadShieldIconProperties-class.html">RoadShieldIconProperties</a></span> 
+
+</dt>
+<dd>
+  Contains the information required to create a road shield image.
+</dd>
+
+          <dt id="Style">
+  <span class="name "><a href="../mapview/Style-class.html">Style</a></span> 
+
+</dt>
+<dd>
+  A style that defines the visual appearance of map rendered features.
+</dd>
+
+          <dt id="TranslucentMapLayerGroup">
+  <span class="name "><a href="../mapview/TranslucentMapLayerGroup-class.html">TranslucentMapLayerGroup</a></span> 
+
+</dt>
+<dd>
+  A translucent layer group that can be the target for <a href="../mapview/MapLayerPriorityBuilder/inGroup.html">MapLayerPriorityBuilder.inGroup</a>.
+</dd>
+
+          <dt id="TranslucentMapLayerGroupErrorDetails">
+  <span class="name "><a href="../mapview/TranslucentMapLayerGroupErrorDetails-class.html">TranslucentMapLayerGroupErrorDetails</a></span> 
+
+</dt>
+<dd>
+  Describes the reason for failing to create the group.
+</dd>
+
+          <dt id="TriangleMeshBuilder">
+  <span class="name "><a href="../mapview/TriangleMeshBuilder-class.html">TriangleMeshBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder for a single triangle.
+</dd>
+
+          <dt id="VehicleRestrictionIconProperties">
+  <span class="name "><a href="../mapview/VehicleRestrictionIconProperties-class.html">VehicleRestrictionIconProperties</a></span> 
+
+</dt>
+<dd>
+  Encapsulates properties for generating vehicle restriction icons
+using <code>IconProvider</code>.
+</dd>
+
+          <dt id="WidgetPin">
+  <span class="name "><a href="../mapview/WidgetPin-class.html">WidgetPin</a></span> 
+
+</dt>
+<dd>
+  Controller for a <code>Widget</code> pinned at a fixed geographical location on the map.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+          <dt id="DrawOrderType">
+  <span class="name "><a href="../mapview/DrawOrderType.html">DrawOrderType</a></span> 
+
+</dt>
+<dd>
+  Specifies the type of map item draw order.
+</dd>
+
+          <dt id="HereMapEvent">
+  <span class="name "><a href="../mapview/HereMapEvent.html">HereMapEvent</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="IconProviderAssetType">
+  <span class="name "><a href="../mapview/IconProviderAssetType.html">IconProviderAssetType</a></span> 
+
+</dt>
+<dd>
+  Asset types for loading icons.
+</dd>
+
+          <dt id="IconProviderError">
+  <span class="name "><a href="../mapview/IconProviderError.html">IconProviderError</a></span> 
+
+</dt>
+<dd>
+  Error which indicates why an icon could not be retrieved.
+</dd>
+
+          <dt id="ImageFormat">
+  <span class="name "><a href="../mapview/ImageFormat.html">ImageFormat</a></span> 
+
+</dt>
+<dd>
+  Image format.
+</dd>
+
+          <dt id="JsonStyleFactoryInstantiationErrorCode">
+  <span class="name "><a href="../mapview/JsonStyleFactoryInstantiationErrorCode.html">JsonStyleFactoryInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes reasons for failing to create a <a href="../mapview/Style-class.html">Style</a> from a JSON source.
+</dd>
+
+          <dt id="LineCap">
+  <span class="name "><a href="../mapview/LineCap.html">LineCap</a></span> 
+
+</dt>
+<dd>
+  Determines the cap (line ending) style.
+</dd>
+
+          <dt id="LocationIndicatorIndicatorStyle">
+  <span class="name "><a href="../mapview/LocationIndicatorIndicatorStyle.html">LocationIndicatorIndicatorStyle</a></span> 
+
+</dt>
+<dd>
+  The predefined styles for the location indicator which are pedestrian and navigation mode.
+</dd>
+
+          <dt id="LocationIndicatorMarkerType">
+  <span class="name "><a href="../mapview/LocationIndicatorMarkerType.html">LocationIndicatorMarkerType</a></span> 
+
+</dt>
+<dd>
+  Enum to identify different types of markers of the location indicator.
+</dd>
+
+          <dt id="MapCameraAnimationInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapCameraAnimationInstantiationErrorCode.html">MapCameraAnimationInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to create a multi-track <a href="../mapview/MapCameraAnimation-class.html">MapCameraAnimation</a>.
+</dd>
+
+          <dt id="MapCameraKeyframeTrackInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapCameraKeyframeTrackInstantiationErrorCode.html">MapCameraKeyframeTrackInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to create a MapCameraKeyframeTrack.
+</dd>
+
+          <dt id="MapCameraUpdateInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapCameraUpdateInstantiationErrorCode.html">MapCameraUpdateInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to create a <a href="../mapview/MapCameraUpdate-class.html">MapCameraUpdate</a>.
+</dd>
+
+          <dt id="MapContentCategory">
+  <span class="name "><a href="../mapview/MapContentCategory.html">MapContentCategory</a></span> 
+
+</dt>
+<dd>
+  Type representing map content categories.
+</dd>
+
+          <dt id="MapContentSettingsTrafficRefreshPeriodErrorCode">
+  <span class="name "><a href="../mapview/MapContentSettingsTrafficRefreshPeriodErrorCode.html">MapContentSettingsTrafficRefreshPeriodErrorCode</a></span> 
+
+</dt>
+<dd>
+  Traffic refresh period error code
+</dd>
+
+          <dt id="MapContentType">
+  <span class="name "><a href="../mapview/MapContentType.html">MapContentType</a></span> 
+
+</dt>
+<dd>
+  Content types supported by the map.
+</dd>
+
+          <dt id="MapContextFreeResourceSeverity">
+  <span class="name "><a href="../mapview/MapContextFreeResourceSeverity.html">MapContextFreeResourceSeverity</a></span> 
+
+</dt>
+<dd>
+  The severity of a free resource request.
+</dd>
+
+          <dt id="MapContextMemoryManagementStrategy">
+  <span class="name "><a href="../mapview/MapContextMemoryManagementStrategy.html">MapContextMemoryManagementStrategy</a></span> 
+
+</dt>
+<dd>
+  The memory management strategy.
+</dd>
+
+          <dt id="MapContextResourceType">
+  <span class="name "><a href="../mapview/MapContextResourceType.html">MapContextResourceType</a></span> 
+
+</dt>
+<dd>
+  Types of system resources used by <a href="../mapview/MapContext-class.html">MapContext</a> or any of the entities attached to it, like <a href="../mapview/HereMapControllerCore-class.html">HereMapControllerCore</a>.
+</dd>
+
+          <dt id="MapError">
+  <span class="name "><a href="../mapview/MapError.html">MapError</a></span> 
+
+</dt>
+<dd>
+  Represents various errors that could occur from map related operations.
+</dd>
+
+          <dt id="MapLayerBuilderInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapLayerBuilderInstantiationErrorCode.html">MapLayerBuilderInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to build a <a href="../mapview/MapLayer-class.html">MapLayer</a>.
+</dd>
+
+          <dt id="MapMarker3DModelInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapMarker3DModelInstantiationErrorCode.html">MapMarker3DModelInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Indicates the reason for a failure to create <a href="../mapview/MapMarker3DModel-class.html">MapMarker3DModel</a>.
+</dd>
+
+          <dt id="MapMarkerTextStyleInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapMarkerTextStyleInstantiationErrorCode.html">MapMarkerTextStyleInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to create a <a href="../mapview/MapMarkerTextStyle-class.html">MapMarkerTextStyle</a>.
+</dd>
+
+          <dt id="MapMarkerTextStylePlacement">
+  <span class="name "><a href="../mapview/MapMarkerTextStylePlacement.html">MapMarkerTextStylePlacement</a></span> 
+
+</dt>
+<dd>
+  Represents text placement with respect to the icon of a <a href="../mapview/MapMarker-class.html">MapMarker</a>.
+</dd>
+
+          <dt id="MapMeasureDependentRenderSizeInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapMeasureDependentRenderSizeInstantiationErrorCode.html">MapMeasureDependentRenderSizeInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to create a <a href="../mapview/MapMeasureDependentRenderSize-class.html">MapMeasureDependentRenderSize</a>.
+</dd>
+
+          <dt id="MapMeasureKind">
+  <span class="name "><a href="../mapview/MapMeasureKind.html">MapMeasureKind</a></span> 
+
+</dt>
+<dd>
+  Kinds of measures.
+</dd>
+
+          <dt id="MapPolylineRepresentationInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapPolylineRepresentationInstantiationErrorCode.html">MapPolylineRepresentationInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to create a <a href="../mapview/MapPolylineRepresentation-class.html">MapPolylineRepresentation</a>.
+</dd>
+
+          <dt id="MapProjection">
+  <span class="name "><a href="../mapview/MapProjection.html">MapProjection</a></span> 
+
+</dt>
+<dd>
+  The map projection used for rendering.
+</dd>
+
+          <dt id="MapRenderMode">
+  <span class="name "><a href="../mapview/MapRenderMode.html">MapRenderMode</a></span> 
+
+</dt>
+<dd>
+  For Android only: Mode of rendering the map by a <code>HereMap</code> widget.
+</dd>
+
+          <dt id="MapSceneLightsAttributeSettingError">
+  <span class="name "><a href="../mapview/MapSceneLightsAttributeSettingError.html">MapSceneLightsAttributeSettingError</a></span> 
+
+</dt>
+<dd>
+  Error enum indicating reasons for failure when setting light attributes.
+</dd>
+
+          <dt id="MapSceneLightsCategory">
+  <span class="name "><a href="../mapview/MapSceneLightsCategory.html">MapSceneLightsCategory</a></span> 
+
+</dt>
+<dd>
+  The scene uses three categories of lighting which are:
+Main light, Back light and Rim light.
+</dd>
+
+          <dt id="MapSceneLoadOptionsBuilderInstantiationErrorCode">
+  <span class="name "><a href="../mapview/MapSceneLoadOptionsBuilderInstantiationErrorCode.html">MapSceneLoadOptionsBuilderInstantiationErrorCode</a></span> 
+
+</dt>
+<dd>
+  Describes a reason for failing to build a <a href="../mapview/MapSceneLoadOptions-class.html">MapSceneLoadOptions</a>.
+</dd>
+
+          <dt id="MapSceneMapPickFilterContentType">
+  <span class="name "><a href="../mapview/MapSceneMapPickFilterContentType.html">MapSceneMapPickFilterContentType</a></span> 
+
+</dt>
+<dd>
+  Type of the map content to be picked.
+</dd>
+
+          <dt id="MapScheme">
+  <span class="name "><a href="../mapview/MapScheme.html">MapScheme</a></span> 
+
+</dt>
+<dd>
+  Represents the preconfigured map schemes bundled with the SDK.
+</dd>
+
+          <dt id="NativeViewMode">
+  <span class="name "><a href="../mapview/NativeViewMode.html">NativeViewMode</a></span> 
+
+</dt>
+<dd>
+  Mode of hosting native Android view in Flutter
+</dd>
+
+          <dt id="RenderSizeUnit">
+  <span class="name "><a href="../mapview/RenderSizeUnit.html">RenderSizeUnit</a></span> 
+
+</dt>
+<dd>
+  Defines different units in which the size is described.
+</dd>
+
+          <dt id="ShadowQuality">
+  <span class="name "><a href="../mapview/ShadowQuality.html">ShadowQuality</a></span> 
+
+</dt>
+<dd>
+  The shadow quality.
+</dd>
+
+          <dt id="TranslucentMapLayerGroupErrorCode">
+  <span class="name "><a href="../mapview/TranslucentMapLayerGroupErrorCode.html">TranslucentMapLayerGroupErrorCode</a></span> 
+
+</dt>
+<dd>
+  Error codes for creating the group.
+</dd>
+
+          <dt id="VisibilityState">
+  <span class="name "><a href="../mapview/VisibilityState.html">VisibilityState</a></span> 
+
+</dt>
+<dd>
+  Represents the visibility state of an SDK map view's object.
+</dd>
+
+          <dt id="WatermarkStyle">
+  <span class="name "><a href="../mapview/WatermarkStyle.html">WatermarkStyle</a></span> 
+
+</dt>
+<dd>
+  Defines the style of the HERE watermark logo.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl>
+          
+  <dt id="HereMapCreatedCallback" class="callable">
+    <span class="name"><a href="../mapview/HereMapCreatedCallback.html">HereMapCreatedCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="HereMapCreatedCallback-param-mapController"><span class="type-annotation"><a href="../mapview/HereMapController-class.html">HereMapController</a></span> <span class="parameter-name">mapController</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Method called when the map is ready to be used.
+    
+
+  </dd>
+
+          
+  <dt id="HereMapEventCallback" class="callable">
+    <span class="name"><a href="../mapview/HereMapEventCallback.html">HereMapEventCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../mapview/HereMapEvent.html">HereMapEvent</a></span> <span class="parameter-name">event</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    
+    
+
+  </dd>
+
+          
+  <dt id="IconProviderCallback" class="callable">
+    <span class="name"><a href="../mapview/IconProviderCallback.html">IconProviderCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-imageInfo"><span class="type-annotation">ImageInfo?</span> <span class="parameter-name">imageInfo</span>, </span><span class="parameter" id="param-iconDescription"><span class="type-annotation">String?</span> <span class="parameter-name">iconDescription</span>, </span><span class="parameter" id="param-error"><span class="type-annotation"><a href="../mapview/IconProviderError.html">IconProviderError</a>?</span> <span class="parameter-name">error</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    A callback of this type is invoked when an icon is received from the <a href="../mapview/IconProvider-class.html">IconProvider</a> in
+the <code>ImageInfo</code> format. The callback provides information about the loaded icon, or an
+<a href="../mapview/IconProviderError.html">IconProviderError</a> if one occurred.
+    
+
+  </dd>
+
+          
+  <dt id="MapCameraDryCameraUpdateCallback" class="callable">
+    <span class="name"><a href="../mapview/MapCameraDryCameraUpdateCallback.html">MapCameraDryCameraUpdateCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-cameraState"><span class="type-annotation"><a href="../mapview/MapCameraState-class.html">MapCameraState</a>?</span> <span class="parameter-name">cameraState</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Used to report back results of dry update application to camera.
+    
+
+  </dd>
+
+          
+  <dt id="MapContextSetMemoryManagementOptionsCallback" class="callable">
+    <span class="name"><a href="../mapview/MapContextSetMemoryManagementOptionsCallback.html">MapContextSetMemoryManagementOptionsCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-result"><span class="type-annotation"><a href="../mapview/MapContextMemoryManagementResult-class.html">MapContextMemoryManagementResult</a></span> <span class="parameter-name">result</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Callback to handle the memory management result.
+    
+
+  </dd>
+
+          
+  <dt id="MapSceneLightsAttributeSettingCallback" class="callable">
+    <span class="name"><a href="../mapview/MapSceneLightsAttributeSettingCallback.html">MapSceneLightsAttributeSettingCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-setLightError"><span class="type-annotation"><a href="../mapview/MapSceneLightsAttributeSettingError.html">MapSceneLightsAttributeSettingError</a>?</span> <span class="parameter-name">setLightError</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    This callback function allows handling errors that occur during the setting of light attributes.
+    
+
+  </dd>
+
+          
+  <dt id="MapSceneLoadSceneCallback" class="callable">
+    <span class="name"><a href="../mapview/MapSceneLoadSceneCallback.html">MapSceneLoadSceneCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-loadSceneError"><span class="type-annotation"><a href="../mapview/MapError.html">MapError</a>?</span> <span class="parameter-name">loadSceneError</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Called on the main thread after <code>loadScene()</code> method finishes loading
+the scene.
+    
+
+  </dd>
+
+          
+  <dt id="MapViewBaseMapPickCallback" class="callable">
+    <span class="name"><a href="../mapview/MapViewBaseMapPickCallback.html">MapViewBaseMapPickCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-mapPickResult"><span class="type-annotation"><a href="../mapview/MapPickResult-class.html">MapPickResult</a>?</span> <span class="parameter-name">mapPickResult</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Callback for a pick request.
+    
+
+  </dd>
+
+          
+  <dt id="TakeScreenshotCallback" class="callable">
+    <span class="name"><a href="../mapview/TakeScreenshotCallback.html">TakeScreenshotCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-image"><span class="type-annotation">ImageInfo?</span> <span class="parameter-name">image</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Callback to be called on retrieval of screenshot.
+    
+
+  </dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="exceptions">
+      <h2>Exceptions / Errors</h2>
+
+      <dl>
+          <dt id="JsonStyleFactoryInstantiationException">
+  <span class="name "><a href="../mapview/JsonStyleFactoryInstantiationException-class.html">JsonStyleFactoryInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when failing to create a <a href="../mapview/Style-class.html">Style</a> from a JSON source.
+</dd>
+
+          <dt id="MapCameraAnimationInstantiationException">
+  <span class="name "><a href="../mapview/MapCameraAnimationInstantiationException-class.html">MapCameraAnimationInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create a multi-track
+<a href="../mapview/MapCameraAnimation-class.html">MapCameraAnimation</a>.
+</dd>
+
+          <dt id="MapCameraKeyframeTrackInstantiationException">
+  <span class="name "><a href="../mapview/MapCameraKeyframeTrackInstantiationException-class.html">MapCameraKeyframeTrackInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create <a href="../mapview/MapCameraKeyframeTrack-class.html">MapCameraKeyframeTrack</a>.
+</dd>
+
+          <dt id="MapCameraUpdateInstantiationException">
+  <span class="name "><a href="../mapview/MapCameraUpdateInstantiationException-class.html">MapCameraUpdateInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create a <a href="../mapview/MapCameraUpdate-class.html">MapCameraUpdate</a>.
+</dd>
+
+          <dt id="MapContentSettingsTrafficRefreshPeriodExceptionException">
+  <span class="name "><a href="../mapview/MapContentSettingsTrafficRefreshPeriodExceptionException-class.html">MapContentSettingsTrafficRefreshPeriodExceptionException</a></span> 
+
+</dt>
+<dd>
+  Traffic refresh period error exception
+</dd>
+
+          <dt id="MapLayerBuilderInstantiationException">
+  <span class="name "><a href="../mapview/MapLayerBuilderInstantiationException-class.html">MapLayerBuilderInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when failing to build a <a href="../mapview/MapLayer-class.html">MapLayer</a>.
+</dd>
+
+          <dt id="MapMarker3DModelInstantiationException">
+  <span class="name "><a href="../mapview/MapMarker3DModelInstantiationException-class.html">MapMarker3DModelInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create <a href="../mapview/MapMarker3DModel-class.html">MapMarker3DModel</a>.
+</dd>
+
+          <dt id="MapMarkerTextStyleInstantiationException">
+  <span class="name "><a href="../mapview/MapMarkerTextStyleInstantiationException-class.html">MapMarkerTextStyleInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create a <a href="../mapview/MapMarkerTextStyle-class.html">MapMarkerTextStyle</a> instance.
+</dd>
+
+          <dt id="MapMeasureDependentRenderSizeInstantiationException">
+  <span class="name "><a href="../mapview/MapMeasureDependentRenderSizeInstantiationException-class.html">MapMeasureDependentRenderSizeInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create <a href="../mapview/MapMeasureDependentRenderSize-class.html">MapMeasureDependentRenderSize</a>.
+</dd>
+
+          <dt id="MapPolylineRepresentationInstantiationException">
+  <span class="name "><a href="../mapview/MapPolylineRepresentationInstantiationException-class.html">MapPolylineRepresentationInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a problem occurs while trying to create <a href="../mapview/MapPolylineRepresentation-class.html">MapPolylineRepresentation</a>.
+</dd>
+
+          <dt id="MapSceneLoadOptionsBuilderInstantiationException">
+  <span class="name "><a href="../mapview/MapSceneLoadOptionsBuilderInstantiationException-class.html">MapSceneLoadOptionsBuilderInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when failing to build a <a href="../mapview/MapSceneLoadOptions-class.html">MapSceneLoadOptions</a>.
+</dd>
+
+          <dt id="TranslucentMapLayerGroupInstantiationException">
+  <span class="name "><a href="../mapview/TranslucentMapLayerGroupInstantiationException-class.html">TranslucentMapLayerGroupInstantiationException</a></span> 
+
+</dt>
+<dd>
+  Thrown when failing to build the group.
+</dd>
+
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li class="self-crumb">mapview.dart</li>
+</ol>
+
+
+    <h5><span class="package-name">here_sdk</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../animation/animation-library.html">animation</a></li>
+      <li><a href="../core/core-library.html">core</a></li>
+      <li><a href="../core.engine/core.engine-library.html">core.engine</a></li>
+      <li><a href="../core.errors/core.errors-library.html">core.errors</a></li>
+      <li><a href="../core.threading/core.threading-library.html">core.threading</a></li>
+      <li><a href="../electronic_horizon/electronic_horizon-library.html">electronic_horizon</a></li>
+      <li><a href="../ev/ev-library.html">ev</a></li>
+      <li><a href="../gestures/gestures-library.html">gestures</a></li>
+      <li><a href="../location/location-library.html">location</a></li>
+      <li><a href="../mapdata/mapdata-library.html">mapdata</a></li>
+      <li><a href="../mapdata.ocm/mapdata.ocm-library.html">mapdata.ocm</a></li>
+      <li><a href="../maploader/maploader-library.html">maploader</a></li>
+      <li><a href="../maploader.remote.connection/maploader.remote.connection-library.html">maploader.remote.connection</a></li>
+      <li><a href="../mapmatcher/mapmatcher-library.html">mapmatcher</a></li>
+      <li><a href="../mapview/mapview-library.html">mapview</a></li>
+      <li><a href="../mapview.datasource/mapview.datasource-library.html">mapview.datasource</a></li>
+      <li><a href="../mapview.mapobject/mapview.mapobject-library.html">mapview.mapobject</a></li>
+      <li><a href="../navigation/navigation-library.html">navigation</a></li>
+      <li><a href="../prefetcher/prefetcher-library.html">prefetcher</a></li>
+      <li><a href="../routing/routing-library.html">routing</a></li>
+      <li><a href="../search/search-library.html">search</a></li>
+      <li><a href="../traffic/traffic-library.html">traffic</a></li>
+      <li><a href="../trafficawarenavigation/trafficawarenavigation-library.html">trafficawarenavigation</a></li>
+      <li><a href="../trafficbroadcast/trafficbroadcast-library.html">trafficbroadcast</a></li>
+      <li><a href="../transport/transport-library.html">transport</a></li>
+      <li><a href="../venue/venue-library.html">venue</a></li>
+      <li><a href="../venue.control/venue.control-library.html">venue.control</a></li>
+      <li><a href="../venue.data/venue.data-library.html">venue.data</a></li>
+      <li><a href="../venue.routing/venue.routing-library.html">venue.routing</a></li>
+      <li><a href="../venue.service/venue.service-library.html">venue.service</a></li>
+      <li><a href="../venue.style/venue.style-library.html">venue.style</a></li>
+      <li><a href="../warner/warner-library.html">warner</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>mapview library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

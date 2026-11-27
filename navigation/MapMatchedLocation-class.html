@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapMatchedLocation class from the navigation library, for the Dart programming language.">
+  <title>MapMatchedLocation class - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation.dart</a></li>
+    <li class="self-crumb">MapMatchedLocation class</li>
+  </ol>
+  <div class="self-name">MapMatchedLocation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="navigation&#47;navigation-library-sidebar.html"
+    data-below-sidebar="navigation&#47;MapMatchedLocation-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapMatchedLocation</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Describes a map-matched location in the world at a given time.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapMatchedLocation" class="callable">
+          <span class="name"><a href="../navigation/MapMatchedLocation/MapMatchedLocation.html">MapMatchedLocation</a></span><span class="signature">(<span class="parameter" id="-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span>, </span><span class="parameter" id="-param-bearingInDegrees"><span class="type-annotation">double?</span> <span class="parameter-name">bearingInDegrees</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="bearingInDegrees" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/bearingInDegrees.html">bearingInDegrees</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  The bearing orientation points to the direction of travel, and has the same angle as the
+street where it is matched to. Therefore, it must not necessarily be the same as the
+bearing of a location source.
+Starts at 0 in the geographic north and rotates in a clockwise direction around the
+compass. It means that for going north it's equal to 0, for northeast it's equal to 45,
+for east it's equal to 90, and so on.
+If it cannot be determined, the value is <code>null</code>. Otherwise, it is guaranteed to be in the
+range [0, 360).
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="confidence" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/confidence.html">confidence</a></span>
+  <span class="signature">&#8596; double</span>
+  
+
+</dt>
+<dd>
+  Confidence level (between 0 and 1) of the matched location.
+A low confidence value means that the map-matched vehicle location is not reliable and it may
+not be clear which part of the road the vehicle has taken. This can happen when the accuracy
+or frequency of the provided location updates is poor. If the confidence level is too small
+then, for example, overspeed warnings may be also inaccurate.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="coordinates" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/coordinates.html">coordinates</a></span>
+  <span class="signature">&#8596; <a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span>
+  
+
+</dt>
+<dd>
+  The geographic coordinates of the map-matched location.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="horizontalAccuracyInMeters" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/horizontalAccuracyInMeters.html">horizontalAccuracyInMeters</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Horizontal accuracy measure of location.
+Estimated based on accuracy of input location and confidence of this map-matched location.
+Currently this value is not being provided by the Navigator.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isDrivingInTheWrongWay" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/isDrivingInTheWrongWay.html">isDrivingInTheWrongWay</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  Determines if the travel direction on a one-way street is against the allowed traffic direction.
+For two-way streets, this value is always <code>false</code>.
+This feature is supported in tracking mode and when deviating from a route.
+Note that the travel direction is determined based on the map-matched location.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../navigation/MapMatchedLocation/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="segmentOffsetInCentimeters" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/segmentOffsetInCentimeters.html">segmentOffsetInCentimeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  Offset from start of segment in centimeters.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="segmentReference" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/segmentReference.html">segmentReference</a></span>
+  <span class="signature">&#8596; <a href="../routing/SegmentReference-class.html">SegmentReference</a></span>
+  
+
+</dt>
+<dd>
+  Reference to the current segment.
+The ratio of <a href="../navigation/MapMatchedLocation/segmentOffsetInCentimeters.html">MapMatchedLocation.segmentOffsetInCentimeters</a> to the segment length is
+between <a href="../routing/SegmentReference/offsetStart.html">SegmentReference.offsetStart</a> and <a href="../routing/SegmentReference/offsetEnd.html">SegmentReference.offsetEnd</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="speedInMetersPerSecond" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/speedInMetersPerSecond.html">speedInMetersPerSecond</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Speed in meters per second.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="timestamp" class="property">
+  <span class="name"><a href="../navigation/MapMatchedLocation/timestamp.html">timestamp</a></span>
+  <span class="signature">&#8596; DateTime?</span>
+  
+
+</dt>
+<dd>
+  Timestamp of the map matched position.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../navigation/MapMatchedLocation/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../navigation/MapMatchedLocation/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../navigation/MapMatchedLocation/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../navigation/navigation-library.html">navigation</a></li>
+    <li class="self-crumb">MapMatchedLocation class</li>
+</ol>
+
+
+    <h5>navigation library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

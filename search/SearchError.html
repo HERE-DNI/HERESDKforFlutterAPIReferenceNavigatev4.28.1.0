@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the SearchError enum from the search library, for the Dart programming language.">
+  <title>SearchError enum - search library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../search/search-library.html">search.dart</a></li>
+    <li class="self-crumb">SearchError enum</li>
+  </ol>
+  <div class="self-name">SearchError</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="search&#47;search-library-sidebar.html"
+    data-below-sidebar="search&#47;SearchError-enum-sidebar.html">
+    <div>
+
+      <h1>
+        <span class="kind-enum">SearchError</span>
+        enum 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>Specifies possible errors that may result from a search query.</p>
+</section>
+
+
+
+      <section class="summary offset-anchor" id="values">
+        <h2>Values</h2>
+
+        <dl class="properties">
+            <dt id="authenticationFailed" class="constant">
+    <span class="name ">authenticationFailed</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Search operation is not authenticated. Check your credentials.</p>
+  
+
+</dd>
+
+            <dt id="maxItemsOutOfRange" class="constant">
+    <span class="name ">maxItemsOutOfRange</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Should be in the range [1, 100].</p>
+  
+
+</dd>
+
+            <dt id="parsingError" class="constant">
+    <span class="name ">parsingError</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Error while parsing response data.</p>
+  
+
+</dd>
+
+            <dt id="noResultsFound" class="constant">
+    <span class="name ">noResultsFound</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>No results found.</p>
+  
+
+</dd>
+
+            <dt id="httpError" class="constant">
+    <span class="name ">httpError</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Network request error.</p>
+  
+
+</dd>
+
+            <dt id="serverUnreachable" class="constant">
+    <span class="name ">serverUnreachable</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Server unreachable.</p>
+  
+
+</dd>
+
+            <dt id="forbidden" class="constant">
+    <span class="name ">forbidden</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The credentials given do not provide access to the resource requested.</p>
+  
+
+</dd>
+
+            <dt id="exceededUsageLimit" class="constant">
+    <span class="name ">exceededUsageLimit</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Credentials exceeded the allowed requests limit.</p>
+  
+
+</dd>
+
+            <dt id="operationFailed" class="constant">
+    <span class="name ">operationFailed</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Operation failed due to an internal error.</p>
+  
+
+</dd>
+
+            <dt id="operationCancelled" class="constant">
+    <span class="name ">operationCancelled</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Operation cancelled.</p>
+  
+
+</dd>
+
+            <dt id="timedOut" class="constant">
+    <span class="name ">timedOut</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The request timed out.</p>
+  
+
+</dd>
+
+            <dt id="offline" class="constant">
+    <span class="name ">offline</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>The device does not have an internet connection.</p>
+  
+
+</dd>
+
+            <dt id="queryTooLong" class="constant">
+    <span class="name ">queryTooLong</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Query is too long, max. size is 300 characters.</p>
+  
+
+</dd>
+
+            <dt id="filterTooLong" class="constant">
+    <span class="name ">filterTooLong</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Filter is too long, max. size is 300 characters.</p>
+  
+
+</dd>
+
+            <dt id="proxyAuthenticationFailed" class="constant">
+    <span class="name ">proxyAuthenticationFailed</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Proxy is not authenticated. Check your proxy credentials.</p>
+  
+
+</dd>
+
+            <dt id="proxyServerUnreachable" class="constant">
+    <span class="name ">proxyServerUnreachable</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Proxy server unreachable.</p>
+  
+
+</dd>
+
+            <dt id="queryEmpty" class="constant">
+    <span class="name ">queryEmpty</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Empty query</p>
+  
+
+</dd>
+
+            <dt id="invalidArea" class="constant">
+    <span class="name ">invalidArea</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Box or circle area of query is invalid</p>
+  
+
+</dd>
+
+            <dt id="filterEmpty" class="constant">
+    <span class="name ">filterEmpty</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Filter is empty</p>
+  
+
+</dd>
+
+            <dt id="invalidCorridorPolyline" class="constant">
+    <span class="name ">invalidCorridorPolyline</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Corridor area polyline size is less than 2 points</p>
+  
+
+</dd>
+
+            <dt id="invalidUrl" class="constant">
+    <span class="name ">invalidUrl</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Url is invalid</p>
+  
+
+</dd>
+
+            <dt id="invalidCustomOptionFormat" class="constant">
+    <span class="name ">invalidCustomOptionFormat</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Custom options are set in an invalid format in the query</p>
+  
+
+</dd>
+
+            <dt id="invalidTruckClass" class="constant">
+    <span class="name ">invalidTruckClass</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Light truck class is passed in the filter</p>
+  
+
+</dd>
+
+            <dt id="badRequest" class="constant">
+    <span class="name ">badRequest</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Bad network request</p>
+  
+
+</dd>
+
+            <dt id="mapNotReady" class="constant">
+    <span class="name ">mapNotReady</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Offline map data is incomplete for the requested operation.
+Regions are not downloaded or are in the <code>Pending</code> state.</p>
+<p>Note: This is a beta release of this feature, so there could be a few bugs and unexpected behaviors.
+Related APIs may change for new releases without a deprecation process.</p>
+  
+
+</dd>
+
+            <dt id="layersNotDownloaded" class="constant">
+    <span class="name ">layersNotDownloaded</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Downloaded regions missing <a href="../core.engine/LayerConfigurationFeature.html">LayerConfigurationFeature.offlineSearchGlobal</a>
+feature. Update or redownload regions with enabled feature.</p>
+<p>Note: This is a beta release of this feature, so there could be a few bugs and unexpected behaviors.
+Related APIs may change for new releases without a deprecation process.</p>
+  
+
+</dd>
+
+            <dt id="operationAfterDispose" class="constant">
+    <span class="name ">operationAfterDispose</span>
+  <span class="signature">&#8594; const <a href="../search/SearchError.html">SearchError</a></span>
+  
+
+</dt>
+<dd>
+  <p>Method is invoked on object connected to the disposed SDKNativeEngine.</p>
+  
+
+</dd>
+
+        </dl>
+      </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../search/SearchError/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="index" class="property inherited">
+  <span class="name"><a href="../search/SearchError/index.html">index</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  A numeric identifier for the enumerated value.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../search/SearchError/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../search/SearchError/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../search/SearchError/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../search/SearchError/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="values" class="constant">
+    <span class="name "><a href="../search/SearchError/values-constant.html">values</a></span>
+  <span class="signature">&#8594; const List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../search/SearchError.html">SearchError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A constant List of the values in this enum, in order of their declaration.
+  
+
+</dd>
+
+    </dl>
+  </section>
+</div><!-- /.main-content -->
+
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../search/search-library.html">search</a></li>
+    <li class="self-crumb">SearchError enum</li>
+</ol>
+
+
+  <h5>search library</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div>
+
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!-- /.sidebar-offcanvas -->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ManeuverNotificationTimingOptions constructor from Class ManeuverNotificationTimingOptions from the navigation library, for the Dart programming language.">
+  <title>ManeuverNotificationTimingOptions constructor - ManeuverNotificationTimingOptions - navigation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../navigation/navigation-library.html">navigation.dart</a></li>
+    <li><a href="../../navigation/ManeuverNotificationTimingOptions-class.html">ManeuverNotificationTimingOptions</a></li>
+    <li class="self-crumb">ManeuverNotificationTimingOptions constructor</li>
+  </ol>
+  <div class="self-name">ManeuverNotificationTimingOptions</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="navigation&#47;ManeuverNotificationTimingOptions-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">ManeuverNotificationTimingOptions</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">ManeuverNotificationTimingOptions</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="-param-rangeNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">rangeNotificationDistanceInMeters</span>, </span></li>
+<li><span class="parameter" id="-param-rangeNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">rangeNotificationTimeInSeconds</span>, </span></li>
+<li><span class="parameter" id="-param-reminderNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">reminderNotificationDistanceInMeters</span>, </span></li>
+<li><span class="parameter" id="-param-reminderNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">reminderNotificationTimeInSeconds</span>, </span></li>
+<li><span class="parameter" id="-param-distanceNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">distanceNotificationDistanceInMeters</span>, </span></li>
+<li><span class="parameter" id="-param-distanceNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">distanceNotificationTimeInSeconds</span>, </span></li>
+<li><span class="parameter" id="-param-actionNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">actionNotificationDistanceInMeters</span>, </span></li>
+<li><span class="parameter" id="-param-actionNotificationTimeInSeconds"><span class="type-annotation">int</span> <span class="parameter-name">actionNotificationTimeInSeconds</span>, </span></li>
+<li><span class="parameter" id="-param-doubleNotificationDistanceInMeters"><span class="type-annotation">int</span> <span class="parameter-name">doubleNotificationDistanceInMeters</span>, </span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates a new instance.</p>
+<ul>
+<li><code>rangeNotificationDistanceInMeters</code> The default distance setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> notification. A configuration value of 0 is only allowed for
+<a href="../../navigation/ManeuverNotificationTimingOptions/rangeNotificationDistanceInMeters.html">ManeuverNotificationTimingOptions.rangeNotificationDistanceInMeters</a> and <a href="../../navigation/ManeuverNotificationTimingOptions/rangeNotificationTimeInSeconds.html">ManeuverNotificationTimingOptions.rangeNotificationTimeInSeconds</a>. It means that the maneuver notifications of type
+<a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> should be generated as soon as the maneuver location is known - no matter how far away it may be.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>rangeNotificationTimeInSeconds</code> The default time setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> notification. A configuration value of 0 is only allowed for
+<a href="../../navigation/ManeuverNotificationTimingOptions/rangeNotificationDistanceInMeters.html">ManeuverNotificationTimingOptions.rangeNotificationDistanceInMeters</a> and <a href="../../navigation/ManeuverNotificationTimingOptions/rangeNotificationTimeInSeconds.html">ManeuverNotificationTimingOptions.rangeNotificationTimeInSeconds</a>. It means that the maneuver notifications of type
+<a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.range</a> should be generated as soon as the maneuver location is known - no matter how far away it may be.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>reminderNotificationDistanceInMeters</code> The default distance setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.reminder</a> notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>500</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>500</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>500</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>2300</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>800</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>600</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>reminderNotificationTimeInSeconds</code> The default time setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.reminder</a> notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>distanceNotificationDistanceInMeters</code> The default distance setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.distance</a> notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>100</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>100</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>100</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>1300</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>300</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>distanceNotificationTimeInSeconds</code> The default time setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.distance</a> notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>18</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>18</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>18</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>actionNotificationDistanceInMeters</code> The default distance setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.action</a> notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>10</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>400</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>100</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>actionNotificationTimeInSeconds</code> The default time setting for <a href="../../navigation/ManeuverNotificationType.html">ManeuverNotificationType.action</a> notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>doubleNotificationDistanceInMeters</code> The default distance setting for double notification.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transport Mode</th>
+<th>Timing Profile</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>20</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>20</td>
+</tr>
+<tr>
+<td><a href="../../transport/TransportMode.html">TransportMode.pedestrian</a></td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>20</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.fastSpeed</a></td>
+<td>750</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.regularSpeed</a></td>
+<td>250</td>
+</tr>
+<tr>
+<td>Others</td>
+<td><a href="../../navigation/TimingProfile.html">TimingProfile.slowSpeed</a></td>
+<td>150</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">ManeuverNotificationTimingOptions(this.rangeNotificationDistanceInMeters, this.rangeNotificationTimeInSeconds, this.reminderNotificationDistanceInMeters, this.reminderNotificationTimeInSeconds, this.distanceNotificationDistanceInMeters, this.distanceNotificationTimeInSeconds, this.actionNotificationDistanceInMeters, this.actionNotificationTimeInSeconds, this.doubleNotificationDistanceInMeters);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../navigation/navigation-library.html">navigation</a></li>
+    <li><a href="../../navigation/ManeuverNotificationTimingOptions-class.html">ManeuverNotificationTimingOptions</a></li>
+    <li class="self-crumb">ManeuverNotificationTimingOptions constructor</li>
+</ol>
+
+
+    <h5>ManeuverNotificationTimingOptions class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

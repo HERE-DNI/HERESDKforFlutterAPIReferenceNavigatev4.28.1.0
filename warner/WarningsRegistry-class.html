@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the WarningsRegistry class from the warner library, for the Dart programming language.">
+  <title>WarningsRegistry class - warner library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../warner/warner-library.html">warner.dart</a></li>
+    <li class="self-crumb">WarningsRegistry class</li>
+  </ol>
+  <div class="self-name">WarningsRegistry</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="warner&#47;warner-library-sidebar.html"
+    data-below-sidebar="warner&#47;WarningsRegistry-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">WarningsRegistry</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A class that store warning metadata for different warning types.</p>
+<p>Aggregates individual collection for each warning category (safety cameras, truck restrictions, etc.).
+Provided by <code>WarnerEngine</code> so callers can lookup detailed information about specific warnings.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="WarningsRegistry" class="callable">
+          <span class="name"><a href="../warner/WarningsRegistry/WarningsRegistry.html">WarningsRegistry</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../warner/WarningsRegistry/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../warner/WarningsRegistry/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="getBorderCrossingWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getBorderCrossingWarning.html">getBorderCrossingWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getBorderCrossingWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/BorderCrossingWarning-class.html">BorderCrossingWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a border crossing warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getCustomWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getCustomWarning.html">getCustomWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getCustomWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../warner/CustomWarning-class.html">CustomWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns additional data associated with the given custom warning.
+  
+
+</dd>
+
+        <dt id="getDangerZoneWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getDangerZoneWarning.html">getDangerZoneWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getDangerZoneWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/DangerZoneWarning-class.html">DangerZoneWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a danger zone warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getEnvironmentalZoneWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getEnvironmentalZoneWarning.html">getEnvironmentalZoneWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getEnvironmentalZoneWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/EnvironmentalZoneWarning-class.html">EnvironmentalZoneWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns environmental zone warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getLaneDecreaseWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getLaneDecreaseWarning.html">getLaneDecreaseWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getLaneDecreaseWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../warner/LaneDecreaseWarning-class.html">LaneDecreaseWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a lane decrease warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getLowSpeedZoneWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getLowSpeedZoneWarning.html">getLowSpeedZoneWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getLowSpeedZoneWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/LowSpeedZoneWarning-class.html">LowSpeedZoneWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a low speed zone warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getRailwayCrossingWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getRailwayCrossingWarning.html">getRailwayCrossingWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getRailwayCrossingWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/RailwayCrossingWarning-class.html">RailwayCrossingWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a railway crossing warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getRealisticViewWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getRealisticViewWarning.html">getRealisticViewWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getRealisticViewWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/RealisticViewWarning-class.html">RealisticViewWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a realistic-view warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getRoadSignWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getRoadSignWarning.html">getRoadSignWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getRoadSignWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/RoadSignWarning-class.html">RoadSignWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a road-sign warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getSafetyCameraWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getSafetyCameraWarning.html">getSafetyCameraWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getSafetyCameraWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/SafetyCameraWarning-class.html">SafetyCameraWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a safety-camera warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getSchoolZoneWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getSchoolZoneWarning.html">getSchoolZoneWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getSchoolZoneWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/SchoolZoneWarning-class.html">SchoolZoneWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a school zone warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getTollStopWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getTollStopWarning.html">getTollStopWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getTollStopWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/TollStop-class.html">TollStop</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a toll stop warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getTrafficMergeWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getTrafficMergeWarning.html">getTrafficMergeWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getTrafficMergeWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/TrafficMergeWarning-class.html">TrafficMergeWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a traffic merge warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="getTruckRestrictionWarning" class="callable">
+  <span class="name"><a href="../warner/WarningsRegistry/getTruckRestrictionWarning.html">getTruckRestrictionWarning</a></span><span class="signature">(<wbr><span class="parameter" id="getTruckRestrictionWarning-param-warning"><span class="type-annotation"><a href="../warner/Warning-class.html">Warning</a></span> <span class="parameter-name">warning</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../navigation/TruckRestrictionWarning-class.html">TruckRestrictionWarning</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a truck restrictions warning corresponding to the given identifier.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../warner/WarningsRegistry/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../warner/WarningsRegistry/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../warner/WarningsRegistry/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../warner/warner-library.html">warner</a></li>
+    <li class="self-crumb">WarningsRegistry class</li>
+</ol>
+
+
+    <h5>warner library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

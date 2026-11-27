@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the corridorArea property from the CategoryQueryArea class, for the Dart programming language.">
+  <title>corridorArea property - CategoryQueryArea class - search library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../search/search-library.html">search.dart</a></li>
+    <li><a href="../../search/CategoryQueryArea-class.html">CategoryQueryArea</a></li>
+    <li class="self-crumb">corridorArea property</li>
+  </ol>
+  <div class="self-name">corridorArea</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="search&#47;CategoryQueryArea-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-property">corridorArea</span> property 
+</h1></div>
+
+      <section class="multi-line-signature">
+        
+        <a href="../../core/GeoCorridor-class.html">GeoCorridor</a>?
+        <span class="name ">corridorArea</span>
+        <div class="features"><span class="feature">final</span></div>
+
+      </section>
+      
+<section class="desc markdown">
+  <p>Geographic corridor area in which to provide the most relevant places.
+The contained polyline and half-width define the area that will be used in a search query.</p>
+<p>When used with <code>SearchEngine</code>, the polyline is compressed and sent.
+More complex polylines with large amounts of coordinates and with smaller
+half-width may have the less relevant part removed, such as the one far away from the
+search center. This usually makes no difference, because there will be enough POIs near
+the search center. For use cases where it is important to search the entire polyline,
+half-width can be increased or not set.
+For example: Route between New York and Chicago with half-width 800 will be added to request
+without removing the far away part, but route of the same length (around 360km) between
+Milan (Italy) and Konstanz (Germany) will have the far away part removed due to its complexity.</p>
+<p>When <a href="../../search/CategoryQueryArea/corridorArea.html">CategoryQueryArea.corridorArea</a> is provided,
+<a href="../../search/CategoryQueryArea/areaCenter.html">CategoryQueryArea.areaCenter</a> has to be within it, otherwise
+<a href="../../search/CategoryQueryArea/areaCenter.html">CategoryQueryArea.areaCenter</a> is ignored when searching.</p>
+</section>
+
+      
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final GeoCorridor? corridorArea;</code></pre>
+</section>
+
+
+</div> <!-- /.main-content -->
+
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../search/search-library.html">search</a></li>
+    <li><a href="../../search/CategoryQueryArea-class.html">CategoryQueryArea</a></li>
+    <li class="self-crumb">corridorArea property</li>
+</ol>
+
+
+  <h5>CategoryQueryArea class</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
+
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

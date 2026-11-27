@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the downloadRegions method from the MapDownloader class, for the Dart programming language.">
+  <title>downloadRegions method - MapDownloader class - maploader library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../maploader/maploader-library.html">maploader.dart</a></li>
+    <li><a href="../../maploader/MapDownloader-class.html">MapDownloader</a></li>
+    <li class="self-crumb">downloadRegions abstract method</li>
+  </ol>
+  <div class="self-name">downloadRegions</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="maploader&#47;MapDownloader-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">downloadRegions</span> abstract method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="../../maploader/MapDownloaderTask-class.html">MapDownloaderTask</a></span>
+<span class="name ">downloadRegions</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="downloadRegions-param-regions"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../maploader/RegionId-class.html">RegionId</a></span>&gt;</span></span> <span class="parameter-name">regions</span>, </span></li>
+<li><span class="parameter" id="downloadRegions-param-statusListener"><span class="type-annotation"><a href="../../maploader/DownloadRegionsStatusListener-class.html">DownloadRegionsStatusListener</a></span> <span class="parameter-name">statusListener</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Performs an asynchronous request to download map data for regions specified
+by a list of <a href="../../maploader/RegionId-class.html">RegionId</a> instances.</p>
+<p><code>MapDownloader.downloadRegions.statusListener</code> receives notifications until
+<a href="../../maploader/DownloadRegionsStatusListener/onDownloadRegionsComplete.html">DownloadRegionsStatusListener.onDownloadRegionsComplete</a> is called.
+The returned <a href="../../maploader/MapDownloaderTask-class.html">MapDownloaderTask</a> can be used to pause or resume the download
+using <code>MapDownloaderTask.pauseWithCompaction</code> or <a href="../../maploader/MapDownloaderTask/resume.html">MapDownloaderTask.resume</a>.</p>
+<p>To cancel the request, call <a href="../../maploader/MapDownloaderTask/cancel.html">MapDownloaderTask.cancel</a> on the returned
+<a href="../../maploader/MapDownloaderTask-class.html">MapDownloaderTask</a> object. After cancellation,
+<a href="../../maploader/DownloadRegionsStatusListener/onDownloadRegionsComplete.html">DownloadRegionsStatusListener.onDownloadRegionsComplete</a> is called
+with the error <a href="../../maploader/MapLoaderError.html">MapLoaderError.operationCancelled</a>.</p>
+<p><a href="../../maploader/MapDownloaderTask-class.html">MapDownloaderTask</a> remains operational until <a href="../../maploader/DownloadRegionsStatusListener/onDownloadRegionsComplete.html">DownloadRegionsStatusListener.onDownloadRegionsComplete</a> is called.</p>
+<p>To get list of downloadable regions use <a href="../../maploader/MapDownloader/getDownloadableRegionsWithLanguageCode.html">MapDownloader.getDownloadableRegionsWithLanguageCode</a> API.</p>
+<p>Simultaneous downloads of the same region are not supported.
+If this occurs, <a href="../../maploader/DownloadRegionsStatusListener/onDownloadRegionsComplete.html">DownloadRegionsStatusListener.onDownloadRegionsComplete</a>
+is called with <a href="../../maploader/MapLoaderError.html">MapLoaderError.serviceAccessFailed</a> for the new request,
+while the previous one continues uninterrupted.</p>
+<p>If indexing is enabled through <code>OfflineSearchEngine.setIndexOptions</code>, then after
+the requested regions have been downloaded, the corresponding index will be created.
+The index is used by <code>OfflineSearchEngine</code> to find better results.
+Note: Indexing is a beta feature, so there could be a few bugs and unexpected behaviors.</p>
+<p>To control list of map content features for region download, use <a href="../../core.engine/LayerConfiguration/enabledFeatures.html">LayerConfiguration.enabledFeatures</a>.</p>
+<br>
+Note: If an application is forcefully closed or crashes during a map download operation, then this
+method can be called again to resume the download. For example, if a download was interrupted at 60%,
+then the next call to download the same region will load the remaining 40%.
+<br>
+Note: If a download fails during runtime, then the HERE SDK will automatically retry to download the affected
+region three times before giving up. A connection will be timed out after one minute.
+<ul>
+<li>
+<p><code>regions</code> List of regions to download. Can be fetched using <a href="../../maploader/MapDownloader/getDownloadableRegionsWithLanguageCode.html">MapDownloader.getDownloadableRegionsWithLanguageCode</a> API.</p>
+</li>
+<li>
+<p><code>statusListener</code> Notifies on the download progress.</p>
+</li>
+</ul>
+<p>Returns <a href="../../maploader/MapDownloaderTask-class.html">MapDownloaderTask</a>. Handle that will be used to manipulate the execution of the task, for example, to cancel on ongoing request.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">MapDownloaderTask downloadRegions(List&lt;RegionId&gt; regions, DownloadRegionsStatusListener statusListener);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">here_sdk</a></li>
+    <li><a href="../../maploader/maploader-library.html">maploader</a></li>
+    <li><a href="../../maploader/MapDownloader-class.html">MapDownloader</a></li>
+    <li class="self-crumb">downloadRegions abstract method</li>
+</ol>
+
+
+    <h5>MapDownloader class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

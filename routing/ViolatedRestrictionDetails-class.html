@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ViolatedRestrictionDetails class from the routing library, for the Dart programming language.">
+  <title>ViolatedRestrictionDetails class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing.dart</a></li>
+    <li class="self-crumb">ViolatedRestrictionDetails class</li>
+  </ol>
+  <div class="self-name">ViolatedRestrictionDetails</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;routing-library-sidebar.html"
+    data-below-sidebar="routing&#47;ViolatedRestrictionDetails-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ViolatedRestrictionDetails</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Optional restriction details, contains additional information depending on the specific violation, zero or more member might be set.</p>
+<p>For example, if the vehicle violates the maximum allowed height during the trip, then the member <code>max_height_in_centimeters</code> will
+be set with the maximum allowed height value.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ViolatedRestrictionDetails" class="callable">
+          <span class="name"><a href="../routing/ViolatedRestrictionDetails/ViolatedRestrictionDetails.html">ViolatedRestrictionDetails</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="forbiddenAxleCount" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/forbiddenAxleCount.html">forbiddenAxleCount</a></span>
+  <span class="signature">&#8596; <a href="../core/IntegerRange-class.html">IntegerRange</a>?</span>
+  
+
+</dt>
+<dd>
+  The restriction to trucks with axles number within specified range during the trip.
+This property will be set if the <a href="../transport/VehicleSpecification/axleCount.html">VehicleSpecification.axleCount</a>
+is within this range.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="forbiddenHazardousGoods" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/forbiddenHazardousGoods.html">forbiddenHazardousGoods</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../transport/HazardousMaterial.html">HazardousMaterial</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  There are two lists for our trip: Hazardous goods restrictions applied during the trip, and the list used
+for the route calculation provided using <a href="../transport/VehicleSpecification/hazardousMaterials.html">VehicleSpecification.hazardousMaterials</a> from
+<a href="../transport/TransportSpecification/vehicleSpecification.html">TransportSpecification.vehicleSpecification</a> from <a href="../routing/RoutingOptions/transportSpecification.html">RoutingOptions.transportSpecification</a>.
+This property is the intersection of the two lists.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="forbiddenTrailerCount" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/forbiddenTrailerCount.html">forbiddenTrailerCount</a></span>
+  <span class="signature">&#8596; <a href="../core/IntegerRange-class.html">IntegerRange</a>?</span>
+  
+
+</dt>
+<dd>
+  Constrains the restriction to trucks with number of trailer within specified range during the trip.
+This property will be set if the <a href="../transport/VehicleSpecification/trailerCount.html">VehicleSpecification.trailerCount</a>
+is within this range.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="forbiddenTruckCategory" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/forbiddenTruckCategory.html">forbiddenTruckCategory</a></span>
+  <span class="signature">&#8596; <a href="../transport/TruckCategory.html">TruckCategory</a>?</span>
+  
+
+</dt>
+<dd>
+  This property will be set if a restriction applies to the value of <a href="../transport/TruckCategory.html">TruckCategory</a>
+parameter used for route calculation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="forbiddenTruckRoadTypes" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/forbiddenTruckRoadTypes.html">forbiddenTruckRoadTypes</a></span>
+  <span class="signature">&#8596; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../transport/TruckRoadType.html">TruckRoadType</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Contains violated restrictions for truck road types.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="maxHeightInCentimeters" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxHeightInCentimeters.html">maxHeightInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Max permitted height during the trip, in centimeters.
+This property will be set if the <a href="../transport/VehicleSpecification/heightInCentimeters.html">VehicleSpecification.heightInCentimeters</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxKingpinToRearAxleDistanceInCentimeters" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxKingpinToRearAxleDistanceInCentimeters.html">maxKingpinToRearAxleDistanceInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Contains the maximum permitted distance from kingpin to the rear axle in centimeters.
+This property will be set if the
+<a href="../transport/VehicleSpecification/kingpinToRearAxleDistanceInCentimeters.html">VehicleSpecification.kingpinToRearAxleDistanceInCentimeters</a>
+exceeds the specified value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxLengthInCentimeters" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxLengthInCentimeters.html">maxLengthInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Max permitted length during the trip, in centimeters.
+This property will be set if the <a href="../transport/VehicleSpecification/lengthInCentimeters.html">VehicleSpecification.lengthInCentimeters</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxNumberOfTires" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxNumberOfTires.html">maxNumberOfTires</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Contains the maximum permitted number of tires.
+This property will be set if the <a href="../transport/VehicleSpecification/tiresCount.html">VehicleSpecification.tiresCount</a> exceeds the specified value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxPayloadCapacityInKilograms" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxPayloadCapacityInKilograms.html">maxPayloadCapacityInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Max permitted payload capacity during the trip, in kilograms.
+This property will be set if the <a href="../transport/VehicleSpecification/payloadCapacityInKilograms.html">VehicleSpecification.payloadCapacityInKilograms</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxTunnelCategory" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxTunnelCategory.html">maxTunnelCategory</a></span>
+  <span class="signature">&#8596; <a href="../transport/TunnelCategory.html">TunnelCategory</a>?</span>
+  
+
+</dt>
+<dd>
+  Tunnel category to restrict transport of specific goods during the trip.
+This property will be set if the <a href="../transport/VehicleSpecification/tunnelCategory.html">VehicleSpecification.tunnelCategory</a> from
+<a href="../transport/TransportSpecification/vehicleSpecification.html">TransportSpecification.vehicleSpecification</a> from <a href="../routing/RoutingOptions/transportSpecification.html">RoutingOptions.transportSpecification</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxWeight" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxWeight.html">maxWeight</a></span>
+  <span class="signature">&#8596; <a href="../routing/VehicleRestrictionMaxWeight-class.html">VehicleRestrictionMaxWeight</a>?</span>
+  
+
+</dt>
+<dd>
+  Max permitted weight during the trip, in kilograms, along with the specific type of maximum permitted weight restriction.
+This property will be set if the <a href="../transport/VehicleSpecification/grossWeightInKilograms.html">VehicleSpecification.grossWeightInKilograms</a>
+parameter used for route calculation exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxWeightPerAxleGroupInKilograms" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxWeightPerAxleGroupInKilograms.html">maxWeightPerAxleGroupInKilograms</a></span>
+  <span class="signature">&#8596; <a href="../routing/MaxAxleGroupWeight-class.html">MaxAxleGroupWeight</a>?</span>
+  
+
+</dt>
+<dd>
+  Max permitted weight per axle group during the trip, in kilograms.
+This property will be set if the <a href="../transport/VehicleSpecification/weightPerAxleGroup.html">VehicleSpecification.weightPerAxleGroup</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxWeightPerAxleInKilograms" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxWeightPerAxleInKilograms.html">maxWeightPerAxleInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Max permitted weight per axle during the trip, in kilograms.
+This property will be set if the <a href="../transport/VehicleSpecification/weightPerAxleInKilograms.html">VehicleSpecification.weightPerAxleInKilograms</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="maxWidthInCentimeters" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/maxWidthInCentimeters.html">maxWidthInCentimeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Max permitted width during the trip, in centimeters.
+This property will be set if the <a href="../transport/VehicleSpecification/widthInCentimeters.html">VehicleSpecification.widthInCentimeters</a>
+exceeds this value.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="routingZoneReference" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/routingZoneReference.html">routingZoneReference</a></span>
+  <span class="signature">&#8596; String?</span>
+  
+
+</dt>
+<dd>
+  Contains the restricted routing zone reference
+This property will be set if the <a href="../routing/AvoidanceOptions/zoneCategories.html">AvoidanceOptions.zoneCategories</a> is not empty
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="timeRule" class="property">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/timeRule.html">timeRule</a></span>
+  <span class="signature">&#8596; <a href="../core/TimeRule-class.html">TimeRule</a>?</span>
+  
+
+</dt>
+<dd>
+  Time intervals during which restrictions are enforced.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../routing/ViolatedRestrictionDetails/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing</a></li>
+    <li class="self-crumb">ViolatedRestrictionDetails class</li>
+</ol>
+
+
+    <h5>routing library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

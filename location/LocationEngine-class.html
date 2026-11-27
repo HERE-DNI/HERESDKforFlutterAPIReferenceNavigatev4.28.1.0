@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the LocationEngine class from the location library, for the Dart programming language.">
+  <title>LocationEngine class - location library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../location/location-library.html">location.dart</a></li>
+    <li class="self-crumb">LocationEngine class</li>
+  </ol>
+  <div class="self-name">LocationEngine</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="location&#47;location-library-sidebar.html"
+    data-below-sidebar="location&#47;LocationEngine-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">LocationEngine</span> class 
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="../location/LocationEngineBase-class.html">LocationEngineBase</a></li>
+    </ul>
+  </dd>
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="LocationEngine" class="callable">
+          <span class="name"><a href="../location/LocationEngine/LocationEngine.html">LocationEngine</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="LocationEngine.withSdkEngine" class="callable">
+          <span class="name"><a href="../location/LocationEngine/LocationEngine.withSdkEngine.html">LocationEngine.withSdkEngine</a></span><span class="signature">(<span class="parameter" id="withSdkEngine-param-sdkEngine"><span class="type-annotation"><a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a></span> <span class="parameter-name">sdkEngine</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../location/LocationEngineBase/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isStarted" class="property inherited">
+  <span class="name"><a href="../location/LocationEngine/isStarted.html">isStarted</a></span>
+  <span class="signature">&#8594; bool</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="lastKnownLocation" class="property inherited">
+  <span class="name"><a href="../location/LocationEngine/lastKnownLocation.html">lastKnownLocation</a></span>
+  <span class="signature">&#8594; <a href="../core/Location-class.html">Location</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  The last known location obtained by the engine.
+<a href="../core/Location-class.html">Location</a> is returned synchronously. <a href="../core/Location-class.html">Location</a> object has a timestamp attribute,
+which reflects when data was obtained. If location was never obtained - null is returned.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../location/LocationEngineBase/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addLocationIssueListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/addLocationIssueListener.html">addLocationIssueListener</a></span><span class="signature">(<wbr><span class="parameter" id="addLocationIssueListener-param-listener"><span class="type-annotation"><a href="../location/LocationIssueListener-class.html">LocationIssueListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Adds a <a href="../location/LocationIssueListener-class.html">LocationIssueListener</a> to the engine to get notified when a location issue has occurred
+Supports more than one listener, instance is added only once.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addLocationListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/addLocationListener.html">addLocationListener</a></span><span class="signature">(<wbr><span class="parameter" id="addLocationListener-param-listener"><span class="type-annotation"><a href="../core/LocationListener-class.html">LocationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Adds a <a href="../core/LocationListener-class.html">LocationListener</a> to the engine to get notified when there is a new location update available.
+Supports more than one listener, instance is added only once.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addLocationStatusListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/addLocationStatusListener.html">addLocationStatusListener</a></span><span class="signature">(<wbr><span class="parameter" id="addLocationStatusListener-param-listener"><span class="type-annotation"><a href="../location/LocationStatusListener-class.html">LocationStatusListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Adds a <a href="../location/LocationStatusListener-class.html">LocationStatusListener</a> to the engine to get notified when there is a an important status change.
+Supports more than one listener, instance is added only once.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addOrientationListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/addOrientationListener.html">addOrientationListener</a></span><span class="signature">(<wbr><span class="parameter" id="addOrientationListener-param-listener"><span class="type-annotation"><a href="../core/OrientationListener-class.html">OrientationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="confirmHEREPrivacyNoticeException" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/confirmHEREPrivacyNoticeException.html">confirmHEREPrivacyNoticeException</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../location/ConfirmationStatus.html">ConfirmationStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On Android devices by calling this method, the application developer confirms that they have received an
+exceptional permission from HERE in written form to <strong>not</strong> include a reference to the HERE
+Privacy Notice. As a result, the <code>LocationEngine</code> will not collect characteristic
+information about the nearby mobile and Wi-Fi network signals. However, the engine will still
+be fully functional and will deliver location updates when the exception can be confirmed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="confirmHEREPrivacyNoticeInclusion" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/confirmHEREPrivacyNoticeInclusion.html">confirmHEREPrivacyNoticeInclusion</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../location/ConfirmationStatus.html">ConfirmationStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On Android devices it is the responsibility of the application developer to ensure that
+the application user is informed about the collection of characteristic information
+regarding nearby mobile and Wi-Fi network signals. Additionally, a link to the related
+<a href="https://legal.here.com/here-network-positioning-via-sdk">HERE Privacy Notice</a>
+must be made available to the user.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getBackgroundLocationAllowed" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/getBackgroundLocationAllowed.html">getBackgroundLocationAllowed</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On iOS devices this checks if application's background location updates are enabled.
+Returns true if background location updates are allowed, false otherwise.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getBackgroundLocationIndicatorVisible" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/getBackgroundLocationIndicatorVisible.html">getBackgroundLocationIndicatorVisible</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On iOS devices this checks if application's background location indicator is visible.
+Returns true if background location indicator is visible, false otherwise.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getPauseLocationUpdatesAutomatically" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/getPauseLocationUpdatesAutomatically.html">getPauseLocationUpdatesAutomatically</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On iOS devices this checks if automatic pausing of location updates is enabled.
+Returns true if automatic pausing of location updates is enabled, false otherwise.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="internalsetCallListenerFromMainThreadEnabled" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/internalsetCallListenerFromMainThreadEnabled.html">internalsetCallListenerFromMainThreadEnabled</a></span><span class="signature">(<wbr><span class="parameter" id="internalsetCallListenerFromMainThreadEnabled-param-enabled"><span class="type-annotation">bool</span> <span class="parameter-name">enabled</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngineBase/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeLocationIssueListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/removeLocationIssueListener.html">removeLocationIssueListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeLocationIssueListener-param-listener"><span class="type-annotation"><a href="../location/LocationIssueListener-class.html">LocationIssueListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Removes a <a href="../location/LocationIssueListener-class.html">LocationIssueListener</a> from the engine.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeLocationListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/removeLocationListener.html">removeLocationListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeLocationListener-param-listener"><span class="type-annotation"><a href="../core/LocationListener-class.html">LocationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Removes a <a href="../core/LocationListener-class.html">LocationListener</a> from the engine.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeLocationStatusListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/removeLocationStatusListener.html">removeLocationStatusListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeLocationStatusListener-param-listener"><span class="type-annotation"><a href="../location/LocationStatusListener-class.html">LocationStatusListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Removes a <a href="../location/LocationStatusListener-class.html">LocationStatusListener</a> from the engine.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeOrientationListener" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/removeOrientationListener.html">removeOrientationListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeOrientationListener-param-listener"><span class="type-annotation"><a href="../core/OrientationListener-class.html">OrientationListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setBackgroundLocationAllowed" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/setBackgroundLocationAllowed.html">setBackgroundLocationAllowed</a></span><span class="signature">(<wbr><span class="parameter" id="setBackgroundLocationAllowed-param-allowed"><span class="type-annotation">bool</span> <span class="parameter-name">allowed</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On iOS devices this enables or disables application's background location updates.
+By default background location updates
+are enabled if application has background location capabilities.
+Set <code>allowed</code> to true to allow background location updates, or false to disable them.
+Returns <a href="../location/LocationEngineStatus.html">LocationEngineStatus.ok</a> if call succeeds. <a href="../location/LocationEngineStatus.html">LocationEngineStatus.notAllowed</a> if the application
+does not have background location capabilities enabled.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setBackgroundLocationIndicatorVisible" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/setBackgroundLocationIndicatorVisible.html">setBackgroundLocationIndicatorVisible</a></span><span class="signature">(<wbr><span class="parameter" id="setBackgroundLocationIndicatorVisible-param-visible"><span class="type-annotation">bool</span> <span class="parameter-name">visible</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On iOS devices this controls visibility of application's background location indicator.
+By default background location indicator
+is visible, if application has background location capabilities.
+Set <code>visible</code> to true to show background location indicator, or false to hide it.
+Returns <a href="../location/LocationEngineStatus.html">LocationEngineStatus.ok</a> if call succeeds and <a href="../location/LocationEngineStatus.html">LocationEngineStatus.notAllowed</a> if the application
+does not have background location capabilities enabled.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setLastKnownLocationPersistent" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/setLastKnownLocationPersistent.html">setLastKnownLocationPersistent</a></span><span class="signature">(<wbr><span class="parameter" id="setLastKnownLocationPersistent-param-persistent"><span class="type-annotation">bool</span> <span class="parameter-name">persistent</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On Android devices this enables or disables saving of last known location so
+that it persists across application sessions.
+By default persistent saving across sessions is enabled.
+Set <code>persistent</code> to true to enable last known location to persist across application sessions, or false to disable it.
+When calling this method then <a href="../location/LocationEngineStatus.html">LocationEngineStatus.ok</a> is returned.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setPauseLocationUpdatesAutomatically" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/setPauseLocationUpdatesAutomatically.html">setPauseLocationUpdatesAutomatically</a></span><span class="signature">(<wbr><span class="parameter" id="setPauseLocationUpdatesAutomatically-param-allowed"><span class="type-annotation">bool</span> <span class="parameter-name">allowed</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On iOS devices this controls automatic pausing of location updates e.g.
+for improving device's battery life at times when
+location data is unlikely to change.
+By default automatic pausing of location updates is allowed.
+Set <code>allowed</code> to true to allow automatic pausing of location updates, or false to disable them.
+When calling this method then <a href="../location/LocationEngineStatus.html">LocationEngineStatus.ok</a> is returned.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="startWithLocationAccuracy" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/startWithLocationAccuracy.html">startWithLocationAccuracy</a></span><span class="signature">(<wbr><span class="parameter" id="startWithLocationAccuracy-param-locationAccuracy"><span class="type-annotation"><a href="../location/LocationAccuracy.html">LocationAccuracy</a></span> <span class="parameter-name">locationAccuracy</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Starts the location engine with desired <a href="../location/LocationAccuracy.html">LocationAccuracy</a>.
+Make sure to call either <code>LocationEngine.confirmHEREPrivacyNoticeInclusion</code> or
+<code>LocationEngine.confirmHEREPrivacyNoticeException</code> beforehand.
+Returns <a href="../location/LocationEngineStatus.html">LocationEngineStatus.alreadyStarted</a> if <code>LocationEngine.startWithLocationAccuracy</code> or
+<code>LocationEngine.startWithLocationOptions</code> is called again without calling <code>LocationEngine.stop</code> in between.
+See <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a> for other possible return values.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="startWithLocationOptions" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/startWithLocationOptions.html">startWithLocationOptions</a></span><span class="signature">(<wbr><span class="parameter" id="startWithLocationOptions-param-locationOptions"><span class="type-annotation"><a href="../location/LocationOptions-class.html">LocationOptions</a></span> <span class="parameter-name">locationOptions</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  On Android devices starts the location engine with desired <a href="../location/LocationOptions-class.html">LocationOptions</a>.
+Make sure to call either <code>LocationEngine.confirmHEREPrivacyNoticeInclusion</code> or
+<code>LocationEngine.confirmHEREPrivacyNoticeException</code> beforehand.
+Returns <a href="../location/LocationEngineStatus.html">LocationEngineStatus.alreadyStarted</a> if <code>LocationEngine.startWithLocationAccuracy</code> or
+<code>LocationEngine.startWithLocationOptions</code> is called again without calling <code>LocationEngine.stop</code> in between.
+See <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a> for other possible return values.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stop" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/stop.html">stop</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Stops the location engine.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngineBase/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateLocationAccuracy" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/updateLocationAccuracy.html">updateLocationAccuracy</a></span><span class="signature">(<wbr><span class="parameter" id="updateLocationAccuracy-param-locationAccuracy"><span class="type-annotation"><a href="../location/LocationAccuracy.html">LocationAccuracy</a></span> <span class="parameter-name">locationAccuracy</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Reconfigures the location engine with desired LocationAccuracy.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateLocationOptions" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngine/updateLocationOptions.html">updateLocationOptions</a></span><span class="signature">(<wbr><span class="parameter" id="updateLocationOptions-param-locationOptions"><span class="type-annotation"><a href="../location/LocationOptions-class.html">LocationOptions</a></span> <span class="parameter-name">locationOptions</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../location/LocationEngineStatus.html">LocationEngineStatus</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Reconfigures the location engine with desired LocationOptions.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../location/LocationEngineBase/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../location/location-library.html">location</a></li>
+    <li class="self-crumb">LocationEngine class</li>
+</ol>
+
+
+    <h5>location library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

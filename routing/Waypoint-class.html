@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Waypoint class from the routing library, for the Dart programming language.">
+  <title>Waypoint class - routing library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing.dart</a></li>
+    <li class="self-crumb">Waypoint class</li>
+  </ol>
+  <div class="self-name">Waypoint</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="routing&#47;routing-library-sidebar.html"
+    data-below-sidebar="routing&#47;Waypoint-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Waypoint</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Represents a waypoint, used as input for route calculation.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Waypoint" class="callable">
+          <span class="name"><a href="../routing/Waypoint/Waypoint.html">Waypoint</a></span><span class="signature">(<span class="parameter" id="-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span>, [</span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../routing/WaypointType.html">WaypointType</a></span> <span class="parameter-name">type</span> = <span class="default-value">WaypointType.stopover</span>, </span><span class="parameter" id="-param-transitRadiusInMeters"><span class="type-annotation">int</span> <span class="parameter-name">transitRadiusInMeters</span> = <span class="default-value">0</span>, </span><span class="parameter" id="-param-headingInDegrees"><span class="type-annotation">double?</span> <span class="parameter-name">headingInDegrees</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-sideOfStreetHint"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a>?</span> <span class="parameter-name">sideOfStreetHint</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-displayLocation"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a>?</span> <span class="parameter-name">displayLocation</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-minCourseDistanceInMeters"><span class="type-annotation">int?</span> <span class="parameter-name">minCourseDistanceInMeters</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-nameHint"><span class="type-annotation">String?</span> <span class="parameter-name">nameHint</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-matchSideOfStreet"><span class="type-annotation"><a href="../routing/MatchSideOfStreet.html">MatchSideOfStreet</a>?</span> <span class="parameter-name">matchSideOfStreet</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span> = <span class="default-value">const Duration(seconds: 0)</span>, </span><span class="parameter" id="-param-segmentHint"><span class="type-annotation"><a href="../routing/SegmentReference-class.html">SegmentReference</a>?</span> <span class="parameter-name">segmentHint</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-onRoadThresholdInMeters"><span class="type-annotation">int?</span> <span class="parameter-name">onRoadThresholdInMeters</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-chargingStop"><span class="type-annotation"><a href="../routing/ChargingStop-class.html">ChargingStop</a>?</span> <span class="parameter-name">chargingStop</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-currentWeightChangeInKilograms"><span class="type-annotation">int?</span> <span class="parameter-name">currentWeightChangeInKilograms</span> = <span class="default-value">null</span>, </span><span class="parameter" id="-param-radiusInMeters"><span class="type-annotation">int</span> <span class="parameter-name">radiusInMeters</span> = <span class="default-value">0</span></span>])</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+        <dt id="Waypoint.withDefaults" class="callable">
+          <span class="name"><a href="../routing/Waypoint/Waypoint.withDefaults.html">Waypoint.withDefaults</a></span><span class="signature">(<span class="parameter" id="withDefaults-param-coordinates"><span class="type-annotation"><a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span> <span class="parameter-name">coordinates</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a new instance.
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="chargingStop" class="property">
+  <span class="name"><a href="../routing/Waypoint/chargingStop.html">chargingStop</a></span>
+  <span class="signature">&#8596; <a href="../routing/ChargingStop-class.html">ChargingStop</a>?</span>
+  
+
+</dt>
+<dd>
+  Specifies of a user-planned charging stop.
+The resulting <code>Route</code> may contain this waypoint as a <code>RoutePlace</code> with a non-null <code>ChargingStation</code> member
+when the provided specifications indicate that a stop is required to charge the EV battery.
+<strong>Note:</strong>
+If <code>ElectricVehicleOptions.ensure_reachability</code> is not set as <code>true</code> and <code>ChargingStop.min_duration</code> is not provided,
+route calculation may suggest a better charging stop instead of this stop.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="coordinates" class="property">
+  <span class="name"><a href="../routing/Waypoint/coordinates.html">coordinates</a></span>
+  <span class="signature">&#8596; <a href="../core/GeoCoordinates-class.html">GeoCoordinates</a></span>
+  
+
+</dt>
+<dd>
+  The waypoint's geographic coordinates.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentWeightChangeInKilograms" class="property">
+  <span class="name"><a href="../routing/Waypoint/currentWeightChangeInKilograms.html">currentWeightChangeInKilograms</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Changes the value of <code>vehicle[currentWeight]</code> by this value.
+Enables the support of scenarios where the vehicle takes additional cargo or unloads its cargo along the route.
+Changes to the configuration of the vehicle, such as adding a trailer, aren't supported.
+Relative value in kilograms. Available range: from -40000 to 40000 (inclusive).
+<strong>Note:</strong>
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="displayLocation" class="property">
+  <span class="name"><a href="../routing/Waypoint/displayLocation.html">displayLocation</a></span>
+  <span class="signature">&#8596; <a href="../core/GeoCoordinates-class.html">GeoCoordinates</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional coordinates to indicate physical location of the Points of Interest (PoI).
+It is different from <a href="../routing/Waypoint/coordinates.html">Waypoint.coordinates</a> which is generally expected to be on the navigable road network.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="duration" class="property">
+  <span class="name"><a href="../routing/Waypoint/duration.html">duration</a></span>
+  <span class="signature">&#8596; Duration</span>
+  
+
+</dt>
+<dd>
+  The duration in seconds that should be spent at a waypoint of type <a href="../routing/WaypointType.html">WaypointType.stopover</a>.
+Impacts time-aware calculations.
+Ignored for waypoints of type <a href="../routing/WaypointType.html">WaypointType.passThrough</a>.
+The default duration is 0 seconds.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../routing/Waypoint/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="headingInDegrees" class="property">
+  <span class="name"><a href="../routing/Waypoint/headingInDegrees.html">headingInDegrees</a></span>
+  <span class="signature">&#8596; double?</span>
+  
+
+</dt>
+<dd>
+  Optional heading angle referenced by true North, clockwise specifying
+the direction of travel. The heading direction may help the routing algorithm to select
+the best direction, for example, when multiple directions are possible at a road junction.
+North is 0 degrees, East is 90 degrees, South is 180 degrees, and West is 270 degrees.
+The value must be in the range [0, 360] when specified. By default, or when <code>null</code> is set,
+heading is ignored for route calculation.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="matchSideOfStreet" class="property">
+  <span class="name"><a href="../routing/Waypoint/matchSideOfStreet.html">matchSideOfStreet</a></span>
+  <span class="signature">&#8596; <a href="../routing/MatchSideOfStreet.html">MatchSideOfStreet</a>?</span>
+  
+
+</dt>
+<dd>
+  Specifies how the location set by <a href="../routing/Waypoint/sideOfStreetHint.html">Waypoint.sideOfStreetHint</a> should be handled. Note that this setting might affect the geometry of the resulting route.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="minCourseDistanceInMeters" class="property">
+  <span class="name"><a href="../routing/Waypoint/minCourseDistanceInMeters.html">minCourseDistanceInMeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Optional distance in meters during which the user wants to avoid taking actions. For example, if
+the origin is set by a moving vehicle, the user might not have time to react to immediate actions such
+as a sharp right turn.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="nameHint" class="property">
+  <span class="name"><a href="../routing/Waypoint/nameHint.html">nameHint</a></span>
+  <span class="signature">&#8596; String?</span>
+  
+
+</dt>
+<dd>
+  Optional name hint causes the router to look for the place with the most similar name.
+This can e.g. include things like: <code>North</code> being used to differentiate between
+interstates <code>I66 North</code> and <code>I66 South</code>, <code>Downtown Avenue</code> being used to correctly
+select a residential street.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="onRoadThresholdInMeters" class="property">
+  <span class="name"><a href="../routing/Waypoint/onRoadThresholdInMeters.html">onRoadThresholdInMeters</a></span>
+  <span class="signature">&#8596; int?</span>
+  
+
+</dt>
+<dd>
+  Optional threshold allows specifying a distance within which the waypoint could be considered
+as being on a highway/bridge/tunnel/sliproad. Within this threshold, the attributes of the segments do not impact the matching.
+Outside the threshold only segments which aren't one of highway/bridge/tunnel/sliproad can be matched.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="radiusInMeters" class="property">
+  <span class="name"><a href="../routing/Waypoint/radiusInMeters.html">radiusInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The radius for potential candidates of a road to be used as a waypoint
+for the route calculation. This could be used either because it is not important which place is used,
+or because it is unknown. The default radius is zero.
+If the route should pass the waypoint as close as possible, the default value
+should be kept. Note that the waypoint will be matched to a road.
+Non-zero values allow a greater tolerance.
+If negative, route calculation will fail with an <a href="../routing/RoutingError.html">RoutingError.invalidParameter</a> error.
+Note that <a href="../routing/Waypoint/sideOfStreetHint.html">Waypoint.sideOfStreetHint</a> option is ignored if the user sets this option with a value
+greater than zero.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../routing/Waypoint/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="segmentHint" class="property">
+  <span class="name"><a href="../routing/Waypoint/segmentHint.html">segmentHint</a></span>
+  <span class="signature">&#8596; <a href="../routing/SegmentReference-class.html">SegmentReference</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional segment hint causes the router to try and match to the specified segment.
+Waypoint coordinates need to be on the segment, otherwise waypoint will be matched ignoring the segment hint.
+This parameter can be used when the waypoint is too close to more than one segment to force matching to a specific one.
+Only topology segment id and travel direction are used to define the segment hint
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="sideOfStreetHint" class="property">
+  <span class="name"><a href="../routing/Waypoint/sideOfStreetHint.html">sideOfStreetHint</a></span>
+  <span class="signature">&#8596; <a href="../core/GeoCoordinates-class.html">GeoCoordinates</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional coordinates to indicate which side of the street should be used to reach the waypoint.
+For example, if the location is to the left of the street, the router will prefer using that side
+in case the street has dividers.
+Note that this option is ignored if the user sets <a href="../routing/Waypoint/radiusInMeters.html">Waypoint.radiusInMeters</a> or <a class="deprecated" href="../routing/Waypoint/transitRadiusInMeters.html">Waypoint.transitRadiusInMeters</a>
+option with a value greater than zero.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="transitRadiusInMeters" class="property">
+  <span class="name"><a class="deprecated" href="../routing/Waypoint/transitRadiusInMeters.html">transitRadiusInMeters</a></span>
+  <span class="signature">&#8596; int</span>
+  
+
+</dt>
+<dd>
+  The maximum allowed distance from the waypoint that the calculated
+route may pass through. For example, to drive past a city without necessarily going
+into the city center, you can specify the coordinates of the center and a transit
+radius of 5000m. The default transit radius is zero.
+If the route should pass the waypoint as close as possible, the default value
+should be kept. Note that the waypoint will be map-matched to a road.
+Non-zero values allow a greater tolerance.
+Note that <a href="../routing/Waypoint/sideOfStreetHint.html">Waypoint.sideOfStreetHint</a> option is ignored if the user sets this option with a value
+greater than zero.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="../routing/Waypoint/type.html">type</a></span>
+  <span class="signature">&#8596; <a href="../routing/WaypointType.html">WaypointType</a></span>
+  
+
+</dt>
+<dd>
+  Defines how a waypoint should be considered for route calculation.
+The default waypoint type is <a href="../routing/WaypointType.html">WaypointType.stopover</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../routing/Waypoint/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../routing/Waypoint/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../routing/Waypoint/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../routing/routing-library.html">routing</a></li>
+    <li class="self-crumb">Waypoint class</li>
+</ol>
+
+
+    <h5>routing library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

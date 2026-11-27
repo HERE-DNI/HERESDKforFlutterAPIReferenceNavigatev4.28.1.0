@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the SDKNativeEngine class from the core.engine library, for the Dart programming language.">
+  <title>SDKNativeEngine class - core.engine library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core.engine/core.engine-library.html">core.engine.dart</a></li>
+    <li class="self-crumb">SDKNativeEngine class</li>
+  </ol>
+  <div class="self-name">SDKNativeEngine</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="core.engine&#47;core.engine-library-sidebar.html"
+    data-below-sidebar="core.engine&#47;SDKNativeEngine-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">SDKNativeEngine</span> class 
+    <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Holds internal services and configurations needed by various HERE SDK modules.</p>
+<p>You can initialize the HERE SDK in two ways:</p>
+<ul>
+<li>Create a shared instance of the <code>SDKNativeEngine</code> with <code>SDKNativeEngine.makeSharedInstance()</code>.</li>
+<li>Create individual instances of the <code>SDKNativeEngine</code> via <code>SDKNativeEngine()</code>. Note that this does not automatically set a shared instance.</li>
+</ul>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="SDKNativeEngine" class="callable">
+          <span class="name"><a href="../core.engine/SDKNativeEngine/SDKNativeEngine.html">SDKNativeEngine</a></span><span class="signature">(<span class="parameter" id="-param-options"><span class="type-annotation"><a href="../core.engine/SDKOptions-class.html">SDKOptions</a></span> <span class="parameter-name">options</span></span>)</span>
+        </dt>
+        <dd>
+          Makes a new instance of SDKNativeEngine using supplied options.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; int</span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isOfflineMode" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/isOfflineMode.html">isOfflineMode</a></span>
+  <span class="signature">&#8596; bool</span>
+  
+
+</dt>
+<dd>
+  The offline mode.
+Sets offline mode for the HERE SDK to offline or online.
+Defaults to false, which means the HERE SDK uses an online connection.
+When enabled, this prevents the HERE SDK from initiating any online connection except for provided pass through features if set.
+See <a href="../core.engine/SDKNativeEngine/passThroughFeatures.html">SDKNativeEngine.passThroughFeatures</a>.
+Note that the flag does not cancel pending requests.
+The mode can be enabled or disabled at any time. In order to fully operate offline, the mode
+needs to be enabled via <a href="../core.engine/SDKOptions/offlineMode.html">SDKOptions.offlineMode</a>.
+Initialization of the HERE SDK itself does not require an internet connection.
+Returns <code>true</code> if the HERE SDK uses offline connection mode, otherwise returns <code>false</code>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="options" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/options.html">options</a></span>
+  <span class="signature">&#8594; <a href="../core.engine/SDKOptions-class.html">SDKOptions</a></span>
+  
+
+</dt>
+<dd>
+  Options used by this instance of <a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a>.
+Gets the options used by this instance of <a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a>.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="passThroughFeatures" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/passThroughFeatures.html">passThroughFeatures</a></span>
+  <span class="signature">&#8596; Set<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../core.engine/PassThroughFeature.html">PassThroughFeature</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The pass through features.
+Sets pass through features which are allowed to use online data when HERE SDK is in offline mode.
+Pass through features can be updated at any time.
+When offline mode is disabled, existing pass through features will be removed.
+These needs to be set again when you enable offline mode next time.
+By default, reporting of HERE SDK <a href="../core.engine/UsageStats-class.html">UsageStats</a> will be enabled when at least one pass-through feature is set.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="proxySettings" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/proxySettings.html">proxySettings</a></span>
+  <span class="signature">&#8596; <a href="../core.engine/ProxySettings-class.html">ProxySettings</a>?</span>
+  
+
+</dt>
+<dd>
+  Proxy settings of this SDK engine that will be used by HERE SDK network for all requests.
+Defaults to (<code>null</code>), which indicates proxy is not enabled.
+When setting proxy settings, they will immediately be applied and all the pending and fresh requests will use these settings.
+Pass (<code>null</code>) to indicate that proxy should be disabled.
+If proxy is necessary from the start then it's recommended to use <a href="../core.engine/NetworkSettings/proxySettings.html">NetworkSettings.proxySettings</a> in <a href="../core.engine/SDKOptions/networkSettings.html">SDKOptions.networkSettings</a>.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; Type</span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sdkUsageStats" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/sdkUsageStats.html">sdkUsageStats</a></span>
+  <span class="signature">&#8594; List<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../core.engine/UsageStats-class.html">UsageStats</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  Gets a list of usage statistics for all available HERE SDK features.
+<a href="../core.engine/UsageStats-class.html">UsageStats</a> has cache and persistent storage. Reads from the persistent storage happen on <code>SDKNativeEngine</code> creation step.
+Writes to persistent storage happen by reaching internal limit (amount of upload bytes, by default is 50KB).
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="clearPersistentUsageStats" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/clearPersistentUsageStats.html">clearPersistentUsageStats</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Clear persistent storage for the HERE SDK <a href="../core.engine/UsageStats-class.html">UsageStats</a>.
+  
+
+</dd>
+
+        <dt id="clearUsageStatsCache" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/clearUsageStatsCache.html">clearUsageStatsCache</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Clear cache for the HERE SDK <a href="../core.engine/UsageStats-class.html">UsageStats</a>.
+  
+
+</dd>
+
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; Future<span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stops pending requests and closes open files and databases in main thread.
+  
+
+</dd>
+
+        <dt id="enableUsageStats" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/enableUsageStats.html">enableUsageStats</a></span><span class="signature">(<wbr><span class="parameter" id="enableUsageStats-param-enabled"><span class="type-annotation">bool</span> <span class="parameter-name">enabled</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Enable or disable <a href="../core.engine/UsageStats-class.html">UsageStats</a> for the HERE SDK.
+  
+
+</dd>
+
+        <dt id="getDeviceId" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/getDeviceId.html">getDeviceId</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; Future<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The unique identifier assigned to the device for this application.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="purgeMemoryCaches" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/purgeMemoryCaches.html">purgeMemoryCaches</a></span><span class="signature">(<wbr><span class="parameter" id="purgeMemoryCaches-param-strategy"><span class="type-annotation"><a href="../core.engine/SDKNativeEnginePurgeMemoryStrategy.html">SDKNativeEnginePurgeMemoryStrategy</a></span> <span class="parameter-name">strategy</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Releases memory occupied by internal caches.
+  
+
+</dd>
+
+        <dt id="setAccessKeySecret" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/setAccessKeySecret.html">setAccessKeySecret</a></span><span class="signature">(<wbr><span class="parameter" id="setAccessKeySecret-param-accessKeySecret"><span class="type-annotation">String</span> <span class="parameter-name">accessKeySecret</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Overrides HERE SDK access key secret with new value.
+  
+
+</dd>
+
+        <dt id="setAccessScope" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/setAccessScope.html">setAccessScope</a></span><span class="signature">(<wbr><span class="parameter" id="setAccessScope-param-scope"><span class="type-annotation">String</span> <span class="parameter-name">scope</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Overrides the token scope of the HERE SDK with new value.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; String</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">Object</span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; bool</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
+
+    <dl class="properties">
+        <dt id="parameterConfig" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/parameterConfig.html">parameterConfig</a></span>
+  <span class="signature">&#8596; <a href="../core/ParameterConfiguration-class.html">ParameterConfiguration</a></span>
+  
+
+</dt>
+<dd>
+  Configuration for default values of parameters used in the HERE SDK.
+<strong>Note:</strong> This feature is in beta state and thus there can be bugs and unexpected behavior.
+Related APIs may change for new releases without a deprecation process.
+Gets the configuration for default values of parameters used in the HERE SDK.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="sharedInstance" class="property">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/sharedInstance.html">sharedInstance</a></span>
+  <span class="signature">&#8596; <a href="../core.engine/SDKNativeEngine-class.html">SDKNativeEngine</a>?</span>
+  
+
+</dt>
+<dd>
+  Shared instance of this SDK engine that can be accessed by any HERE SDK module as the default
+engine.
+This is automatically set as a part of the SDK initialization process.
+Gets the shared instance of this SDK engine that can be accessed by any HERE SDK module as the default
+engine.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="makeSharedInstance" class="callable">
+  <span class="name"><a href="../core.engine/SDKNativeEngine/makeSharedInstance.html">makeSharedInstance</a></span><span class="signature">(<wbr><span class="parameter" id="makeSharedInstance-param-options"><span class="type-annotation"><a href="../core.engine/SDKOptions-class.html">SDKOptions</a></span> <span class="parameter-name">options</span></span>)
+    <span class="returntype parameter">&#8594; Future<span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Makes a new instance of SDKNativeEngine using supplied options and stores it as shared instance
+see <a href="../core.engine/SDKNativeEngine/sharedInstance.html">SDKNativeEngine.sharedInstance</a>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">here_sdk</a></li>
+    <li><a href="../core.engine/core.engine-library.html">core.engine</a></li>
+    <li class="self-crumb">SDKNativeEngine class</li>
+</ol>
+
+
+    <h5>core.engine library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    here_sdk
+      4.28.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
